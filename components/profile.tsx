@@ -21,10 +21,10 @@ interface ProfileData {
 }
 
 const defaultWebsites: Website[] = [
-  { icon: "/placeholder.svg?height=14&width=14", name: "X", url: "https://x.com/KoichiNishizuka" },
-  { icon: "/placeholder.svg?height=14&width=14", name: "YouTube", url: "https://www.youtube.com/@KoichiNishizuka" },
-  { icon: "/placeholder.svg?height=14&width=14", name: "Instagram", url: "https://www.instagram.com/stellariumix/" },
-  { icon: "/placeholder.svg?height=14&width=14", name: "LINE", url: "https://www.tiktok.com/@koichinishizuka" },
+  { icon: "/icons/note-pic.svg", name: "note", url: "https://note.com/" },
+  { icon: "/icons/aozaki-pic.svg", name: "YouTube", url: "https://www.youtube.com/@KoichiNishizuka" },
+  { icon: "/icons/instagram-pic.svg", name: "Instagram", url: "https://www.instagram.com/stellariumix/" },
+  { icon: "/icons/line-pic.svg", name: "LINE", url: "https://lin.ee/ATZ4bog" },
 ]
 
 export default function Profile() {
@@ -92,7 +92,7 @@ export default function Profile() {
               >
                 <div className="w-12 h-12 bg-gray-800/50 backdrop-blur-sm rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-all duration-300">
                   {website.icon ? (
-                    <Image src={website.icon} alt={website.name} width={24} height={24} className="filter invert" />
+                    <Image src={website.icon} alt={website.name} width={24} height={24} />
                   ) : (
                     <Globe className="w-6 h-6 text-cyan-400" />
                   )}
