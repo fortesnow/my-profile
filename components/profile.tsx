@@ -18,7 +18,7 @@ interface ProfileData {
 const defaultWebsites: Website[] = [
   { icon: "/icons/note-pic.svg", name: "note", url: "https://note.com/" },
   { icon: "/icons/aozaki-pic.svg", name: "Anime", url: "https://www.youtube.com/watch?v=0YaUlkcpoXw&ab_channel=%E3%80%90%E5%85%AC%E5%BC%8F%E3%80%91TYPE-MOONGAMES" },
-  { icon: "/Instagram-logo.svg", name: "Instagram", url: "https://www.instagram.com/stellariumix/" },
+  { icon: "/instagram-logo.svg", name: "Instagram", url: "https://www.instagram.com/stellariumix/" },
   { icon: "/icons/line-pic.svg", name: "LINE", url: "https://lin.ee/ATZ4bog" },
 ]
 
