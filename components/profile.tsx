@@ -22,7 +22,7 @@ interface ProfileData {
 
 const defaultWebsites: Website[] = [
   { icon: "/icons/note-pic.svg", name: "note", url: "https://note.com/" },
-  { icon: "/icons/aozaki-pic.svg", name: "YouTube", url: "https://www.youtube.com/@KoichiNishizuka" },
+  { icon: "/icons/aozaki-pic.svg", name: "Anime", url: "https://www.youtube.com/watch?v=0YaUlkcpoXw&ab_channel=%E3%80%90%E5%85%AC%E5%BC%8F%E3%80%91TYPE-MOONGAMES" },
   { icon: "/icons/instagram-pic.svg", name: "Instagram", url: "https://www.instagram.com/stellariumix/" },
   { icon: "/icons/line-pic.svg", name: "LINE", url: "https://lin.ee/ATZ4bog" },
 ]
@@ -52,7 +52,7 @@ export default function Profile() {
     <div className="w-full min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white font-sans">
       {/* Header */}
       <div className="relative h-80 bg-cover bg-center overflow-hidden" style={{ 
-        backgroundImage: `url('/placeholder.svg?height=320&width=1280')`,
+        backgroundImage: `url('/images/aoko-pic.jpg')`,
         backgroundPosition: '50% 30%'
       }}>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/50 to-indigo-900/90" />
@@ -66,7 +66,7 @@ export default function Profile() {
         <div className="relative mb-8">
           <div className="w-48 h-48 rounded-full border-4 border-cyan-400 shadow-lg overflow-hidden mx-auto transform hover:scale-105 transition-transform duration-300">
             <Image 
-              src="/placeholder.svg?height=192&width=192" 
+              src="/images/aoko-pic.jpg" 
               alt="Profile" 
               width={192}
               height={192}
