@@ -1,11 +1,7 @@
 'use client'
 
 import * as React from "react"
-import { Button } from "@/components/ui/button"
-import { Dialog, DialogContent, DialogTitle, DialogFooter } from "@/components/ui/dialog"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Camera, Globe, Plus, X, PlusCircle, ChevronRight } from 'lucide-react'
+import { Globe } from 'lucide-react'
 import Image from "next/image"
 
 interface Website {
@@ -28,7 +24,7 @@ const defaultWebsites: Website[] = [
 ]
 
 export default function Profile() {
-  const [profileData, setProfileData] = React.useState<ProfileData>({
+  const [profileData] = React.useState<ProfileData>({
     name: "あおい",
     bio: `実業や経営面で培った思考を垂れ流しています。
 売上販促全般的にやり過ぎて万事屋みたいになってます投稿内容で察してください
@@ -37,22 +33,12 @@ export default function Profile() {
 ◾︎SNS＆広告運用┊︎ Webデザイン ┊︎ プログラマー ┊︎SEO&コンテンツ┊︎`,
     websites: defaultWebsites
   })
-  const [bannerImage, setBannerImage] = React.useState<string | null>(null)
-  const [profileImage, setProfileImage] = React.useState<string | null>(null)
-
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>, setImage: React.Dispatch<React.SetStateAction<string | null>>) => {
-    const file = e.target.files?.[0]
-    if (file) {
-      const imageUrl = URL.createObjectURL(file)
-      setImage(imageUrl)
-    }
-  }
 
   return (
     <div className="w-full min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white font-sans">
       {/* Header */}
       <div className="relative h-80 bg-cover bg-center overflow-hidden" style={{ 
-        backgroundImage: `url('/images/aoko-pic.jpg')`,
+        backgroundImage: `url('/placeholder.svg?height=320&width=1280')`,
         backgroundPosition: '50% 30%'
       }}>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/50 to-indigo-900/90" />
@@ -66,7 +52,7 @@ export default function Profile() {
         <div className="relative mb-8">
           <div className="w-48 h-48 rounded-full border-4 border-cyan-400 shadow-lg overflow-hidden mx-auto transform hover:scale-105 transition-transform duration-300">
             <Image 
-              src="/images/aoko-pic.jpg" 
+              src="/placeholder.svg?height=192&width=192" 
               alt="Profile" 
               width={192}
               height={192}
@@ -116,4 +102,3 @@ export default function Profile() {
     </div>
   )
 }
-
