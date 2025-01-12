@@ -31,31 +31,34 @@ export default function Profile() {
 連絡や相談は各SNS媒体までお願いします
 ‪⿻スキルとキャリア
 ◾︎SNS＆広告運用┊︎ Webデザイン ┊︎ プログラマー ┊︎SEO&コンテンツ┊︎`,
-    websites: defaultWebsites
+    websites: defaultWebsites,
   })
 
   return (
     <div className="w-full min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white font-sans">
       {/* Header */}
-      <div className="relative h-80 bg-cover bg-center overflow-hidden" style={{ 
-        backgroundImage: `url('/images/aoko-pic.jpg')`,
-        backgroundPosition: '50% 30%'
-      }}>
+      <div
+        className="relative h-72 bg-cover bg-center overflow-hidden"
+        style={{
+          backgroundImage: `url('/images/aoko-pic.jpg')`,
+          backgroundPosition: "50% 20%", // 背景画像を上に寄せる
+        }}
+      >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/50 to-indigo-900/90" />
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 to-purple-500/30" />
-        <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-r from-cyan-500 to-purple-500 transform -skew-y-3" />
+        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-r from-cyan-500 to-purple-500 transform -skew-y-3" />
       </div>
 
       {/* Profile Content */}
-      <div className="relative px-6 pb-12 -mt-40">
+      <div className="relative px-6 pb-8 -mt-32"> {/* -mt-40 を -mt-32 に変更して上に寄せる */}
         {/* Profile Picture */}
-        <div className="relative mb-8">
+        <div className="relative mb-6">
           <div className="w-48 h-48 rounded-full border-4 border-cyan-400 shadow-lg overflow-hidden mx-auto transform hover:scale-105 transition-transform duration-300">
-            <Image 
-              src="/images/aoko-pic.jpg" 
-              alt="Profile" 
-              width={192}
-              height={192}
+            <Image
+              src="/images/aoko-pic.jpg"
+              alt="Profile"
+              width={160}
+              height={160}
               className="object-cover w-full h-full"
             />
           </div>
@@ -64,18 +67,20 @@ export default function Profile() {
           </div>
         </div>
 
-        <div className="text-center mb-6">
+        <div className="text-center mb-4">
           <p className="text-xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-            信用が一番の宝物
+            商いは、信用と信頼が一番の宝物
           </p>
         </div>
 
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-4 name-font">{profileData.name}</h1>
-          <div className="flex justify-center flex-wrap gap-6 mt-6">
+        <div className="text-center mb-10">
+          <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-4 name-font">
+            {profileData.name}
+          </h1>
+          <div className="flex justify-center flex-wrap gap-6 mt-4">
             {profileData.websites.map((website, index) => (
-              <a 
-                key={index} 
+              <a
+                key={index}
                 href={website.url || "#"}
                 className="group relative"
                 title={website.name}
@@ -98,9 +103,11 @@ export default function Profile() {
         </div>
 
         {profileData.bio && (
-          <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-8 shadow-2xl relative overflow-hidden">
+          <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-cyan-400 to-purple-400" />
-            <p className="text-gray-300 whitespace-pre-wrap text-sm leading-relaxed">{profileData.bio}</p>
+            <p className="text-gray-300 whitespace-pre-wrap text-sm leading-relaxed">
+              {profileData.bio}
+            </p>
             <div className="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tl from-cyan-500/20 to-purple-500/20 transform rotate-45 translate-x-8 translate-y-8" />
           </div>
         )}
