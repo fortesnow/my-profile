@@ -16,7 +16,7 @@ interface ProfileData {
 }
 
 const defaultWebsites: Website[] = [
-  { icon: "/icons/note-pic.svg", name: "note", url: "https://note.com/" },
+  { icon: "/icons/note-pic.svg", name: "note", url: "https://note.com/hareharesky" },
   { icon: "/icons/aozaki-pic.svg", name: "Anime", url: "https://youtu.be/0YaUlkcpoXw?si=KGwDQklCCVXDvTdO" },
   { icon: "/icons/instagram-pic.svg", name: "Instagram", url: "https://www.instagram.com/stellariumix/" },
   { icon: "/icons/line-pic.svg", name: "LINE", url: "https://lin.ee/ATZ4bog" },
@@ -64,8 +64,14 @@ export default function Profile() {
           </div>
         </div>
 
+        <div className="text-center mb-6">
+          <p className="text-xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+            信用が一番の宝物
+          </p>
+        </div>
+
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-4">{profileData.name}</h1>
+          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-4 name-font">{profileData.name}</h1>
           <div className="flex justify-center flex-wrap gap-6 mt-6">
             {profileData.websites.map((website, index) => (
               <a 

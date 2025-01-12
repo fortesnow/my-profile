@@ -6,6 +6,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap'); /* フォントのインポート */
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -68,5 +70,8 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+  .name-font {
+    font-family: 'Kaisei Decol', sans-serif;
   }
 }
