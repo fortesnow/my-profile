@@ -102,6 +102,18 @@ export default function Profile() {
           </div>
         </div>
 
+        <div className="flex justify-center mb-4">
+      <a href="https://note.com/hareharesky" target="_blank" rel="noopener noreferrer">
+        <Image
+          src="/images/note-pic.jpg"
+          alt="公式noteに飛びます"
+          width={480}
+          height={640}
+          className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+        />
+      </a>
+    </div>
+
         {profileData.bio && (
           <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-cyan-400 to-purple-400" />
