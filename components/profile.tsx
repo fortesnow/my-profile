@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Image from "next/image"
+import { SkillsSection } from "../components/ui/SkillsSection"
 
 interface Website {
   icon: string | null
@@ -33,6 +34,14 @@ export default function Profile() {
 ◾︎SNS＆広告運用┊︎ Webデザイン ┊︎ プログラマー ┊︎SEO&コンテンツ┊︎`,
     websites: defaultWebsites,
   })
+
+  const skills = [
+    { name: "SNS & 広告運用", level: 90 },
+    { name: "Webデザイン", level: 85 },
+    { name: "プログラミング", level: 80 },
+    { name: "SEO & コンテンツ", level: 88 },
+    { name: "前を向く誇り", level: 100 },
+  ]
 
   return (
     <div className="w-full min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white font-sans">
@@ -89,7 +98,7 @@ export default function Profile() {
               >
                 <div className="w-12 h-12 bg-gray-800/50 backdrop-blur-sm rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-all duration-300">
                   {website.icon ? (
-                    <Image src={website.icon} alt={website.name} width={24} height={24} />
+                    <Image src={website.icon || "/placeholder.svg"} alt={website.name} width={24} height={24} />
                   ) : (
                     <div className="w-6 h-6 text-cyan-400">🌐</div>
                   )}
@@ -103,16 +112,16 @@ export default function Profile() {
         </div>
 
         <div className="flex justify-center mb-4">
-      <a href="https://note.com/hareharesky" target="_blank" rel="noopener noreferrer">
-        <Image
-          src="/images/note-pic.jpg"
-          alt="公式noteに飛びます"
-          width={480}
-          height={640}
-          className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
-        />
-      </a>
-    </div>
+          <a href="https://note.com/hareharesky" target="_blank" rel="noopener noreferrer">
+            <Image
+              src="/images/note-pic.jpg"
+              alt="公式noteに飛びます"
+              width={480}
+              height={640}
+              className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+            />
+          </a>
+        </div>
 
         {profileData.bio && (
           <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 shadow-2xl relative overflow-hidden">
@@ -123,6 +132,9 @@ export default function Profile() {
             <div className="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tl from-cyan-500/20 to-purple-500/20 transform rotate-45 translate-x-8 translate-y-8" />
           </div>
         )}
+
+        {/* SkillsSection component */}
+        <SkillsSection skills={skills} />
       </div>
     </div>
   )
