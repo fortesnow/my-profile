@@ -123,6 +123,35 @@ export default function Profile() {
           </a>
         </div>
 
+        {/* 広告運用の専門家画像とLINEボタン */}
+        <div className="flex flex-col items-center space-y-4 mb-8">
+          <div className="relative w-full max-w-md mx-auto">
+            <Image
+              src="/images/dog-suit.png"
+              alt="広告運用の専門家"
+              width={400}
+              height={400}
+              className="rounded-lg shadow-lg w-full hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div className="w-full max-w-md mx-auto bg-gradient-to-br from-gray-900/80 to-blue-900/80 backdrop-blur-md rounded-lg p-6 shadow-lg border border-cyan-500/20">
+            <div className="flex flex-col items-center space-y-4">
+              <p className="text-white font-bold text-xl">
+                テスター募集中
+              </p>
+              <a
+                href="https://lin.ee/ATZ4bog"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#00B900] text-white px-8 py-3 rounded-full font-bold text-base hover:opacity-90 transition-all duration-300 shadow-lg flex items-center space-x-2 group hover:scale-105"
+              >
+                <span>詳しくはLINEから</span>
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
         {profileData.bio && (
           <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-cyan-400 to-purple-400" />
