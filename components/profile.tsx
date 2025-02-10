@@ -164,6 +164,63 @@ export default function Profile() {
 
         {/* SkillsSection component */}
         <SkillsSection skills={skills} />
+
+        {/* 私の強みセクションを再構築 */}
+        <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md rounded-lg p-8 shadow-lg">
+          <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+            私の強み
+          </h2>
+          
+          <div className="space-y-8">
+            <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 transform hover:scale-[1.02] transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2 text-cyan-400">マルチスキル</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    SNS運用、Webデザイン、プログラミング、SEOなど、デジタルマーケティングに必要な幅広いスキルを保有。複合的な視点でプロジェクトを推進できます。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 transform hover:scale-[1.02] transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2 text-cyan-400">実践的な経験</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    実業での経験を活かした実践的なアプローチが可能。理論だけでなく、実際のビジネスシーンで効果を発揮する施策を提案できます。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 transform hover:scale-[1.02] transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2 text-cyan-400">迅速な対応力</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    デジタルマーケティングの急速な変化に対応し、最新のトレンドやテクノロジーを素早くキャッチアップ。クライアントのニーズに柔軟に対応します。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   )
