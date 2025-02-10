@@ -165,7 +165,7 @@ export default function Profile() {
         {/* SkillsSection component */}
         <SkillsSection skills={skills} />
 
-        {/* 私の強みセクションを再構築 */}
+        {/* 私の強みセクション */}
         <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md rounded-lg p-8 shadow-lg">
           <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
             私の強み
@@ -180,7 +180,7 @@ export default function Profile() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-cyan-400">マルチスキル</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-cyan-400">包括的なマルチスキル</h3>
                   <p className="text-gray-300 leading-relaxed">
                     SNS運用、Webデザイン、プログラミング、SEOなど、デジタルマーケティングに必要な幅広いスキルを保有。複合的な視点でプロジェクトを推進できます。
                   </p>
@@ -216,6 +216,82 @@ export default function Profile() {
                   <p className="text-gray-300 leading-relaxed">
                     デジタルマーケティングの急速な変化に対応し、最新のトレンドやテクノロジーを素早くキャッチアップ。クライアントのニーズに柔軟に対応します。
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* LP制作サービスセクション */}
+        <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md rounded-lg p-8 shadow-lg">
+          <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+            LP制作サービス
+          </h2>
+          
+          <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-8">
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="space-y-6">
+                <h3 className="text-2xl font-semibold text-cyan-400">
+                  成果を出すためのLP制作
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  戦略的なデザインと効果的なコピーライティングで、
+                  確実に成果を出すLPを制作いたします。
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <span className="text-gray-300">戦略的なデザイン設計</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <span className="text-gray-300">CVR最適化</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <span className="text-gray-300">レスポンシブ対応</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex flex-col justify-center items-center space-y-6">
+                <div className="text-center">
+                  <p className="text-lg text-gray-300 mb-2">詳しいサービス内容はこちら</p>
+                  <p className="text-sm text-gray-400">料金プランや制作の流れをご確認いただけます</p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a
+                    href="/lp-service"
+                    className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
+                  >
+                    <span>サービス詳細へ</span>
+                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://lin.ee/ATZ4bog"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-8 py-4 rounded-full border-2 border-cyan-500 text-cyan-400 font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
+                  >
+                    <span>無料相談する</span>
+                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
