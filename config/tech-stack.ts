@@ -1,8 +1,3 @@
-import { 
-  Boxes, Atom, FileCode2, Palette,
-  Server, Database, Container, Cloud,
-  Code, Paintbrush, Terminal 
-} from "lucide-react"
 
 export const techStack = [
   { name: "HTML", icon: Code },
