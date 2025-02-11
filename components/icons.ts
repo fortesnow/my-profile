@@ -6,13 +6,5 @@ export {
   Calculator,
   Rocket,
   CheckCircle2,
-  Boxes,
-  Atom,
-  FileCode2,
-  Palette,
-  Server,
-  Database,
-  Container,
-  Cloud,
-  Terminal
+  // 技術スタック用のアイコンは tech-stack.ts で import
 } from "lucide-react" 

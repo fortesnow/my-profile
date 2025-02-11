@@ -3,21 +3,7 @@
 import * as React from "react"
 import Image from "next/image"
 import { SkillsSection } from "../components/ui/SkillsSection"
-import Link from 'next/link'
 import { ProfileData } from './types'
-
-interface Website {
-  icon: string | null
-  name: string
-  url: string
-}
-
-const defaultWebsites: Website[] = [
-  { icon: "/icons/note-pic.svg", name: "note", url: "https://note.com/hareharesky" },
-  { icon: "/icons/aozaki-pic.svg", name: "Anime", url: "https://youtu.be/0YaUlkcpoXw?si=KGwDQklCCVXDvTdO" },
-  { icon: "/icons/instagram-pic.svg", name: "Instagram", url: "https://www.instagram.com/stellariumix/" },
-  { icon: "/icons/line-pic.svg", name: "LINE", url: "https://lin.ee/ATZ4bog" },
-]
 
 // インタラクティブな要素のみを含むClient Component
 export default function ProfileClient({ data }: { data: ProfileData }) {
@@ -72,29 +58,6 @@ export default function ProfileClient({ data }: { data: ProfileData }) {
           <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-4 name-font">
             {data.name}
           </h1>
-          <div className="flex justify-center flex-wrap gap-6 mt-4">
-            {data.websites.map((website, index) => (
-              <a
-                key={index}
-                href={website.url || "#"}
-                className="group relative"
-                title={website.name}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="w-12 h-12 bg-gray-800/50 backdrop-blur-sm rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-all duration-300">
-                  {website.icon ? (
-                    <Image src={website.icon || "/placeholder.svg"} alt={website.name} width={24} height={24} />
-                  ) : (
-                    <div className="w-6 h-6 text-cyan-400">🌐</div>
-                  )}
-                </div>
-                <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-gray-800/90 text-cyan-400 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-                  {website.name}
-                </span>
-              </a>
-            ))}
-          </div>
         </div>
 
         <div className="flex justify-center mb-4">
