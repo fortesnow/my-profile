@@ -13,5 +13,6 @@ export {
   Server,
   Database,
   Container,
-  Cloud
+  Cloud,
+  Terminal
 } from "lucide-react" 
