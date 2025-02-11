@@ -2,9 +2,6 @@ import Image from "next/image"
 import { 
   Zap, Code2, LineChart, MessageSquare, 
   Calculator, Rocket, CheckCircle2,
-  Boxes, Atom, FileCode2, Palette,
-  Server, Database, Container, Cloud,
-  Code, Paintbrush, Terminal
 } from "@/components/icons"
 import { techStack } from "@/config/tech-stack"
 
