@@ -3,17 +3,13 @@
 import * as React from "react"
 import Image from "next/image"
 import { SkillsSection } from "../components/ui/SkillsSection"
+import Link from 'next/link'
+import { ProfileData } from './types'
 
 interface Website {
   icon: string | null
   name: string
   url: string
-}
-
-interface ProfileData {
-  name: string
-  bio: string
-  websites: Website[]
 }
 
 const defaultWebsites: Website[] = [
@@ -23,18 +19,8 @@ const defaultWebsites: Website[] = [
   { icon: "/icons/line-pic.svg", name: "LINE", url: "https://lin.ee/ATZ4bog" },
 ]
 
-export default function Profile() {
-  const [profileData] = React.useState<ProfileData>({
-    name: "あおい",
-    bio: `実業や経営面で培った思考を垂れ流しています。
-売上販促全般的にやり過ぎて万事屋みたいになってます投稿内容で察してください
-事業者向けnoteを書いてます読んで損する内容はないです。
-連絡や相談は各SNS媒体までお願いします
-‪⿻スキルとキャリア
-◾︎SNS＆広告運用┊︎ Webデザイン ┊︎ プログラマー ┊︎SEO&コンテンツ┊︎`,
-    websites: defaultWebsites,
-  })
-
+// インタラクティブな要素のみを含むClient Component
+export default function ProfileClient({ data }: { data: ProfileData }) {
   const skills = [
     { name: "SNS & 広告運用", level: 90 },
     { name: "Webデザイン", level: 85 },
@@ -84,10 +70,10 @@ export default function Profile() {
 
         <div className="text-center mb-10">
           <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-4 name-font">
-            {profileData.name}
+            {data.name}
           </h1>
           <div className="flex justify-center flex-wrap gap-6 mt-4">
-            {profileData.websites.map((website, index) => (
+            {data.websites.map((website, index) => (
               <a
                 key={index}
                 href={website.url || "#"}
@@ -152,11 +138,11 @@ export default function Profile() {
           </div>
         </div>
 
-        {profileData.bio && (
+        {data.bio && (
           <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-cyan-400 to-purple-400" />
             <p className="text-gray-300 whitespace-pre-wrap text-sm leading-relaxed">
-              {profileData.bio}
+              {data.bio}
             </p>
             <div className="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tl from-cyan-500/20 to-purple-500/20 transform rotate-45 translate-x-8 translate-y-8" />
           </div>

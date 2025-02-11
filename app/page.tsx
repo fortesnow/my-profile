@@ -1,11 +1,9 @@
-import Profile from "@/components/profile"
+import type { Metadata } from "next";
+import { ProfileServer } from '@/components/profile-server'
+import ProfileClient from '@/components/profile'
 import '@/app/globals.css';
 
-export default function Home() {
-  return <Profile />
-}
-
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Web制作 あおい | フロントエンド開発・LP制作',
   description: 'フロントエンド開発とLP制作のフリーランスエンジニア。React, Next.js, TypeScriptを使用した高品質な開発と、成果の出るLP制作を提供します。',
   keywords: 'Web制作, フロントエンド開発, LP制作, React, Next.js, フリーランス',
@@ -21,4 +19,10 @@ export const metadata = {
       },
     ],
   },
+}
+
+export default async function Home() {
+  const data = await ProfileServer()
+  
+  return <ProfileClient data={data} />
 }

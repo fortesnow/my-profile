@@ -18,7 +18,7 @@ export const metadata = {
   },
 }
 
-export default function LPService() {
+export default async function LPService() {
   const services = [
     {
       title: "戦略的デザイン",

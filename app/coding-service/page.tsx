@@ -26,22 +26,26 @@ export const metadata = {
   },
 }
 
-// 構造化データの追加
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: '爆速コーディングサービス',
-  description: '最短当日対応可能な高品質コーディングサービス。',
-  provider: {
-    '@type': 'Person',
-    name: 'あおい',
-    url: 'https://yourdomain.com'
-  },
-  areaServed: 'JP',
-  serviceType: 'Web Development',
+// 構造化データの生成を関数化
+function generateJsonLd() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: '爆速コーディングサービス',
+    description: '最短当日対応可能な高品質コーディングサービス。',
+    provider: {
+      '@type': 'Person',
+      name: 'あおい',
+      url: 'https://yourdomain.com'
+    },
+    areaServed: 'JP',
+    serviceType: 'Web Development',
+  }
 }
 
-export default function CodingServicePage() {
+export default async function CodingServicePage() {
+  const jsonLd = generateJsonLd()
+
   return (
     <>
       <script
