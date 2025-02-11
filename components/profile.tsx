@@ -297,6 +297,92 @@ export default function Profile() {
             </div>
           </div>
         </section>
+
+        {/* コーディングサービスセクション */}
+        <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md rounded-lg p-8 shadow-lg">
+          <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+            爆速コーディングサービス
+          </h2>
+          
+          <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-8">
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="space-y-6">
+                <h3 className="text-2xl font-semibold text-cyan-400">
+                  スピード × クオリティ
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  最短当日対応可能。高品質なコードと
+                  迅速な納品で、あなたのビジネスを加速させます。
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+                    <span className="text-gray-300">最短当日納品対応</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <span className="text-gray-300">保守性の高いクリーンコード</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <span className="text-gray-300">パフォーマンス最適化</span>
+                  </div>
+                </div>
+                <div className="mt-8 p-4 bg-gray-800/50 rounded-lg">
+                  <p className="text-cyan-400 font-semibold mb-2">対応技術スタック</p>
+                  <div className="flex flex-wrap gap-2">
+                    {['Next.js', 'React', 'TypeScript', 'TailwindCSS', 'Node.js'].map((tech) => (
+                      <span key={tech} className="px-3 py-1 bg-gray-700/50 rounded-full text-sm text-gray-300">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex flex-col justify-center items-center space-y-6">
+                <div className="text-center">
+                  <p className="text-lg text-gray-300 mb-2">まずはご相談ください</p>
+                  <p className="text-sm text-gray-400">最短納期とお見積りをご案内いたします</p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a
+                    href="/coding-service"
+                    className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
+                  >
+                    <span>サービス詳細へ</span>
+                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://lin.ee/ATZ4bog"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-8 py-4 rounded-full border-2 border-cyan-500 text-cyan-400 font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
+                  >
+                    <span>無料相談する</span>
+                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   )
