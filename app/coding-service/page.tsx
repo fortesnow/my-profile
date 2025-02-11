@@ -8,7 +8,7 @@ import {
   Rocket,
   CheckCircle2,
 } from "@/components/icons"
-import { techStack } from "@/config/tech-stack"
+
 
 export const metadata = {
   title: '爆速コーディングサービス | Web制作 あおい',
