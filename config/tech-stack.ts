@@ -1,13 +1,12 @@
-
 export const techStack = [
-  { name: "HTML", icon: Code },
-  { name: "CSS", icon: Paintbrush },
-  { name: "Next.js", icon: Boxes },
-  { name: "React", icon: Atom },
-  { name: "TypeScript", icon: FileCode2 },
-  { name: "Python", icon: Terminal },
-  { name: "TailwindCSS", icon: Palette },
-  { name: "Node.js", icon: Server },
-  { name: "Git", icon: Container },
-  { name: "AWS", icon: Cloud }
+  { name: "HTML" },
+  { name: "CSS" },
+  { name: "Next.js" },
+  { name: "React" },
+  { name: "TypeScript" },
+  { name: "Python" },
+  { name: "TailwindCSS" },
+  { name: "Node.js" },
+  { name: "Git" },
+  { name: "AWS" }
 ] 

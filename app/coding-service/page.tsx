@@ -242,12 +242,9 @@ export default async function CodingServicePage() {
               対応技術スタック
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {techStack.map((tech) => (
-                <div key={tech.name} className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 flex flex-col items-center justify-center gap-4 hover:scale-105 transition-transform">
-                  <div className="bg-gradient-to-br from-cyan-500 to-purple-500 w-12 h-12 rounded-lg flex items-center justify-center">
-                    <tech.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <span className="text-gray-300">{tech.name}</span>
+              {["HTML", "CSS", "Next.js", "React", "TypeScript", "Python", "TailwindCSS", "Node.js", "Git", "AWS"].map((tech) => (
+                <div key={tech} className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 flex flex-col items-center justify-center gap-4 hover:scale-105 transition-transform">
+                  <span className="text-gray-300">{tech}</span>
                 </div>
               ))}
             </div>
