@@ -1,7 +1,12 @@
 import Image from "next/image"
 import { 
-  Zap, Code2, LineChart, MessageSquare, 
-  Calculator, Rocket, CheckCircle2,
+  Zap, 
+  Code2, 
+  LineChart,
+  MessageSquare,
+  Calculator,
+  Rocket,
+  CheckCircle2,
 } from "@/components/icons"
 import { techStack } from "@/config/tech-stack"
 
