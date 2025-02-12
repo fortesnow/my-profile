@@ -4,7 +4,7 @@ import * as React from "react"
 import Image from "next/image"
 import { SkillsSection } from "../components/ui/SkillsSection"
 import { ProfileData } from './types'
-import { Target, Code2, BarChart2, Users, PieChart } from "lucide-react"
+import { BarChart2, Users, PieChart } from "lucide-react"
 
 // インタラクティブな要素のみを含むClient Component
 export default function ProfileClient({ data }: { data: ProfileData }) {
@@ -14,27 +14,6 @@ export default function ProfileClient({ data }: { data: ProfileData }) {
     { name: "プログラミング", level: 80 },
     { name: "SEO & コンテンツ", level: 88 },
     { name: "前を向く誇り", level: 100 },
-  ]
-
-  const services = [
-    {
-      title: "LP制作",
-      description: "戦略的なデザインと効果的なコピーライティングで、成果の出るLPを制作します。",
-      icon: Target,
-      link: "/lp-service"
-    },
-    {
-      title: "コーディング",
-      description: "モダンな技術とクリーンなコードで、保守性の高いWebサイトを構築します。",
-      icon: Code2,
-      link: "/coding-service"
-    },
-    {
-      title: "広告運用",
-      description: "データドリブンな運用で広告効果を最大化。Google/Meta広告の運用代行からLPとの連携まで。",
-      icon: BarChart2,
-      link: "/ads-service"
-    }
   ]
 
   return (
