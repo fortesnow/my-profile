@@ -25,7 +25,7 @@ export default function ProfileClient({ data }: { data: ProfileData }) {
             className="relative h-72 bg-cover bg-center overflow-hidden"
             style={{
               backgroundImage: `url('/images/aoko-pic.jpg')`,
-              backgroundPosition: "50% 20%", // 背景画像を上に寄せる
+              backgroundPosition: "50% 20%",
             }}
           >
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/50 to-indigo-900/90" />
@@ -34,7 +34,7 @@ export default function ProfileClient({ data }: { data: ProfileData }) {
           </div>
 
           {/* Profile Content */}
-          <div className="relative px-6 pb-8 -mt-32"> {/* -mt-40 を -mt-32 に変更して上に寄せる */}
+          <div className="relative px-6 pb-8 -mt-32">
             {/* Profile Picture */}
             <div className="relative mb-6">
               <div 
@@ -51,13 +51,17 @@ export default function ProfileClient({ data }: { data: ProfileData }) {
                   className="object-cover w-full h-full"
                 />
               </div>
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-purple-500 px-6 py-1 rounded-full text-xs font-semibold tracking-wider">
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 
+                bg-gradient-to-r from-cyan-500 to-purple-500 px-6 py-1 rounded-full text-xs font-semibold tracking-wider"
+              >
                 <span>VISIONARY</span>
               </div>
             </div>
 
             <div className="text-center mb-4">
-              <p className="text-xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+              <p className="text-xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400
+                [text-shadow:2px_2px_0_theme(colors.cyan.900)]"
+              >
                 商いは、信用と信頼が一番の宝物
               </p>
             </div>
@@ -121,19 +125,23 @@ export default function ProfileClient({ data }: { data: ProfileData }) {
 
             {/* Skills Section */}
             <div className="mt-8">
-              <h2 className="text-2xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+              <h2 className="text-2xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400
+                [text-shadow:2px_2px_0_theme(colors.cyan.900)]"
+              >
                 Skills
               </h2>
               <div className="space-y-4">
                 {skills.map((skill, index) => (
-                  <div key={index} className="bg-gray-900/50 backdrop-blur-md rounded-lg p-4">
+                  <div key={index} className="bg-gray-900/50 backdrop-blur-md p-4 
+                    border-2 border-cyan-200 [box-shadow:4px_4px_0_theme(colors.cyan.900)]"
+                  >
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-gray-300">{skill.name}</span>
                       <span className="text-cyan-400">{skill.level}%</span>
                     </div>
                     <div className="w-full bg-gray-700 rounded-full h-2">
                       <div
-                        className="bg-gradient-to-r from-cyan-500 to-purple-500 h-2 rounded-full"
+                        className="bg-gradient-to-r from-cyan-500 to-purple-500 h-2"
                         style={{ width: `${skill.level}%` }}
                       />
                     </div>
@@ -143,7 +151,7 @@ export default function ProfileClient({ data }: { data: ProfileData }) {
             </div>
 
             {/* 私の強みセクション */}
-            <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md rounded-lg p-8 shadow-lg">
+            <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md p-8 border-4 border-cyan-200 [box-shadow:8px_8px_0_theme(colors.cyan.900)]">
               <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
                 私の強み
               </h2>
@@ -200,7 +208,7 @@ export default function ProfileClient({ data }: { data: ProfileData }) {
             </section>
 
             {/* LP制作サービスセクション */}
-            <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md rounded-lg p-8 shadow-lg">
+            <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md p-8 border-4 border-cyan-200 [box-shadow:8px_8px_0_theme(colors.cyan.900)]">
               <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
                 LP制作サービス
               </h2>
@@ -276,7 +284,7 @@ export default function ProfileClient({ data }: { data: ProfileData }) {
             </section>
 
             {/* コーディングサービスセクション */}
-            <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md rounded-lg p-8 shadow-lg">
+            <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md p-8 border-4 border-cyan-200 [box-shadow:8px_8px_0_theme(colors.cyan.900)]">
               <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
                 爆速コーディングサービス
               </h2>
@@ -362,7 +370,7 @@ export default function ProfileClient({ data }: { data: ProfileData }) {
             </section>
 
             {/* 広告運用サービスセクション */}
-            <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md rounded-lg p-8 shadow-lg">
+            <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md p-8 border-4 border-cyan-200 [box-shadow:8px_8px_0_theme(colors.cyan.900)]">
               <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
                 広告運用サービス
               </h2>
@@ -442,7 +450,7 @@ export default function ProfileClient({ data }: { data: ProfileData }) {
             </section>
 
             {/* SEO対策サービスセクション */}
-            <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md rounded-lg p-8 shadow-lg">
+            <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md p-8 border-4 border-cyan-200 [box-shadow:8px_8px_0_theme(colors.cyan.900)]">
               <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
                 SEO対策サービス
               </h2>
