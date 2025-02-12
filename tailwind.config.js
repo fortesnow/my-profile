@@ -48,8 +48,8 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ['var(--font-zen)', 'var(--font-outfit)', 'var(--font-geist-sans)', 'sans-serif'],
-        mono: ['var(--font-geist-mono)', 'monospace'],
+        sans: ['Shinonome', 'monospace'],
+        mono: ['Shinonome', 'monospace'],
         outfit: ['var(--font-outfit)', 'sans-serif'],
       },
     },

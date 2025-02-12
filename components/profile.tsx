@@ -51,7 +51,7 @@ export default function ProfileClient({ data }: { data: ProfileData }) {
                 />
               </div>
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-purple-500 px-6 py-1 rounded-full text-xs font-semibold tracking-wider">
-                VISIONARY
+                <span>VISIONARY</span>
               </div>
             </div>
 
@@ -62,7 +62,7 @@ export default function ProfileClient({ data }: { data: ProfileData }) {
             </div>
 
             <div className="text-center mb-10">
-              <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-4 name-font">
+              <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-4">
                 {data.name}
               </h1>
             </div>

@@ -1,33 +1,6 @@
 import { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/react"
-import { Zen_Kaku_Gothic_New, Outfit } from 'next/font/google'
 import "./globals.css"
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-// 日本語フォントの設定
-const zenKaku = Zen_Kaku_Gothic_New({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-  variable: '--font-zen',
-  display: 'swap',
-})
-
-// 英数字用フォントの設定
-const outfit = Outfit({
-  subsets: ['latin'],
-  variable: '--font-outfit',
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -40,7 +13,7 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ja" className={`${geistSans.variable} ${geistMono.variable} ${zenKaku.variable} ${outfit.variable} antialiased`}>
+    <html lang="ja">
       <body className="font-sans">
         {children}
         <Analytics />
