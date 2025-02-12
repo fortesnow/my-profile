@@ -8,10 +8,11 @@ import { BarChart2, Users, PieChart } from "lucide-react"
 // インタラクティブな要素のみを含むClient Component
 export default function ProfileClient({ data }: { data: ProfileData }) {
   const skills = [
+    { name: "WEBサイト制作＆LP制作", level: 90 },
     { name: "SNS & 広告運用", level: 90 },
     { name: "Webデザイン", level: 85 },
-    { name: "プログラミング", level: 80 },
-    { name: "SEO & コンテンツ", level: 88 },
+    { name: "プログラミング", level: 90 },
+    { name: "SEO & コンテンツ", level: 95 },
     { name: "前を向く誇り", level: 100 },
   ]
 
