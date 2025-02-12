@@ -1,9 +1,8 @@
-'use client'
-
 import * as React from "react"
 import Image from "next/image"
 import { ProfileData } from './types'
 import { BarChart2, Users, PieChart } from "lucide-react"
+import ClientSideProfile from './client-side-profile'
 
 interface Website {
   icon: string
@@ -18,8 +17,7 @@ const defaultWebsites: Website[] = [
   { icon: "/icons/line-pic.svg", name: "LINE", url: "https://lin.ee/ATZ4bog" },
 ]
 
-// インタラクティブな要素のみを含むClient Component
-export default function ProfileClient({ data }: { data: ProfileData }) {
+export default function Profile({ data }: { data: ProfileData }) {
   const skills = [
     { name: "WEBサイト制作＆LP制作", level: 90 },
     { name: "SNS & 広告運用", level: 90 },
@@ -48,28 +46,11 @@ export default function ProfileClient({ data }: { data: ProfileData }) {
 
           {/* Profile Content */}
           <div className="relative px-6 pb-8 -mt-32">
-            {/* Profile Picture */}
-            <div className="relative mb-6">
-              <div 
-                className="w-48 h-48 rounded-full border-4 border-cyan-400 shadow-lg overflow-hidden mx-auto transform hover:scale-105 transition-transform duration-300"
-                role="img"
-                aria-label="あおいのプロフィール画像"
-              >
-                <Image
-                  src="/images/aoko-pic.jpg"
-                  alt="Profile"
-                  width={160}
-                  height={160}
-                  priority
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 
-                bg-gradient-to-r from-cyan-500 to-purple-500 px-6 py-1 rounded-full text-xs font-semibold tracking-wider"
-              >
-                <span>VISIONARY</span>
-              </div>
-            </div>
+            <ClientSideProfile 
+              profileImage="/images/aoko-pic.jpg"
+              name={data.name}
+              websites={defaultWebsites}
+            />
 
             <div className="text-center mb-4">
               <p className="text-xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400
@@ -80,9 +61,6 @@ export default function ProfileClient({ data }: { data: ProfileData }) {
             </div>
 
             <div className="text-center mb-10">
-              <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-4">
-                {data.name}
-              </h1>
               {/* SNSアイコン */}
               <div className="flex justify-center gap-4 mb-6">
                 {defaultWebsites.map((site) => (

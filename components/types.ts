@@ -1,5 +1,5 @@
 export interface Website {
-  icon: string | null
+  icon: string
   name: string
   url: string
 }
