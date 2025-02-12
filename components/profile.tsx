@@ -440,6 +440,82 @@ export default function ProfileClient({ data }: { data: ProfileData }) {
                 </div>
               </div>
             </section>
+
+            {/* SEO対策サービスセクション */}
+            <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md rounded-lg p-8 shadow-lg">
+              <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                SEO対策サービス
+              </h2>
+              
+              <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-8">
+                <div className="grid md:grid-cols-2 gap-12">
+                  <div className="space-y-6">
+                    <h3 className="text-2xl font-semibold text-cyan-400">
+                      検索上位表示で集客力アップ
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      戦略的なSEO施策で、Googleでの検索順位を
+                      上げ、オーガニック流入を増やします。
+                    </p>
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-3">
+                        <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
+                          <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2z" />
+                          </svg>
+                        </div>
+                        <span className="text-gray-300">検索順位改善</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
+                          <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                          </svg>
+                        </div>
+                        <span className="text-gray-300">キーワード戦略</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
+                          <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          </svg>
+                        </div>
+                        <span className="text-gray-300">コンテンツ最適化</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-col justify-center items-center space-y-6">
+                    <div className="text-center">
+                      <p className="text-lg text-gray-300 mb-2">詳しいサービス内容はこちら</p>
+                      <p className="text-sm text-gray-400">SEO対策の具体的な施策をご確認いただけます</p>
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <a
+                        href="/seo-service"
+                        className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
+                      >
+                        <span>サービス詳細へ</span>
+                        <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </a>
+                      <a
+                        href="https://lin.ee/ATZ4bog"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-8 py-4 rounded-full border-2 border-cyan-500 text-cyan-400 font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
+                      >
+                        <span>お問い合わせ</span>
+                        <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         </article>
       </main>
