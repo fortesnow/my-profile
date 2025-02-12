@@ -4,7 +4,7 @@ import * as React from "react"
 import Image from "next/image"
 import { SkillsSection } from "../components/ui/SkillsSection"
 import { ProfileData } from './types'
-import { Target, Code2, BarChart2 } from "lucide-react"
+import { Target, Code2, BarChart2, Users, PieChart } from "lucide-react"
 
 // インタラクティブな要素のみを含むClient Component
 export default function ProfileClient({ data }: { data: ProfileData }) {
@@ -355,30 +355,83 @@ export default function ProfileClient({ data }: { data: ProfileData }) {
           </div>
         </section>
 
-        {/* サービス紹介セクション */}
+        {/* 広告運用サービスセクション */}
         <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md rounded-lg p-8 shadow-lg">
           <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-            サービス内容
+            広告運用サービス
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-gray-900/30 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20 hover:scale-105 transition-transform">
-                <div className="bg-gradient-to-br from-cyan-500 to-purple-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <service.icon className="w-6 h-6 text-white" />
+          
+          <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-8">
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="space-y-6">
+                <h3 className="text-2xl font-semibold text-cyan-400">
+                  データドリブンな広告運用
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  効率的な運用と継続的な改善で、
+                  広告費用対効果（ROAS）を最大化します。
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
+                      <BarChart2 className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="text-gray-300">ROAS改善</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
+                      <Users className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="text-gray-300">ターゲティング最適化</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
+                      <PieChart className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="text-gray-300">詳細なレポーティング</span>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-cyan-400">{service.title}</h3>
-                <p className="text-gray-300 mb-6">{service.description}</p>
-                <a
-                  href={service.link}
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
-                  詳しく見る
-                  <svg className="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
+                <div className="mt-8 p-4 bg-gray-800/50 rounded-lg">
+                  <p className="text-cyan-400 font-semibold mb-2">対応広告媒体</p>
+                  <div className="flex flex-wrap gap-2">
+                    {['Google広告', 'Meta広告', 'LINE広告', 'TikTok広告'].map((ad) => (
+                      <span key={ad} className="px-3 py-1 bg-gray-700/50 rounded-full text-sm text-gray-300">
+                        {ad}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-            ))}
+              
+              <div className="flex flex-col justify-center items-center space-y-6">
+                <div className="text-center">
+                  <p className="text-lg text-gray-300 mb-2">まずはご相談ください</p>
+                  <p className="text-sm text-gray-400">現状の課題と改善プランをご提案いたします</p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a
+                    href="/ads-service"
+                    className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
+                  >
+                    <span>サービス詳細へ</span>
+                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://lin.ee/ATZ4bog"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-8 py-4 rounded-full border-2 border-cyan-500 text-cyan-400 font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
+                  >
+                    <span>無料相談する</span>
+                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </div>
