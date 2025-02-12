@@ -1,20 +1,19 @@
-import Image from "next/image"
 import { Metadata } from "next"
+import Image from "next/image"
 import { 
-  BarChart2, 
   TrendingUp,
   Settings,
   Users,
   PieChart
 } from "lucide-react"
+import { FaFacebook } from "react-icons/fa"
+import { FcGoogle } from "react-icons/fc"
+import { SiLine, SiTiktok } from "react-icons/si"
 
 export const metadata: Metadata = {
   title: '広告運用サービス | Web制作 あおい',
-  description: '効率的な広告運用でROASを最大化。Google/Meta広告の運用代行から、LPとの連携まで一貫してサポートします。',
-  keywords: [
-    '広告運用', 'Web広告', 'Google広告', 'Meta広告',
-    'ROAS改善', '運用代行', '広告戦略', 'Web集客'
-  ].join(', '),
+  description: 'データドリブンな広告運用で成果を最大化。Google広告、Meta広告、LINE広告など、各種広告媒体の運用代行サービスを提供します。',
+  keywords: ['広告運用', 'Google広告', 'Meta広告', 'LINE広告', 'TikTok広告'],
   openGraph: {
     title: '広告運用サービス | Web制作 あおい',
     description: '効率的な広告運用でROASを最大化。Google/Meta広告の運用代行から、LPとの連携まで一貫してサポートします。',
@@ -66,274 +65,248 @@ export default function AdsService() {
 
   const features = [
     {
-      title: "Google広告運用",
-      description: "検索広告、ディスプレイ広告の戦略立案から運用まで",
-      icon: BarChart2
+      title: "ROAS改善",
+      description: "データ分析に基づく継続的な改善で、広告費用対効果を最大化します。",
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2z" />
+        </svg>
+      ),
     },
     {
-      title: "Meta広告運用",
-      description: "Instagram、Facebook広告の効率的な運用と最適化",
-      icon: TrendingUp
+      title: "ターゲティング最適化",
+      description: "精緻なターゲティングで、最適なユーザーにリーチします。",
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+      ),
     },
     {
-      title: "広告分析・改善",
-      description: "データに基づく継続的な改善とROAS最大化",
-      icon: PieChart
+      title: "クリエイティブ制作",
+      description: "効果的な広告クリエイティブで、高いコンバージョン率を実現。",
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+      ),
     },
-    {
-      title: "LPO対応",
-      description: "広告とLPの連携による効果最大化",
-      icon: Settings
-    }
-  ]
-
-  const benefits = [
-    {
-      title: "データドリブン",
-      points: [
-        "詳細なデータ分析",
-        "A/Bテストによる検証",
-        "継続的な改善提案"
-      ]
-    },
-    {
-      title: "コスト最適化",
-      points: [
-        "入札額の最適化",
-        "ターゲティングの精緻化",
-        "無駄な広告費の削減"
-      ]
-    },
-    {
-      title: "統合的なアプローチ",
-      points: [
-        "広告とLPの連携",
-        "クリエイティブ改善",
-        "コンバージョン率向上"
-      ]
-    }
-  ]
-
-  const process = [
-    {
-      title: "現状分析",
-      description: "現在の広告運用状況を詳細に分析し、改善点を洗い出します。"
-    },
-    {
-      title: "戦略立案",
-      description: "目標達成のための具体的な運用戦略を策定します。"
-    },
-    {
-      title: "運用開始",
-      description: "策定した戦略に基づき、効率的な運用を開始します。"
-    },
-    {
-      title: "効果測定・改善",
-      description: "定期的なレポーティングと継続的な改善を実施します。"
-    }
   ]
 
   const results = [
     {
-      title: "ECサイト",
-      description: "広告費用を20%削減しながら、ROASを150%改善"
+      title: "ROAS 300%改善",
+      description: "広告費用対効果を3倍に改善し、投資効率を大幅に向上させました。",
     },
     {
-      title: "サービス業",
-      description: "問い合わせ数を3倍に増加、CPAを40%削減"
+      title: "CVR 50%向上",
+      description: "広告クリエイティブとランディングページの最適化でコンバージョン率が1.5倍に。",
     },
     {
-      title: "BtoB企業",
-      description: "リード獲得単価を半額に抑制し、質も向上"
-    }
+      title: "運用コスト30%削減",
+      description: "効率的な運用と自動化により、運用コストを大幅に削減しました。",
+    },
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white py-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      {/* ヒーローセクション */}
-      <section className="relative h-[60vh] flex items-center justify-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/90" />
-        <div className="relative z-10 text-center px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+      <div className="container mx-auto px-6">
+        {/* ヒーローセクション */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 text-transparent bg-clip-text">
             広告運用サービス
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300">
             データドリブンな運用で、広告効果を最大化します
           </p>
         </div>
-      </section>
 
-      {/* 課題解決セクション */}
-      <section className="py-16 px-4 bg-gradient-to-br from-gray-900/50 to-indigo-900/50 relative overflow-hidden">
-        <div className="container mx-auto relative">
-          {/* Zunda-pic */}
-          <div className="absolute right-[-20%] top-1/2 transform -translate-y-1/2 opacity-10 pointer-events-none z-20">
-            <Image
-              src="/images/zunda-pic.png"
-              alt="装飾"
-              width={800}
-              height={800}
-              className="w-[600px] md:w-[800px]"
-              priority
-            />
-          </div>
-
-          {/* コンテンツ */}
-          <div className="relative z-10 max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              もう悩ませません
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-gray-900/30 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
-                <div className="flex items-start gap-4">
-                  <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2 text-cyan-400">広告費用が高騰していませんか？</h3>
-                    <p className="text-gray-300">適切なターゲティングと入札戦略で、広告費用を最適化し、ROASを改善します。</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-gray-900/30 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
-                <div className="flex items-start gap-4">
-                  <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg">
-                    <Users className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2 text-cyan-400">ターゲットが明確ではありませんか？</h3>
-                    <p className="text-gray-300">データ分析に基づいて最適なターゲット層を特定し、効果的な広告配信を実現します。</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-gray-900/30 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
-                <div className="flex items-start gap-4">
-                  <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg">
-                    <PieChart className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2 text-cyan-400">成果が見えづらくありませんか？</h3>
-                    <p className="text-gray-300">詳細なレポーティングと分析で、広告効果を可視化し、継続的な改善を実現します。</p>
-                  </div>
-                </div>
-              </div>
+        {/* メインビジュアル */}
+        <div className="relative w-full max-w-4xl mx-auto mb-16 aspect-[16/9]">
+          <Image
+            src="/images/zunda-pic.png"
+            alt="広告運用サービスのイメージ"
+            fill
+            className="object-cover rounded-lg"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/90 rounded-lg" />
+          <div className="absolute bottom-0 left-0 w-full p-6">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">
+                ROASを最大化する運用力
+              </h2>
+              <p className="text-lg text-gray-200">
+                豊富な運用実績とデータ分析に基づく最適化で、広告効果を最大限に引き出します
+              </p>
             </div>
           </div>
         </div>
-      </section>
 
-      {/* サービス内容 */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-            提供サービス
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-gray-900/30 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
-                <div className="flex items-start gap-4">
-                  <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg">
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2 text-cyan-400">{feature.title}</h3>
-                    <p className="text-gray-300">{feature.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* メリットセクション */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-            選ばれる理由
+        {/* 特徴セクション */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+            サービスの特徴
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-gray-900/30 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
-                <div className="flex items-start gap-4">
-                  <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2 text-cyan-400">{benefit.title}</h3>
-                    <ul className="list-disc pl-6 text-gray-300">
-                      {benefit.points.map((point, pointIndex) => (
-                        <li key={pointIndex}>{point}</li>
-                      ))}
-                    </ul>
-                  </div>
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20"
+              >
+                <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg w-fit mb-4">
+                  {feature.icon}
                 </div>
+                <h3 className="text-xl font-semibold mb-4 text-cyan-400">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* 制作フローセクション */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-            運用の流れ
+        {/* 対応広告媒体セクション */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+            対応広告媒体
           </h2>
-          <div className="space-y-6">
-            {process.map((step, index) => (
-              <div key={index} className="bg-gray-900/30 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
-                <div className="flex items-start gap-4">
-                  <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2 text-cyan-400">{step.title}</h3>
-                    <p className="text-gray-300">{step.description}</p>
-                  </div>
-                </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
+              <div className="flex items-center gap-3 mb-4">
+                <FcGoogle className="w-8 h-8" />
+                <h3 className="text-xl font-semibold text-cyan-400">Google広告</h3>
               </div>
-            ))}
+              <ul className="space-y-2 text-gray-300">
+                <li>・検索広告</li>
+                <li>・ディスプレイ広告</li>
+                <li>・ショッピング広告</li>
+                <li>・YouTube広告</li>
+                <li>・パフォーマンスMAX</li>
+              </ul>
+            </div>
+            <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
+              <div className="flex items-center gap-3 mb-4">
+                <FaFacebook className="w-8 h-8 text-[#1877F2]" />
+                <h3 className="text-xl font-semibold text-cyan-400">Meta広告</h3>
+              </div>
+              <ul className="space-y-2 text-gray-300">
+                <li>・フィード広告</li>
+                <li>・ストーリーズ広告</li>
+                <li>・リール広告</li>
+                <li>・メッセンジャー広告</li>
+                <li>・Instagram広告</li>
+              </ul>
+            </div>
+            <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
+              <div className="flex items-center gap-3 mb-4">
+                <SiLine className="w-8 h-8 text-[#00B900]" />
+                <h3 className="text-xl font-semibold text-cyan-400">LINE広告</h3>
+              </div>
+              <ul className="space-y-2 text-gray-300">
+                <li>・タイムライン広告</li>
+                <li>・LINE NEWS広告</li>
+                <li>・トークリスト広告</li>
+                <li>・ウォレット広告</li>
+                <li>・LINE VOOM広告</li>
+              </ul>
+            </div>
+            <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
+              <div className="flex items-center gap-3 mb-4">
+                <SiTiktok className="w-8 h-8" />
+                <h3 className="text-xl font-semibold text-cyan-400">TikTok広告</h3>
+              </div>
+              <ul className="space-y-2 text-gray-300">
+                <li>・インフィード広告</li>
+                <li>・トップビュー広告</li>
+                <li>・ブランドタグチャレンジ</li>
+                <li>・スパークアズ広告</li>
+                <li>・コレクション広告</li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* 実績セクション */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-            改善実績
+        {/* 運用プロセスセクション */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+            運用プロセス
+          </h2>
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
+              <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg w-fit mb-4">
+                <Settings className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2 text-cyan-400">初期設定</h3>
+              <p className="text-gray-300">アカウント設定から配信設定まで、最適な広告配信の土台を構築</p>
+            </div>
+            <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
+              <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg w-fit mb-4">
+                <Users className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2 text-cyan-400">ターゲティング</h3>
+              <p className="text-gray-300">データに基づく最適なターゲット選定と配信最適化</p>
+            </div>
+            <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
+              <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg w-fit mb-4">
+                <TrendingUp className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2 text-cyan-400">運用改善</h3>
+              <p className="text-gray-300">パフォーマンスデータの分析と継続的な改善施策の実施</p>
+            </div>
+            <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
+              <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg w-fit mb-4">
+                <PieChart className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2 text-cyan-400">レポーティング</h3>
+              <p className="text-gray-300">詳細な分析レポートの提供と改善提案の実施</p>
+            </div>
+          </div>
+        </section>
+
+        {/* 実績セクション */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+            実績
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {results.map((result, index) => (
-              <div key={index} className="bg-gray-900/30 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
-                <div className="flex items-start gap-4">
-                  <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2 text-cyan-400">{result.title}</h3>
-                    <p className="text-gray-300">{result.description}</p>
-                  </div>
-                </div>
+              <div
+                key={index}
+                className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20"
+              >
+                <h3 className="text-xl font-semibold mb-4 text-cyan-400">{result.title}</h3>
+                <p className="text-gray-300">{result.description}</p>
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* CTAセクション */}
+        <section className="text-center">
+          <div className="bg-gradient-to-br from-gray-900/80 to-blue-900/80 backdrop-blur-md rounded-lg p-8 max-w-2xl mx-auto">
+            <h2 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+              まずはご相談ください
+            </h2>
+            <p className="text-gray-300 mb-8">
+              あなたのビジネスに最適な広告戦略をご提案いたします
+            </p>
+            <a
+              href="https://lin.ee/ATZ4bog"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
+            >
+              <span>お問い合わせ</span>
+              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </section>
+      </div>
     </div>
   )
 } 
