@@ -6,7 +6,21 @@ import '@/app/globals.css';
 export const metadata: Metadata = {
   title: 'Web制作 あおい | フロントエンド開発・LP制作',
   description: 'フロントエンド開発とLP制作のフリーランスエンジニア。React, Next.js, TypeScriptを使用した高品質な開発と、成果の出るLP制作を提供します。',
-  keywords: 'Web制作, フロントエンド開発, LP制作, React, Next.js, フリーランス',
+  keywords: ['Web制作', 'フロントエンド開発', 'LP制作', 'React', 'Next.js', 'フリーランス', '広告運用', 'SEO対策', 'コーディング'],
+  alternates: {
+    canonical: 'https://yourdomain.com'
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     title: 'Web制作 あおい | フロントエンド開発・LP制作',
     description: 'フロントエンド開発とLP制作のフリーランスエンジニア。高品質な開発と成果の出るLP制作を提供します。',
