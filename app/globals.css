@@ -9,6 +9,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* オーバースクロール時の背景色を設定 */
+html {
+  background: #111827; /* または現在使用している濃い青系の背景色 */
+  overscroll-behavior: none;
+}
+
+body {
+  overscroll-behavior: none;
+  min-height: 100dvh; /* dynamic viewport heightを使用 */
+  background: linear-gradient(to bottom right, #111827, #1e3a8a, #1e40af);
+  @apply bg-background text-foreground;
+  font-family: 'Shinonome', monospace !important;
+}
+
 * {
   font-family: 'Shinonome', monospace;
 }
@@ -69,9 +83,5 @@
   }
   * {
     @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-    font-family: 'Shinonome', monospace !important;
   }
 }
