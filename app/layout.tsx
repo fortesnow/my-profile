@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 import Navigation from '@/components/navigation'
+import { GoogleTagManager } from '@/components/google-tag-manager'
 
 export const metadata: Metadata = {
   title: 'Web制作 あおい',
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="ja" className="overflow-x-hidden">
       <body className="font-sans">
+        <GoogleTagManager />
         <Navigation />
         {children}
         <Analytics />
