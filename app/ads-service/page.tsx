@@ -1,7 +1,6 @@
 import Image from "next/image"
 import { Metadata } from "next"
 import { 
-  Target, 
   BarChart2, 
   TrendingUp,
   Settings,
@@ -67,95 +66,85 @@ export default function AdsService() {
 
   const features = [
     {
-      title: "戦略的な広告設計",
-      description: "ターゲット分析と市場調査に基づく、効果的な広告戦略の立案",
-      icon: Target
-    },
-    {
-      title: "データ分析",
-      description: "広告データの詳細な分析による、継続的な改善と最適化",
+      title: "Google広告運用",
+      description: "検索広告、ディスプレイ広告の戦略立案から運用まで",
       icon: BarChart2
     },
     {
-      title: "ROAS改善",
-      description: "広告費用対効果を最大化する運用とクリエイティブの改善",
+      title: "Meta広告運用",
+      description: "Instagram、Facebook広告の効率的な運用と最適化",
       icon: TrendingUp
     },
     {
-      title: "自動化設定",
-      description: "効率的な運用を実現する広告の自動化設定",
+      title: "広告分析・改善",
+      description: "データに基づく継続的な改善とROAS最大化",
+      icon: PieChart
+    },
+    {
+      title: "LPO対応",
+      description: "広告とLPの連携による効果最大化",
       icon: Settings
     }
   ]
 
   const benefits = [
     {
-      title: "効率的な運用",
+      title: "データドリブン",
       points: [
-        "ターゲット層の明確化",
-        "効果的な予算配分",
-        "自動入札の最適化"
+        "詳細なデータ分析",
+        "A/Bテストによる検証",
+        "継続的な改善提案"
       ]
     },
     {
-      title: "継続的な改善",
+      title: "コスト最適化",
       points: [
-        "定期的なレポーティング",
-        "クリエイティブの改善提案",
-        "競合分析と対策"
+        "入札額の最適化",
+        "ターゲティングの精緻化",
+        "無駄な広告費の削減"
       ]
     },
     {
-      title: "LPとの連携",
+      title: "統合的なアプローチ",
       points: [
-        "広告とLPの整合性確保",
-        "コンバージョン率の改善",
-        "ユーザー体験の最適化"
+        "広告とLPの連携",
+        "クリエイティブ改善",
+        "コンバージョン率向上"
       ]
     }
   ]
 
   const process = [
     {
-      step: "01",
       title: "現状分析",
-      description: "現在の広告運用状況、目標、課題などをヒアリングし、改善点を特定します。"
+      description: "現在の広告運用状況を詳細に分析し、改善点を洗い出します。"
     },
     {
-      step: "02",
       title: "戦略立案",
-      description: "データに基づいた広告戦略を立案し、具体的な施策を提案します。"
+      description: "目標達成のための具体的な運用戦略を策定します。"
     },
     {
-      step: "03",
       title: "運用開始",
-      description: "効果的なクリエイティブと最適な配信設定で運用を開始します。"
+      description: "策定した戦略に基づき、効率的な運用を開始します。"
     },
     {
-      step: "04",
-      title: "改善・最適化",
-      description: "定期的なレポーティングと分析に基づき、継続的に改善を行います。"
+      title: "効果測定・改善",
+      description: "定期的なレポーティングと継続的な改善を実施します。"
     }
   ]
 
   const results = [
     {
-      title: "ECサイトの広告運用",
-      improvement: "ROAS 127% → 312%",
-      period: "3ヶ月の改善実績",
-      description: "ターゲティングの最適化とLPの改善で、広告費用対効果を146%向上"
+      title: "ECサイト",
+      description: "広告費用を20%削減しながら、ROASを150%改善"
     },
     {
-      title: "リード獲得広告",
-      improvement: "CPA ¥3,200 → ¥1,850",
-      period: "2ヶ月の改善実績",
-      description: "クリエイティブとキーワードの改善で、獲得単価を42%削減"
+      title: "サービス業",
+      description: "問い合わせ数を3倍に増加、CPAを40%削減"
     },
     {
-      title: "認知拡大キャンペーン",
-      improvement: "CTR 0.8% → 2.1%",
-      period: "1ヶ月の改善実績",
-      description: "ターゲット層の分析と広告文の改善で、クリック率を163%向上"
+      title: "BtoB企業",
+      description: "リード獲得単価を半額に抑制し、質も向上"
     }
   ]
 
@@ -240,8 +229,111 @@ export default function AdsService() {
         </div>
       </section>
 
-      {/* 以下、サービス内容、メリット、制作フロー、実績セクションは同様の構造で実装 */}
-      // ... 残りのセクションは同様の構造で実装します
+      {/* サービス内容 */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+            提供サービス
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-gray-900/30 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
+                <div className="flex items-start gap-4">
+                  <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2 text-cyan-400">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* メリットセクション */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+            選ばれる理由
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-gray-900/30 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
+                <div className="flex items-start gap-4">
+                  <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2 text-cyan-400">{benefit.title}</h3>
+                    <ul className="list-disc pl-6 text-gray-300">
+                      {benefit.points.map((point, pointIndex) => (
+                        <li key={pointIndex}>{point}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 制作フローセクション */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+            運用の流れ
+          </h2>
+          <div className="space-y-6">
+            {process.map((step, index) => (
+              <div key={index} className="bg-gray-900/30 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
+                <div className="flex items-start gap-4">
+                  <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2 text-cyan-400">{step.title}</h3>
+                    <p className="text-gray-300">{step.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 実績セクション */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+            改善実績
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {results.map((result, index) => (
+              <div key={index} className="bg-gray-900/30 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
+                <div className="flex items-start gap-4">
+                  <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2 text-cyan-400">{result.title}</h3>
+                    <p className="text-gray-300">{result.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   )
 } 
