@@ -220,8 +220,8 @@ export default function LPService() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-cyan-400">広告効果を最大化したいですか？</h3>
-                    <p className="text-gray-300">広告運用とLPの連携で、広告費用対効果（ROAS）を最大化。効率的な集客を実現します。</p>
+                    <h3 className="text-xl font-semibold mb-2 text-cyan-400">コピーライティングに悩んでいませんか？</h3>
+                    <p className="text-gray-300">商品やサービスの価値を最大限に引き出し、ユーザーの心理に響く効果的なコピーライティングを提供します。</p>
                   </div>
                 </div>
               </div>
@@ -233,8 +233,8 @@ export default function LPService() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-cyan-400">コピーライティングに悩んでいませんか？</h3>
-                    <p className="text-gray-300">商品やサービスの価値を最大限に引き出し、ユーザーの心理に響く効果的なコピーライティングを提供します。</p>
+                    <h3 className="text-xl font-semibold mb-2 text-cyan-400">広告効果を最大化したいですか？</h3>
+                    <p className="text-gray-300">広告運用とLPの連携で、広告費用対効果（ROAS）を最大化。効率的な集客を実現します。</p>
                   </div>
                 </div>
               </div>
