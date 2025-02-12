@@ -4,6 +4,7 @@ import * as React from "react"
 import Image from "next/image"
 import { SkillsSection } from "../components/ui/SkillsSection"
 import { ProfileData } from './types'
+import { Target, Code2, BarChart2 } from "lucide-react"
 
 // インタラクティブな要素のみを含むClient Component
 export default function ProfileClient({ data }: { data: ProfileData }) {
@@ -13,6 +14,27 @@ export default function ProfileClient({ data }: { data: ProfileData }) {
     { name: "プログラミング", level: 80 },
     { name: "SEO & コンテンツ", level: 88 },
     { name: "前を向く誇り", level: 100 },
+  ]
+
+  const services = [
+    {
+      title: "LP制作",
+      description: "戦略的なデザインと効果的なコピーライティングで、成果の出るLPを制作します。",
+      icon: Target,
+      link: "/lp-service"
+    },
+    {
+      title: "コーディング",
+      description: "モダンな技術とクリーンなコードで、保守性の高いWebサイトを構築します。",
+      icon: Code2,
+      link: "/coding-service"
+    },
+    {
+      title: "広告運用",
+      description: "データドリブンな運用で広告効果を最大化。Google/Meta広告の運用代行からLPとの連携まで。",
+      icon: BarChart2,
+      link: "/ads-service"
+    }
   ]
 
   return (
@@ -330,6 +352,33 @@ export default function ProfileClient({ data }: { data: ProfileData }) {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* サービス紹介セクション */}
+        <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md rounded-lg p-8 shadow-lg">
+          <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+            サービス内容
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-gray-900/30 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20 hover:scale-105 transition-transform">
+                <div className="bg-gradient-to-br from-cyan-500 to-purple-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                  <service.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-cyan-400">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                <a
+                  href={service.link}
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                >
+                  詳しく見る
+                  <svg className="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            ))}
           </div>
         </section>
       </div>

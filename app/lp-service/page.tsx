@@ -198,18 +198,45 @@ export default function LPService() {
             <h2 className="text-3xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
               もう悩ませません
             </h2>
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-gray-900/30 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
-                <h3 className="text-xl font-semibold mb-4 text-cyan-400">成果が出ないLPでお困りですか？</h3>
-                <p className="text-gray-300">制作して終わりではなく、データに基づいた継続的な改善が重要です。私たちは制作後も成果向上までサポートします。</p>
+                <div className="flex items-start gap-4">
+                  <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2 text-cyan-400">成果が出ないLPでお困りですか？</h3>
+                    <p className="text-gray-300">制作して終わりではなく、データに基づいた継続的な改善が重要です。私たちは制作後も成果向上までサポートします。</p>
+                  </div>
+                </div>
               </div>
               <div className="bg-gray-900/30 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
-                <h3 className="text-xl font-semibold mb-4 text-cyan-400">コピーライティングに悩んでいませんか？</h3>
-                <p className="text-gray-300">商品やサービスの価値を最大限に引き出し、ユーザーの心理に響く効果的なコピーライティングを提供します。</p>
+                <div className="flex items-start gap-4">
+                  <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2 text-cyan-400">コピーライティングに悩んでいませんか？</h3>
+                    <p className="text-gray-300">商品やサービスの価値を最大限に引き出し、ユーザーの心理に響く効果的なコピーライティングを提供します。</p>
+                  </div>
+                </div>
               </div>
               <div className="bg-gray-900/30 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
-                <h3 className="text-xl font-semibold mb-4 text-cyan-400">広告効果を最大化したいですか？</h3>
-                <p className="text-gray-300">広告運用との連携を考慮したLP設計で、広告費用対効果（ROAS）の最大化を実現します。</p>
+                <div className="flex items-start gap-4">
+                  <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2 text-cyan-400">コピーライティングに悩んでいませんか？</h3>
+                    <p className="text-gray-300">商品やサービスの価値を最大限に引き出し、ユーザーの心理に響く効果的なコピーライティングを提供します。</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
