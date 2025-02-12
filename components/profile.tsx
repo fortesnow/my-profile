@@ -5,6 +5,19 @@ import Image from "next/image"
 import { ProfileData } from './types'
 import { BarChart2, Users, PieChart } from "lucide-react"
 
+interface Website {
+  icon: string
+  name: string
+  url: string
+}
+
+const defaultWebsites: Website[] = [
+  { icon: "/icons/note-pic.svg", name: "note", url: "https://note.com/hareharesky" },
+  { icon: "/icons/aozaki-pic.svg", name: "Anime", url: "https://youtu.be/0YaUlkcpoXw?si=KGwDQklCCVXDvTdO" },
+  { icon: "/icons/instagram-pic.svg", name: "Instagram", url: "https://www.instagram.com/stellariumix/" },
+  { icon: "/icons/line-pic.svg", name: "LINE", url: "https://lin.ee/ATZ4bog" },
+]
+
 // インタラクティブな要素のみを含むClient Component
 export default function ProfileClient({ data }: { data: ProfileData }) {
   const skills = [
@@ -70,6 +83,26 @@ export default function ProfileClient({ data }: { data: ProfileData }) {
               <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-4">
                 {data.name}
               </h1>
+              {/* SNSアイコン */}
+              <div className="flex justify-center gap-4 mb-6">
+                {defaultWebsites.map((site) => (
+                  <a
+                    key={site.name}
+                    href={site.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 hover:scale-110 transition-transform duration-300"
+                  >
+                    <Image
+                      src={site.icon}
+                      alt={site.name}
+                      width={32}
+                      height={32}
+                      className="w-full h-full object-contain"
+                    />
+                  </a>
+                ))}
+              </div>
             </div>
 
             <div className="flex justify-center mb-4">
