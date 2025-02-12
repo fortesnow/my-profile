@@ -237,7 +237,7 @@ export default function ProfileClient({ data }: { data: ProfileData }) {
                     rel="noopener noreferrer"
                     className="inline-flex items-center px-8 py-4 rounded-full border-2 border-cyan-500 text-cyan-400 font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
                   >
-                    <span>無料相談する</span>
+                    <span>お問い合わせ</span>
                     <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -323,7 +323,7 @@ export default function ProfileClient({ data }: { data: ProfileData }) {
                     rel="noopener noreferrer"
                     className="inline-flex items-center px-8 py-4 rounded-full border-2 border-cyan-500 text-cyan-400 font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
                   >
-                    <span>無料相談する</span>
+                    <span>お問い合わせ</span>
                     <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -403,7 +403,7 @@ export default function ProfileClient({ data }: { data: ProfileData }) {
                     rel="noopener noreferrer"
                     className="inline-flex items-center px-8 py-4 rounded-full border-2 border-cyan-500 text-cyan-400 font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
                   >
-                    <span>無料相談する</span>
+                    <span>お問い合わせ</span>
                     <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
