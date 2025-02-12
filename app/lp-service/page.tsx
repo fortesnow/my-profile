@@ -233,8 +233,8 @@ export default function LPService() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-cyan-400">広告効果を最大化したいですか？</h3>
-                    <p className="text-gray-300">広告運用とLPの連携で、広告費用対効果（ROAS）を最大化。効率的な集客を実現します。</p>
+                    <h3 className="text-xl font-semibold mb-2 text-cyan-400">コピーライティングに悩んでいませんか？</h3>
+                    <p className="text-gray-300">商品やサービスの価値を最大限に引き出し、ユーザーの心理に響く効果的なコピーライティングを提供します。</p>
                   </div>
                 </div>
               </div>
@@ -287,81 +287,6 @@ export default function LPService() {
                 </ul>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* コンテンツセクション - 移動 */}
-      <section className="py-20 px-4 bg-gradient-to-br from-gray-900/50 to-indigo-900/50">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-            なぜLPの継続的な改善が重要なのか
-          </h2>
-          <div className="bg-gray-900/30 backdrop-blur-md rounded-lg p-8 border border-cyan-500/20">
-            <div className="prose prose-invert prose-lg max-w-none">
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                ランディングページは、制作して公開したら終わりではありません。
-                むしろ、そこからが本当のスタートラインです。
-              </p>
-
-              <h3 className="text-2xl font-semibold mb-6 text-cyan-400">
-                完璧なLPは存在しない
-              </h3>
-              <p className="text-gray-300 mb-8 leading-relaxed">
-                最初から完璧なLPを作ることは不可能です。なぜなら、ユーザーの行動は常に変化し、
-                市場環境も刻々と変わっていくからです。そのため、データに基づいた継続的な改善が必要不可欠です。
-              </p>
-
-              <h3 className="text-2xl font-semibold mb-6 text-cyan-400">
-                3ステップの改善サイクル
-              </h3>
-              <div className="space-y-6">
-                <div className="bg-gray-900/50 p-6 rounded-lg">
-                  <h4 className="text-xl font-semibold mb-4 text-purple-400">
-                    1. データ収集と分析
-                  </h4>
-                  <ul className="list-disc list-inside space-y-2 text-gray-300">
-                    <li>ヒートマップによるユーザー行動の可視化</li>
-                    <li>コンバージョンファネルの分析</li>
-                    <li>離脱ポイントの特定</li>
-                  </ul>
-                </div>
-
-                <div className="bg-gray-900/50 p-6 rounded-lg">
-                  <h4 className="text-xl font-semibold mb-4 text-purple-400">
-                    2. 改善仮説の設定
-                  </h4>
-                  <ul className="list-disc list-inside space-y-2 text-gray-300">
-                    <li>ユーザー行動心理に基づく改善案の策定</li>
-                    <li>セールスライティングの最適化</li>
-                    <li>UIの改善提案</li>
-                  </ul>
-                </div>
-
-                <div className="bg-gray-900/50 p-6 rounded-lg">
-                  <h4 className="text-xl font-semibold mb-4 text-purple-400">
-                    3. A/Bテストと効果測定
-                  </h4>
-                  <ul className="list-disc list-inside space-y-2 text-gray-300">
-                    <li>科学的なアプローチによる検証</li>
-                    <li>データに基づく意思決定</li>
-                    <li>継続的な改善サイクルの確立</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="mt-12 p-6 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-lg border border-cyan-500/20">
-                <p className="text-lg font-semibold text-cyan-400 mb-4">
-                  継続的な改善がもたらす効果
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-300">
-                  <li>コンバージョン率の段階的な向上</li>
-                  <li>投資対効果（ROI）の最大化</li>
-                  <li>市場環境の変化への迅速な対応</li>
-                  <li>競合との差別化要因の強化</li>
-                </ul>
-              </div>
-            </div>
           </div>
         </div>
       </section>
