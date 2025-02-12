@@ -2,7 +2,6 @@ import * as React from "react"
 import Image from "next/image"
 import { ProfileData } from './types'
 import { BarChart2, Users, PieChart } from "lucide-react"
-import ClientSideProfile from './client-side-profile'
 
 interface Website {
   icon: string
