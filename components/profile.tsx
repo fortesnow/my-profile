@@ -2,6 +2,7 @@ import * as React from "react"
 import Image from "next/image"
 import { ProfileData } from './types'
 import { BarChart2, Users, PieChart } from "lucide-react"
+import Link from "next/link"
 
 interface Website {
   icon: string
@@ -180,10 +181,52 @@ export default function Profile({ data }: { data: ProfileData }) {
               </div>
             </div>
 
-            {/* 私の強みセクション */}
+            {/* メディアコンテンツセクション */}
             <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md p-8 border-4 border-cyan-200 [box-shadow:8px_8px_0_theme(colors.cyan.900)]">
               <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                私の強み
+                メディアコンテンツ
+              </h2>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* 最新の記事 */}
+                <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
+                  <h3 className="text-xl font-semibold mb-4 text-cyan-400">最新の記事</h3>
+                  <div className="space-y-4">
+                    <Link href="/blog/lp-development" className="block hover:bg-gray-800/50 p-4 rounded-lg transition-colors">
+                      <span className="text-sm text-gray-400">2025.02.16</span>
+                      <h4 className="text-white font-medium mt-2">【事業者向け】LPはただ作るだけではダメ！作ってからがスタートラインその理由とは？</h4>
+                    </Link>
+                    <Link href="/blog/digital-marketing" className="block hover:bg-gray-800/50 p-4 rounded-lg transition-colors">
+                      <span className="text-sm text-gray-400">2024.03.18</span>
+                      <h4 className="text-white font-medium mt-2">効果的なデジタルマーケティング戦略</h4>
+                    </Link>
+                  </div>
+                  <Link href="/blog" className="inline-flex items-center text-cyan-400 mt-4 hover:text-cyan-300 transition-colors">
+                    すべての記事を見る
+                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
+
+                {/* メディア掲載 */}
+                <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
+                  <h3 className="text-xl font-semibold mb-4 text-cyan-400">メディア掲載</h3>
+                  <div className="space-y-4">
+                    <a href="https://note.com/hareharesky" target="_blank" rel="noopener noreferrer" 
+                       className="block hover:bg-gray-800/50 p-4 rounded-lg transition-colors">
+                      <span className="text-sm text-gray-400">note</span>
+                      <h4 className="text-white font-medium mt-2">Web制作とマーケティングの実践知識</h4>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* わたしの強みセクション */}
+            <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md p-8 border-4 border-cyan-200 [box-shadow:8px_8px_0_theme(colors.cyan.900)]">
+              <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                わたしの強み
               </h2>
               
               <div className="space-y-8">
