@@ -16,7 +16,7 @@ export default function BlogPage() {
       date: "2025.02.16",
       category: "LP制作",
       slug: "lp-development",
-      thumbnail: "/images/blog/lp-development.jpg"
+      thumbnail: "/images/blog/eye-catch/for-LPO.webp"
     },
   ]
 

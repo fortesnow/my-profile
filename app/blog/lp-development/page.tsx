@@ -11,6 +11,17 @@ export default function LPDevelopmentBlog() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white py-20">
       <article className="container mx-auto px-6 max-w-4xl">
+        {/* ヘッダー画像 */}
+        <div className="relative h-[400px] mb-12 rounded-lg overflow-hidden">
+          <Image
+            src="/images/blog/eye-catch/for-LPO.webp"
+            alt="オールマイト"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+
         {/* ヘッダー */}
         <header className="mb-12">
           <h1 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 text-transparent bg-clip-text">
