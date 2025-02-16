@@ -18,15 +18,6 @@ export default function BlogPage() {
       slug: "lp-development",
       thumbnail: "/images/blog/lp-development.jpg"
     },
-    {
-      id: 2,
-      title: "効果的なデジタルマーケティング戦略",
-      excerpt: "成果を出すためのデジタルマーケティング戦略と実践方法をご紹介します。",
-      date: "2024.03.18",
-      category: "マーケティング",
-      slug: "digital-marketing",
-      thumbnail: "/images/blog/marketing.jpg"
-    },
   ]
 
   return (

@@ -196,10 +196,6 @@ export default function Profile({ data }: { data: ProfileData }) {
                       <span className="text-sm text-gray-400">2025.02.16</span>
                       <h4 className="text-white font-medium mt-2">【事業者向け】LPはただ作るだけではダメ！作ってからがスタートラインその理由とは？</h4>
                     </Link>
-                    <Link href="/blog/digital-marketing" className="block hover:bg-gray-800/50 p-4 rounded-lg transition-colors">
-                      <span className="text-sm text-gray-400">2024.03.18</span>
-                      <h4 className="text-white font-medium mt-2">効果的なデジタルマーケティング戦略</h4>
-                    </Link>
                   </div>
                   <Link href="/blog" className="inline-flex items-center text-cyan-400 mt-4 hover:text-cyan-300 transition-colors">
                     すべての記事を見る
