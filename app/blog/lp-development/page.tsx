@@ -14,7 +14,7 @@ export default function LPDevelopmentBlog() {
         {/* ヘッダー画像 */}
         <div className="relative h-[400px] mb-12 rounded-lg overflow-hidden">
           <Image
-            src="/images/blog/eye-catch/for-LPO.webp"
+            src="/blog/eye-catch/for-LPO.webp"
             alt="オールマイト"
             fill
             className="object-cover"
