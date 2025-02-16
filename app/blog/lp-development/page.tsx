@@ -83,12 +83,16 @@ export default function LPDevelopmentBlog() {
                 例としてLPではAIDMAといった普遍的な概念があります。
               </p>
               {/* AIDMA画像 */}
-              <div className="my-8 relative h-64 w-full">
+              <div className="my-8">
                 <Image
-                  src="/images/blog/aidma.jpg"
+                  src="/blog/contents/for-lpo2.webp"
                   alt="AIDMAの法則"
-                  fill
-                  className="object-contain"
+                  width={1200}
+                  height={675}
+                  className="w-full rounded-lg"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                  quality={90}
+                  priority
                 />
               </div>
               <p className="text-gray-300 leading-relaxed mb-6 text-sm text-center">
