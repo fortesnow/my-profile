@@ -17,8 +17,12 @@ export default function Navigation() {
         { name: '広告運用サービス', href: '/ads-service' },
         { name: 'SNS運用サービス', href: '/sns-service' },
         { name: 'SEO対策サービス', href: '/seo-service' },
-        { name: 'ブログ', href: '/blog' },
+        { name: 'セールスライティング', href: '/writing-service' }
       ]
+    },
+    {
+      title: 'ブログ',
+      href: '/blog'
     },
     {
       title: 'プロフィール',
