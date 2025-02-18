@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Image from "next/image"
-import { Users, MessageSquare, LineChart, TrendingUp } from "lucide-react"
+import { Users, MessageSquare, LineChart } from "lucide-react"
 import { FaInstagram, FaTwitter, FaFacebookF, FaTiktok } from "react-icons/fa"
 
 export const metadata: Metadata = {
