@@ -1,7 +1,7 @@
 import * as React from "react"
 import Image from "next/image"
 import { ProfileData } from './types'
-import { BarChart2, Users, PieChart } from "lucide-react"
+import { BarChart2, Users, PieChart, MessageSquare, LineChart } from "lucide-react"
 import Link from "next/link"
 
 interface Website {
@@ -570,6 +570,76 @@ export default function Profile({ data }: { data: ProfileData }) {
                     <div className="flex flex-col sm:flex-row gap-4">
                       <a
                         href="/seo-service"
+                        className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
+                      >
+                        <span>サービス詳細へ</span>
+                        <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </a>
+                      <a
+                        href="https://lin.ee/ATZ4bog"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-8 py-4 rounded-full border-2 border-cyan-500 text-cyan-400 font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
+                      >
+                        <span>お問い合わせ</span>
+                        <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* SNS運用サービスセクション */}
+            <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md p-8 border-4 border-cyan-200 [box-shadow:8px_8px_0_theme(colors.cyan.900)]">
+              <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                SNS運用サービス
+              </h2>
+              
+              <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-8">
+                <div className="grid md:grid-cols-2 gap-12">
+                  <div className="space-y-6">
+                    <h3 className="text-2xl font-semibold text-cyan-400">
+                      戦略的なSNSマーケティング
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      ブランド価値を高め、ファンを増やす
+                      効果的なSNS運用戦略を提供します。
+                    </p>
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-3">
+                        <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
+                          <Users className="w-5 h-5 text-white" />
+                        </div>
+                        <span className="text-gray-300">フォロワー増加施策</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
+                          <MessageSquare className="w-5 h-5 text-white" />
+                        </div>
+                        <span className="text-gray-300">エンゲージメント向上</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
+                          <LineChart className="w-5 h-5 text-white" />
+                        </div>
+                        <span className="text-gray-300">分析・レポーティング</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-col justify-center items-center space-y-6">
+                    <div className="text-center">
+                      <p className="text-lg text-gray-300 mb-2">まずはご相談ください</p>
+                      <p className="text-sm text-gray-400">SNSマーケティング戦略をご提案いたします</p>
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <a
+                        href="/sns-service"
                         className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
                       >
                         <span>サービス詳細へ</span>

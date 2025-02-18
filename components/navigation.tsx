@@ -15,6 +15,7 @@ export default function Navigation() {
         { name: 'WEBサイト制作＆LP制作', href: '/lp-service' },
         { name: 'コーディングサービス', href: '/coding-service' },
         { name: '広告運用サービス', href: '/ads-service' },
+        { name: 'SNS運用サービス', href: '/sns-service' },
         { name: 'SEO対策サービス', href: '/seo-service' },
         { name: 'ブログ', href: '/blog' },
       ]

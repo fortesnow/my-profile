@@ -183,8 +183,38 @@ export default function AdsService() {
                 <li>・検索広告</li>
                 <li>・ディスプレイ広告</li>
                 <li>・ショッピング広告</li>
-                <li>・YouTube広告</li>
                 <li>・パフォーマンスMAX</li>
+              </ul>
+            </div>
+            <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
+              <div className="flex items-center gap-3 mb-4">
+                <svg className="w-8 h-8 text-[#00A4EF]" viewBox="0 0 23 23" fill="currentColor">
+                  <path d="M0 0h11v11H0z"/>
+                  <path d="M12 0h11v11H12z" fill="#7FBA00"/>
+                  <path d="M0 12h11v11H0z" fill="#F25022"/>
+                  <path d="M12 12h11v11H12z" fill="#FFB900"/>
+                </svg>
+                <h3 className="text-xl font-semibold text-cyan-400">Microsoft広告</h3>
+              </div>
+              <ul className="space-y-2 text-gray-300">
+                <li>・Bing検索広告</li>
+                <li>・ディスプレイ広告</li>
+                <li>・ショッピング広告</li>
+                <li>・オーディエンス広告</li>
+              </ul>
+            </div>
+            <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
+              <div className="flex items-center gap-3 mb-4">
+                <svg className="w-8 h-8 text-[#FF0000]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+                <h3 className="text-xl font-semibold text-cyan-400">YouTube広告</h3>
+              </div>
+              <ul className="space-y-2 text-gray-300">
+                <li>・インストリーム広告</li>
+                <li>・ディスカバリー広告</li>
+                <li>・バンパー広告</li>
+                <li>・マストヘッド広告</li>
               </ul>
             </div>
             <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
