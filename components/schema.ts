@@ -3,7 +3,7 @@ export const generateOrganizationSchema = () => ({
   '@type': 'Organization',
   name: 'Web制作 あおい',
   description: 'フロントエンド開発とLP制作のフリーランスエンジニア',
-  url: 'https://yourdomain.com',
+  url: 'https://www.stellarium.jp',
   sameAs: [
     'https://note.com/hareharesky',
     'https://www.instagram.com/stellariumix/'
