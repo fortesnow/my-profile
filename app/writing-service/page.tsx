@@ -4,8 +4,38 @@ import { PenTool, FileText, Video, Newspaper } from "lucide-react"
 
 export const metadata: Metadata = {
   title: 'セールスライティングサービス | Web制作 あおい',
-  description: 'プロのライターとして、動画台本からプレスリリースまで、あらゆる文章で成果を出すライティングサービスを提供します。',
-  keywords: ['セールスライティング', 'コピーライティング', 'プレスリリース', '動画台本', 'メディア出稿'],
+  description: '社団法人のプレスリリース作成や大手メディアへの出稿支援、新規ベンチャー企業のプロモーション支援など、豊富な実績を持つプロのライティングサービス。動画台本からプレスリリースまで、あらゆる文章で成果を出します。',
+  keywords: [
+    'セールスライティング',
+    'コピーライティング',
+    'プレスリリース',
+    '動画台本',
+    'メディア出稿',
+    '社団法人PR',
+    'ベンチャー企業PR',
+    '新聞掲載',
+    'メディア掲載',
+    'プロモーション支援'
+  ],
+  openGraph: {
+    title: 'セールスライティングサービス | プレスリリース作成・メディア出稿支援',
+    description: '社団法人のプレスリリース作成や大手メディアへの出稿支援、新規ベンチャー企業のプロモーション支援など、豊富な実績を持つプロのライティングサービス。',
+    type: 'website',
+    images: [
+      {
+        url: '/images/writing-service-og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'セールスライティングサービス',
+      }
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'セールスライティングサービス | プレスリリース作成・メディア出稿支援',
+    description: '社団法人のプレスリリース作成や大手メディアへの出稿支援、新規ベンチャー企業のプロモーション支援など、豊富な実績を持つプロのライティングサービス。',
+    images: ['/images/writing-service-og.jpg'],
+  },
 }
 
 export default function WritingService() {

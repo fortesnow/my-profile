@@ -9,19 +9,26 @@ import {
 
 export const metadata: Metadata = {
   title: 'LP制作サービス | Web制作 あおい',
-  description: '高品質なランディングページ制作サービスを提供。戦略的なデザイン、効果的なコピーライティング、SEO対策まで一貫して対応。成果の出るLPを制作いたします。',
+  description: '戦略的なデザインと効果的なコピーライティングで成果を最大化するランディングページ制作サービス。A/Bテストによる継続的な改善と、セールスライティングのノウハウを活かした高コンバージョンのLP制作を提供します。',
   keywords: [
-    'LP制作', 'ランディングページ制作', 'LPO', 'コンバージョン率改善',
-    'A/Bテスト', 'セールスライティング', 'Web制作', 'コピーライティング'
+    'LP制作',
+    'ランディングページ',
+    'コンバージョン率改善',
+    'A/Bテスト',
+    'セールスライティング',
+    'Web制作',
+    'UI/UXデザイン',
+    'レスポンシブデザイン',
+    'コーディング'
   ].join(', '),
   openGraph: {
-    title: 'LP制作サービス | Web制作 あおい',
-    description: '高品質なランディングページ制作サービスを提供。戦略的なデザイン、効果的なコピーライティング、SEO対策まで一貫して対応。',
+    title: 'LP制作サービス | 高コンバージョンのランディングページ制作',
+    description: '戦略的なデザインと効果的なコピーライティングで成果を最大化するランディングページ制作サービス。A/Bテストによる継続的な改善を提供。',
     type: 'website',
     locale: 'ja_JP',
     images: [
       {
-        url: '/images/og-lp-service.jpg', // OGP画像を用意する必要があります
+        url: '/images/lp-service-og.jpg',
         width: 1200,
         height: 630,
         alt: 'LP制作サービス',
@@ -30,9 +37,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'LP制作サービス | Web制作 あおい',
-    description: '高品質なランディングページ制作サービスを提供。戦略的なデザイン、効果的なコピーライティング、SEO対策まで一貫して対応。',
-    images: ['/images/og-lp-service.jpg'],
+    title: 'LP制作サービス | 高コンバージョンのランディングページ制作',
+    description: '戦略的なデザインと効果的なコピーライティングで成果を最大化するランディングページ制作サービス。A/Bテストによる継続的な改善を提供。',
+    images: ['/images/lp-service-og.jpg'],
   },
   alternates: {
     canonical: 'https://yourdomain.com/lp-service'

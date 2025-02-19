@@ -3,8 +3,37 @@ import Image from "next/image"
 
 export const metadata: Metadata = {
   title: 'SEO対策サービス | Web制作 あおい',
-  description: '戦略的なSEO対策で検索順位を改善。キーワード戦略からコンテンツ最適化まで、包括的なSEOサービスを提供します。',
-  keywords: ['SEO対策', 'キーワード戦略', 'コンテンツ最適化', '検索順位改善'],
+  description: '検索順位の改善による自然な集客増加を実現するSEO対策サービス。技術的SEOからコンテンツSEO、内部対策・外部対策まで包括的に対応。データに基づく戦略的なSEO施策で成果を最大化します。',
+  keywords: [
+    'SEO対策',
+    '検索順位改善',
+    'コンテンツSEO',
+    '技術的SEO',
+    'サイト内部対策',
+    '外部対策',
+    'MEO対策',
+    'アクセス解析',
+    'コンバージョン改善'
+  ],
+  openGraph: {
+    title: 'SEO対策サービス | 検索順位改善・アクセス数向上',
+    description: '検索順位の改善による自然な集客増加を実現するSEO対策サービス。技術的SEOからコンテンツSEO、内部対策・外部対策まで包括的に対応。',
+    type: 'website',
+    images: [
+      {
+        url: '/images/seo-service-og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'SEO対策サービス',
+      }
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SEO対策サービス | 検索順位改善・アクセス数向上',
+    description: '検索順位の改善による自然な集客増加を実現するSEO対策サービス。技術的SEOからコンテンツSEO、内部対策・外部対策まで包括的に対応。',
+    images: ['/images/seo-service-og.jpg'],
+  },
 }
 
 export default function SEOService() {
