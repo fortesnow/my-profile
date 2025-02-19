@@ -1,42 +1,39 @@
-import type { Metadata } from "next"
+"use client"
+
+import { useState } from "react"
 import Image from "next/image"
 
-export const metadata: Metadata = {
-  title: 'SEO対策サービス | Web制作 あおい',
-  description: '検索順位の改善による自然な集客増加を実現するSEO対策サービス。技術的SEOからコンテンツSEO、内部対策・外部対策まで包括的に対応。データに基づく戦略的なSEO施策で成果を最大化します。',
-  keywords: [
-    'SEO対策',
-    '検索順位改善',
-    'コンテンツSEO',
-    '技術的SEO',
-    'サイト内部対策',
-    '外部対策',
-    'MEO対策',
-    'アクセス解析',
-    'コンバージョン改善'
-  ],
-  openGraph: {
-    title: 'SEO対策サービス | 検索順位改善・アクセス数向上',
-    description: '検索順位の改善による自然な集客増加を実現するSEO対策サービス。技術的SEOからコンテンツSEO、内部対策・外部対策まで包括的に対応。',
-    type: 'website',
-    images: [
-      {
-        url: '/images/seo-service-og.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'SEO対策サービス',
-      }
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'SEO対策サービス | 検索順位改善・アクセス数向上',
-    description: '検索順位の改善による自然な集客増加を実現するSEO対策サービス。技術的SEOからコンテンツSEO、内部対策・外部対策まで包括的に対応。',
-    images: ['/images/seo-service-og.jpg'],
-  },
+// 画像拡大モーダルコンポーネント
+function ImageModal({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
+  return (
+    <div 
+      className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+      onClick={onClose}
+    >
+      <div className="relative w-full max-w-4xl h-auto">
+        <Image
+          src={src}
+          alt={alt}
+          width={1200}
+          height={900}
+          className="object-contain w-full h-auto"
+        />
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-white p-2 rounded-full bg-gray-800/50"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  )
 }
 
 export default function SEOService() {
+  const [showModal, setShowModal] = useState(false)
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -86,7 +83,10 @@ export default function SEOService() {
                   ユーザーにとって使いやすいサイトを目指しています。
                 </p>
                 {/* 制作過程の投稿 */}
-                <div className="relative w-full aspect-[4/3] max-w-2xl mx-auto my-8">
+                <div 
+                  className="relative w-full aspect-[4/3] max-w-2xl mx-auto my-8 cursor-pointer"
+                  onClick={() => setShowModal(true)}
+                >
                   <Image
                     src="/images/for-seo.png"
                     alt="サイト制作過程のSNS投稿 - CSRとSSRの複合レンダリングでSEOの内部強化"
@@ -94,6 +94,11 @@ export default function SEOService() {
                     className="object-contain rounded-lg"
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/10 rounded-lg" />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                    <span className="bg-black/70 text-white px-4 py-2 rounded-full text-sm">
+                      タップして拡大
+                    </span>
+                  </div>
                 </div>
                 <p className="text-gray-300 text-center italic">
                   ↑ 実際のサイト制作過程での投稿 - SEOを意識した実装について
@@ -119,6 +124,54 @@ export default function SEOService() {
                     Noteに掲載していた記事を厳選してブログ形式で再構成するなど、
                     コンテンツの最適化も行っています。
                   </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* 分析ツールセクション */}
+          <section className="mb-20">
+            <h2 className="text-3xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+              プロフェッショナルな分析と改善
+            </h2>
+            <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-8 border border-cyan-500/20">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-6">
+                  <h3 className="text-xl font-semibold text-cyan-400">各種分析ツールの活用</h3>
+                  <div className="space-y-4">
+                    <div className="bg-gray-800/50 p-4 rounded-lg">
+                      <h4 className="font-semibold text-purple-400 mb-2">Google Analytics 4</h4>
+                      <p className="text-gray-300">最新のGA4を使用したユーザー行動分析、コンバージョン測定、ROI分析を実施。的確なデータに基づく改善提案を行います。</p>
+                    </div>
+                    <div className="bg-gray-800/50 p-4 rounded-lg">
+                      <h4 className="font-semibold text-purple-400 mb-2">Google Tag Manager</h4>
+                      <p className="text-gray-300">GTMを活用した柔軟なタグ管理と詳細なイベント計測により、ユーザー行動を正確に把握します。</p>
+                    </div>
+                    <div className="bg-gray-800/50 p-4 rounded-lg">
+                      <h4 className="font-semibold text-purple-400 mb-2">Search Console</h4>
+                      <p className="text-gray-300">サーチコンソールを活用した検索パフォーマンスの分析、技術的な問題の早期発見と対応を行います。</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="space-y-6">
+                  <h3 className="text-xl font-semibold text-cyan-400">データドリブンな改善</h3>
+                  <div className="space-y-4">
+                    <div className="bg-gray-800/50 p-4 rounded-lg">
+                      <h4 className="font-semibold text-purple-400 mb-2">定期的なレポーティング</h4>
+                      <ul className="text-gray-300 space-y-2">
+                        <li>• 検索順位とクリック率の推移</li>
+                        <li>• ユーザー行動の詳細分析</li>
+                        <li>• コンバージョン率の改善状況</li>
+                        <li>• 具体的な改善提案の提示</li>
+                      </ul>
+                    </div>
+                    <div className="bg-gray-800/50 p-4 rounded-lg">
+                      <p className="text-gray-300">
+                        各種分析ツールを組み合わせることで、より正確なデータ収集と分析が可能になります。
+                        これらのデータを基に、効果的なSEO施策を提案・実施していきます。
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -190,6 +243,14 @@ export default function SEOService() {
           </section>
         </div>
       </div>
+
+      {showModal && (
+        <ImageModal
+          src="/images/for-seo.png"
+          alt="サイト制作過程のSNS投稿 - CSRとSSRの複合レンダリングでSEOの内部強化"
+          onClose={() => setShowModal(false)}
+        />
+      )}
     </div>
   )
 } 
