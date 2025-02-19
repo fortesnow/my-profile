@@ -73,6 +73,57 @@ export default function SEOService() {
 
         {/* サービス内容 */}
         <div className="max-w-4xl mx-auto space-y-16">
+          {/* 技術的専門性セクション */}
+          <section className="mb-20">
+            <h2 className="text-3xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+              このサイトもSEOを意識して作っています
+            </h2>
+            <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-8 border border-cyan-500/20">
+              <div className="space-y-6">
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  このWebサイトは、デザインから実装、SEO対策まで、すべて自分自身で作り上げました。
+                  遊び心のある動きや効果を取り入れながらも、検索エンジンでの表示を最適化し、
+                  ユーザーにとって使いやすいサイトを目指しています。
+                </p>
+                {/* 制作過程の投稿 */}
+                <div className="relative w-full aspect-[4/3] max-w-2xl mx-auto my-8">
+                  <Image
+                    src="/images/for-seo.png"
+                    alt="サイト制作過程のSNS投稿 - CSRとSSRの複合レンダリングでSEOの内部強化"
+                    fill
+                    className="object-contain rounded-lg"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/10 rounded-lg" />
+                </div>
+                <p className="text-gray-300 text-center italic">
+                  ↑ 実際のサイト制作過程での投稿 - SEOを意識した実装について
+                </p>
+                <div className="grid md:grid-cols-3 gap-6 mt-8">
+                  <div className="bg-gray-800/50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-purple-400 mb-2">速度にこだわり</h4>
+                    <p className="text-gray-300">ページの読み込み速度を最適化し、快適な閲覧体験を提供しています。</p>
+                  </div>
+                  <div className="bg-gray-800/50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-purple-400 mb-2">見やすさを重視</h4>
+                    <p className="text-gray-300">スマートフォンでも見やすく、情報が伝わりやすいデザインにしています。</p>
+                  </div>
+                  <div className="bg-gray-800/50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-purple-400 mb-2">SEOを意識</h4>
+                    <p className="text-gray-300">検索エンジンで見つけやすく、かつ魅力的に表示されるよう工夫しています。</p>
+                  </div>
+                </div>
+                <div className="mt-6 p-4 bg-gray-800/50 rounded-lg">
+                  <p className="text-gray-300">
+                    このサイトでは、Next.jsを使用したCSRとSSRの複合レンダリングを採用し、
+                    SEOの内部強化を図りながら、ゲーム的な要素や遊び心のある演出も取り入れています。
+                    Noteに掲載していた記事を厳選してブログ形式で再構成するなど、
+                    コンテンツの最適化も行っています。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* 特徴セクション */}
           <section>
             <h2 className="text-3xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
@@ -102,15 +153,15 @@ export default function SEOService() {
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
                 <h3 className="text-xl font-semibold mb-4 text-cyan-400">検索順位の改善</h3>
-                <p className="text-gray-300">主要キーワードでの検索順位を平均30%改善</p>
+                <p className="text-gray-300">技術的SEOの改善により、主要キーワードでの検索順位を平均30%改善。Core Web Vitalsスコアも90以上を達成。</p>
               </div>
               <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
                 <h3 className="text-xl font-semibold mb-4 text-cyan-400">オーガニック流入増加</h3>
-                <p className="text-gray-300">自然検索からの訪問者数が3ヶ月で50%増加</p>
+                <p className="text-gray-300">ハイブリッドレンダリングの実装とコンテンツ最適化により、自然検索からの訪問者数が3ヶ月で50%増加</p>
               </div>
               <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
                 <h3 className="text-xl font-semibold mb-4 text-cyan-400">コンバージョン率向上</h3>
-                <p className="text-gray-300">最適化されたランディングページで成約率が20%向上</p>
+                <p className="text-gray-300">構造化データの実装とパフォーマンス改善により、モバイルでのコンバージョン率が20%向上</p>
               </div>
             </div>
           </section>
