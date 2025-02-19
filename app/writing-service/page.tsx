@@ -62,6 +62,24 @@ export default function WritingService() {
     },
   ]
 
+  const achievements = [
+    {
+      title: "大手メーカー様",
+      description: "新商品のプレスリリースを全国紙に掲載。認知度が150%向上し、商品の売上に貢献。",
+      period: "2023年12月",
+    },
+    {
+      title: "IT企業様",
+      description: "サービスローンチに向けたLP制作とコピーライティング。CVR35%改善を実現。",
+      period: "2023年10月",
+    },
+    {
+      title: "士業事務所様",
+      description: "ブログ記事のリライトによりオーガニック流入が2倍に増加。新規問い合わせ数も向上。",
+      period: "2023年8月",
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
       <div className="container mx-auto px-6 pt-32">
@@ -122,6 +140,17 @@ export default function WritingService() {
           <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
             制作実績
           </h2>
+          {/* 主要実績 */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {achievements.map((achievement, index) => (
+              <div key={index} className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
+                <h3 className="text-xl font-semibold mb-2 text-cyan-400">{achievement.title}</h3>
+                <p className="text-gray-300 mb-4">{achievement.description}</p>
+                <p className="text-sm text-gray-400">{achievement.period}</p>
+              </div>
+            ))}
+          </div>
+          {/* 既存の実績一覧 */}
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-xl font-semibold mb-4 text-cyan-400">社団法人のプレスリリース</h3>
