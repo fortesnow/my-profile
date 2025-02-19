@@ -63,10 +63,10 @@ export default function WritingService() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white py-20">
-      <div className="container mx-auto px-6">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <div className="container mx-auto px-6 pt-32">
         {/* ヒーローセクション */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 pt-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 text-transparent bg-clip-text">
             セールスライティングサービス
           </h1>

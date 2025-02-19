@@ -36,13 +36,13 @@ export default function SEOService() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 pt-32 pb-16">
         {/* ヒーローセクション */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 text-transparent bg-clip-text">
             SEO対策サービス
           </h1>
-          <p className="text-xl text-gray-300">
+          <p className="text-xl text-gray-300 mt-6">
             戦略的なSEO施策で、あなたのビジネスの可能性を広げます
           </p>
         </div>

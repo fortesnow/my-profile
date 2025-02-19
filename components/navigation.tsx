@@ -37,7 +37,7 @@ export default function Navigation() {
   return (
     <>
       {/* 固定ヘッダー */}
-      <header className="fixed top-0 left-0 w-full z-50 bg-gray-900/90 backdrop-blur-md">
+      <header className="fixed top-0 left-0 w-full z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800/50">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-20">
             {/* ロゴ */}
