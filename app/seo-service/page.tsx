@@ -1,31 +1,35 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 
 // 画像拡大モーダルコンポーネント
 function ImageModal({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
   return (
     <div 
-      className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 md:p-8"
       onClick={onClose}
     >
-      <div className="relative w-full max-w-4xl h-auto">
+      <div className="relative w-full max-w-[90vw] md:max-w-[80vw] h-auto max-h-[90vh] md:max-h-[80vh]">
         <Image
           src={src}
           alt={alt}
-          width={1200}
-          height={900}
-          className="object-contain w-full h-auto"
+          fill
+          className="object-contain"
+          sizes="(max-width: 768px) 90vw, 80vw"
+          quality={100}
         />
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-white p-2 rounded-full bg-gray-800/50"
+          className="absolute -top-12 right-0 text-white p-2 rounded-full bg-gray-800/50 hover:bg-gray-700/50 transition-colors"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
+        <p className="absolute -bottom-8 left-0 right-0 text-center text-gray-400 text-sm">
+          ESCキーまたは画面クリックで閉じる
+        </p>
       </div>
     </div>
   )
@@ -33,6 +37,19 @@ function ImageModal({ src, alt, onClose }: { src: string; alt: string; onClose: 
 
 export default function SEOService() {
   const [showModal, setShowModal] = useState(false)
+
+  // ESCキーでモーダルを閉じる
+  useEffect(() => {
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setShowModal(false)
+      }
+    }
+    window.addEventListener('keydown', handleEsc)
+    return () => {
+      window.removeEventListener('keydown', handleEsc)
+    }
+  }, [])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
