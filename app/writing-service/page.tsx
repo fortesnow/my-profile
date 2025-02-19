@@ -17,7 +17,7 @@ export default function WritingService() {
     },
     {
       title: "プレスリリース制作",
-      description: "メディアに取り上げられやすい、説得力のあるプレスリリースを作成します。",
+      description: "社団法人や企業の価値を効果的に伝え、メディアに取り上げられやすいプレスリリースを作成します。",
       icon: <FileText className="w-6 h-6" />,
     },
     {
@@ -27,7 +27,7 @@ export default function WritingService() {
     },
     {
       title: "メディア出稿",
-      description: "大手メディアや新聞への効果的な出稿をサポートします。",
+      description: "大手メディア、ネット新聞、業界専門メディアなど、最適なメディアへの出稿をサポートします。",
       icon: <Newspaper className="w-6 h-6" />,
     },
   ]
@@ -94,17 +94,46 @@ export default function WritingService() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
-              <h3 className="text-xl font-semibold mb-4 text-cyan-400">大手企業のプレスリリース</h3>
-              <p className="text-gray-300">多数のメディアに掲載され、商品認知度が150%向上</p>
+              <h3 className="text-xl font-semibold mb-4 text-cyan-400">社団法人のプレスリリース</h3>
+              <p className="text-gray-300">全国紙や業界専門メディアに掲載され、団体の認知度が大幅に向上。新規会員数増加に貢献。</p>
             </div>
             <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
-              <h3 className="text-xl font-semibold mb-4 text-cyan-400">商品紹介動画の台本</h3>
-              <p className="text-gray-300">再生回数100万回を達成し、売上が200%増加</p>
+              <h3 className="text-xl font-semibold mb-4 text-cyan-400">ベンチャー企業の新規サービス</h3>
+              <p className="text-gray-300">プレスリリースとメディア出稿の連携により、サービス認知度向上とユーザー獲得に成功。</p>
             </div>
             <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
-              <h3 className="text-xl font-semibold mb-4 text-cyan-400">ブランドキャッチコピー</h3>
-              <p className="text-gray-300">認知度向上とブランドイメージの確立に貢献</p>
+              <h3 className="text-xl font-semibold mb-4 text-cyan-400">大手メディア出稿支援</h3>
+              <p className="text-gray-300">全国紙やネット新聞への効果的な出稿により、ブランド価値向上とリード獲得を実現。</p>
             </div>
+          </div>
+          <div className="mt-8 bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20">
+            <h3 className="text-xl font-semibold mb-4 text-cyan-400">実績の一例</h3>
+            <ul className="grid md:grid-cols-2 gap-4 text-gray-300">
+              <li className="flex items-start gap-2">
+                <svg className="w-5 h-5 mt-1 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span>社団法人の活動PRによる会員数30%増加</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <svg className="w-5 h-5 mt-1 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span>スタートアップの新規サービス認知度200%向上</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <svg className="w-5 h-5 mt-1 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span>業界専門メディアでの連載記事による問い合わせ増加</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <svg className="w-5 h-5 mt-1 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span>ネット新聞への戦略的出稿によるCV率向上</span>
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -115,7 +144,7 @@ export default function WritingService() {
               まずはご相談ください
             </h2>
             <p className="text-gray-300 mb-8">
-              あなたのビジネスに最適な文章表現をご提案いたします
+              豊富な実績を活かし、あなたのビジネスに最適なPR戦略をご提案いたします
             </p>
             <a
               href="https://lin.ee/ATZ4bog"
