@@ -868,20 +868,22 @@ export default function Profile({ data }: { data: ProfileData }) {
                 <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
                   サービス一覧
                 </h2>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
                   {services.map((service, index) => (
                     <div
                       key={index}
-                      className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20"
+                      className="bg-gray-900/50 backdrop-blur-md rounded-lg p-3 md:p-6 border border-cyan-500/20"
                     >
                       <div className={`bg-gradient-to-br ${service.gradient} p-3 rounded-lg w-fit mb-4`}>
-                        {service.icon}
+                        <div className="w-4 h-4 md:w-6 md:h-6">
+                          {service.icon}
+                        </div>
                       </div>
-                      <h3 className="text-xl font-semibold mb-4 text-cyan-400">{service.title}</h3>
-                      <p className="text-gray-300 mb-6">{service.description}</p>
+                      <h3 className="text-sm md:text-xl font-semibold mb-2 md:mb-4 text-cyan-400">{service.title}</h3>
+                      <p className="text-xs md:text-base text-gray-300 mb-3 md:mb-6 line-clamp-3">{service.description}</p>
                       <Link
                         href={service.href}
-                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                        className="inline-flex items-center text-xs md:text-base text-cyan-400 hover:text-cyan-300 transition-colors"
                       >
                         詳しく見る
                         <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
