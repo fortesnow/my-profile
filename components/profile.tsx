@@ -822,7 +822,7 @@ export default function Profile({ data }: { data: ProfileData }) {
                       <div className="flex items-center gap-3">
                         <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
                           <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2z" />
                           </svg>
                         </div>
                         <span className="text-gray-300">動画台本作成</span>
@@ -858,6 +858,38 @@ export default function Profile({ data }: { data: ProfileData }) {
                       </a>
                     </div>
                   </div>
+                </div>
+              </div>
+            </section>
+
+            {/* サービス一覧セクション */}
+            <section className="py-20 px-4">
+              <div className="container mx-auto">
+                <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                  サービス一覧
+                </h2>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {services.map((service, index) => (
+                    <div
+                      key={index}
+                      className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border border-cyan-500/20"
+                    >
+                      <div className={`bg-gradient-to-br ${service.gradient} p-3 rounded-lg w-fit mb-4`}>
+                        {service.icon}
+                      </div>
+                      <h3 className="text-xl font-semibold mb-4 text-cyan-400">{service.title}</h3>
+                      <p className="text-gray-300 mb-6">{service.description}</p>
+                      <Link
+                        href={service.href}
+                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                      >
+                        詳しく見る
+                        <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    </div>
+                  ))}
                 </div>
               </div>
             </section>
