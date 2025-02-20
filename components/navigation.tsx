@@ -12,6 +12,7 @@ export default function Navigation() {
     {
       title: 'サービス',
       items: [
+        { name: '受託開発サービス', href: '/development-service' },
         { name: 'WEBサイト制作＆LP制作', href: '/lp-service' },
         { name: 'コーディングサービス', href: '/coding-service' },
         { name: '広告運用サービス', href: '/ads-service' },

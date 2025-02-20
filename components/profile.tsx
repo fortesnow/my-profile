@@ -1,7 +1,7 @@
 import * as React from "react"
 import Image from "next/image"
 import { ProfileData } from './types'
-import { BarChart2, Users, PieChart, MessageSquare, LineChart } from "lucide-react"
+import { BarChart2, Users, PieChart, MessageSquare, LineChart, Code, Layout, Server, Database } from "lucide-react"
 import Link from "next/link"
 
 interface Website {
@@ -25,6 +25,58 @@ export default function Profile({ data }: { data: ProfileData }) {
     { name: "プログラミング", level: 90 },
     { name: "SEO & コンテンツ", level: 95 },
     { name: "前を向く誇り", level: 100 },
+  ]
+
+  const services = [
+    {
+      title: "受託開発サービス",
+      description: "フロントエンドからバックエンド、インフラまで、フルスタックな開発サービスを提供。最新技術を活用した高品質な開発を実現します。",
+      icon: <Code className="w-6 h-6" />,
+      href: "/development-service",
+      gradient: "from-blue-500 to-purple-500",
+    },
+    {
+      title: "LP制作サービス",
+      description: "目的達成に特化したランディングページを制作。商品やサービスの魅力を最大限に引き出し、高いコンバージョン率を実現します。",
+      icon: <Layout className="w-6 h-6" />,
+      href: "/lp-service",
+      gradient: "from-cyan-500 to-blue-500",
+    },
+    {
+      title: "爆速コーディングサービス",
+      description: "最短当日対応可能。高品質なコードと迅速な納品で、あなたのビジネスを加速させます。",
+      icon: <Code className="w-6 h-6" />,
+      href: "/coding-service",
+      gradient: "from-cyan-500 to-purple-500",
+    },
+    {
+      title: "広告運用サービス",
+      description: "効率的な運用と継続的な改善で、広告費用対効果（ROAS）を最大化します。",
+      icon: <BarChart2 className="w-6 h-6" />,
+      href: "/ads-service",
+      gradient: "from-cyan-500 to-purple-500",
+    },
+    {
+      title: "SEO対策サービス",
+      description: "戦略的なSEO施策で、Googleでの検索順位を上げ、オーガニック流入を増やします。",
+      icon: <Layout className="w-6 h-6" />,
+      href: "/seo-service",
+      gradient: "from-cyan-500 to-purple-500",
+    },
+    {
+      title: "SNS運用サービス",
+      description: "ブランド価値を高め、ファンを増やす効果的なSNS運用戦略を提供します。",
+      icon: <Users className="w-6 h-6" />,
+      href: "/sns-service",
+      gradient: "from-cyan-500 to-purple-500",
+    },
+    {
+      title: "セールスライティングサービス",
+      description: "動画台本からプレスリリースまで、あらゆる文章で成果を出すライティングを提供します。",
+      icon: <Layout className="w-6 h-6" />,
+      href: "/writing-service",
+      gradient: "from-cyan-500 to-purple-500",
+    },
   ]
 
   return (
@@ -538,7 +590,7 @@ export default function Profile({ data }: { data: ProfileData }) {
                       <div className="flex items-center gap-3">
                         <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
                           <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2z" />
                           </svg>
                         </div>
                         <span className="text-gray-300">検索順位改善</span>
@@ -640,6 +692,76 @@ export default function Profile({ data }: { data: ProfileData }) {
                     <div className="flex flex-col sm:flex-row gap-4">
                       <a
                         href="/sns-service"
+                        className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
+                      >
+                        <span>サービス詳細へ</span>
+                        <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </a>
+                      <a
+                        href="https://lin.ee/ATZ4bog"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-8 py-4 rounded-full border-2 border-cyan-500 text-cyan-400 font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
+                      >
+                        <span>お問い合わせ</span>
+                        <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* 受託開発サービスセクション */}
+            <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md p-8 border-4 border-cyan-200 [box-shadow:8px_8px_0_theme(colors.cyan.900)]">
+              <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                受託開発サービス
+              </h2>
+              
+              <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-8">
+                <div className="grid md:grid-cols-2 gap-12">
+                  <div className="space-y-6">
+                    <h3 className="text-2xl font-semibold text-cyan-400">
+                      フルスタック開発
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      フロントエンドからバックエンド、インフラまで、
+                      最新技術を活用した高品質な開発を提供します。
+                    </p>
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-3">
+                        <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
+                          <Code className="w-5 h-5 text-white" />
+                        </div>
+                        <span className="text-gray-300">フロントエンド開発</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
+                          <Server className="w-5 h-5 text-white" />
+                        </div>
+                        <span className="text-gray-300">バックエンド開発</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
+                          <Database className="w-5 h-5 text-white" />
+                        </div>
+                        <span className="text-gray-300">インフラ構築</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-col justify-center items-center space-y-6">
+                    <div className="text-center">
+                      <p className="text-lg text-gray-300 mb-2">まずはご相談ください</p>
+                      <p className="text-sm text-gray-400">お客様のニーズに合わせた最適な開発プランをご提案します</p>
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <a
+                        href="/development-service"
                         className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
                       >
                         <span>サービス詳細へ</span>
