@@ -33,6 +33,14 @@ const services = [
   // ... 他のサービス
 ] as const
 
+const blogPosts = [
+  {
+    slug: 'homepage-success',
+    lastModified: new Date('2024-02-16'),
+  },
+  // ... 他のブログ記事
+]
+
 async function getArticles(): Promise<Article[]> {
   // ここで実際のブログ記事データを取得
   // 例: DBやCMSからの取得
@@ -76,9 +84,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }))
 
   // ブログ記事ページ
-  const blogPages = articles.map(article => ({
-    url: `${baseUrl}/blog/${article.slug}`,
-    lastModified: article.lastModified,
+  const blogPages = blogPosts.map(post => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: post.lastModified,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))

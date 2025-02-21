@@ -10,6 +10,15 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   const posts = [
     {
+      id: 2,
+      title: "結果の出るホームページの作り方～プロが教える7つの成功戦略と実践事例",
+      excerpt: "ホームページの成果を最大化するための実践的な戦略と具体的な改善手法を解説。アクセス解析データに基づく効果的なホームページ設計のノウハウと、CV率を2.3倍に改善した実例を紹介します。",
+      date: "2024.02.16",
+      category: "Web制作",
+      slug: "homepage-success",
+      thumbnail: "/blog/eye-catch/homepage-success.webp"
+    },
+    {
       id: 1,
       title: "【事業者向け】LPはただ作るだけではダメ！作ってからがスタートラインその理由とは？",
       excerpt: "LPの本質的な目的と、制作後の運用の重要性について解説します。セールスライティング、LPO、広告運用など、実務経験に基づいた知見を共有します。",
