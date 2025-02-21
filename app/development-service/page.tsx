@@ -101,6 +101,75 @@ export default function DevelopmentService() {
           </div>
         </section>
 
+        {/* 開発実績セクション */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+            開発実績
+          </h2>
+          <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-8 border border-cyan-500/20">
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="space-y-6">
+                <h3 className="text-2xl font-semibold text-cyan-400">
+                  会員管理システム開発
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  データベース設計からUI/UX、デプロイまでを一貫して担当。
+                  短期間での開発要件に応え、高品質なSaaSアプリケーションを実現しました。
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
+                      <Database className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="text-gray-300">データベース設計・構築</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
+                      <Layout className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="text-gray-300">モダンなUI/UX設計</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
+                      <Server className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="text-gray-300">クラウドインフラ構築</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-6">
+                <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/app-sample.png"
+                    alt="会員管理システムのスクリーンショット"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-[16/9] rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/app-sample2.png"
+                    alt="会員管理システムの詳細画面"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="bg-gray-800/50 rounded-lg p-4">
+                  <h4 className="text-lg font-semibold text-cyan-400 mb-2">プロジェクト概要</h4>
+                  <ul className="text-sm text-gray-300 space-y-2">
+                    <li>• 会員情報の一括管理システム</li>
+                    <li>• 検索・フィルタリング機能</li>
+                    <li>• 権限管理システム</li>
+                    <li>• レスポンシブ対応</li>
+                    <li>• クラウドベースの運用</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* 技術スタック */}
         <section className="mb-20">
           <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
