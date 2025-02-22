@@ -135,6 +135,42 @@ export default function WritingService() {
           </div>
         </section>
 
+        {/* プレスリリース代行サービスセクション */}
+        <section className="mb-20 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md p-8 border-4 border-cyan-200 [box-shadow:8px_8px_0_theme(colors.cyan.900)]">
+          <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+            プレスリリース代行サービス
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-semibold text-cyan-400">
+                社団法人・ベンチャー企業向け<br />プレスリリース作成・配信
+              </h3>
+              <p className="text-gray-300 leading-relaxed">
+                大手メディアへの露出実績多数。問い合わせ80%増加を実現した実績を持つプロフェッショナルが対応します。
+              </p>
+              <div className="flex items-center gap-4 text-cyan-400">
+                <span className="font-bold">料金：¥220,000（税込）</span>
+              </div>
+            </div>
+            
+            <div className="flex flex-col justify-center items-center space-y-6">
+              <div className="text-center">
+                <p className="text-lg text-gray-300 mb-2">詳しいサービス内容をご確認ください</p>
+              </div>
+              <a
+                href="/writing-service/press-release"
+                className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
+              >
+                <span>サービス詳細へ</span>
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* 実績セクション */}
         <section className="mb-20">
           <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
