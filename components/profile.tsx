@@ -15,6 +15,7 @@ const defaultWebsites: Website[] = [
   { icon: "/icons/aozaki-pic.svg", name: "Anime", url: "https://youtu.be/0YaUlkcpoXw?si=KGwDQklCCVXDvTdO" },
   { icon: "/icons/instagram-pic.svg", name: "Instagram", url: "https://www.instagram.com/stellariumix/" },
   { icon: "/icons/line-pic.svg", name: "LINE", url: "https://lin.ee/ATZ4bog" },
+  { icon: "/icons/threads-pic.svg", name: "Threads", url: "https://www.threads.net/@stellariumix" },
 ]
 
 export default function Profile({ data }: { data: ProfileData }) {

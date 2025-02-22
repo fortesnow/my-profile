@@ -58,7 +58,6 @@ const latestPosts = [
 ];
 
 export default async function Home() {
-  // サーバーサイドでの処理時間を計測
   const startTime = process.hrtime();
   const data = await ProfileServer();
   const endTime = process.hrtime(startTime);
