@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ProfileServer } from '@/components/profile-server'
 import ProfileClient from '@/components/profile'
 import '@/app/globals.css';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Web制作 あおい | フロントエンド開発・LP制作',
@@ -35,6 +36,27 @@ export const metadata: Metadata = {
   },
 }
 
+// 最新の記事データを更新
+const latestPosts = [
+  {
+    title: '結果の出るホームページの作り方～プロが教える7つの成功戦略と実践事例',
+    description: 'ホームページの成果を最大化するための実践的な戦略と具体的な改善手法を解説。アクセス解析データに基づく効果的なホームページ設計のノウハウと、CV率を2.3倍に改善した実例を紹介します。',
+    date: '2025.02.21',
+    category: 'Web制作',
+    slug: 'homepage-success',
+    image: '/blog/eye-catch/homepage-success.jpg'
+  },
+  {
+    title: '【事業者向け】LPはただ作るだけではダメ！作ってからがスタートラインその理由とは？',
+    description: 'LPの本質的な目的と、制作後の運用の重要性について解説します。セールスライティング、LPO、広告運用など、実務経験に基づいた知見を共有します。',
+    date: '2025.02.16',
+    category: 'LP制作',
+    slug: 'lp-development',
+    image: '/blog/eye-catch/for-LPO.webp'
+  },
+  // ... 他の記事データ ...
+];
+
 export default async function Home() {
   // サーバーサイドでの処理時間を計測
   const startTime = process.hrtime();
@@ -53,6 +75,39 @@ export default async function Home() {
 
       {/* プロフィールセクション */}
       <ProfileClient data={data} />
+
+      {/* 最新記事セクション */}
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12">最新の記事</h2>
+          <div className="grid gap-8 md:grid-cols-2">
+            {latestPosts.map((post) => (
+              <a
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="block bg-gray-800/50 rounded-lg overflow-hidden hover:scale-105 transition-transform"
+              >
+                <div className="relative h-48">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-2">{post.title}</h3>
+                  <p className="text-gray-400 text-sm mb-4">{post.description}</p>
+                  <div className="flex items-center gap-4">
+                    <span className="text-cyan-400">{post.category}</span>
+                    <time className="text-gray-500">{post.date}</time>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

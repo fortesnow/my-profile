@@ -13,10 +13,10 @@ export default function BlogPage() {
       id: 2,
       title: "結果の出るホームページの作り方～プロが教える7つの成功戦略と実践事例",
       excerpt: "ホームページの成果を最大化するための実践的な戦略と具体的な改善手法を解説。アクセス解析データに基づく効果的なホームページ設計のノウハウと、CV率を2.3倍に改善した実例を紹介します。",
-      date: "2024.02.16",
+      date: "2025.02.22",
       category: "Web制作",
       slug: "homepage-success",
-      thumbnail: "/blog/eye-catch/homepage-success.webp"
+      thumbnail: "/blog/eye-catch/homepage-success.jpg"
     },
     {
       id: 1,

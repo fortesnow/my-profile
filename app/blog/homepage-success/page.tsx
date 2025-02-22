@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description: 'ホームページの成果を最大化するための実践的な戦略と具体的な改善手法を解説。',
     images: [
       {
-        url: '/blog/eye-catch/homepage-success.webp',
+        url: '/blog/eye-catch/homepage-success.jpg',
         width: 1200,
         height: 630,
         alt: '結果の出るホームページの作り方',
@@ -33,7 +33,7 @@ export default function BlogPost() {
       <article className="container mx-auto px-6 max-w-4xl">
         <div className="relative h-[400px] mb-12 rounded-lg overflow-hidden">
           <Image
-            src="/blog/eye-catch/homepage-success.webp"
+            src="/blog/eye-catch/homepage-success.jpg"
             alt="結果の出るホームページの作り方"
             fill
             className="object-cover"
