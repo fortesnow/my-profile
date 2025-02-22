@@ -41,18 +41,18 @@ export default function PressReleasePage() {
             <p className="text-lg text-cyan-400 font-semibold mb-4">
               これまでの実績
             </p>
-            <div className="grid md:grid-cols-3 gap-4 text-center">
-              <div className="p-4">
-                <p className="text-3xl font-bold text-cyan-400 mb-2">80%</p>
-                <p className="text-sm text-gray-300">問い合わせ増加率</p>
-              </div>
-              <div className="p-4">
-                <p className="text-3xl font-bold text-cyan-400 mb-2">50+</p>
-                <p className="text-sm text-gray-300">メディア掲載実績</p>
-              </div>
-              <div className="p-4">
+            <div className="mt-12 grid md:grid-cols-3 gap-6 text-center">
+              <div className="bg-gray-900/50 p-6 rounded-lg border border-cyan-500/20">
                 <p className="text-3xl font-bold text-cyan-400 mb-2">100%</p>
-                <p className="text-sm text-gray-300">顧客満足度</p>
+                <p className="text-gray-300">メディア掲載率</p>
+              </div>
+              <div className="bg-gray-900/50 p-6 rounded-lg border border-cyan-500/20">
+                <p className="text-3xl font-bold text-cyan-400 mb-2">200%</p>
+                <p className="text-gray-300">サービス認知度向上</p>
+              </div>
+              <div className="bg-gray-900/50 p-6 rounded-lg border border-cyan-500/20">
+                <p className="text-3xl font-bold text-cyan-400 mb-2">50+</p>
+                <p className="text-gray-300">掲載メディア数</p>
               </div>
             </div>
           </div>
@@ -137,7 +137,7 @@ export default function PressReleasePage() {
                 1. プロフェッショナルによる戦略的な文章作成
               </h3>
               <p className="text-gray-300">
-                業界経験豊富なライターが、御社の強みを最大限に引き出し、メディアに響く表現で訴求します。
+                プロのセールスライターとしての能力で、御社の強みを最大限に引き出し、メディアに響く表現で訴求します。
               </p>
             </div>
             <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-8 border border-cyan-500/20">
