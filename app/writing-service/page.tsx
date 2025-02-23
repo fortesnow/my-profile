@@ -147,7 +147,7 @@ export default function WritingService() {
                 社団法人・ベンチャー企業向け<br />プレスリリース作成・配信
               </h3>
               <p className="text-gray-300 leading-relaxed">
-                大手メディアへの露出実績多数。問い合わせ80%増加を実現した実績を持つプロフェッショナルが対応します。
+                全国紙やオンラインメディアでの多数の掲載実績を持つプロフェッショナルが、企業価値の向上とブランド認知の拡大をサポートします。
               </p>
               <div className="flex items-center gap-4 text-cyan-400">
                 <span className="font-bold">料金：¥220,000（税込）</span>

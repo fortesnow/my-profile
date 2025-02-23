@@ -30,29 +30,50 @@ export default function PressReleasePage() {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-6 max-w-4xl">
         {/* ヒーローセクション */}
-        <section className="text-center mb-20">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 text-transparent bg-clip-text">
-            プレスリリース代行サービス
+        <section className="text-center mb-20 pt-8 relative">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 text-transparent bg-clip-text relative z-10">
+            メディアに響くプレスリリースで<br />
+            企業価値を高める
           </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            社団法人・ベンチャー企業の認知度向上をサポート
+          <p className="text-xl text-gray-300 mb-24 leading-relaxed relative z-10">
+            全国紙からオンラインメディアまで<br />
+            多数の掲載実績を持つプロフェッショナルが<br className="md:hidden" />
+            あなたの企業の魅力を発信します
           </p>
-          <div className="bg-gradient-to-br from-gray-900/80 to-blue-900/80 backdrop-blur-md p-6 rounded-lg border border-cyan-500/20">
-            <p className="text-lg text-cyan-400 font-semibold mb-4">
-              これまでの実績
+
+          {/* メインビジュアル */}
+          <div className="absolute top-20 inset-x-0 w-full max-w-2xl mx-auto aspect-[16/9] opacity-30">
+            <Image
+              src="/images/zunda-pic.png"
+              alt="プレスリリース代行サービス"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+
+          <div className="bg-gradient-to-br from-gray-900/80 to-blue-900/80 backdrop-blur-md p-8 rounded-lg border border-cyan-500/20 relative z-10 mt-36">
+            <p className="text-lg text-cyan-400 font-semibold mb-8">
+              主な掲載実績メディア
             </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-gray-300 mb-12">
+              <div className="bg-gray-900/50 p-4 rounded-lg">講談社</div>
+              <div className="bg-gray-900/50 p-4 rounded-lg">毎日新聞</div>
+              <div className="bg-gray-900/50 p-4 rounded-lg">東洋経済</div>
+              <div className="bg-gray-900/50 p-4 rounded-lg">NewsPicks</div>
+            </div>
             <div className="mt-12 grid md:grid-cols-3 gap-6 text-center">
-              <div className="bg-gray-900/50 p-6 rounded-lg border border-cyan-500/20">
-                <p className="text-3xl font-bold text-cyan-400 mb-2">100%</p>
-                <p className="text-gray-300">メディア掲載率</p>
-              </div>
-              <div className="bg-gray-900/50 p-6 rounded-lg border border-cyan-500/20">
-                <p className="text-3xl font-bold text-cyan-400 mb-2">200%</p>
-                <p className="text-gray-300">サービス認知度向上</p>
-              </div>
               <div className="bg-gray-900/50 p-6 rounded-lg border border-cyan-500/20">
                 <p className="text-3xl font-bold text-cyan-400 mb-2">50+</p>
                 <p className="text-gray-300">掲載メディア数</p>
+              </div>
+              <div className="bg-gray-900/50 p-6 rounded-lg border border-cyan-500/20">
+                <p className="text-3xl font-bold text-cyan-400 mb-2">200%</p>
+                <p className="text-gray-300">平均認知度向上率</p>
+              </div>
+              <div className="bg-gray-900/50 p-6 rounded-lg border border-cyan-500/20">
+                <p className="text-3xl font-bold text-cyan-400 mb-2">100%</p>
+                <p className="text-gray-300">メディア掲載率</p>
               </div>
             </div>
           </div>
@@ -142,18 +163,18 @@ export default function PressReleasePage() {
             </div>
             <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-8 border border-cyan-500/20">
               <h3 className="text-xl font-semibold text-cyan-400 mb-4">
-                2. 大手メディアとの強いネットワーク
+                2. 大手メディアでの掲載実績
               </h3>
-              <p className="text-gray-300">
-                新聞社やオンラインメディアとの信頼関係を活かし、効果的な露出を実現します。
+              <p className="text-gray-300 leading-relaxed">
+                全国紙やオンラインメディアでの多数の掲載実績を持つプロフェッショナルが、企業価値の向上とブランド認知の拡大をサポートします。
               </p>
             </div>
             <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-8 border border-cyan-500/20">
               <h3 className="text-xl font-semibold text-cyan-400 mb-4">
-                3. 実績に基づく確かな効果
+                3. ブランディングによる事業成長
               </h3>
               <p className="text-gray-300">
-                これまでの支援先で平均80%の問い合わせ増加を達成。企業価値の向上に貢献します。
+                メディア露出を通じた認知度拡大と企業価値向上により、事業規模の拡大と新たなビジネスチャンスの創出を実現します。
               </p>
             </div>
           </div>

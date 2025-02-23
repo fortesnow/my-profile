@@ -19,12 +19,12 @@ body {
   overscroll-behavior: none;
   min-height: 100dvh; /* dynamic viewport heightを使用 */
   background: linear-gradient(to bottom right, #111827, #1e3a8a, #1e40af);
-  @apply bg-background text-foreground;
-  font-family: 'Shinonome', monospace !important;
+  font-family: 'Shinonome', monospace;
 }
 
 * {
   font-family: 'Shinonome', monospace;
+  border-color: var(--border);
 }
 
 @layer base {
@@ -80,8 +80,5 @@ body {
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-  }
-  * {
-    @apply border-border;
   }
 }
