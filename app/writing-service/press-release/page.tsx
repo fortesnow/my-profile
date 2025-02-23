@@ -37,7 +37,7 @@ export default function PressReleasePage() {
           </h1>
           <p className="text-xl text-gray-300 mb-12 md:mb-24 leading-relaxed relative z-10">
             全国紙からオンラインメディアまで<br />
-            多数の掲載実績を持つプロフェッショナルが<br className="md:hidden" />
+            多数掲載実績を持つプロフェッショナルが<br className="md:hidden" />
             あなたの企業の魅力を発信します
           </p>
 
