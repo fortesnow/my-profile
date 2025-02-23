@@ -35,14 +35,14 @@ export default function PressReleasePage() {
             メディアに響くプレスリリースで<br />
             企業価値を高める
           </h1>
-          <p className="text-xl text-gray-300 mb-24 leading-relaxed relative z-10">
+          <p className="text-xl text-gray-300 mb-12 md:mb-24 leading-relaxed relative z-10">
             全国紙からオンラインメディアまで<br />
             多数の掲載実績を持つプロフェッショナルが<br className="md:hidden" />
             あなたの企業の魅力を発信します
           </p>
 
           {/* メインビジュアル */}
-          <div className="absolute top-20 inset-x-0 w-full max-w-2xl mx-auto aspect-[16/9] opacity-30">
+          <div className="absolute top-20 inset-x-0 w-full mx-auto opacity-30 max-w-[280px] md:max-w-2xl aspect-square md:aspect-[16/9]">
             <Image
               src="/images/zunda-pic.png"
               alt="プレスリリース代行サービス"
@@ -52,7 +52,7 @@ export default function PressReleasePage() {
             />
           </div>
 
-          <div className="bg-gradient-to-br from-gray-900/80 to-blue-900/80 backdrop-blur-md p-8 rounded-lg border border-cyan-500/20 relative z-10 mt-36">
+          <div className="bg-gradient-to-br from-gray-900/80 to-blue-900/80 backdrop-blur-md p-8 rounded-lg border border-cyan-500/20 relative z-10 mt-24 md:mt-36">
             <p className="text-lg text-cyan-400 font-semibold mb-8">
               主な掲載実績メディア
             </p>
