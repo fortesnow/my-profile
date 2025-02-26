@@ -8,31 +8,22 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [hoveredItem, setHoveredItem] = useState<string | null>(null)
 
-  const menuItems = [
-    {
-      title: 'サービス',
+  const navItems = [
+    { label: "Home", href: "/" },
+    { 
+      label: "サービス", 
       items: [
-        { name: '受託開発サービス', href: '/development-service' },
-        { name: 'WEBサイト制作＆LP制作', href: '/lp-service' },
-        { name: 'コーディングサービス', href: '/coding-service' },
-        { name: '広告運用サービス', href: '/ads-service' },
-        { name: 'SNS運用サービス', href: '/sns-service' },
-        { name: 'SEO対策サービス', href: '/seo-service' },
-        { name: 'セールスライティング', href: '/writing-service' }
+        { name: "受託開発", href: "/development-service" },
+        { name: "LP制作", href: "/lp-service" },
+        { name: "コーディング", href: "/coding-service" },
+        { name: "広告運用", href: "/ads-service" },
+        { name: "SEO対策", href: "/seo-service" },
+        { name: "ライティング", href: "/writing-service" },
+        { name: "AI開発", href: "/ai-service" },
       ]
     },
-    {
-      title: 'ブログ',
-      href: '/blog'
-    },
-    {
-      title: 'プロフィール',
-      href: '/#profile'
-    },
-    {
-      title: 'お問い合わせ',
-      href: 'https://lin.ee/ATZ4bog'
-    }
+    { label: "ブログ", href: "/blog" },
+    { label: "お問い合わせ", href: "https://lin.ee/ATZ4bog", external: true },
   ]
 
   return (
@@ -48,19 +39,19 @@ export default function Navigation() {
 
             {/* PCメニュー */}
             <nav className="hidden md:flex items-center space-x-8">
-              {menuItems.map((item) => (
+              {navItems.map((item) => (
                 <div
-                  key={item.title}
+                  key={item.label}
                   className="relative"
-                  onMouseEnter={() => setHoveredItem(item.title)}
+                  onMouseEnter={() => setHoveredItem(item.label)}
                   onMouseLeave={() => setHoveredItem(null)}
                 >
                   {item.items ? (
                     <>
                       <button className="text-gray-300 hover:text-cyan-400 transition-colors py-2">
-                        {item.title}
+                        {item.label}
                       </button>
-                      {hoveredItem === item.title && (
+                      {hoveredItem === item.label && (
                         <motion.div
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
@@ -84,7 +75,7 @@ export default function Navigation() {
                       href={item.href}
                       className="text-gray-300 hover:text-cyan-400 transition-colors py-2"
                     >
-                      {item.title}
+                      {item.label}
                     </Link>
                   )}
                 </div>
@@ -117,11 +108,11 @@ export default function Navigation() {
           >
             <div className="container mx-auto px-4 py-20">
               <nav className="space-y-8">
-                {menuItems.map((item, index) => (
+                {navItems.map((item, index) => (
                   <div key={index} className="border-b border-cyan-500/20 pb-4">
                     {item.items ? (
                       <>
-                        <h2 className="text-xl font-bold text-cyan-400 mb-4">{item.title}</h2>
+                        <h2 className="text-xl font-bold text-cyan-400 mb-4">{item.label}</h2>
                         <ul className="space-y-4">
                           {item.items.map((subItem, subIndex) => (
                             <motion.li
@@ -152,7 +143,7 @@ export default function Navigation() {
                           className="text-xl font-bold text-cyan-400 hover:text-cyan-300 transition-colors block"
                           onClick={() => setIsOpen(false)}
                         >
-                          {item.title}
+                          {item.label}
                         </Link>
                       </motion.div>
                     )}
