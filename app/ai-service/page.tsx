@@ -151,6 +151,57 @@ export default function AiServicePage() {
           </div>
         </section>
         
+        {/* Notionで実現できる機能例 */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 [text-shadow:2px_2px_0_#0f172a]">
+            Notionで実現できる機能例
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border-[2px] border-cyan-500/20 [image-rendering:pixelated] hover:border-cyan-500/40 transition-all">
+              <h3 className="text-lg font-semibold text-cyan-400 mb-3">自動データ整理・分類システム</h3>
+              <p className="text-gray-300 text-sm">
+                大量のデータを自動的に整理・分類し、アクセス可能なデータベースを構築。情報検索の時間を大幅に削減できます。
+              </p>
+            </div>
+            
+            <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border-[2px] border-purple-500/20 [image-rendering:pixelated] hover:border-purple-500/40 transition-all">
+              <h3 className="text-lg font-semibold text-purple-400 mb-3">AI文書要約・分析ツール</h3>
+              <p className="text-gray-300 text-sm">
+                長文レポートや記事を自動要約し、重要ポイントを抽出。会議前の準備時間を短縮し、意思決定を迅速化します。
+              </p>
+            </div>
+            
+            <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border-[2px] border-cyan-500/20 [image-rendering:pixelated] hover:border-cyan-500/40 transition-all">
+              <h3 className="text-lg font-semibold text-cyan-400 mb-3">自動応答メールシステム</h3>
+              <p className="text-gray-300 text-sm">
+                顧客からの問い合わせに自動応答するシステムを構築。FAQベースの回答生成で、サポート業務の負担を軽減します。
+              </p>
+            </div>
+            
+            <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border-[2px] border-purple-500/20 [image-rendering:pixelated] hover:border-purple-500/40 transition-all">
+              <h3 className="text-lg font-semibold text-purple-400 mb-3">タスク自動優先順位付け</h3>
+              <p className="text-gray-300 text-sm">
+                プロジェクトタスクの優先度を自動で判定し、チームの作業効率を向上。締切や重要度に基づいた最適な作業順序を提案します。
+              </p>
+            </div>
+            
+            <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border-[2px] border-cyan-500/20 [image-rendering:pixelated] hover:border-cyan-500/40 transition-all">
+              <h3 className="text-lg font-semibold text-cyan-400 mb-3">会議議事録の自動生成</h3>
+              <p className="text-gray-300 text-sm">
+                会議の録音から自動的に議事録を生成し、タスクや決定事項を抽出。フォローアップを効率化し、情報共有をスムーズにします。
+              </p>
+            </div>
+            
+            <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 border-[2px] border-purple-500/20 [image-rendering:pixelated] hover:border-purple-500/40 transition-all">
+              <h3 className="text-lg font-semibold text-purple-400 mb-3">データ可視化ダッシュボード</h3>
+              <p className="text-gray-300 text-sm">
+                ビジネスデータをリアルタイムで可視化し、インサイトを提供。経営判断や戦略立案に必要な情報を一目で把握できます。
+              </p>
+            </div>
+          </div>
+        </section>
+        
         {/* 料金プラン */}
         <section className="mb-20">
           <h2 className="text-3xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 [text-shadow:2px_2px_0_#0f172a]">

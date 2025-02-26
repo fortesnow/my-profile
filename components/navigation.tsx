@@ -18,7 +18,7 @@ export default function Navigation() {
         { name: "コーディング", href: "/coding-service" },
         { name: "広告運用", href: "/ads-service" },
         { name: "SEO対策", href: "/seo-service" },
-        { name: "ライティング", href: "/writing-service" },
+        { name: "セールスライティング", href: "/writing-service" },
         { name: "AI開発", href: "/ai-service" },
       ]
     },
