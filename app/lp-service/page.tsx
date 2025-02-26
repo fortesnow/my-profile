@@ -327,8 +327,8 @@ export default function LPService() {
                 初回限定特典
               </h3>
               <p className="text-gray-300 mb-4">
-                今月中のお申し込みで、A/Bテスト無料実施！<br />
-                コンバージョン率を科学的に向上させるチャンス！
+                今月中のお申し込みで、集客戦略相談60分＆マーケティング施策レポートを無料プレゼント！<br />
+                LPだけでなく、それを活かす戦略まで手に入れるチャンス！
               </p>
               <a
                 href="https://lin.ee/ATZ4bog"
@@ -589,9 +589,22 @@ export default function LPService() {
             <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 [text-shadow:3px_3px_0_rgba(0,0,0,0.5)]">
               お問い合わせ
             </h2>
-            <p className="text-xl text-gray-300 mb-12 [text-shadow:1px_1px_0_rgba(0,0,0,0.5)]">
+            <p className="text-xl text-gray-300 mb-8 [text-shadow:1px_1px_0_rgba(0,0,0,0.5)]">
               LP制作についてのご相談・お見積りは、<br />LINEにてお気軽にお問い合わせください。
             </p>
+            
+            {/* 限定特典 - 内容を変更 */}
+            <div className="mb-10 bg-gradient-to-br from-yellow-900/30 to-amber-900/30 p-6 rounded-lg border-[4px] border-yellow-500/30 [box-shadow:4px_4px_0_rgba(234,179,8,0.2)]">
+              <h3 className="text-xl font-bold mb-4 text-yellow-400 [text-shadow:2px_2px_0_rgba(0,0,0,0.5)]">
+                <Gift className="w-6 h-6 inline-block mr-2" />
+                初回限定特典！
+              </h3>
+              <p className="text-gray-300 mb-4">
+                今月中のお問い合わせで<span className="text-yellow-400 font-bold">集客戦略相談60分</span>＆<br />
+                <span className="text-yellow-400 font-bold">マーケティング施策レポート</span>を無料プレゼント！
+              </p>
+              <div className="text-sm text-gray-400 animate-pulse">残り3枠のみ！</div>
+            </div>
             
             {/* 安心の保証 - 成果保証制度を削除 */}
             <div className="mt-10 flex flex-col md:flex-row justify-center gap-6">
