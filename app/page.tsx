@@ -36,8 +36,17 @@ export const metadata: Metadata = {
   },
 }
 
-// 最新の記事データを更新
+// 最新の記事データを更新（時系列順に並べ替え）
 const latestPosts = [
+  {
+    title: "Notion API でできること - ビジネスを自動化する11の活用例",
+    description: "Notion APIを活用したビジネス自動化の可能性を探ります。データベース操作からワークフロー自動化まで、実践的な11の活用例を解説します。",
+    date: "2025.02.27",
+    category: "API活用",
+    slug: "notion-api-usage",
+    image: "/blog/eye-catch/for-notion.jpeg",
+    href: "/blog/notion-api-usage"
+  },
   {
     title: "結果の出るホームページの作り方～プロが教える7つの成功戦略と実践事例",
     description: 'ホームページの成果を最大化するための実践的な戦略と具体的な改善手法を解説。アクセス解析データに基づく効果的なホームページ設計のノウハウと、CV率を2.3倍に改善した実例を紹介します。',
@@ -55,13 +64,6 @@ const latestPosts = [
     slug: 'lp-development',
     image: '/blog/eye-catch/for-LPO.webp',
     href: "/blog/lp-development"
-  },
-  {
-    title: "Notion API でできること - ビジネスを自動化する11の活用例",
-    date: "2025.02.27",
-    href: "/blog/notion-api-usage",
-    image: "/blog/eye-catch/for-notion.jpeg",
-    category: "API活用"
   },
   // ... 他の記事データ ...
 ];
