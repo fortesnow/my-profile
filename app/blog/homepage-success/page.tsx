@@ -341,7 +341,7 @@ export default function BlogPost() {
 
               <p className="text-sm text-gray-500 mt-8">
                 【編集後記】<br />
-                本記事は2025年2月21日に更新されました。最新のWeb標準やユーザー行動の変化を反映した内容となっています。
+                本記事は2025年2月27日に更新されました。最新のWeb標準やユーザー行動の変化を反映した内容となっています。
               </p>
             </div>
           </section>

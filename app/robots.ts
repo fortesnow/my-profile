@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://www.stellarium.jp/sitemap.xml',
+    sitemap: 'https://example.com/sitemap.xml',
   }
 } 

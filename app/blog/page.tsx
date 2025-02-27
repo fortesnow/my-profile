@@ -13,7 +13,7 @@ export default function BlogPage() {
       id: 2,
       title: "結果の出るホームページの作り方～プロが教える7つの成功戦略と実践事例",
       excerpt: "ホームページの成果を最大化するための実践的な戦略と具体的な改善手法を解説。アクセス解析データに基づく効果的なホームページ設計のノウハウと、CV率を2.3倍に改善した実例を紹介します。",
-      date: "2025.02.22",
+      date: "2025.02.27",
       category: "Web制作",
       slug: "homepage-success",
       thumbnail: "/blog/eye-catch/homepage-success.jpg"
@@ -22,10 +22,17 @@ export default function BlogPage() {
       id: 1,
       title: "【事業者向け】LPはただ作るだけではダメ！作ってからがスタートラインその理由とは？",
       excerpt: "LPの本質的な目的と、制作後の運用の重要性について解説します。セールスライティング、LPO、広告運用など、実務経験に基づいた知見を共有します。",
-      date: "2025.02.16",
+      date: "2025.02.27",
       category: "LP制作",
       slug: "lp-development",
       thumbnail: "/blog/eye-catch/for-LPO.webp"
+    },
+    {
+      title: "Notion API でできること - ビジネスを自動化する11の活用例",
+      description: "Notion APIを活用したビジネス自動化の可能性を探ります。データベース操作からワークフロー自動化まで、実践的な11の活用例を解説します。",
+      date: "2025年2月27日",
+      href: "/blog/notion-api-usage",
+      image: "/blog/eye-catch/for-notion.jpeg"
     },
   ]
 
@@ -43,12 +50,12 @@ export default function BlogPage() {
           {posts.map((post) => (
             <Link 
               key={post.id}
-              href={`/blog/${post.slug}`}
+              href={post.href || `/blog/${post.slug}`}
               className="bg-gray-900/50 backdrop-blur-md rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300"
             >
               <div className="relative h-48">
                 <Image
-                  src={post.thumbnail}
+                  src={post.thumbnail || post.image || '/images/default-image.jpg'}
                   alt={post.title}
                   fill
                   className="object-cover"
@@ -62,7 +69,7 @@ export default function BlogPage() {
                   </span>
                 </div>
                 <h2 className="text-xl font-semibold mb-3 text-cyan-400">{post.title}</h2>
-                <p className="text-gray-300">{post.excerpt}</p>
+                <p className="text-gray-300">{post.excerpt || post.description}</p>
               </div>
             </Link>
           ))}
