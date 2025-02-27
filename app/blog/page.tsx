@@ -10,6 +10,14 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   const posts = [
     {
+      title: "Notion API でできること - ビジネスを自動化する11の活用例",
+      description: "Notion APIを活用したビジネス自動化の可能性を探ります。データベース操作からワークフロー自動化まで、実践的な11の活用例を解説します。",
+      date: "2025年2月27日",
+      href: "/blog/notion-api-usage",
+      image: "/blog/eye-catch/for-notion.jpeg",
+      category: "API活用"
+    },
+    {
       id: 2,
       title: "結果の出るホームページの作り方～プロが教える7つの成功戦略と実践事例",
       excerpt: "ホームページの成果を最大化するための実践的な戦略と具体的な改善手法を解説。アクセス解析データに基づく効果的なホームページ設計のノウハウと、CV率を2.3倍に改善した実例を紹介します。",
@@ -26,14 +34,7 @@ export default function BlogPage() {
       category: "LP制作",
       slug: "lp-development",
       thumbnail: "/blog/eye-catch/for-LPO.webp"
-    },
-    {
-      title: "Notion API でできること - ビジネスを自動化する11の活用例",
-      description: "Notion APIを活用したビジネス自動化の可能性を探ります。データベース操作からワークフロー自動化まで、実践的な11の活用例を解説します。",
-      date: "2025年2月27日",
-      href: "/blog/notion-api-usage",
-      image: "/blog/eye-catch/for-notion.jpeg"
-    },
+    }
   ]
 
   return (
