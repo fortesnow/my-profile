@@ -39,20 +39,29 @@ export const metadata: Metadata = {
 // 最新の記事データを更新
 const latestPosts = [
   {
-    title: '結果の出るホームページの作り方～プロが教える7つの成功戦略と実践事例',
+    title: "結果の出るホームページの作り方～プロが教える7つの成功戦略と実践事例",
     description: 'ホームページの成果を最大化するための実践的な戦略と具体的な改善手法を解説。アクセス解析データに基づく効果的なホームページ設計のノウハウと、CV率を2.3倍に改善した実例を紹介します。',
-    date: '2025.02.21',
+    date: "2025.02.22",
     category: 'Web制作',
     slug: 'homepage-success',
-    image: '/blog/eye-catch/homepage-success.jpg'
+    image: '/blog/eye-catch/homepage-success.jpg',
+    href: "/blog/homepage-success"
   },
   {
-    title: '【事業者向け】LPはただ作るだけではダメ！作ってからがスタートラインその理由とは？',
+    title: "【事業者向け】LPはただ作るだけではダメ！作ってからがスタートラインその理由とは？",
     description: 'LPの本質的な目的と、制作後の運用の重要性について解説します。セールスライティング、LPO、広告運用など、実務経験に基づいた知見を共有します。',
-    date: '2025.02.16',
+    date: "2025.02.16",
     category: 'LP制作',
     slug: 'lp-development',
-    image: '/blog/eye-catch/for-LPO.webp'
+    image: '/blog/eye-catch/for-LPO.webp',
+    href: "/blog/lp-development"
+  },
+  {
+    title: "Notion API でできること - ビジネスを自動化する11の活用例",
+    date: "2025.02.27",
+    href: "/blog/notion-api-usage",
+    image: "/blog/eye-catch/for-notion.jpeg",
+    category: "API活用"
   },
   // ... 他の記事データ ...
 ];
@@ -83,7 +92,7 @@ export default async function Home() {
             {latestPosts.map((post) => (
               <a
                 key={post.slug}
-                href={`/blog/${post.slug}`}
+                href={post.href}
                 className="block bg-gray-800/50 rounded-lg overflow-hidden hover:scale-105 transition-transform"
               >
                 <div className="relative h-48">

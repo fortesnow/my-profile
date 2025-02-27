@@ -7,13 +7,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogPosts = [
     {
       url: `${baseUrl}/blog/homepage-success`,
-      lastModified: new Date('2025-02-27'),
+      lastModified: new Date('2025-02-22'),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/blog/lp-development`,
-      lastModified: new Date('2025-02-27'),
+      lastModified: new Date('2025-02-16'),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },

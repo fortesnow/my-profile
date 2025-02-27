@@ -28,7 +28,7 @@ export default function LPDevelopmentBlog() {
             【事業者向け】LPはただ作るだけではダメ！作ってからがスタートラインその理由とは？
           </h1>
           <div className="flex items-center gap-4 text-gray-400">
-            <time dateTime="2025-02-27">2025年2月27日</time>
+            <time dateTime="2025-02-16">2025年2月16日</time>
             <span className="text-sm px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full">
               LP制作
             </span>

@@ -46,12 +46,18 @@ export default function BlogPost() {
             結果の出るホームページの作り方～プロが教える7つの成功戦略と実践事例
           </h1>
           <div className="flex items-center gap-4 text-gray-400">
-            <time>2025.02.21</time>
+            <time>2025.02.22</time>
             <span className="text-sm px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full">
               Web制作
             </span>
           </div>
         </header>
+
+        <div className="mb-8 flex items-center text-sm text-gray-400">
+          <time dateTime="2025-02-22">2025年2月22日</time>
+          <span className="mx-2">•</span>
+          <span>約12分で読めます</span>
+        </div>
 
         <div className="prose prose-invert max-w-none">
           <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-8 mb-12">
@@ -341,7 +347,7 @@ export default function BlogPost() {
 
               <p className="text-sm text-gray-500 mt-8">
                 【編集後記】<br />
-                本記事は2025年2月27日に更新されました。最新のWeb標準やユーザー行動の変化を反映した内容となっています。
+                本記事は2025年2月22日に更新されました。最新のWeb標準やユーザー行動の変化を反映した内容となっています。
               </p>
             </div>
           </section>
