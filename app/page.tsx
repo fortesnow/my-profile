@@ -46,8 +46,10 @@ export default async function Home() {
   
   console.log(`Server-side rendering took ${endTime[0]}s ${endTime[1] / 1000000}ms`);
   
-  // 最新の3記事を取得
+  // 確実に最新データを取得するため、明示的に関数を呼び出す
   const latestPosts = getLatestPosts(3);
+  
+  console.log("Latest posts:", latestPosts); // デバッグ用
   
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
