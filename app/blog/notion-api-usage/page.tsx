@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowLeft, ExternalLink } from "lucide-react"
+import { ArrowLeft } from "lucide-react"
 
 export const metadata: Metadata = {
   title: 'Notion API でできること - ビジネスを自動化する11の活用例 | Web制作 あおい',
@@ -395,29 +395,49 @@ export default function NotionApiUsagePage() {
           </p>
         </div>
 
-        <div className="my-12 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-lg p-6 border border-cyan-500/20 shadow-lg">
-          <h3 className="text-xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-            Notion APIの導入サポートします
-          </h3>
-          <p className="text-gray-200 mb-4 leading-relaxed">
-            「自社のワークフローにNotionを取り入れたいけど、どう始めればいいかわからない」
-            「既存のシステムとNotionを連携させたい」といったお悩みはありませんか？
-          </p>
-          <p className="text-gray-200 mb-6 leading-relaxed">
-            Web制作あおいでは、Notion APIを活用したカスタムソリューションの開発から、
-            既存システムとの連携まで、幅広くサポートしています。
-            お気軽にご相談ください。
-          </p>
-          <a
-            href="https://lin.ee/ATZ4bog"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-purple-500 transition-all"
-          >
-            お問い合わせはこちら
-            <ExternalLink className="ml-2 h-4 w-4" />
-          </a>
-        </div>
+        {/* 訴求セクション - AI開発サービスへ誘導 */}
+        <section className="mt-16 bg-gradient-to-r from-blue-900 to-purple-900 rounded-xl p-8 border border-cyan-400/30 shadow-lg">
+          <h2 className="text-2xl font-bold mb-6 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300">
+            「Notion APIの活用方法がわからない…」<br/>
+            そんなお悩みを解決します！
+          </h2>
+          
+          <div className="space-y-6 text-gray-200">
+            <p className="text-lg">
+              Notion APIを使った業務自動化やシステム開発は、<span className="font-bold text-cyan-300">専門知識がなくても実現可能</span>です。
+              私のAI開発サービスでは、お客様のビジネスやプロジェクトに合わせた最適な自動化ソリューションをご提案します。
+            </p>
+            
+            <div className="bg-blue-950/50 p-6 rounded-lg">
+              <h3 className="font-bold text-cyan-300 mb-3">こんなお悩みはありませんか？</h3>
+              <ul className="space-y-2 list-disc pl-5">
+                <li>Notionのデータを他のシステムと連携させたい</li>
+                <li>日々の単調な作業を自動化したい</li>
+                <li>技術的な知識がなくてもシステムを導入したい</li>
+                <li>コストを抑えながら業務効率を上げたい</li>
+              </ul>
+            </div>
+            
+            <div className="flex flex-col items-center">
+              <p className="font-bold text-lg text-cyan-300 mb-2">
+                今なら初回相談無料！第一線で活躍するわたしがお客様の課題をヒアリングします
+              </p>
+              <p className="text-sm mb-4">※技術的な知識は一切必要ありません。現在の課題をお聞かせください</p>
+              
+              <a 
+                href="/ai-service" 
+                className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-8 py-4 rounded-full text-white font-bold text-lg transition-all transform hover:scale-105 shadow-lg"
+              >
+                AI開発サービスの詳細を見る →
+              </a>
+            </div>
+            
+            <div className="text-center text-sm mt-4">
+              <p>※これまでに<span className="font-bold text-cyan-300">20社以上の会社と個人</span>の業務自動化を実現しています</p>
+              <p>※最短2週間でシステム導入が可能です</p>
+            </div>
+          </div>
+        </section>
       </div>
     </article>
   )

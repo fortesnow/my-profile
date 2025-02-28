@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
+import { ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
   title: 'ブログ | Web制作 あおい',
@@ -47,32 +48,62 @@ export default function BlogPage() {
           Web制作とマーケティングの実践的な情報を発信
         </p>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {posts.map((post) => (
-            <Link 
-              key={post.id}
-              href={post.href || `/blog/${post.slug}`}
-              className="bg-gray-900/50 backdrop-blur-md rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300"
-            >
-              <div className="relative h-48">
-                <Image
-                  src={post.thumbnail || post.image || '/images/default-image.jpg'}
-                  alt={post.title}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+          <article className="bg-gradient-to-b from-gray-800/50 to-gray-900/50 rounded-xl overflow-hidden border border-gray-800 shadow-lg hover:shadow-cyan-900/20 transition-all group">
+            <Link href="/blog/meta-ads-for-esthetic-salon" className="block">
+              <div className="relative h-48 overflow-hidden">
+                <Image 
+                  src="/blog/eye-catch/meta-ads-esthetic.jpg"
+                  alt="エステサロン向けMeta広告運用ガイド"
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+                <div className="absolute bottom-0 left-0 p-4 z-10">
+                  <span className="bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded text-xs">広告運用</span>
+                </div>
               </div>
-              <div className="p-6">
-                <div className="flex items-center gap-4 mb-3">
-                  <span className="text-sm text-gray-400">{post.date}</span>
-                  <span className="text-sm px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full">
-                    {post.category}
+              
+              <div className="p-5">
+                <h2 className="text-xl font-bold mb-3 text-white group-hover:text-cyan-400 transition-colors">
+                  【2025年最新】エステサロンのMeta広告運用完全ガイド
+                </h2>
+                <p className="text-gray-400 text-sm mb-4 line-clamp-2">
+                  エステサロン向けMeta広告の運用方法を徹底解説。効果的なターゲティング、予算設定から実際の成功事例まで。
+                </p>
+                <div className="flex justify-between items-center">
+                  <time className="text-gray-500 text-sm">2025.02.28</time>
+                  <span className="text-cyan-400 text-sm flex items-center group-hover:translate-x-1 transition-transform">
+                    詳細を見る <ArrowRight className="ml-1 h-3 w-3" />
                   </span>
                 </div>
-                <h2 className="text-xl font-semibold mb-3 text-cyan-400">{post.title}</h2>
-                <p className="text-gray-300">{post.excerpt || post.description}</p>
               </div>
             </Link>
+          </article>
+          
+          {posts.map((post) => (
+            <article className="bg-gradient-to-b from-gray-800/50 to-gray-900/50 rounded-xl overflow-hidden border border-gray-800 shadow-lg hover:shadow-cyan-900/20 transition-all group">
+              <Link href={post.href || `/blog/${post.slug}`} className="block">
+                <div className="relative h-48">
+                  <Image
+                    src={post.thumbnail || post.image || '/images/default-image.jpg'}
+                    alt={post.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-4 mb-3">
+                    <span className="text-sm text-gray-400">{post.date}</span>
+                    <span className="text-sm px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full">
+                      {post.category}
+                    </span>
+                  </div>
+                  <h2 className="text-xl font-semibold mb-3 text-cyan-400 group-hover:text-white transition-colors">{post.title}</h2>
+                  <p className="text-gray-300 line-clamp-2">{post.excerpt || post.description}</p>
+                </div>
+              </Link>
+            </article>
           ))}
         </div>
       </div>

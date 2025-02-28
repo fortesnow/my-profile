@@ -3,6 +3,8 @@ import { ProfileServer } from '@/components/profile-server'
 import ProfileClient from '@/components/profile'
 import '@/app/globals.css';
 import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
   title: 'Web制作 あおい | フロントエンド開発・LP制作',
@@ -115,6 +117,52 @@ export default async function Home() {
                 </div>
               </a>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ブログセクション */}
+      <section className="py-20 px-6 bg-gradient-to-b from-[#0d1631] to-[#0f172a]">
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-400 mb-16 text-center">
+            ブログ
+          </h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* 新しいブログ記事 - Meta広告 エステサロン */}
+            <article className="bg-[#0d1631]/70 rounded-xl overflow-hidden border border-gray-800 shadow-lg hover:shadow-cyan-900/20 transition-all group">
+              <Link href="/blog/meta-ads-for-esthetic-salon" className="block">
+                <div className="relative h-48 overflow-hidden">
+                  <Image 
+                    src="/blog/eye-catch/meta-ads-esthetic.jpg"
+                    alt="エステサロン向けMeta広告運用ガイド"
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+                  <div className="absolute bottom-0 left-0 p-4 z-10">
+                    <span className="bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded text-xs">広告運用</span>
+                  </div>
+                </div>
+                
+                <div className="p-5">
+                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-cyan-400 transition-colors">
+                    エステサロンのMeta広告運用完全ガイド
+                  </h3>
+                  <time className="text-gray-500 text-sm">2025.02.28</time>
+                </div>
+              </Link>
+            </article>
+            
+            {/* 既存のブログ記事 */}
+            {/* ... existing articles ... */}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Link href="/blog" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-teal-600 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-teal-500 transition-all">
+              ブログ一覧を見る
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>
