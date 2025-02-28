@@ -880,23 +880,33 @@ export default function MetaAdsForEstheticSalonPage() {
               </ul>
             </div>
             
+            <div className="text-center text-sm mt-4">
+              <p>※これまでに<span className="font-bold text-cyan-300">20社以上の会社と個人</span>の広告運用をサポートしています</p>
+              <p>※最短1ヵ月で広告パフォーマンスの改善が可能です</p>
+            </div>
+            
             <div className="flex flex-col items-center">
               <p className="font-bold text-lg text-cyan-300 mb-2">
                 今なら初回相談無料！第一線で活躍するわたしがお客様の課題をヒアリングします
               </p>
               <p className="text-sm mb-4">※技術的な知識は一切必要ありません。現在の集客状況や課題をお聞かせください</p>
               
-              <a 
-                href="/advertising-service" 
-                className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-8 py-4 rounded-full text-white font-bold text-lg transition-all transform hover:scale-105 shadow-lg"
-              >
-                広告運用サポートの詳細を見る →
-              </a>
-            </div>
-            
-            <div className="text-center text-sm mt-4">
-              <p>※これまでに<span className="font-bold text-cyan-300">20社以上の会社と個人</span>の広告運用をサポートしています</p>
-              <p>※最短2週間で広告パフォーマンスの改善が可能です</p>
+              <div className="flex flex-col md:flex-row gap-4 mt-2">
+                <a 
+                  href="/ads-service" 
+                  className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 px-8 py-4 rounded-full text-white font-bold text-lg transition-all transform hover:scale-105 shadow-lg"
+                >
+                  広告運用サービスの詳細を見る →
+                </a>
+                <a 
+                  href="https://lin.ee/ATZ4bog" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 px-8 py-4 rounded-full text-white font-bold text-lg transition-all transform hover:scale-105 shadow-lg"
+                >
+                  お問い合わせはこちら →
+                </a>
+              </div>
             </div>
           </div>
         </section>

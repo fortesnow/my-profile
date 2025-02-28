@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
   title: 'ブログ | Web制作 あおい',
@@ -11,12 +10,22 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   const posts = [
     {
+      id: 4,
+      title: "【2025年最新】エステサロンのMeta広告運用完全ガイド",
+      excerpt: "エステサロン向けMeta広告の運用方法を徹底解説。効果的なターゲティング、予算設定から実際の成功事例まで。",
+      date: "2025.02.28",
+      category: "広告運用",
+      slug: "meta-ads-for-esthetic-salon",
+      thumbnail: "/blog/eye-catch/meta-ads-esthetic.jpg"
+    },
+    {
+      id: 3,
       title: "Notion API でできること - ビジネスを自動化する11の活用例",
-      description: "Notion APIを活用したビジネス自動化の可能性を探ります。データベース操作からワークフロー自動化まで、実践的な11の活用例を解説します。",
-      date: "2025年2月27日",
-      href: "/blog/notion-api-usage",
-      image: "/blog/eye-catch/for-notion.jpeg",
-      category: "API活用"
+      excerpt: "Notion APIを活用したビジネス自動化の可能性を探ります。データベース操作からワークフロー自動化まで、実践的な11の活用例を解説します。",
+      date: "2025.02.27",
+      category: "API活用",
+      slug: "notion-api-usage",
+      thumbnail: "/blog/eye-catch/for-notion.jpeg"
     },
     {
       id: 2,
@@ -45,48 +54,17 @@ export default function BlogPage() {
           ブログ
         </h1>
         <p className="text-xl text-center text-gray-300 mb-12">
-          Web制作とマーケティングの実践的な情報を発信
+          Web制作やデジタルマーケティングに関する<br className="md:hidden" />
+          実践的な知識やノウハウを発信しています
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-          <article className="bg-gradient-to-b from-gray-800/50 to-gray-900/50 rounded-xl overflow-hidden border border-gray-800 shadow-lg hover:shadow-cyan-900/20 transition-all group">
-            <Link href="/blog/meta-ads-for-esthetic-salon" className="block">
-              <div className="relative h-48 overflow-hidden">
-                <Image 
-                  src="/blog/eye-catch/meta-ads-esthetic.jpg"
-                  alt="エステサロン向けMeta広告運用ガイド"
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
-                <div className="absolute bottom-0 left-0 p-4 z-10">
-                  <span className="bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded text-xs">広告運用</span>
-                </div>
-              </div>
-              
-              <div className="p-5">
-                <h2 className="text-xl font-bold mb-3 text-white group-hover:text-cyan-400 transition-colors">
-                  【2025年最新】エステサロンのMeta広告運用完全ガイド
-                </h2>
-                <p className="text-gray-400 text-sm mb-4 line-clamp-2">
-                  エステサロン向けMeta広告の運用方法を徹底解説。効果的なターゲティング、予算設定から実際の成功事例まで。
-                </p>
-                <div className="flex justify-between items-center">
-                  <time className="text-gray-500 text-sm">2025.02.28</time>
-                  <span className="text-cyan-400 text-sm flex items-center group-hover:translate-x-1 transition-transform">
-                    詳細を見る <ArrowRight className="ml-1 h-3 w-3" />
-                  </span>
-                </div>
-              </div>
-            </Link>
-          </article>
-          
           {posts.map((post, index) => (
             <article key={post.id || post.slug || index} className="bg-gradient-to-b from-gray-800/50 to-gray-900/50 rounded-xl overflow-hidden border border-gray-800 shadow-lg hover:shadow-cyan-900/20 transition-all group">
-              <Link href={post.href || `/blog/${post.slug}`} className="block">
+              <Link href={`/blog/${post.slug}`} className="block">
                 <div className="relative h-48">
                   <Image
-                    src={post.thumbnail || post.image || '/images/default-image.jpg'}
+                    src={post.thumbnail || '/images/default-image.jpg'}
                     alt={post.title}
                     fill
                     className="object-cover"
@@ -100,7 +78,7 @@ export default function BlogPage() {
                     </span>
                   </div>
                   <h2 className="text-xl font-semibold mb-3 text-cyan-400 group-hover:text-white transition-colors">{post.title}</h2>
-                  <p className="text-gray-300 line-clamp-2">{post.excerpt || post.description}</p>
+                  <p className="text-gray-300 line-clamp-2">{post.excerpt}</p>
                 </div>
               </Link>
             </article>
