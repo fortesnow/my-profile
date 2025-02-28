@@ -551,10 +551,10 @@ export default function MetaAdsForEstheticSalonPage() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-5 justify-center">
-              <a href="/service" className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold py-4 px-6 rounded-lg text-center transition-all hover:shadow-lg sm:flex-1 text-base">
+              <a href="https://www.stellarium.jp/ads-service" className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold py-4 px-6 rounded-lg text-center transition-all hover:shadow-lg sm:flex-1 text-base">
                 広告運用サービスの詳細を見る →
               </a>
-              <a href="/contact" className="bg-transparent hover:bg-cyan-800/20 text-cyan-400 border border-cyan-600 font-semibold py-4 px-6 rounded-lg text-center transition-colors sm:flex-1 text-base">
+              <a href="https://page.line.me/nag6553k?oat_content=url&openQrModal=true" className="bg-transparent hover:bg-cyan-800/20 text-cyan-400 border border-cyan-600 font-semibold py-4 px-6 rounded-lg text-center transition-colors sm:flex-1 text-base">
                 お問い合わせはこちら →
               </a>
             </div>
