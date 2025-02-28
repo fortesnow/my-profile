@@ -81,8 +81,8 @@ export default function BlogPage() {
             </Link>
           </article>
           
-          {posts.map((post) => (
-            <article className="bg-gradient-to-b from-gray-800/50 to-gray-900/50 rounded-xl overflow-hidden border border-gray-800 shadow-lg hover:shadow-cyan-900/20 transition-all group">
+          {posts.map((post, index) => (
+            <article key={post.id || post.slug || index} className="bg-gradient-to-b from-gray-800/50 to-gray-900/50 rounded-xl overflow-hidden border border-gray-800 shadow-lg hover:shadow-cyan-900/20 transition-all group">
               <Link href={post.href || `/blog/${post.slug}`} className="block">
                 <div className="relative h-48">
                   <Image
