@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
+import { blogPosts, BlogPost } from "../../lib/blog-posts"
 
 export const metadata: Metadata = {
   title: 'ブログ | Web制作 あおい',
@@ -8,45 +9,6 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPage() {
-  const posts = [
-    {
-      id: 4,
-      title: "【2025年最新】エステサロンのMeta広告運用完全ガイド",
-      excerpt: "エステサロン向けMeta広告の運用方法を徹底解説。効果的なターゲティング、予算設定から実際の成功事例まで。",
-      date: "2025.02.28",
-      category: "広告運用",
-      slug: "meta-ads-for-esthetic-salon",
-      thumbnail: "/blog/eye-catch/meta-ads-esthetic.jpg"
-    },
-    {
-      id: 3,
-      title: "Notion API でできること - ビジネスを自動化する11の活用例",
-      excerpt: "Notion APIを活用したビジネス自動化の可能性を探ります。データベース操作からワークフロー自動化まで、実践的な11の活用例を解説します。",
-      date: "2025.02.27",
-      category: "API活用",
-      slug: "notion-api-usage",
-      thumbnail: "/blog/eye-catch/for-notion.jpeg"
-    },
-    {
-      id: 2,
-      title: "結果の出るホームページの作り方～プロが教える7つの成功戦略と実践事例",
-      excerpt: "ホームページの成果を最大化するための実践的な戦略と具体的な改善手法を解説。アクセス解析データに基づく効果的なホームページ設計のノウハウと、CV率を2.3倍に改善した実例を紹介します。",
-      date: "2025.02.22",
-      category: "Web制作",
-      slug: "homepage-success",
-      thumbnail: "/blog/eye-catch/homepage-success.jpg"
-    },
-    {
-      id: 1,
-      title: "【事業者向け】LPはただ作るだけではダメ！作ってからがスタートラインその理由とは？",
-      excerpt: "LPの本質的な目的と、制作後の運用の重要性について解説します。セールスライティング、LPO、広告運用など、実務経験に基づいた知見を共有します。",
-      date: "2025.02.16",
-      category: "LP制作",
-      slug: "lp-development",
-      thumbnail: "/blog/eye-catch/for-LPO.webp"
-    }
-  ]
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white py-20">
       <div className="container mx-auto px-6">
@@ -59,12 +21,12 @@ export default function BlogPage() {
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-          {posts.map((post, index) => (
-            <article key={post.id || post.slug || index} className="bg-gradient-to-b from-gray-800/50 to-gray-900/50 rounded-xl overflow-hidden border border-gray-800 shadow-lg hover:shadow-cyan-900/20 transition-all group">
+          {blogPosts.map((post: BlogPost) => (
+            <article key={post.id} className="bg-gradient-to-b from-gray-800/50 to-gray-900/50 rounded-xl overflow-hidden border border-gray-800 shadow-lg hover:shadow-cyan-900/20 transition-all group">
               <Link href={`/blog/${post.slug}`} className="block">
                 <div className="relative h-48">
                   <Image
-                    src={post.thumbnail || '/images/default-image.jpg'}
+                    src={post.thumbnail}
                     alt={post.title}
                     fill
                     className="object-cover"
