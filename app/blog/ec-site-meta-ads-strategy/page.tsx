@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import React from "react"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: '【2025年最新】ECサイト・ネットショップのMeta広告運用完全ガイド｜費用対効果2倍のテクニック',
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     locale: 'ja_JP',
     images: [
       {
-        url: '/blog/eye-catch/ec-site-meta-ads-strategy.jpg',
+        url: '/blog/eye-catch/for-meta-ec.webp',
         width: 1200,
         height: 630,
         alt: 'ECサイト・ネットショップのMeta広告運用戦略',
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '【2025年最新】ECサイト・ネットショップのMeta広告運用ガイド',
     description: 'ECサイト・ネットショップのMeta広告で結果を出す運用テクニック。',
-    images: ['/blog/eye-catch/ec-site-meta-ads-strategy.jpg'],
+    images: ['/blog/eye-catch/for-meta-ec.webp'],
     creator: '@あおい',
     site: '@Webデザインあおい',
   },
@@ -68,8 +69,13 @@ export default function ECsiteMetaAdsStrategyPage() {
           <span className="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-sm">広告運用</span>
         </div>
 
-        <div className="relative w-full h-64 md:h-96 mb-10 rounded-xl overflow-hidden bg-gradient-to-r from-blue-800/50 to-purple-800/50 flex items-center justify-center">
-          <p className="text-lg text-center px-6">Meta広告でECサイトの売上を加速させるための完全ガイド</p>
+        <div className="relative w-full h-64 md:h-96 mb-10 rounded-xl overflow-hidden">
+          <Image 
+            src="/blog/eye-catch/for-meta-ec.webp"
+            alt="ECサイト・ネットショップのMeta広告運用ガイド" 
+            fill
+            className="object-cover"
+          />
         </div>
 
         <div className="prose prose-lg prose-invert max-w-none">
