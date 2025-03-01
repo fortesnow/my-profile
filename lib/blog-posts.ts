@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025.03.01",
     category: "広告運用",
     slug: "ec-site-meta-ads-strategy",
-    thumbnail: "/blog/eye-catch/ec-site-meta-ads-strategy.jpg"
+    thumbnail: "/blog/eye-catch/for-meta-ec.webp"
   },
   {
     id: 2,
