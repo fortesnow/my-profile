@@ -36,8 +36,8 @@ export const metadata: Metadata = {
     ],
     url: 'https://stellarium.jp/blog/meta-ads-for-restaurant',
     siteName: 'Web制作 あおい',
-    publishedTime: '2025-03-15T00:00:00+09:00',
-    modifiedTime: '2025-03-15T00:00:00+09:00',
+    publishedTime: '2025-03-01T00:00:00+09:00',
+    modifiedTime: '2025-03-01T00:00:00+09:00',
     authors: ['Web制作 あおい'],
   },
   twitter: {
@@ -63,10 +63,7 @@ export default function MetaAdsForRestaurantPage() {
           【2025年最新】飲食店のMeta広告運用完全ガイド
         </h1>
         
-        <div className="flex items-center gap-4 mb-10">
-          <time className="text-gray-400">2025.03.15</time>
-          <span className="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-sm">広告運用</span>
-        </div>
+        <div className="text-gray-400 mb-6">2025.03.01 <span className="ml-2 px-2 py-1 bg-cyan-900/30 text-cyan-400 rounded text-xs">広告運用</span></div>
         
         <div className="relative w-full h-64 md:h-96 mb-10 rounded-xl overflow-hidden">
           <Image
