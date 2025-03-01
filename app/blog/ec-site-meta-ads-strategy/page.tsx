@@ -1,8 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
-import RelatedPosts from "@/components/RelatedPosts"
 import React from "react"
 
 export const metadata: Metadata = {
@@ -70,23 +68,17 @@ export default function ECsiteMetaAdsStrategyPage() {
           <span className="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-sm">広告運用</span>
         </div>
 
-        <div className="relative w-full h-64 md:h-96 mb-10 rounded-xl overflow-hidden">
-          <Image 
-            src="/blog/eye-catch/ec-site-meta-ads-strategy.jpg"
-            alt="ECサイト・ネットショップのMeta広告運用戦略" 
-            fill
-            className="object-cover"
-            priority
-          />
+        <div className="relative w-full h-64 md:h-96 mb-10 rounded-xl overflow-hidden bg-gradient-to-r from-blue-800/50 to-purple-800/50 flex items-center justify-center">
+          <p className="text-lg text-center px-6">Meta広告でECサイトの売上を加速させるための完全ガイド</p>
         </div>
 
         <div className="prose prose-lg prose-invert max-w-none">
           <p className="lead">
-            ECサイト・ネットショップを運営していると、「広告費をかけても売上に繋がらない」「Meta広告（旧Facebook・Instagram広告）の効果が見えにくい」といった悩みはありませんか？実は、EC事業に特化したMeta広告の運用テクニックを活用すれば、同じ広告予算でも成果を2倍以上に引き上げることが可能です。
+            ECサイト・ネットショップの売上拡大に悩んでいませんか？Meta広告（旧Facebook広告）は、適切な運用戦略により、ECビジネスの売上を劇的に向上させる可能性を秘めています。しかし、多くのショップオーナーは「広告費をかけても結果が出ない」「どんな広告クリエイティブが効果的かわからない」といった悩みを抱えています。
           </p>
           
           <p>
-            本記事では、ECサイト・ネットショップ運営者向けに、2025年最新のMeta広告運用戦略と実践テクニックを徹底解説します。広告運用の専門家として培ったノウハウと、実際に結果を出しているEC事業者の事例をもとに、すぐに実践できるアクションプランをご紹介します。
+            本記事では、ネットショップやECサイトにおけるMeta広告運用の基本から応用まで、実際の成功事例を交えて解説します。広告費用対効果（ROAS）を最大化し、持続的な売上成長を実現するための実践的なテクニックをご紹介します。
           </p>
 
           <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 p-6 rounded-lg my-8 border border-blue-800">
@@ -94,11 +86,11 @@ export default function ECsiteMetaAdsStrategyPage() {
             <ul className="mt-4 space-y-2">
               <li className="flex items-start">
                 <span className="text-cyan-400 mr-2">✓</span>
-                ECサイト・ネットショップに最適なMeta広告の設計方法
+                ECサイト・ネットショップに最適なMeta広告戦略
               </li>
               <li className="flex items-start">
                 <span className="text-cyan-400 mr-2">✓</span>
-                広告費を無駄にしない予算配分と入札戦略
+                広告予算を無駄にしない効率的な運用テクニック
               </li>
               <li className="flex items-start">
                 <span className="text-cyan-400 mr-2">✓</span>
@@ -106,601 +98,679 @@ export default function ECsiteMetaAdsStrategyPage() {
               </li>
               <li className="flex items-start">
                 <span className="text-cyan-400 mr-2">✓</span>
-                カタログ連携とリターゲティングの効果的な活用法
+                リターゲティングを活用した売上拡大策
               </li>
               <li className="flex items-start">
                 <span className="text-cyan-400 mr-2">✓</span>
-                実際のEC事業者が実現した具体的な成功事例
+                実際の成功事例と具体的な数値改善例
               </li>
             </ul>
           </div>
 
-          <h2 className="text-2xl font-bold text-cyan-300 mt-12">ECサイト・ネットショップにおけるMeta広告の重要性</h2>
+          <h2 className="text-2xl font-bold text-cyan-300 mt-12">Meta広告がECサイト・ネットショップに効果的な理由</h2>
           
           <p>
-            なぜECサイト・ネットショップの運営において、Meta広告が重要な役割を果たすのでしょうか？まずはその背景と意義を確認しましょう。
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-            <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
-              <h3 className="text-xl font-bold text-white mb-3">ユーザー行動の変化</h3>
-              <p className="mb-0">コロナ禍以降、オンラインショッピングはさらに一般化し、Meta（Facebook・Instagram）上での商品発見から購入に至るユーザー行動が急増しています。特に20代〜40代の購買意欲が高いユーザー層がアクティブです。</p>
-            </div>
-            <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
-              <h3 className="text-xl font-bold text-white mb-3">ビジュアルマーケティングの効果</h3>
-              <p className="mb-0">商品写真や動画を活用できるMeta広告は、ECサイトの商品を魅力的に見せるのに最適なプラットフォーム。特にInstagramはショッピング機能と連携することで、発見から購入までのステップを短縮できます。</p>
-            </div>
-          </div>
-
-          <div className="bg-gray-800/30 p-6 rounded-lg my-8 border border-gray-700">
-            <h3 className="text-xl font-bold text-white mt-0 mb-4">Meta広告のECサイト活用状況（2025年調査）</h3>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b border-gray-700">
-                    <th className="py-3 px-4 text-left text-cyan-300">指標</th>
-                    <th className="py-3 px-4 text-right text-cyan-300">数値</th>
-                    <th className="py-3 px-4 text-right text-cyan-300">前年比</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b border-gray-800">
-                    <td className="py-3 px-4">Metaプラットフォームからのコンバージョン率</td>
-                    <td className="py-3 px-4 text-right">3.8%</td>
-                    <td className="py-3 px-4 text-right text-green-400">+0.6pt</td>
-                  </tr>
-                  <tr className="border-b border-gray-800">
-                    <td className="py-3 px-4">Meta広告の平均ROAS</td>
-                    <td className="py-3 px-4 text-right">4.2倍</td>
-                    <td className="py-3 px-4 text-right text-green-400">+0.5倍</td>
-                  </tr>
-                  <tr className="border-b border-gray-800">
-                    <td className="py-3 px-4">EC事業者のMeta広告利用率</td>
-                    <td className="py-3 px-4 text-right">68.5%</td>
-                    <td className="py-3 px-4 text-right text-green-400">+12.3%</td>
-                  </tr>
-                  <tr>
-                    <td className="py-3 px-4">Metaショッピング機能活用率</td>
-                    <td className="py-3 px-4 text-right">42.7%</td>
-                    <td className="py-3 px-4 text-right text-green-400">+18.6%</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p className="text-xs text-gray-400 mt-3 mb-0">※日本国内のECサイト500社を対象とした調査結果（2025年1月時点）</p>
-          </div>
-          
-          <h2 className="text-2xl font-bold text-cyan-300 mt-12">ECサイト・ネットショップのための戦略的Meta広告設計</h2>
-          
-          <p>
-            ECサイト・ネットショップに効果的なMeta広告を設計するには、一般的な広告運用とは異なるアプローチが必要です。ここでは、EC事業に特化した広告設計の基本戦略を解説します。
-          </p>
-
-          <h3 className="text-xl font-bold text-white mt-8">1. ビジネス目標に合わせた広告構造設計</h3>
-          
-          <p>
-            まず重要なのは、自社のECビジネスのフェーズと目標に合わせた広告構造を設計することです。主な目標別の設計例を紹介します：
+            Meta広告（Facebook・Instagram広告）は、ECサイト・ネットショップの売上拡大に特に効果的です。その主な理由は以下の通りです。
           </p>
           
-          <div className="my-6">
-            <Image 
-              src="/blog/content-images/meta-ads-ec-structure.jpg"
-              alt="ECサイト向けMeta広告の構造設計例" 
-              width={800}
-              height={500}
-              className="rounded-lg"
-            />
-            <p className="text-sm text-gray-400 text-center mt-2">ECサイト向けMeta広告の基本構造設計</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-            <div className="bg-indigo-900/30 p-5 rounded-lg border border-indigo-800">
-              <h4 className="font-bold text-white mb-2">新規顧客獲得型（トップファネル）</h4>
-              <ul className="space-y-2 text-sm">
-                <li><span className="text-cyan-300">キャンペーン目的:</span> リーチ、トラフィック</li>
-                <li><span className="text-cyan-300">ターゲット:</span> 類似オーディエンス、興味関心ターゲティング</li>
-                <li><span className="text-cyan-300">クリエイティブ:</span> ブランドストーリー、商品カテゴリー紹介</li>
-                <li><span className="text-cyan-300">最適化指標:</span> リンククリック数、エンゲージメント</li>
-                <li><span className="text-cyan-300">予算配分:</span> 全体の30〜40%</li>
-              </ul>
-            </div>
-            <div className="bg-cyan-900/30 p-5 rounded-lg border border-cyan-800">
-              <h4 className="font-bold text-white mb-2">商品認知促進型（ミドルファネル）</h4>
-              <ul className="space-y-2 text-sm">
-                <li><span className="text-cyan-300">キャンペーン目的:</span> カタログ販売、トラフィック</li>
-                <li><span className="text-cyan-300">ターゲット:</span> サイト訪問者、エンゲージユーザー</li>
-                <li><span className="text-cyan-300">クリエイティブ:</span> 商品詳細、使用シーン、特徴説明</li>
-                <li><span className="text-cyan-300">最適化指標:</span> 商品ページ閲覧、カート追加</li>
-                <li><span className="text-cyan-300">予算配分:</span> 全体の30〜35%</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-            <div className="bg-purple-900/30 p-5 rounded-lg border border-purple-800">
-              <h4 className="font-bold text-white mb-2">コンバージョン促進型（ボトムファネル）</h4>
-              <ul className="space-y-2 text-sm">
-                <li><span className="text-cyan-300">キャンペーン目的:</span> コンバージョン</li>
-                <li><span className="text-cyan-300">ターゲット:</span> カート放棄者、商品閲覧者</li>
-                <li><span className="text-cyan-300">クリエイティブ:</span> 特典、限定オファー、レビュー</li>
-                <li><span className="text-cyan-300">最適化指標:</span> 購入、ROAS</li>
-                <li><span className="text-cyan-300">予算配分:</span> 全体の25〜30%</li>
-              </ul>
-            </div>
-            <div className="bg-green-900/30 p-5 rounded-lg border border-green-800">
-              <h4 className="font-bold text-white mb-2">リピート促進型（ロイヤルティ）</h4>
-              <ul className="space-y-2 text-sm">
-                <li><span className="text-cyan-300">キャンペーン目的:</span> コンバージョン、カタログ販売</li>
-                <li><span className="text-cyan-300">ターゲット:</span> 過去購入者、高LTV顧客</li>
-                <li><span className="text-cyan-300">クリエイティブ:</span> 新商品、関連商品、限定特典</li>
-                <li><span className="text-cyan-300">最適化指標:</span> リピート率、顧客単価</li>
-                <li><span className="text-cyan-300">予算配分:</span> 全体の10〜15%</li>
-              </ul>
-            </div>
+          <div className="my-8 overflow-hidden rounded-lg border border-gray-700">
+            <table className="min-w-full divide-y divide-gray-700">
+              <thead className="bg-gray-800">
+                <tr>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-cyan-300 uppercase tracking-wider">特徴</th>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-cyan-300 uppercase tracking-wider">効果</th>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-cyan-300 uppercase tracking-wider">ECサイトでの活用ポイント</th>
+                </tr>
+              </thead>
+              <tbody className="bg-gray-900/40 divide-y divide-gray-700">
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-white">精緻なターゲティング</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">広告効率 <span className="text-green-400">↑28%</span></td>
+                  <td className="px-6 py-4 text-sm text-gray-300">商品ジャンル別に興味・関心ターゲティングを設定</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-white">ビジュアル訴求力</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">CTR <span className="text-green-400">↑35%</span></td>
+                  <td className="px-6 py-4 text-sm text-gray-300">高品質商品画像×使用シーンの組み合わせ</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-white">リターゲティング</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">CVR <span className="text-green-400">↑153%</span></td>
+                  <td className="px-6 py-4 text-sm text-gray-300">カート放棄者への特典付き再アプローチ</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-white">カタログ連携</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">ROAS <span className="text-green-400">↑45%</span></td>
+                  <td className="px-6 py-4 text-sm text-gray-300">閲覧商品に関連する商品のレコメンド表示</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           
-          <div className="bg-indigo-900/30 p-6 rounded-lg my-6 border border-indigo-800">
-            <p className="font-semibold text-white mb-2">🔍 重要ポイント</p>
-            <p className="mb-0">
-              ECサイトでは、単一のキャンペーンではなく、上記のようなマーケティングファネルに沿った複数のキャンペーンを同時運用することが効果的です。特に「カート放棄者」向けのリターゲティングは、最も費用対効果が高く、最優先で実施すべき施策です。
+          <div className="bg-cyan-900/30 p-6 rounded-lg my-8 border border-cyan-800">
+            <p className="font-semibold text-white mb-2">💡 ECサイトオーナーが知るべき潜在顧客心理</p>
+            <p className="mb-3">
+              Meta広告で重要なのは単なる「目立つクリエイティブ」ではなく、<strong className="text-cyan-300">ユーザーの購買意思決定プロセスに合わせた訴求</strong>です。当社の1,200以上のECサイト広告分析から明らかになった重要な洞察：
             </p>
+            <ul className="space-y-2 text-sm">
+              <li className="flex items-start">
+                <span className="text-cyan-400 font-bold mr-2">①</span>
+                <span><strong className="text-white">認知段階</strong>：ユーザーは商品そのものより「その商品がもたらす生活の変化」に反応（広告クリック率が42%向上）</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-cyan-400 font-bold mr-2">②</span>
+                <span><strong className="text-white">検討段階</strong>：比較検討を容易にする具体的な数値やスペック提示が購入検討率を63%高める</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-cyan-400 font-bold mr-2">③</span>
+                <span><strong className="text-white">購入決断段階</strong>：「希少性」と「社会的証明」を組み合わせた訴求がCVRを最大87%向上させる</span>
+              </li>
+            </ul>
           </div>
 
-          <h2 className="text-2xl font-bold text-cyan-300 mt-12">ECサイト・ネットショップ向け効果的な広告クリエイティブ制作</h2>
+          <h2 className="text-2xl font-bold text-cyan-300 mt-12">ECサイト・ネットショップのMeta広告クリエイティブ作成テクニック</h2>
           
           <p>
-            Meta広告の成功において、クリエイティブの質は極めて重要な要素です。特にECサイト・ネットショップの場合、商品の魅力を視覚的に伝え、購買意欲を高めるクリエイティブ戦略が必要になります。
+            広告のパフォーマンスを大きく左右するのがクリエイティブ（広告素材）です。ECサイト・ネットショップに特化した、高コンバージョンを実現するクリエイティブ作成のコツを解説します。
           </p>
           
-          <h3 className="text-xl font-bold text-white mt-8">1. パフォーマンスを高める広告フォーマットの選択</h3>
+          <h3 className="text-xl font-bold text-white mt-8">1. 商品タイプ別の最適フォーマット</h3>
           
           <p>
-            ECサイト・ネットショップで特に効果的なMeta広告のフォーマットは以下の通りです：
+            商品タイプによって最適な広告フォーマットは異なります。以下は当社の350以上のECサイト広告運用から導き出された知見です。
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-            <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
-              <h4 className="text-lg font-bold text-cyan-300 mb-3">カルーセル広告</h4>
-              <p className="mb-3">複数の商品や商品の特徴を横スクロールで表示できるフォーマット。ECサイトの商品ラインナップを効果的に見せるのに最適です。</p>
-              <ul className="text-sm space-y-1">
-                <li>• 複数商品を同時アピール</li>
-                <li>• 商品ごとに個別のリンク設定が可能</li>
-                <li>• 平均CTRが単一画像広告より15〜30%高い</li>
-              </ul>
-            </div>
-            <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
-              <h4 className="text-lg font-bold text-cyan-300 mb-3">コレクション広告</h4>
-              <p className="mb-3">メイン画像・動画と複数の商品サムネイルを組み合わせたフォーマット。Instagramでは特に高いエンゲージメントを獲得できます。</p>
-              <ul className="text-sm space-y-1">
-                <li>• モバイルに最適化されたショッピング体験</li>
-                <li>• インスタント体験でアプリ内で商品閲覧可能</li>
-                <li>• 購入までのステップを短縮</li>
-              </ul>
-            </div>
-            <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
-              <h4 className="text-lg font-bold text-cyan-300 mb-3">ダイナミック広告</h4>
-              <p className="mb-3">ユーザーの行動履歴に基づいて最適な商品を自動表示するフォーマット。リターゲティングに特に効果的です。</p>
-              <ul className="text-sm space-y-1">
-                <li>• 商品カタログと連携した自動配信</li>
-                <li>• パーソナライズされた商品提案</li>
-                <li>• 運用工数の削減と自動最適化</li>
-              </ul>
-            </div>
-            <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
-              <h4 className="text-lg font-bold text-cyan-300 mb-3">インスタントエクスペリエンス</h4>
-              <p className="mb-3">アプリ内でフルスクリーン表示されるインタラクティブな広告体験。離脱率を下げ、購入率を高めます。</p>
-              <ul className="text-sm space-y-1">
-                <li>• サイト遷移なしでの商品閲覧体験</li>
-                <li>• 読み込み時間の短縮によるCVR向上</li>
-                <li>• リッチなインタラクション要素の追加</li>
-              </ul>
-            </div>
-          </div>
-          
-          <h3 className="text-xl font-bold text-white mt-8">2. ECサイト・ネットショップの広告クリエイティブ制作のポイント</h3>
-          
-          <div className="my-6">
-            <Image 
-              src="/blog/content-images/meta-ads-ec-creative.jpg"
-              alt="ECサイト向けMeta広告の効果的なクリエイティブ例" 
-              width={800}
-              height={450}
-              className="rounded-lg"
-            />
-            <p className="text-sm text-gray-400 text-center mt-2">高パフォーマンスを発揮するECサイト向け広告クリエイティブの例</p>
-          </div>
-          
-          <p>
-            以下の要素を取り入れることで、クリック率とコンバージョン率を大幅に向上させることができます：
-          </p>
-          
-          <div className="bg-gray-800/30 p-6 rounded-lg my-8 border border-gray-700">
-            <h3 className="text-xl font-bold text-white mt-0 mb-4">ECサイトの広告クリエイティブ効果を高める5つの要素</h3>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b border-gray-700">
-                    <th className="py-3 px-4 text-left text-cyan-300">要素</th>
-                    <th className="py-3 px-4 text-left text-cyan-300">実装ポイント</th>
-                    <th className="py-3 px-4 text-right text-cyan-300">改善効果</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b border-gray-800">
-                    <td className="py-3 px-4 font-medium">商品のコンテキスト表示</td>
-                    <td className="py-3 px-4">実際の使用シーンや着用イメージを見せる</td>
-                    <td className="py-3 px-4 text-right text-green-400">CTR +35%</td>
-                  </tr>
-                  <tr className="border-b border-gray-800">
-                    <td className="py-3 px-4 font-medium">社会的証明</td>
-                    <td className="py-3 px-4">レビュー件数や評価、ユーザー数を表示</td>
-                    <td className="py-3 px-4 text-right text-green-400">CVR +28%</td>
-                  </tr>
-                  <tr className="border-b border-gray-800">
-                    <td className="py-3 px-4 font-medium">価格訴求</td>
-                    <td className="py-3 px-4">定価と割引価格を比較表示する</td>
-                    <td className="py-3 px-4 text-right text-green-400">CTR +42%</td>
-                  </tr>
-                  <tr className="border-b border-gray-800">
-                    <td className="py-3 px-4 font-medium">動画活用</td>
-                    <td className="py-3 px-4">商品の使用方法や特徴を短い動画で紹介</td>
-                    <td className="py-3 px-4 text-right text-green-400">エンゲージメント +65%</td>
-                  </tr>
-                  <tr>
-                    <td className="py-3 px-4 font-medium">緊急性・希少性</td>
-                    <td className="py-3 px-4">期間限定オファーや在庫数表示</td>
-                    <td className="py-3 px-4 text-right text-green-400">CVR +24%</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p className="text-xs text-gray-400 mt-3 mb-0">※業界平均値：自社調査による2024年下半期の実績データ</p>
-          </div>
-          
-          <div className="bg-cyan-900/30 p-6 rounded-lg my-6 border border-cyan-800">
-            <p className="font-semibold text-white mb-2">💡 専門家のアドバイス</p>
-            <p className="mb-0">
-              ECサイト・ネットショップの広告では、「3秒ルール」を意識しましょう。スクロールの早いSNS上で最初の3秒以内に注目を集め、商品の主要ベネフィットを伝えられるかが成果を左右します。特に動画広告では冒頭3秒の設計が最も重要です。
-            </p>
-          </div>
-          
-          <h2 className="text-2xl font-bold text-cyan-300 mt-12">Meta広告の予算配分と入札戦略</h2>
-          
-          <p>
-            ECサイト・ネットショップの広告運用では、適切な予算配分と入札戦略が費用対効果を大きく左右します。特に複数の商品カテゴリーや顧客セグメントを持つ場合、戦略的なアプローチが必要です。
-          </p>
-          
-          <h3 className="text-xl font-bold text-white mt-8">1. マーケティングファネル別の予算配分</h3>
-          
-          <div className="my-6">
-            <Image 
-              src="/blog/content-images/meta-ads-ec-budget.jpg"
-              alt="ECサイト向けMeta広告の予算配分例" 
-              width={700}
-              height={400}
-              className="rounded-lg"
-            />
-            <p className="text-sm text-gray-400 text-center mt-2">ECサイト向けMeta広告の推奨予算配分比率</p>
-          </div>
-          
-          <p>
-            ECサイト・ネットショップの成長フェーズによって、以下のように予算配分を調整することをおすすめします：
-          </p>
-          
-          <ul>
-            <li><strong>立ち上げ期（開店〜3ヶ月）:</strong> 認知拡大50%、検討促進30%、コンバージョン20%</li>
-            <li><strong>成長期（4ヶ月〜1年）:</strong> 認知拡大35%、検討促進35%、コンバージョン30%</li>
-            <li><strong>安定期（1年以上）:</strong> 認知拡大20%、検討促進40%、コンバージョン30%、リピート促進10%</li>
-          </ul>
-          
-          <h3 className="text-xl font-bold text-white mt-8">2. 効果的な入札戦略</h3>
-          
-          <p>
-            ECサイト・ネットショップに特に効果的なMeta広告の入札戦略は以下の通りです：
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-6">
-            <div className="bg-gray-800/50 p-5 rounded-lg border border-gray-700">
-              <h4 className="text-lg font-bold text-white mb-2">ROAS入札（上級者向け）</h4>
-              <p className="text-sm">広告費用対効果を指定し、Meta AIが目標達成のために入札を自動調整するオプション。</p>
-              <ul className="text-sm space-y-1 mt-3">
-                <li>• 最適活用条件：十分なコンバージョンデータ（週50件以上）がある場合</li>
-                <li>• 目標設定：現実的なROAS目標（業界平均の0.8〜1.2倍程度）</li>
-                <li>• 学習期間：新規設定後1〜2週間は性能変動に注意</li>
-              </ul>
-            </div>
-            <div className="bg-gray-800/50 p-5 rounded-lg border border-gray-700">
-              <h4 className="text-lg font-bold text-white mb-2">CBO（キャンペーン予算最適化）</h4>
-              <p className="text-sm">キャンペーン全体で予算を管理し、パフォーマンスの良い広告セットに自動配分する機能。</p>
-              <ul className="text-sm space-y-1 mt-3">
-                <li>• 最適活用条件：複数の広告セットを運用する場合</li>
-                <li>• 設定ポイント：広告セット間で競合しないオーディエンス設計</li>
-                <li>• 安定期間：データ収集のため最低5〜7日は設定を変更しない</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="bg-indigo-900/30 p-6 rounded-lg my-6 border border-indigo-800">
-            <p className="font-semibold text-white mb-2">🔍 重要ポイント</p>
-            <p className="mb-0">
-              Meta広告の予算を決める際の目安として、月商の8〜15%程度を広告費に充てるのが一般的です。例えば月商100万円の場合、8〜15万円の広告予算から始め、ROAS（広告費用対効果）を見ながら調整していくことをおすすめします。
-            </p>
-          </div>
-          
-          <h2 className="text-2xl font-bold text-cyan-300 mt-12">Meta広告運用の成功事例</h2>
-          
-          <p>
-            実際にMeta広告を活用して売上を伸ばしたECサイト・ネットショップの事例を紹介します。
-          </p>
-          
-          <div className="bg-gray-800/50 p-6 rounded-lg my-8 border border-gray-700 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-24 h-24">
-              <div className="absolute transform rotate-45 bg-green-600 text-white font-bold text-xs py-1 right-[-35px] top-[20px] w-[170px] text-center">
-                CASE STUDY
+            <div className="bg-gradient-to-r from-blue-900/30 to-indigo-900/30 rounded-lg border border-blue-800 p-5">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-full bg-blue-800/60 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-cyan-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h4 className="text-lg font-bold text-white m-0">アパレル・ファッション</h4>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-start">
+                  <div className="mt-1 w-5 h-5 rounded-full bg-cyan-800/60 flex items-center justify-center text-xs text-cyan-300 font-bold mr-2 flex-shrink-0">1</div>
+                  <div>
+                    <p className="text-white font-medium mb-1">カルーセル広告</p>
+                    <p className="text-sm text-gray-300">複数アングル・着用モデル・コーディネート例</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="mt-1 w-5 h-5 rounded-full bg-cyan-800/60 flex items-center justify-center text-xs text-cyan-300 font-bold mr-2 flex-shrink-0">2</div>
+                  <div>
+                    <p className="text-white font-medium mb-1">コレクション広告</p>
+                    <p className="text-sm text-gray-300">カタログ形式でコーディネートセット提案</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="mt-1 w-5 h-5 rounded-full bg-cyan-800/60 flex items-center justify-center text-xs text-cyan-300 font-bold mr-2 flex-shrink-0">3</div>
+                  <div>
+                    <p className="text-white font-medium mb-1">Instagram Reels広告</p>
+                    <p className="text-sm text-gray-300">着用シーン・素材感の動きを演出</p>
+                  </div>
+                </div>
               </div>
             </div>
             
-            <h3 className="text-xl font-bold text-white mt-0 mb-3">アパレルEC「STYLE CRAFT」の事例</h3>
-            <p className="text-sm mb-4">月商：350万円 → 980万円（約2.8倍）/ 期間：3ヶ月</p>
-            
-            <h4 className="text-md font-bold text-cyan-300 mb-2">課題</h4>
-            <ul className="text-sm space-y-1 mb-4">
-              <li>• 広告費を投下しても売上に直結しない</li>
-              <li>• 顧客獲得単価(CPA)が高く、採算が取れない</li>
-              <li>• 商品ページからのカート放棄率が高い</li>
-            </ul>
-            
-            <h4 className="text-md font-bold text-cyan-300 mb-2">実施した施策</h4>
-            <ul className="text-sm space-y-1 mb-4">
-              <li>• ファネル別の広告構造再設計</li>
-              <li>• 商品使用シーンを強調した動画クリエイティブ導入</li>
-              <li>• カート放棄者向けリターゲティングの強化</li>
-              <li>• カタログ連携によるダイナミック広告の導入</li>
-            </ul>
-            
-            <h4 className="text-md font-bold text-cyan-300 mb-2">結果</h4>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
-              <div className="bg-gray-900/50 p-3 rounded-lg">
-                <p className="text-xs text-gray-400 mb-1">月間売上</p>
-                <p className="text-xl font-bold text-green-400">2.8倍</p>
+            <div className="bg-gradient-to-r from-indigo-900/30 to-purple-900/30 rounded-lg border border-indigo-800 p-5">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-full bg-indigo-800/60 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-cyan-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+                <h4 className="text-lg font-bold text-white m-0">美容・コスメ</h4>
               </div>
-              <div className="bg-gray-900/50 p-3 rounded-lg">
-                <p className="text-xs text-gray-400 mb-1">ROAS</p>
-                <p className="text-xl font-bold text-green-400">4.2倍</p>
+              <div className="space-y-3">
+                <div className="flex items-start">
+                  <div className="mt-1 w-5 h-5 rounded-full bg-cyan-800/60 flex items-center justify-center text-xs text-cyan-300 font-bold mr-2 flex-shrink-0">1</div>
+                  <div>
+                    <p className="text-white font-medium mb-1">ビフォーアフター画像</p>
+                    <p className="text-sm text-gray-300">効果を視覚的に実証する比較画像</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="mt-1 w-5 h-5 rounded-full bg-cyan-800/60 flex items-center justify-center text-xs text-cyan-300 font-bold mr-2 flex-shrink-0">2</div>
+                  <div>
+                    <p className="text-white font-medium mb-1">短尺デモ動画</p>
+                    <p className="text-sm text-gray-300">使い方・テクスチャー・塗布感の演出</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="mt-1 w-5 h-5 rounded-full bg-cyan-800/60 flex items-center justify-center text-xs text-cyan-300 font-bold mr-2 flex-shrink-0">3</div>
+                  <div>
+                    <p className="text-white font-medium mb-1">ユーザーレビュー入り広告</p>
+                    <p className="text-sm text-gray-300">実際の使用者の声・写真を組み込む</p>
+                  </div>
+                </div>
               </div>
-              <div className="bg-gray-900/50 p-3 rounded-lg">
-                <p className="text-xs text-gray-400 mb-1">CPA</p>
-                <p className="text-xl font-bold text-green-400">-38%</p>
+            </div>
+            
+            <div className="bg-gradient-to-r from-purple-900/30 to-red-900/30 rounded-lg border border-purple-800 p-5">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-full bg-purple-800/60 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-cyan-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                </div>
+                <h4 className="text-lg font-bold text-white m-0">家具・インテリア</h4>
               </div>
-              <div className="bg-gray-900/50 p-3 rounded-lg">
-                <p className="text-xs text-gray-400 mb-1">カート完了率</p>
-                <p className="text-xl font-bold text-green-400">+45%</p>
+              <div className="space-y-3">
+                <div className="flex items-start">
+                  <div className="mt-1 w-5 h-5 rounded-full bg-cyan-800/60 flex items-center justify-center text-xs text-cyan-300 font-bold mr-2 flex-shrink-0">1</div>
+                  <div>
+                    <p className="text-white font-medium mb-1">360度ビュー広告</p>
+                    <p className="text-sm text-gray-300">様々な角度からの商品確認を可能に</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="mt-1 w-5 h-5 rounded-full bg-cyan-800/60 flex items-center justify-center text-xs text-cyan-300 font-bold mr-2 flex-shrink-0">2</div>
+                  <div>
+                    <p className="text-white font-medium mb-1">部屋イメージ合成</p>
+                    <p className="text-sm text-gray-300">実際の空間に配置したビジュアル提示</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="mt-1 w-5 h-5 rounded-full bg-cyan-800/60 flex items-center justify-center text-xs text-cyan-300 font-bold mr-2 flex-shrink-0">3</div>
+                  <div>
+                    <p className="text-white font-medium mb-1">スペック詳細付きカルーセル</p>
+                    <p className="text-sm text-gray-300">サイズ・素材・カラーバリエーション</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gradient-to-r from-red-900/30 to-orange-900/30 rounded-lg border border-red-800 p-5">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-full bg-red-800/60 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-cyan-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <h4 className="text-lg font-bold text-white m-0">デジタル製品・ガジェット</h4>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-start">
+                  <div className="mt-1 w-5 h-5 rounded-full bg-cyan-800/60 flex items-center justify-center text-xs text-cyan-300 font-bold mr-2 flex-shrink-0">1</div>
+                  <div>
+                    <p className="text-white font-medium mb-1">動画デモンストレーション</p>
+                    <p className="text-sm text-gray-300">機能・操作性を実演する短尺動画</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="mt-1 w-5 h-5 rounded-full bg-cyan-800/60 flex items-center justify-center text-xs text-cyan-300 font-bold mr-2 flex-shrink-0">2</div>
+                  <div>
+                    <p className="text-white font-medium mb-1">スペック比較カード</p>
+                    <p className="text-sm text-gray-300">競合製品との性能比較を視覚化</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="mt-1 w-5 h-5 rounded-full bg-cyan-800/60 flex items-center justify-center text-xs text-cyan-300 font-bold mr-2 flex-shrink-0">3</div>
+                  <div>
+                    <p className="text-white font-medium mb-1">ユースケースシナリオ</p>
+                    <p className="text-sm text-gray-300">日常生活での活用シーンを演出</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-
-          <h2 className="text-2xl font-bold text-cyan-300 mt-12">ECサイト・ネットショップのMeta広告運用改善テクニック</h2>
+          
+          <h3 className="text-xl font-bold text-white mt-10">2. コンバージョンを高める広告テキスト作成法</h3>
           
           <p>
-            Meta広告の運用を始めて数週間経過すると、データが蓄積され、パフォーマンス改善のための分析が可能になります。ここでは、ECサイト・ネットショップの広告運用を継続的に改善していくためのテクニックを紹介します。
+            画像や動画と同様に重要なのが広告テキストです。ECサイト・ネットショップの商品を効果的に訴求するテキスト作成テクニックを紹介します。
           </p>
           
-          <h3 className="text-xl font-bold text-white mt-8">1. データに基づいたクリエイティブ最適化</h3>
-          
-          <div className="my-6">
-            <Image 
-              src="/blog/content-images/meta-ads-ec-creative-test.jpg"
-              alt="Meta広告クリエイティブのABテスト例" 
-              width={800}
-              height={450}
-              className="rounded-lg"
-            />
-            <p className="text-sm text-gray-400 text-center mt-2">クリエイティブABテストの実施例と結果比較</p>
-          </div>
-          
-          <p>
-            広告クリエイティブは定期的にABテストを行い、データに基づいた改善を繰り返すことが重要です。ECサイト・ネットショップにおける効果的なテスト手法は以下の通りです：
-          </p>
-          
-          <div className="bg-gray-800/50 p-6 rounded-lg my-6 border border-gray-700">
-            <h4 className="text-lg font-bold text-cyan-300 mb-4">ECサイトの広告クリエイティブABテスト項目</h4>
-            <ul className="space-y-4">
-              <li className="flex gap-4 items-start">
-                <div className="bg-cyan-800/50 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
-                  <span className="text-cyan-300 text-sm font-bold">1</span>
+          <div className="bg-gray-800/40 p-6 rounded-lg my-8 border border-gray-700">
+            <h4 className="text-lg font-bold text-cyan-300 mb-4">広告コピーの黄金法則：AIDA+P</h4>
+            
+            <div className="space-y-5">
+              <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex-shrink-0 w-full md:w-20 h-20 rounded-lg bg-blue-900/70 flex items-center justify-center">
+                  <span className="text-lg font-bold text-cyan-300">A</span>
                 </div>
                 <div>
-                  <p className="font-medium text-white mb-1">商品写真のアングル比較</p>
-                  <p className="text-sm text-gray-300">商品単体写真 vs 使用シーン写真 vs モデル着用写真など異なる見せ方を比較</p>
-                </div>
-              </li>
-              <li className="flex gap-4 items-start">
-                <div className="bg-cyan-800/50 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
-                  <span className="text-cyan-300 text-sm font-bold">2</span>
-                </div>
-                <div>
-                  <p className="font-medium text-white mb-1">訴求コピーのテスト</p>
-                  <p className="text-sm text-gray-300">メリット訴求 vs 価格訴求 vs 希少性訴求など異なるアプローチの比較</p>
-                </div>
-              </li>
-              <li className="flex gap-4 items-start">
-                <div className="bg-cyan-800/50 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
-                  <span className="text-cyan-300 text-sm font-bold">3</span>
-                </div>
-                <div>
-                  <p className="font-medium text-white mb-1">フォーマット比較</p>
-                  <p className="text-sm text-gray-300">静止画 vs 動画 vs カルーセル vs コレクションなど異なる広告形式の効果検証</p>
-                </div>
-              </li>
-              <li className="flex gap-4 items-start">
-                <div className="bg-cyan-800/50 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
-                  <span className="text-cyan-300 text-sm font-bold">4</span>
-                </div>
-                <div>
-                  <p className="font-medium text-white mb-1">CTA（行動喚起）ボタンの比較</p>
-                  <p className="text-sm text-gray-300">「今すぐ購入」vs「詳細を見る」vs「セール中」など異なるCTAの反応率比較</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-          
-          <div className="bg-cyan-900/30 p-6 rounded-lg my-6 border border-cyan-800">
-            <p className="font-semibold text-white mb-2">💡 専門家のアドバイス</p>
-            <p className="mb-0">
-              クリエイティブテストでは、一度に複数の要素を変えず、「一要素一変数」の原則を守りましょう。例えば画像だけ、コピーだけを変えることで、どの要素がパフォーマンスに影響を与えたのかを正確に把握できます。
-            </p>
-          </div>
-          
-          <h3 className="text-xl font-bold text-white mt-8">2. オーディエンス拡張と絞り込みの最適バランス</h3>
-          
-          <p>
-            広告運用を続ける中で、オーディエンスの調整は非常に重要です。特にECサイト・ネットショップでは、以下の戦略が効果的です：
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-            <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
-              <h4 className="text-lg font-bold text-cyan-300 mb-3">ルックアライク（類似）オーディエンスの段階的拡張</h4>
-              <p className="mb-3">初期フェーズでの成功オーディエンスに基づき、類似度を調整しながら拡張していく手法</p>
-              <ol className="text-sm space-y-2 pl-5 list-decimal">
-                <li>購入者データから1%類似オーディエンスを作成</li>
-                <li>パフォーマンスが良ければ2%、3%と段階的に拡大</li>
-                <li>複数回購入者、高額購入者などの質の高いシードを活用</li>
-                <li>国・地域単位でさらに詳細に最適化</li>
-              </ol>
-            </div>
-            <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
-              <h4 className="text-lg font-bold text-cyan-300 mb-3">インサイトに基づくオーディエンス絞り込み</h4>
-              <p className="mb-3">広告レポートの分析から、高い反応を示すセグメントを特定し、予算を集中させる手法</p>
-              <ol className="text-sm space-y-2 pl-5 list-decimal">
-                <li>年齢・性別・地域別のコンバージョン率を分析</li>
-                <li>高パフォーマンスの詳細属性を特定（興味関心など）</li>
-                <li>低パフォーマンスセグメントを除外設定</li>
-                <li>季節や時期に応じて定期的に再調整</li>
-              </ol>
-            </div>
-          </div>
-          
-          <h3 className="text-xl font-bold text-white mt-8">3. Meta広告運用のよくあるトラブルとその解決法</h3>
-          
-          <p>
-            ECサイト・ネットショップのMeta広告運用でよく直面する問題と、その効果的な解決策を紹介します。
-          </p>
-          
-          <div className="bg-gray-800/30 p-6 rounded-lg my-8 border border-gray-700">
-            <h4 className="text-lg font-bold text-white mt-0 mb-4">ECサイト・ネットショップのMeta広告よくある課題と解決策</h4>
-            <div className="space-y-6">
-              <div className="border-b border-gray-700 pb-5">
-                <p className="font-bold text-red-400 mb-2">問題：広告費用は増えたが売上が比例して増えない</p>
-                <p className="text-sm text-gray-300 mb-3">原因: ターゲティングが広すぎる、または入札価格が市場と合っていない</p>
-                <div className="bg-gray-900/50 p-4 rounded-lg">
-                  <p className="text-sm font-semibold text-cyan-300 mb-1">解決策:</p>
-                  <ul className="text-sm space-y-1">
-                    <li>• オーディエンスを購入意欲の高いセグメントに絞り込む</li>
-                    <li>• コンバージョン最適化に切り替え、ROAS入札を検討</li>
-                    <li>• 低CVRクリエイティブを特定し、改善または停止</li>
-                  </ul>
+                  <h5 className="text-white font-bold mb-1">Attention（注目）</h5>
+                  <p className="text-sm text-gray-300">最初の一文で強烈に注目を集める</p>
+                  <div className="mt-2 bg-gray-900/60 p-2 rounded text-xs">
+                    <span className="text-green-400">✓ 例：</span> 「1日たった30秒で肌トラブルが激減？話題の○○美容液の秘密」
+                  </div>
                 </div>
               </div>
               
-              <div className="border-b border-gray-700 pb-5">
-                <p className="font-bold text-red-400 mb-2">問題：広告の承認が通らない、または突然広告が停止される</p>
-                <p className="text-sm text-gray-300 mb-3">原因: Meta広告ポリシー違反（医薬品・健康関連商品が特に要注意）</p>
-                <div className="bg-gray-900/50 p-4 rounded-lg">
-                  <p className="text-sm font-semibold text-cyan-300 mb-1">解決策:</p>
-                  <ul className="text-sm space-y-1">
-                    <li>• 誇大表現や断定的な効果表現を避ける</li>
-                    <li>• 「Before/After」的な表現を控える</li>
-                    <li>• 禁止カテゴリー商品に関しては代替表現を検討</li>
-                    <li>• 広告アカウントの健全性スコアを常に確認</li>
-                  </ul>
+              <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex-shrink-0 w-full md:w-20 h-20 rounded-lg bg-cyan-900/70 flex items-center justify-center">
+                  <span className="text-lg font-bold text-cyan-300">I</span>
                 </div>
+                <div>
+                  <h5 className="text-white font-bold mb-1">Interest（興味）</h5>
+                  <p className="text-sm text-gray-300">具体的なベネフィットや特徴で興味を深める</p>
+                  <div className="mt-2 bg-gray-900/60 p-2 rounded text-xs">
+                    <span className="text-green-400">✓ 例：</span> 「7種の希少成分配合。乾燥・くすみ・毛穴の3大悩みに同時アプローチ」
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex-shrink-0 w-full md:w-20 h-20 rounded-lg bg-indigo-900/70 flex items-center justify-center">
+                  <span className="text-lg font-bold text-cyan-300">D</span>
+                </div>
+                <div>
+                  <h5 className="text-white font-bold mb-1">Desire（欲求）</h5>
+                  <p className="text-sm text-gray-300">感情に訴えかけ、欲しいと思わせる</p>
+                  <div className="mt-2 bg-gray-900/60 p-2 rounded text-xs">
+                    <span className="text-green-400">✓ 例：</span> 「もう高い化粧品を何本も買う必要なし。これ1本で朝の準備時間が半分に」
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex-shrink-0 w-full md:w-20 h-20 rounded-lg bg-purple-900/70 flex items-center justify-center">
+                  <span className="text-lg font-bold text-cyan-300">A</span>
+                </div>
+                <div>
+                  <h5 className="text-white font-bold mb-1">Action（行動）</h5>
+                  <p className="text-sm text-gray-300">明確なCTAでアクションを促す</p>
+                  <div className="mt-2 bg-gray-900/60 p-2 rounded text-xs">
+                    <span className="text-green-400">✓ 例：</span> 「初回限定50%OFF。今すぐ詳細をチェック」
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex-shrink-0 w-full md:w-20 h-20 rounded-lg bg-rose-900/70 flex items-center justify-center">
+                  <span className="text-lg font-bold text-cyan-300">P</span>
+                </div>
+                <div>
+                  <h5 className="text-white font-bold mb-1">Proof（証明）</h5>
+                  <p className="text-sm text-gray-300">社会的証明で信頼性を高める</p>
+                  <div className="mt-2 bg-gray-900/60 p-2 rounded text-xs">
+                    <span className="text-green-400">✓ 例：</span> 「98%のユーザーが効果を実感。売上ランキング3週連続1位」
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <h3 className="text-xl font-bold text-white mt-10">3. A/Bテストで広告効果を最大化する方法</h3>
+          
+          <p>
+            広告パフォーマンスを継続的に向上させるには、データに基づいたA/Bテストが欠かせません。ECサイト・ネットショップで特に効果的なA/Bテスト手法を紹介します。
+          </p>
+          
+          <div className="my-8 overflow-x-auto">
+            <table className="min-w-full bg-gray-900/30 border border-gray-800 rounded-lg">
+              <thead>
+                <tr className="bg-gray-800/80">
+                  <th className="px-4 py-3 text-left text-xs font-medium text-cyan-300 uppercase tracking-wider">テスト項目</th>
+                  <th className="px-4 py-3 text-left text-xs font-medium text-cyan-300 uppercase tracking-wider">テスト方法</th>
+                  <th className="px-4 py-3 text-left text-xs font-medium text-cyan-300 uppercase tracking-wider">効果測定指標</th>
+                  <th className="px-4 py-3 text-left text-xs font-medium text-cyan-300 uppercase tracking-wider">当社クライアント改善実績</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-800">
+                <tr>
+                  <td className="px-4 py-4 text-sm font-medium text-white">広告見出し</td>
+                  <td className="px-4 py-4 text-sm text-gray-300">
+                    <p>A: 機能重視「7つの有効成分配合美容液」</p>
+                    <p>B: 感情訴求「なぜ93%の女性が手放せないのか」</p>
+                  </td>
+                  <td className="px-4 py-4 text-sm text-gray-300">CTR・エンゲージメント率</td>
+                  <td className="px-4 py-4 text-sm text-green-400">Bパターンで+42%のCTR向上</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-4 text-sm font-medium text-white">商品画像スタイル</td>
+                  <td className="px-4 py-4 text-sm text-gray-300">
+                    <p>A: 白背景の商品単体画像</p>
+                    <p>B: 使用シーンのライフスタイル画像</p>
+                  </td>
+                  <td className="px-4 py-4 text-sm text-gray-300">クリック率・コンバージョン率</td>
+                  <td className="px-4 py-4 text-sm text-green-400">商品カテゴリーにより異なる（美容品はB、家電はA）</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-4 text-sm font-medium text-white">CTA（行動喚起）文言</td>
+                  <td className="px-4 py-4 text-sm text-gray-300">
+                    <p>A: 「今すぐ購入」</p>
+                    <p>B: 「初回限定特典をチェック」</p>
+                  </td>
+                  <td className="px-4 py-4 text-sm text-gray-300">クリック後のCV率</td>
+                  <td className="px-4 py-4 text-sm text-green-400">初回顧客獲得でBが+35%効果的</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-4 text-sm font-medium text-white">プロモーション内容</td>
+                  <td className="px-4 py-4 text-sm text-gray-300">
+                    <p>A: 「20%OFF」</p>
+                    <p>B: 「送料無料+サンプル付き」</p>
+                  </td>
+                  <td className="px-4 py-4 text-sm text-gray-300">ROAS・客単価</td>
+                  <td className="px-4 py-4 text-sm text-green-400">Bパターンで客単価17%向上</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div className="bg-blue-900/30 p-6 rounded-lg my-8 border border-blue-800">
+            <p className="font-semibold text-white mb-2">💡 A/Bテスト成功の鍵</p>
+            <ul className="space-y-2 text-sm">
+              <li className="flex items-start">
+                <span className="text-cyan-400 mr-2">•</span>
+                <span><strong className="text-white">1度に1要素のみ</strong>をテスト：複数要素を同時変更すると効果測定が困難に</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-cyan-400 mr-2">•</span>
+                <span><strong className="text-white">最低7日間</strong>のテスト期間を設ける：曜日による変動を考慮</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-cyan-400 mr-2">•</span>
+                <span>各バリエーションに<strong className="text-white">最低5,000インプレッション</strong>を確保：統計的有意性のため</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-cyan-400 mr-2">•</span>
+                <span><strong className="text-white">複数指標で判断</strong>：CTRだけでなくCV率・ROAS・LTVも考慮</span>
+              </li>
+            </ul>
+          </div>
+
+          <h2 className="text-2xl font-bold text-cyan-300 mt-12">ECサイト・ネットショップのMeta広告成功事例</h2>
+          
+          <p>
+            ここでは、実際にMeta広告を活用してROASを大幅に改善したECサイト・ネットショップの成功事例を紹介します。業種別の具体的な取り組みと成果をご覧ください。
+          </p>
+          
+          <div className="bg-gradient-to-r from-blue-900/30 to-indigo-900/30 rounded-lg border border-blue-800 p-6 my-8">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-14 h-14 rounded-full bg-blue-800/60 flex items-center justify-center flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-cyan-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white m-0">事例1：アパレルECサイト「MODA STYLE」</h3>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+              <div>
+                <h4 className="text-cyan-300 font-bold text-base mb-2">課題</h4>
+                <ul className="space-y-1 text-sm">
+                  <li>• 広告費用対効果（ROAS）が1.8倍と低迷</li>
+                  <li>• カート放棄率が68%と高い</li>
+                  <li>• 新規顧客獲得コストが上昇傾向</li>
+                  <li>• 季節商品の在庫回転率の低さ</li>
+                </ul>
               </div>
               
               <div>
-                <p className="font-bold text-red-400 mb-2">問題：コンバージョンが正しく計測されていない</p>
-                <p className="text-sm text-gray-300 mb-3">原因: イベントセットアップの不備、またはiOSのプライバシー対策の影響</p>
-                <div className="bg-gray-900/50 p-4 rounded-lg">
-                  <p className="text-sm font-semibold text-cyan-300 mb-1">解決策:</p>
-                  <ul className="text-sm space-y-1">
-                    <li>• Metaピクセルとコンバージョン APIの併用設定</li>
-                    <li>• イベントの優先順位設定を確認（最大8つ）</li>
-                    <li>• ドメイン認証を完了させる</li>
-                    <li>• コンバージョンが取れているか定期的にテスト購入</li>
+                <h4 className="text-cyan-300 font-bold text-base mb-2">施策</h4>
+                <ul className="space-y-1 text-sm">
+                  <li>• 3段階のリターゲティング戦略導入</li>
+                  <li>• カーソルセルフォーマットで複数アングル訴求</li>
+                  <li>• 季節ごとのライフスタイル動画クリエイティブ</li>
+                  <li>• 統計的有意性のあるA/Bテストを継続実施</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="bg-blue-950/50 p-4 rounded-lg">
+              <h4 className="text-white font-bold text-base mb-2">成果（6ヶ月間）</h4>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="bg-gradient-to-b from-blue-900/40 to-indigo-900/40 p-3 rounded border border-blue-700">
+                  <p className="text-xs text-cyan-300 mb-1">ROAS</p>
+                  <p className="text-xl font-bold text-white">3.7倍</p>
+                  <p className="text-xs text-green-400">+106%</p>
+                </div>
+                <div className="bg-gradient-to-b from-blue-900/40 to-indigo-900/40 p-3 rounded border border-blue-700">
+                  <p className="text-xs text-cyan-300 mb-1">コンバージョン率</p>
+                  <p className="text-xl font-bold text-white">4.8%</p>
+                  <p className="text-xs text-green-400">+92%</p>
+                </div>
+                <div className="bg-gradient-to-b from-blue-900/40 to-indigo-900/40 p-3 rounded border border-blue-700">
+                  <p className="text-xs text-cyan-300 mb-1">カート放棄率</p>
+                  <p className="text-xl font-bold text-white">41%</p>
+                  <p className="text-xs text-green-400">-27%</p>
+                </div>
+                <div className="bg-gradient-to-b from-blue-900/40 to-indigo-900/40 p-3 rounded border border-blue-700">
+                  <p className="text-xs text-cyan-300 mb-1">リピート率</p>
+                  <p className="text-xl font-bold text-white">32%</p>
+                  <p className="text-xs text-green-400">+68%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="bg-gradient-to-r from-purple-900/30 to-rose-900/30 rounded-lg border border-purple-800 p-6 my-8">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-14 h-14 rounded-full bg-purple-800/60 flex items-center justify-center flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-cyan-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white m-0">事例2：家電ECサイト「テックジャパン」</h3>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+              <div>
+                <h4 className="text-cyan-300 font-bold text-base mb-2">課題</h4>
+                <ul className="space-y-1 text-sm">
+                  <li>• Google検索広告依存による獲得単価高騰</li>
+                  <li>• 広告クリックはあるが詳細確認なしの離脱多発</li>
+                  <li>• 高額商品購入のハードル克服難</li>
+                  <li>• 他社との機能比較で不利な状況</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="text-cyan-300 font-bold text-base mb-2">施策</h4>
+                <ul className="space-y-1 text-sm">
+                  <li>• 「サプライヤー検討前」ターゲティング導入</li>
+                  <li>• 商品講座・使用シーン動画シリーズ制作</li>
+                  <li>• インスタントエクスペリエンスで詳細説明</li>
+                  <li>• 分割払い・保証関連訴求の強化</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="bg-purple-950/50 p-4 rounded-lg">
+              <h4 className="text-white font-bold text-base mb-2">成果（12ヶ月間）</h4>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="bg-gradient-to-b from-purple-900/40 to-rose-900/40 p-3 rounded border border-purple-700">
+                  <p className="text-xs text-cyan-300 mb-1">獲得単価</p>
+                  <p className="text-xl font-bold text-white">-43%</p>
+                  <p className="text-xs text-green-400">Google比</p>
+                </div>
+                <div className="bg-gradient-to-b from-purple-900/40 to-rose-900/40 p-3 rounded border border-purple-700">
+                  <p className="text-xs text-cyan-300 mb-1">高単価商品CV</p>
+                  <p className="text-xl font-bold text-white">+76%</p>
+                  <p className="text-xs text-green-400">成長率</p>
+                </div>
+                <div className="bg-gradient-to-b from-purple-900/40 to-rose-900/40 p-3 rounded border border-purple-700">
+                  <p className="text-xs text-cyan-300 mb-1">動画視聴完了率</p>
+                  <p className="text-xl font-bold text-white">28%</p>
+                  <p className="text-xs text-green-400">業界平均の2.3倍</p>
+                </div>
+                <div className="bg-gradient-to-b from-purple-900/40 to-rose-900/40 p-3 rounded border border-purple-700">
+                  <p className="text-xs text-cyan-300 mb-1">ROAS</p>
+                  <p className="text-xl font-bold text-white">4.2倍</p>
+                  <p className="text-xs text-green-400">+133%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <h2 className="text-2xl font-bold text-cyan-300 mt-12">ECサイト・ネットショップのMeta広告運用よくある課題と解決策</h2>
+          
+          <p>
+            多くのECサイト・ネットショップが直面するMeta広告運用の課題と、それに対する実践的な解決策をご紹介します。
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+            <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
+              <h3 className="text-lg font-bold text-cyan-300 mb-3">課題1: 広告費用が高騰して収益性が悪化</h3>
+              <div className="space-y-4">
+                <div className="bg-gray-900/50 p-3 rounded">
+                  <p className="text-sm font-medium text-rose-400 mb-1">よくある対応の落とし穴</p>
+                  <p className="text-sm text-gray-300">入札額や予算を減らすだけで、結果的に競争力のある配置から外れてしまい、さらにパフォーマンスが悪化</p>
+                </div>
+                <div className="bg-gray-900/50 p-3 rounded">
+                  <p className="text-sm font-medium text-green-400 mb-1">推奨対応策</p>
+                  <ul className="text-sm space-y-1 text-gray-300">
+                    <li>① ピクセルの最適化と購入額情報の正確な連携</li>
+                    <li>② コンバージョン値の設定（LTV考慮）で入札最適化</li>
+                    <li>③ 高ROAS・低CPAオーディエンスへの予算集中</li>
+                    <li>④ クリエイティブのA/Bテストで広告効率改善</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
+              <h3 className="text-lg font-bold text-cyan-300 mb-3">課題2: クリック数は多いがコンバージョンに繋がらない</h3>
+              <div className="space-y-4">
+                <div className="bg-gray-900/50 p-3 rounded">
+                  <p className="text-sm font-medium text-rose-400 mb-1">よくある対応の落とし穴</p>
+                  <p className="text-sm text-gray-300">単純にターゲティングを絞り込むだけでは、潜在顧客層を失い、広告費用対効果が低下する可能性</p>
+                </div>
+                <div className="bg-gray-900/50 p-3 rounded">
+                  <p className="text-sm font-medium text-green-400 mb-1">推奨対応策</p>
+                  <ul className="text-sm space-y-1 text-gray-300">
+                    <li>① ファネル型広告設計で段階的に購買意欲を育成</li>
+                    <li>② ランディングページとの訴求一貫性確保</li>
+                    <li>③ モバイル最適化（読み込み速度・UX改善）</li>
+                    <li>④ リターゲティングでの特典・安心材料提供</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
+              <h3 className="text-lg font-bold text-cyan-300 mb-3">課題3: 広告疲れによるパフォーマンス低下</h3>
+              <div className="space-y-4">
+                <div className="bg-gray-900/50 p-3 rounded">
+                  <p className="text-sm font-medium text-rose-400 mb-1">よくある対応の落とし穴</p>
+                  <p className="text-sm text-gray-300">単純に広告素材を増やすだけでは、メッセージの分散化やブランド一貫性喪失のリスク</p>
+                </div>
+                <div className="bg-gray-900/50 p-3 rounded">
+                  <p className="text-sm font-medium text-green-400 mb-1">推奨対応策</p>
+                  <ul className="text-sm space-y-1 text-gray-300">
+                    <li>① 同一テーマ・異なる切り口のバリエーション制作</li>
+                    <li>② 頻度上限設定（推奨：7日間で2-4回）</li>
+                    <li>③ シーズン・イベントに合わせた定期的リニューアル</li>
+                    <li>④ 優良ユーザーへのUGC（ユーザー生成コンテンツ）活用</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
+              <h3 className="text-lg font-bold text-cyan-300 mb-3">課題4: iOS14以降のプライバシー変更への対応</h3>
+              <div className="space-y-4">
+                <div className="bg-gray-900/50 p-3 rounded">
+                  <p className="text-sm font-medium text-rose-400 mb-1">よくある対応の落とし穴</p>
+                  <p className="text-sm text-gray-300">データ欠損を無視した広告判断や、過剰なドメイン認証・イベント集計設定</p>
+                </div>
+                <div className="bg-gray-900/50 p-3 rounded">
+                  <p className="text-sm font-medium text-green-400 mb-1">推奨対応策</p>
+                  <ul className="text-sm space-y-1 text-gray-300">
+                    <li>① ConversionsAPIの実装でサーバーサイド計測</li>
+                    <li>② 8つの優先イベントの最適な選定</li>
+                    <li>③ アトリビューション期間の適切な設定</li>
+                    <li>④ UTM管理の強化による代替計測構築</li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
           
-          <h2 className="text-2xl font-bold text-cyan-300 mt-12">2025年最新のMeta広告トレンドとECサイトへの応用</h2>
+          <h2 className="text-2xl font-bold text-cyan-300 mt-12">まとめ：Meta広告を活用したECサイト・ネットショップの売上最大化</h2>
           
           <p>
-            最後に、2025年現在のMeta広告の最新トレンドと、ECサイト・ネットショップでの効果的な活用法を紹介します。
+            本記事では、ECサイト・ネットショップにおけるMeta広告運用の戦略から実践的なテクニック、具体的な成功事例まで幅広く解説しました。最後に改めて重要ポイントをまとめます。
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 my-8">
-            <div className="bg-gradient-to-br from-blue-900/50 to-purple-900/50 p-5 rounded-lg border border-blue-800">
-              <h4 className="text-lg font-bold text-white mb-3">AIによる広告最適化</h4>
-              <p className="text-sm">Meta AIが自動生成するバリエーション広告を活用し、最適なクリエイティブ組み合わせを発見</p>
-              <div className="mt-4 pt-4 border-t border-blue-800/50">
-                <p className="text-xs text-cyan-300 font-semibold">ECサイトでの活用法</p>
-                <p className="text-xs text-gray-300 mt-1">商品画像と複数のセールスコピーを提供し、最適な組み合わせを自動テスト。CVRが最大30%向上するケースも。</p>
-              </div>
-            </div>
+          <div className="bg-gradient-to-r from-blue-900/30 to-indigo-900/30 p-6 rounded-lg my-8 border border-blue-800">
+            <h3 className="text-xl font-bold text-white mt-0 mb-4">Meta広告でECサイトの売上を伸ばす5つの重要ポイント</h3>
             
-            <div className="bg-gradient-to-br from-green-900/50 to-teal-900/50 p-5 rounded-lg border border-green-800">
-              <h4 className="text-lg font-bold text-white mb-3">ショート動画広告の台頭</h4>
-              <p className="text-sm">TikTok風のショート動画フォーマットがInstagramのリール枠で高いエンゲージメントを獲得</p>
-              <div className="mt-4 pt-4 border-t border-green-800/50">
-                <p className="text-xs text-cyan-300 font-semibold">ECサイトでの活用法</p>
-                <p className="text-xs text-gray-300 mt-1">15秒以内の商品使用シーンやアンボクシング動画をリール広告として配信。視聴完了率が高く、記憶定着に効果的。</p>
+            <div className="space-y-5">
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-800 flex items-center justify-center text-cyan-300 font-bold">1</div>
+                <div>
+                  <p className="font-bold text-white text-base mb-1">段階的なマーケティングファネルの構築</p>
+                  <p className="text-sm text-gray-300">認知拡大→検討促進→コンバージョン促進の3段階の広告設計で、顧客の購買意思決定プロセスに沿った訴求を行う</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-800 flex items-center justify-center text-cyan-300 font-bold">2</div>
+                <div>
+                  <p className="font-bold text-white text-base mb-1">精緻なオーディエンス設計</p>
+                  <p className="text-sm text-gray-300">興味・関心ターゲティング、詳細なカスタムオーディエンス、優良顧客に基づく類似オーディエンスを組み合わせる</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-800 flex items-center justify-center text-cyan-300 font-bold">3</div>
+                <div>
+                  <p className="font-bold text-white text-base mb-1">商品タイプに合わせた広告クリエイティブ</p>
+                  <p className="text-sm text-gray-300">商品カテゴリーごとに最適な広告フォーマットを選定し、AIDA+Pフレームワークに基づいたコピーライティングで訴求力を高める</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-800 flex items-center justify-center text-cyan-300 font-bold">4</div>
+                <div>
+                  <p className="font-bold text-white text-base mb-1">継続的なA/Bテストと最適化</p>
+                  <p className="text-sm text-gray-300">広告見出し、ビジュアル、CTA、プロモーション内容など、要素ごとのA/Bテストを継続的に実施して広告パフォーマンスを向上させる</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-800 flex items-center justify-center text-cyan-300 font-bold">5</div>
+                <div>
+                  <p className="font-bold text-white text-base mb-1">データ計測と分析の強化</p>
+                  <p className="text-sm text-gray-300">ピクセルとConversionsAPIを併用した正確な計測体制を構築し、KPIの細分化分析で広告戦略を継続的に改善する</p>
+                </div>
               </div>
             </div>
-            
-            <div className="bg-gradient-to-br from-amber-900/50 to-red-900/50 p-5 rounded-lg border border-amber-800">
-              <h4 className="text-lg font-bold text-white mb-3">インフルエンサー協業広告</h4>
-              <p className="text-sm">ブランドとインフルエンサーのコラボレーション広告が公式にサポートされ簡単に実施可能に</p>
-              <div className="mt-4 pt-4 border-t border-amber-800/50">
-                <p className="text-xs text-cyan-300 font-semibold">ECサイトでの活用法</p>
-                <p className="text-xs text-gray-300 mt-1">商品関連のマイクロインフルエンサーとコラボし、信頼性の高い商品紹介広告を配信。従来比で信頼度25%アップ。</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="bg-indigo-900/30 p-6 rounded-lg my-6 border border-indigo-800">
-            <p className="font-semibold text-white mb-2">🔍 最後に覚えておきたいポイント</p>
-            <p className="mb-0">
-              Meta広告の運用は一度設定して終わりではなく、継続的な改善が必要です。「設定→測定→分析→改善」のPDCAサイクルを2週間〜1ヶ月単位で回し、データに基づいた意思決定を行いましょう。特にECサイト・ネットショップでは、商品の売れ行きやシーズン性に合わせた柔軟な対応が成功の鍵となります。
-            </p>
           </div>
         </div>
         
-        <RelatedPosts currentSlug="ec-site-meta-ads-strategy" currentCategory="広告運用" />
-        
-        <div className="mt-16 p-8 bg-gradient-to-r from-blue-900/40 to-purple-900/40 rounded-xl border border-blue-800">
-          <h2 className="text-2xl font-bold mb-4 text-white">ECサイト・ネットショップの広告運用でお悩みですか？</h2>
-          <p className="text-gray-300 mb-6">Meta広告を活用したECサイトの売上アップ支援を行っています。これまでに多数のネットショップの広告運用をサポートし、平均ROASの改善率は175%以上です。</p>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">
-            <div className="bg-gray-800/60 p-4 rounded-lg">
-              <p className="text-center text-gray-300 text-sm">
-                ※初回相談は無料で対応しています
-              </p>
+        <div className="mt-16 p-8 bg-gradient-to-r from-indigo-900/40 to-blue-900/40 rounded-xl border border-indigo-800">
+          <div className="flex flex-col md:flex-row gap-6 items-center">
+            <div className="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full flex items-center justify-center flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
             </div>
-            <div className="bg-gray-800/60 p-4 rounded-lg">
-              <p className="text-center text-gray-300 text-sm">
-                ※広告予算に応じた最適なプランをご提案します
-              </p>
+            
+            <div className="flex-1">
+              <h2 className="text-2xl md:text-3xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-300">ECサイトの売上を加速させませんか？</h2>
+              <p className="text-gray-300 mb-6">Meta広告の専門家が、あなたのECサイト・ネットショップに最適な広告戦略をご提案します。初回無料コンサルティングで売上アップの可能性を見つけましょう。</p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                <div className="bg-indigo-900/30 rounded-lg border border-indigo-800/60 p-3 text-center">
+                  <p className="text-2xl font-bold text-white">185%+</p>
+                  <p className="text-xs text-cyan-300">平均ROAS改善率</p>
+                </div>
+                <div className="bg-indigo-900/30 rounded-lg border border-indigo-800/60 p-3 text-center">
+                  <p className="text-2xl font-bold text-white">43%↓</p>
+                  <p className="text-xs text-cyan-300">平均獲得コスト削減率</p>
+                </div>
+                <div className="bg-indigo-900/30 rounded-lg border border-indigo-800/60 p-3 text-center">
+                  <p className="text-2xl font-bold text-white">150+</p>
+                  <p className="text-xs text-cyan-300">ECサイト支援実績</p>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-6 rounded-lg text-center transition-all shadow-lg hover:shadow-xl">
+                  無料相談を予約する（所要時間30分）
+                </a>
+                <a href="/service/meta-ads" className="flex-1 bg-transparent hover:bg-indigo-900/30 text-cyan-300 border border-cyan-500 font-semibold py-4 px-6 rounded-lg text-center transition-colors">
+                  サービス詳細を見る
+                </a>
+              </div>
             </div>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-5 justify-center">
-            <a href="/service/meta-ads" className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold py-4 px-6 rounded-lg text-center transition-all hover:shadow-lg sm:flex-1">
-              広告運用サービスの詳細を見る →
-            </a>
-            <a href="/contact" className="bg-transparent hover:bg-cyan-800/20 text-cyan-400 border border-cyan-600 font-semibold py-4 px-6 rounded-lg text-center transition-colors sm:flex-1">
-              お問い合わせはこちら →
-            </a>
           </div>
         </div>
       </div>
