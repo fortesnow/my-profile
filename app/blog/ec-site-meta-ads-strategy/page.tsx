@@ -552,7 +552,7 @@ export default function ECsiteMetaAdsStrategyPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-white m-0">事例2：家電ECサイト「テックジャパン」</h3>
+              <h3 className="text-xl font-bold text-white m-0">事例2：家電ECサイト</h3>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">

@@ -39,6 +39,15 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 4,
+    title: "【2025年最新】Webサイト保守のストック型ビジネスモデル完全ガイド | 内容と相場",
+    excerpt: "Webサイト保守をストック型ビジネスとして展開する方法を徹底解説。具体的なサービス内容や料金相場、クライアントへの提案方法まで、Web制作会社の収益安定化に役立つ情報をご紹介します。",
+    date: "2025.03.02",
+    category: "Web制作",
+    slug: "website-maintenance-stock-business",
+    thumbnail: "/blog/eye-catch/for-website-maintenance.jpg"
+  },
+  {
+    id: 5,
     title: "Notion API でできること - ビジネスを自動化する11の活用例",
     excerpt: "Notion APIを活用したビジネス自動化の可能性を探ります。データベース操作からワークフロー自動化まで、実践的な11の活用例を解説します。",
     date: "2025.02.27",
@@ -47,7 +56,7 @@ export const blogPosts: BlogPost[] = [
     thumbnail: "/blog/eye-catch/for-notion.jpeg"
   },
   {
-    id: 5,
+    id: 6,
     title: "結果の出るホームページの作り方～プロが教える7つの成功戦略と実践事例",
     excerpt: "ホームページの成果を最大化するための実践的な戦略と具体的な改善手法を解説。",
     date: "2025.02.22",
@@ -56,7 +65,7 @@ export const blogPosts: BlogPost[] = [
     thumbnail: "/blog/eye-catch/homepage-success.jpg"
   },
   {
-    id: 6,
+    id: 7,
     title: "【事業者向け】LPはただ作るだけではダメ！作ってからがスタートラインその理由とは？",
     excerpt: "LPの本質的な目的と、制作後の運用の重要性について解説します。",
     date: "2025.02.16",

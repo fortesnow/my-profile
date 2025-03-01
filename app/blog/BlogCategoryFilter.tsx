@@ -125,19 +125,20 @@ export function BlogCategoryFilter({
       
       {/* CTAセクション */}
       <div className="mt-16 p-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-xl border border-gray-700">
-        <h2 className="text-2xl font-bold mb-4 text-white">最新の集客ノウハウを受け取りませんか？</h2>
-        <p className="text-gray-300 mb-6">メールマガジンに登録いただくと、最新の集客テクニックや特別なお知らせをいち早くお届けします。</p>
-        <form className="flex flex-col sm:flex-row gap-4">
-          <input 
-            type="email" 
-            placeholder="メールアドレス" 
-            className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 text-white flex-grow"
-            aria-label="メールアドレス"
-          />
-          <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-bold hover:opacity-90 transition-opacity">
-            登録する
-          </button>
-        </form>
+        <h2 className="text-2xl font-bold mb-4 text-white">最新の集客ノウハウを無料で入手</h2>
+        <p className="text-gray-300 mb-5">LINE公式アカウントを友達追加して、すぐに実践できる集客テクニックを受け取りましょう</p>
+        <a 
+          href="https://page.line.me/nag6553k?oat_content=url&openQrModal=true" 
+          className="w-full bg-[#06C755] hover:bg-[#05B74B] text-white font-bold py-3 px-4 rounded-lg flex items-center justify-center transition-colors"
+        >
+          <svg className="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M22 10.6c0-4.1-4.1-7.5-9.2-7.5-5 0-9.2 3.4-9.2 7.5 0 3.7 3.2 6.8 7.6 7.4.3 0 .7.2.8.5 0 .3 0 .7-.2 1-.3.4-.8 1-.7 1.1.1.2.6-.3.9-.5l2.5-1.5c.6-.1 1.1-.4 1.6-.6 4.3-1.9 6.7-5.3 5.7-7.4"/>
+          </svg>
+          LINE公式アカウントを友達追加する
+        </a>
+        <p className="text-xs text-gray-400 mt-3">
+          ※LINE公式アカウントでは、最新の集客ノウハウや限定情報を定期的にお届けしています。<br />
+        </p>
       </div>
     </>
   )
