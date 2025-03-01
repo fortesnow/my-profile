@@ -1,6 +1,6 @@
 // 記事データを一元管理するファイル
 export interface BlogPost {
-  id: number;
+  id: number | string;  // 数値とスラッグ文字列の両方をサポート
   title: string;
   excerpt: string;
   date: string;
@@ -10,6 +10,15 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    id: 5,
+    title: '【2025年最新】飲食店のMeta広告運用完全ガイド | 集客率2倍の実践テクニック',
+    excerpt: '飲食店向けMeta広告(旧Facebook広告)の運用方法を徹底解説。効果的なターゲティング、予算設定から実際の成功事例まで、集客アップにつながる広告運用テクニックをご紹介します。',
+    date: '2025.03.01',
+    category: '広告運用',
+    slug: 'meta-ads-for-restaurant',
+    thumbnail: '/blog/eye-catch/meta-ads-restaurant.jpg'
+  },
   {
     id: 4,
     title: "【2025年最新】エステサロンのMeta広告運用完全ガイド",
@@ -48,7 +57,17 @@ export const blogPosts: BlogPost[] = [
   }
 ];
 
+// 記事を日付順にソートする関数
+export function getSortedPosts(): BlogPost[] {
+  return [...blogPosts].sort((a, b) => {
+    // 日付の形式を統一して比較（'.' と '-' の両方に対応）
+    const dateA = new Date(a.date.replace(/\./g, '-'));
+    const dateB = new Date(b.date.replace(/\./g, '-'));
+    return dateB.getTime() - dateA.getTime(); // 降順（最新が先頭）
+  });
+}
+
 // 最新の記事を取得するヘルパー関数
 export function getLatestPosts(count: number = 3): BlogPost[] {
-  return [...blogPosts].slice(0, count);
+  return getSortedPosts().slice(0, count);
 } 
