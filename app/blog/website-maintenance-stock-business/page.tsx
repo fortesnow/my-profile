@@ -5,7 +5,7 @@ import { ArrowLeft } from "lucide-react"
 import React from "react"
 
 export const metadata: Metadata = {
-  title: '【2025年最新】Webサイト保守のストック型ビジネスモデル完全ガイド | 内容と相場',
+  title: 'Webサイト保守でストック収益を実現する完全ガイド～ありがちな現場の問題も把握しよう～',
   description: 'Webサイト保守をストック型ビジネスとして展開する方法を徹底解説。具体的なサービス内容や料金相場、クライアントへの提案方法まで、Web制作会社の収益安定化に役立つ情報をご紹介します。',
   keywords: [
     'Webサイト 保守 ストック',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     canonical: 'https://stellarium.jp/blog/website-maintenance-stock-business',
   },
   openGraph: {
-    title: '【2025年最新】Webサイト保守のストック型ビジネスモデル完全ガイド',
+    title: 'Webサイト保守でストック収益を実現する完全ガイド～ありがちな現場の問題も把握しよう～',
     description: 'Webサイト保守をストック型ビジネスとして収益化する方法を徹底解説。サービス内容や料金相場、提案方法まで完全網羅。',
     type: 'article',
     locale: 'ja_JP',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: '【2025年最新】Webサイト保守のストック型ビジネスモデル完全ガイド',
+    title: 'Webサイト保守でストック収益を実現する完全ガイド～ありがちな現場の問題も把握しよう～',
     description: 'Webサイト保守をストック型ビジネスとして収益化する方法を徹底解説。',
     images: ['/blog/eye-catch/for-website-maintenance.jpg'],
     creator: '@あおい',
@@ -61,7 +61,7 @@ export default function WebsiteMaintenanceStockBusinessPage() {
         </Link>
 
         <h1 className="text-3xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-          【2025年最新】Webサイト保守のストック型ビジネスモデル完全ガイド
+          Webサイト保守でストック収益を実現する完全ガイド～ありがちな現場の問題も把握しよう～
         </h1>
         
         <div className="flex items-center gap-4 mb-10">
