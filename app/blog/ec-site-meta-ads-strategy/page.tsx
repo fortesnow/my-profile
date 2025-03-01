@@ -113,35 +113,35 @@ export default function ECsiteMetaAdsStrategyPage() {
             Meta広告（Facebook・Instagram広告）は、ECサイト・ネットショップの売上拡大に特に効果的です。その主な理由は以下の通りです。
           </p>
           
-          <div className="my-8 overflow-hidden rounded-lg border border-gray-700">
+          <div className="my-8 overflow-x-auto rounded-lg border border-gray-700">
             <table className="min-w-full divide-y divide-gray-700">
               <thead className="bg-gray-800">
                 <tr>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-cyan-300 uppercase tracking-wider">特徴</th>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-cyan-300 uppercase tracking-wider">効果</th>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-cyan-300 uppercase tracking-wider">ECサイトでの活用ポイント</th>
+                  <th scope="col" className="px-3 sm:px-6 py-3 text-left text-xs font-medium text-cyan-300 uppercase tracking-wider">特徴</th>
+                  <th scope="col" className="px-3 sm:px-6 py-3 text-left text-xs font-medium text-cyan-300 uppercase tracking-wider">効果</th>
+                  <th scope="col" className="px-3 sm:px-6 py-3 text-left text-xs font-medium text-cyan-300 uppercase tracking-wider">ECサイトでの活用ポイント</th>
                 </tr>
               </thead>
               <tbody className="bg-gray-900/40 divide-y divide-gray-700">
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-white">精緻なターゲティング</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">広告効率 <span className="text-green-400">↑28%</span></td>
-                  <td className="px-6 py-4 text-sm text-gray-300">商品ジャンル別に興味・関心ターゲティングを設定</td>
+                  <td className="px-3 sm:px-6 py-4 text-sm font-medium text-white">精緻なターゲティング</td>
+                  <td className="px-3 sm:px-6 py-4 text-sm text-gray-300">広告効率 <span className="text-green-400">↑28%</span></td>
+                  <td className="px-3 sm:px-6 py-4 text-sm text-gray-300">商品ジャンル別に興味・関心ターゲティングを設定</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-white">ビジュアル訴求力</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">CTR <span className="text-green-400">↑35%</span></td>
-                  <td className="px-6 py-4 text-sm text-gray-300">高品質商品画像×使用シーンの組み合わせ</td>
+                  <td className="px-3 sm:px-6 py-4 text-sm font-medium text-white">ビジュアル訴求力</td>
+                  <td className="px-3 sm:px-6 py-4 text-sm text-gray-300">CTR <span className="text-green-400">↑35%</span></td>
+                  <td className="px-3 sm:px-6 py-4 text-sm text-gray-300">高品質商品画像×使用シーンの組み合わせ</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-white">リターゲティング</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">CVR <span className="text-green-400">↑153%</span></td>
-                  <td className="px-6 py-4 text-sm text-gray-300">カート放棄者への特典付き再アプローチ</td>
+                  <td className="px-3 sm:px-6 py-4 text-sm font-medium text-white">リターゲティング</td>
+                  <td className="px-3 sm:px-6 py-4 text-sm text-gray-300">CVR <span className="text-green-400">↑153%</span></td>
+                  <td className="px-3 sm:px-6 py-4 text-sm text-gray-300">カート放棄者への特典付き再アプローチ</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-white">カタログ連携</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">ROAS <span className="text-green-400">↑45%</span></td>
-                  <td className="px-6 py-4 text-sm text-gray-300">閲覧商品に関連する商品のレコメンド表示</td>
+                  <td className="px-3 sm:px-6 py-4 text-sm font-medium text-white">カタログ連携</td>
+                  <td className="px-3 sm:px-6 py-4 text-sm text-gray-300">ROAS <span className="text-green-400">↑45%</span></td>
+                  <td className="px-3 sm:px-6 py-4 text-sm text-gray-300">閲覧商品に関連する商品のレコメンド表示</td>
                 </tr>
               </tbody>
             </table>
@@ -487,7 +487,7 @@ export default function ECsiteMetaAdsStrategyPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-white m-0">事例1：アパレルECサイト「MODA STYLE」</h3>
+              <h3 className="text-xl font-bold text-white m-0">事例1：アパレルECサイト</h3>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
@@ -757,17 +757,17 @@ export default function ECsiteMetaAdsStrategyPage() {
                   <p className="text-xs text-cyan-300">平均獲得コスト削減率</p>
                 </div>
                 <div className="bg-indigo-900/30 rounded-lg border border-indigo-800/60 p-3 text-center">
-                  <p className="text-2xl font-bold text-white">150+</p>
+                  <p className="text-2xl font-bold text-white">多数</p>
                   <p className="text-xs text-cyan-300">ECサイト支援実績</p>
                 </div>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-6 rounded-lg text-center transition-all shadow-lg hover:shadow-xl">
-                  無料相談を予約する（所要時間30分）
+                <a href="https://page.line.me/nag6553k?oat_content=url&openQrModal=true" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-6 rounded-lg text-center transition-all shadow-lg hover:shadow-xl">
+                  公式LINEで相談する（無料）
                 </a>
-                <a href="/service/meta-ads" className="flex-1 bg-transparent hover:bg-indigo-900/30 text-cyan-300 border border-cyan-500 font-semibold py-4 px-6 rounded-lg text-center transition-colors">
-                  サービス詳細を見る
+                <a href="https://www.stellarium.jp/ads-service" className="flex-1 bg-transparent hover:bg-indigo-900/30 text-cyan-300 border border-cyan-500 font-semibold py-4 px-6 rounded-lg text-center transition-colors">
+                  広告運用サービスの詳細
                 </a>
               </div>
             </div>
