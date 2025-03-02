@@ -152,6 +152,24 @@ export const services: Service[] = [
     price: "要相談",
     slug: "ai-service",
     category: "開発"
+  },
+  {
+    id: 'sns-service',
+    title: 'SNS運用代行',
+    description: '戦略的なSNSマーケティングでブランド価値を向上。Instagram、Twitter、Facebook、TikTokなど、各種SNSの運用代行サービスを提供します。',
+    shortDescription: '各種SNSの戦略的運用でブランド価値を向上',
+    category: 'マーケティング',
+    thumbnail: '/images/zunda-pic.png',
+    icon: "message-square",
+    price: "10万円〜",
+    slug: "sns-service",
+    features: [
+      'ターゲット層に響くコンテンツ戦略',
+      'フォロワー増加・エンゲージメント向上',
+      '各プラットフォームに最適化した投稿',
+      'データ分析に基づく改善提案',
+      'トレンド分析とタイムリーな対応'
+    ]
   }
 ];
 
