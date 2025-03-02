@@ -29,25 +29,25 @@ export const metadata: Metadata = {
     locale: 'ja_JP',
     images: [
       {
-        url: '/blog/eye-catch/studio-seo-guide.jpg',
+        url: '/blog/eye-catch/for-studio.jpg',
         width: 1200,
         height: 630,
         alt: 'StudioのSEO対策完全ガイド',
       },
     ],
     url: 'https://stellarium.jp/blog/studio-seo-optimization',
-    siteName: 'Web制作 あおい',
+    siteName: 'Stellarium Web制作',
     publishedTime: '2025-03-02T00:00:00+09:00',
     modifiedTime: '2025-03-02T00:00:00+09:00',
-    authors: ['Web制作 あおい'],
+    authors: ['Stellarium Web制作'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'StudioのSEO対策完全ガイド〜レンダリング方式から理解する根本的弱点と克服法〜',
     description: 'StudioのSEOが弱い本質的理由をCSR/SSRの技術的観点から徹底解説。',
-    images: ['/blog/eye-catch/studio-seo-guide.jpg'],
-    creator: '@あおい',
-    site: '@Webデザインあおい',
+    images: ['/blog/eye-catch/for-studio.jpg'],
+    creator: '@Stellarium',
+    site: '@StellariumWeb',
   },
 }
 
@@ -71,7 +71,7 @@ export default function StudioSeoOptimizationPage() {
         
         <div className="relative w-full h-64 md:h-96 mb-10 rounded-xl overflow-hidden bg-gradient-to-r from-blue-800/50 to-purple-800/50 flex items-center justify-center">
           <Image 
-            src="/blog/eye-catch/studio-seo-guide.jpg"
+            src="/blog/eye-catch/for-studio.jpg"
             alt="StudioのSEO対策完全ガイド" 
             fill
             className="object-cover opacity-80"
@@ -695,14 +695,14 @@ export default function StudioSeoOptimizationPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium rounded-lg shadow-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+              <a href="https://page.line.me/nag6553k?oat_content=url&openQrModal=true" className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium rounded-lg shadow-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
                 無料相談を予約する
               </a>
               
-              <a href="/services" className="inline-flex items-center justify-center px-6 py-3 bg-transparent border-2 border-cyan-400 text-cyan-300 font-medium rounded-lg hover:bg-cyan-900/30 transition-all duration-300">
+              <a href="https://www.stellarium.jp/lp-service" className="inline-flex items-center justify-center px-6 py-3 bg-transparent border-2 border-cyan-400 text-cyan-300 font-medium rounded-lg hover:bg-cyan-900/30 transition-all duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                 </svg>
