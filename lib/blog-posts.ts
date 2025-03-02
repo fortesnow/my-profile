@@ -7,6 +7,7 @@ export interface BlogPost {
   category: string;
   slug: string;
   thumbnail: string;
+  author?: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -72,6 +73,16 @@ export const blogPosts: BlogPost[] = [
     category: "LP制作",
     slug: "lp-development",
     thumbnail: "/blog/eye-catch/for-LPO.webp"
+  },
+  {
+    id: "studio-seo-optimization",
+    slug: "studio-seo-optimization",
+    title: "StudioのSEO対策完全ガイド〜レンダリング方式から理解する根本的弱点と克服法〜",
+    date: "2025.03.02",
+    category: "Web制作",
+    excerpt: "UniverseのStudio SEOが弱い本質的理由をSSR/CSRの技術的観点から徹底解説。内部構造を理解し、効果的に検索順位を向上させるための具体的な実装方法を紹介します。",
+    thumbnail: "/blog/eye-catch/studio-seo-guide.jpg",
+    author: "あおい"
   }
 ];
 
