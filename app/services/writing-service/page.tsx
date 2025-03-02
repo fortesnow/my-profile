@@ -1,42 +1,11 @@
-import type { Metadata } from "next"
-import Image from "next/image"
-import { PenTool, FileText, Video, Newspaper } from "lucide-react"
-
-export const metadata: Metadata = {
-  title: 'セールスライティングサービス | Web制作 あおい',
-  description: '社団法人のプレスリリース作成や大手メディアへの出稿支援、新規ベンチャー企業のプロモーション支援など、豊富な実績を持つプロのライティングサービス。動画台本からプレスリリースまで、あらゆる文章で成果を出します。',
-  keywords: [
-    'セールスライティング',
-    'コピーライティング',
-    'プレスリリース',
-    '動画台本',
-    'メディア出稿',
-    '社団法人PR',
-    'ベンチャー企業PR',
-    '新聞掲載',
-    'メディア掲載',
-    'プロモーション支援'
-  ],
-  openGraph: {
-    title: 'セールスライティングサービス | プレスリリース作成・メディア出稿支援',
-    description: '社団法人のプレスリリース作成や大手メディアへの出稿支援、新規ベンチャー企業のプロモーション支援など、豊富な実績を持つプロのライティングサービス。',
-    type: 'website',
-    images: [
-      {
-        url: '/images/writing-service-og.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'セールスライティングサービス',
-      }
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'セールスライティングサービス | プレスリリース作成・メディア出稿支援',
-    description: '社団法人のプレスリリース作成や大手メディアへの出稿支援、新規ベンチャー企業のプロモーション支援など、豊富な実績を持つプロのライティングサービス。',
-    images: ['/images/writing-service-og.jpg'],
-  },
-}
+import Image from "next/image";
+// import Link from "next/link"; // 未使用のためコメントアウト
+import { 
+  PenTool, 
+  FileText, 
+  Newspaper, 
+  Video
+} from "lucide-react";
 
 export default function WritingService() {
   const services = [
@@ -140,7 +109,6 @@ export default function WritingService() {
           <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
             プレスリリース代行サービス
           </h2>
-          
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold text-cyan-400">
@@ -153,7 +121,6 @@ export default function WritingService() {
                 <span className="font-bold">料金：¥220,000（税込）</span>
               </div>
             </div>
-            
             <div className="flex flex-col justify-center items-center space-y-6">
               <div className="text-center">
                 <p className="text-lg text-gray-300 mb-2">詳しいサービス内容をご確認ください</p>

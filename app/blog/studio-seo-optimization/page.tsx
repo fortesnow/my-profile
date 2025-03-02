@@ -5,7 +5,7 @@ import { ArrowLeft } from "lucide-react"
 import React from "react"
 
 export const metadata: Metadata = {
-  title: 'StudioのSEO対策完全ガイド〜レンダリング方式から理解する根本的弱点と克服法〜',
+  title: 'StudioのSEO対策完全ガイド〜レンダリング方式から理解する根本的弱点と克服法〜 | Stellarium マーケティング',
   description: 'UniverseのStudio SEOが弱い本質的理由をSSR/CSRの技術的観点から徹底解説。内部構造を理解し、効果的に検索順位を向上させるための具体的な実装方法を紹介します。',
   keywords: [
     'Studio SEO 弱い',
@@ -17,7 +17,9 @@ export const metadata: Metadata = {
     'Studio JS レンダリング',
     'Studio SEO 改善方法',
     'Universe レンダリング方式',
-    'Studio SEO カスタマイズ'
+    'Studio SEO カスタマイズ',
+    'Stellarium マーケティング',
+    'Web制作 SEO対策'
   ].join(', '),
   alternates: {
     canonical: 'https://stellarium.jp/blog/studio-seo-optimization',
@@ -36,10 +38,10 @@ export const metadata: Metadata = {
       },
     ],
     url: 'https://stellarium.jp/blog/studio-seo-optimization',
-    siteName: 'Stellarium Web制作',
+    siteName: 'Stellarium マーケティング',
     publishedTime: '2025-03-02T00:00:00+09:00',
     modifiedTime: '2025-03-02T00:00:00+09:00',
-    authors: ['Stellarium Web制作'],
+    authors: ['Stellarium マーケティング'],
   },
   twitter: {
     card: 'summary_large_image',
@@ -47,7 +49,7 @@ export const metadata: Metadata = {
     description: 'StudioのSEOが弱い本質的理由をCSR/SSRの技術的観点から徹底解説。',
     images: ['/blog/eye-catch/for-studio.jpg'],
     creator: '@Stellarium',
-    site: '@StellariumWeb',
+    site: '@StellariumMkt',
   },
 }
 
@@ -608,7 +610,7 @@ export default function StudioSeoOptimizationPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div className="bg-indigo-900/30 p-5 rounded-lg border border-indigo-700/40">
-              <h3 className="text-xl font-semibold text-cyan-300 mb-3">Webサイト制作 Stellariumの強み</h3>
+              <h3 className="text-xl font-semibold text-cyan-300 mb-3">Webサイト制作 Stellarium マーケティングの強み</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <div className="bg-cyan-900/50 w-7 h-7 rounded-full flex items-center justify-center mr-3 flex-shrink-0">

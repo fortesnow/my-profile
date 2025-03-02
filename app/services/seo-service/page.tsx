@@ -37,7 +37,7 @@ function ImageModal({ src, alt, onClose }: { src: string; alt: string; onClose: 
 
 export default function SEOService() {
   const [showModal, setShowModal] = useState(false)
-
+  
   // ESCキーでモーダルを閉じる
   useEffect(() => {
     const handleEsc = (event: KeyboardEvent) => {
@@ -99,6 +99,7 @@ export default function SEOService() {
                   遊び心のある動きや効果を取り入れながらも、検索エンジンでの表示を最適化し、
                   ユーザーにとって使いやすいサイトを目指しています。
                 </p>
+                
                 {/* 制作過程の投稿 */}
                 <div 
                   className="relative w-full aspect-[4/3] max-w-2xl mx-auto my-8 cursor-pointer"
@@ -120,6 +121,7 @@ export default function SEOService() {
                 <p className="text-gray-300 text-center italic">
                   ↑ 実際のサイト制作過程での投稿 - SEOを意識した実装について
                 </p>
+                
                 <div className="grid md:grid-cols-3 gap-6 mt-8">
                   <div className="bg-gray-800/50 p-4 rounded-lg">
                     <h4 className="font-semibold text-purple-400 mb-2">速度にこだわり</h4>
@@ -134,6 +136,7 @@ export default function SEOService() {
                     <p className="text-gray-300">検索エンジンで見つけやすく、かつ魅力的に表示されるよう工夫しています。</p>
                   </div>
                 </div>
+                
                 <div className="mt-6 p-4 bg-gray-800/50 rounded-lg">
                   <p className="text-gray-300">
                     このサイトでは、Next.jsを使用したCSRとSSRの複合レンダリングを採用し、
@@ -145,7 +148,7 @@ export default function SEOService() {
               </div>
             </div>
           </section>
-
+          
           {/* 分析ツールセクション */}
           <section className="mb-20">
             <h2 className="text-3xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
@@ -193,7 +196,7 @@ export default function SEOService() {
               </div>
             </div>
           </section>
-
+          
           {/* 特徴セクション */}
           <section>
             <h2 className="text-3xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
@@ -214,7 +217,7 @@ export default function SEOService() {
               </div>
             </div>
           </section>
-
+          
           {/* 実績セクション */}
           <section>
             <h2 className="text-3xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
@@ -235,7 +238,7 @@ export default function SEOService() {
               </div>
             </div>
           </section>
-
+          
           {/* CTAセクション */}
           <section className="text-center">
             <div className="bg-gradient-to-br from-gray-900/80 to-blue-900/80 backdrop-blur-md rounded-lg p-8 max-w-2xl mx-auto">
@@ -260,7 +263,7 @@ export default function SEOService() {
           </section>
         </div>
       </div>
-
+      
       {showModal && (
         <ImageModal
           src="/images/for-seo.png"

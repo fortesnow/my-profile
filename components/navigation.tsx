@@ -12,18 +12,19 @@ export default function Navigation() {
     { label: "Home", href: "/" },
     { 
       label: "サービス", 
+      href: "/services",
       items: [
-        { name: "受託開発", href: "/development-service" },
-        { name: "LP制作", href: "/lp-service" },
-        { name: "コーディング", href: "/coding-service" },
-        { name: "広告運用", href: "/ads-service" },
-        { name: "SEO対策", href: "/seo-service" },
-        { name: "セールスライティング", href: "/writing-service" },
-        { name: "AI開発", href: "/ai-service" },
+        { name: "受託開発", href: "/services/development-service" },
+        { name: "LP制作", href: "/services/lp-service" },
+        { name: "コーディング", href: "/services/coding-service" },
+        { name: "広告運用", href: "/services/ads-service" },
+        { name: "SEO対策", href: "/services/seo-service" },
+        { name: "セールスライティング", href: "/services/writing-service" },
+        { name: "AI開発", href: "/services/ai-service" },
       ]
     },
     { label: "ブログ", href: "/blog" },
-    { label: "お問い合わせ", href: "https://lin.ee/ATZ4bog", external: true },
+    { label: "お問い合わせ", href: "https://line.me/nag6553k?oat_content=url&openQrModal=true", external: true },
   ]
 
   return (
@@ -34,7 +35,7 @@ export default function Navigation() {
           <div className="flex justify-between items-center h-20">
             {/* ロゴ */}
             <Link href="/" className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              Web制作 あおい
+              Stellarium マーケティング
             </Link>
 
             {/* PCメニュー */}
@@ -48,9 +49,9 @@ export default function Navigation() {
                 >
                   {item.items ? (
                     <>
-                      <button className="text-gray-300 hover:text-cyan-400 transition-colors py-2">
+                      <Link href={item.href || "#"} className="text-gray-300 hover:text-cyan-400 transition-colors py-2">
                         {item.label}
-                      </button>
+                      </Link>
                       {hoveredItem === item.label && (
                         <motion.div
                           initial={{ opacity: 0, y: 10 }}
@@ -112,7 +113,11 @@ export default function Navigation() {
                   <div key={index} className="border-b border-cyan-500/20 pb-4">
                     {item.items ? (
                       <>
-                        <h2 className="text-xl font-bold text-cyan-400 mb-4">{item.label}</h2>
+                        <h2 className="text-xl font-bold text-cyan-400 mb-4">
+                          <Link href={item.href || "#"} onClick={() => setIsOpen(false)}>
+                            {item.label}
+                          </Link>
+                        </h2>
                         <ul className="space-y-4">
                           {item.items.map((subItem, subIndex) => (
                             <motion.li
