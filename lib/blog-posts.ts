@@ -157,7 +157,7 @@ export const posts: Post[] = [
     date: "2025-03-03",
     author: "Stellarium マーケティング",
     categories: ["SNS運用"],
-    thumbnail: "/blog/eye-catch/tiktok-recruitment.jpg",
+    thumbnail: "/blog/eye-catch/tiktok-recruitment.webp",
   },
 ]
 

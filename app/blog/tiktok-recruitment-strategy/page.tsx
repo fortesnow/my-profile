@@ -35,7 +35,7 @@ export default function BlogPost() {
           
           <div className="relative w-full h-64 md:h-96 rounded-xl overflow-hidden mb-8">
             <Image 
-              src="/blog/eye-catch/tiktok-recruitment.jpg"
+              src="/blog/eye-catch/tiktok-recruitment.webp"
               alt="TikTok運用による人材採用戦略"
               fill
               className="object-cover"
