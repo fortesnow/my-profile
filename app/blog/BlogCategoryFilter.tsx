@@ -113,10 +113,10 @@ export function BlogCategoryFilter({
                 <span className="px-4 py-2 bg-cyan-600 text-white rounded-md">1</span>
               </li>
               <li>
-                <a href="/blog/page/2" className="px-4 py-2 bg-gray-800 text-gray-300 rounded-md hover:bg-gray-700">2</a>
+                <Link href="/blog/page/2/" className="px-4 py-2 bg-gray-800 text-gray-300 rounded-md hover:bg-gray-700">2</Link>
               </li>
               <li>
-                <a href="/blog/page/3" className="px-4 py-2 bg-gray-800 text-gray-300 rounded-md hover:bg-gray-700">3</a>
+                <Link href="/blog/page/3/" className="px-4 py-2 bg-gray-800 text-gray-300 rounded-md hover:bg-gray-700">3</Link>
               </li>
             </ul>
           </nav>

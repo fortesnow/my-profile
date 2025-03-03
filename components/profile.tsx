@@ -246,13 +246,13 @@ export default function Profile({ data }: { data: ProfileData }) {
                     <h3 className="text-xl font-bold text-cyan-400 mb-4">最新の記事</h3>
                     <div>
                       <span className="text-gray-400 text-sm">2025.02.27</span>
-                      <a 
+                      <Link 
                         href="/blog/notion-api-usage" 
                         className="block text-white hover:text-cyan-400 transition-colors mt-1"
                       >
                         Notion API でできること - ビジネスを自動化する11の活用例
-                      </a>
-                      <a 
+                      </Link>
+                      <Link 
                         href="/blog" 
                         className="inline-flex items-center text-cyan-400 mt-4 text-sm"
                       >
@@ -260,13 +260,13 @@ export default function Profile({ data }: { data: ProfileData }) {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
                           <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                         </svg>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   
                   <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-8 border border-cyan-900/20">
                     <h3 className="text-xl font-bold text-cyan-400 mb-4">メディア掲載</h3>
-                    <a 
+                    <Link 
                       href="https://note.com" 
                       target="_blank" 
                       className="block"
@@ -275,7 +275,7 @@ export default function Profile({ data }: { data: ProfileData }) {
                       <div className="text-white hover:text-cyan-400 transition-colors mt-1">
                         Web制作とマーケティングの実践知識
                       </div>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
