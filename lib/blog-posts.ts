@@ -94,6 +94,16 @@ export const blogPosts: BlogPost[] = [
     thumbnail: "/blog/eye-catch/sns-operation.jpg",
     author: "あおい"
   },
+  {
+    id: "tiktok-recruitment-strategy",
+    title: "【2025年最新】TikTok運用で人材採用を成功させる求人活用術 | 事例と実践テクニック",
+    excerpt: "TikTokを活用した効果的な求人・採用戦略を徹底解説。Z世代へのリーチ方法や企業文化の発信テクニック、成功事例まで網羅的に紹介します。採用担当者必見の実践的ガイド。",
+    date: "2025-03-03",
+    category: "SNS運用",
+    slug: "tiktok-recruitment-strategy",
+    thumbnail: "/blog/eye-catch/tiktok-recruitment.jpg",
+    author: "Stellarium マーケティング"
+  },
 ];
 
 // 記事を日付順にソートする関数
@@ -138,6 +148,17 @@ export const posts: Post[] = [
   },
   
   // 他の記事...
+  
+  // 新しいTikTok採用の記事を追加
+  {
+    id: "tiktok-recruitment-strategy",
+    title: "【2025年最新】TikTok運用で人材採用を成功させる求人活用術 | 事例と実践テクニック",
+    excerpt: "TikTokを活用した効果的な求人・採用戦略を徹底解説。Z世代へのリーチ方法や企業文化の発信テクニック、成功事例まで紹介します。",
+    date: "2025-03-03",
+    author: "Stellarium マーケティング",
+    categories: ["SNS運用"],
+    thumbnail: "/blog/eye-catch/tiktok-recruitment.jpg",
+  },
 ]
 
 // 以下の関数は既存のまま
