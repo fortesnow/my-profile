@@ -78,12 +78,22 @@ export const blogPosts: BlogPost[] = [
     id: "studio-seo-optimization",
     slug: "studio-seo-optimization",
     title: "StudioのSEO対策完全ガイド〜レンダリング方式から理解する根本的弱点と克服法〜",
-    date: "2025.03.02",
+    date: "2025-03-02",
     category: "Web制作",
     excerpt: "UniverseのStudio SEOが弱い本質的理由をSSR/CSRの技術的観点から徹底解説。内部構造を理解し、効果的に検索順位を向上させるための具体的な実装方法を紹介します。",
     thumbnail: "/blog/eye-catch/for-studio.jpg",
     author: "Stellarium マーケティング"
-  }
+  },
+  {
+    id: "sns-operation-difficulties",
+    title: "SNS運用が難しいと感じる5つの理由と、実は向いている人の特徴",
+    excerpt: "SNS運用の難しさを感じる理由と、SNS運用に向いている人の特徴を紹介。継続するためのコツや効率的な運用方法も解説します。",
+    date: "2025-03-03",
+    category: "SNS運用",
+    slug: "sns-operation-difficulties",
+    thumbnail: "/images/blog/sns-operation.jpg",
+    author: "あおい"
+  },
 ];
 
 // 記事を日付順にソートする関数
@@ -99,4 +109,50 @@ export function getSortedPosts(): BlogPost[] {
 // 最新の記事を取得するヘルパー関数
 export function getLatestPosts(count: number = 3): BlogPost[] {
   return getSortedPosts().slice(0, count);
+}
+
+// 既存のインポート文
+export type Post = {
+  id: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  author: string;
+  categories: string[];
+  thumbnail: string;
+};
+
+// 記事一覧配列
+export const posts: Post[] = [
+  // 既存の記事...
+  
+  // 新しいSNS運用の記事を追加
+  {
+    id: "sns-operation-difficulties",
+    title: "SNS運用が難しいと感じる5つの理由と、実は向いている人の特徴",
+    excerpt: "SNS運用の難しさを感じる理由と、SNS運用に向いている人の特徴を紹介。継続するためのコツや効率的な運用方法も解説します。",
+    date: "2025-03-03",
+    author: "あおい",
+    categories: ["SNS運用", "マーケティング"],
+    thumbnail: "/images/blog/sns-operation.jpg",
+  },
+  
+  // 他の記事...
+]
+
+// 以下の関数は既存のまま
+export function getPostById(id: string): Post | undefined {
+  return posts.find(post => post.id === id);
+}
+
+export function getAllPosts(): Post[] {
+  return [...posts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+export function getRecentPosts(count: number = 3): Post[] {
+  return getAllPosts().slice(0, count);
+}
+
+export function getPostsByCategory(category: string): Post[] {
+  return getAllPosts().filter(post => post.categories.includes(category));
 } 
