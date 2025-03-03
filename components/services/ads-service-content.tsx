@@ -175,11 +175,11 @@ export function StaticServiceContent() {
 }
 
 // デフォルトエクスポートを追加
-export default function AdsServiceContent({ service }: Props) {
+export default function AdsServiceContent({}: Props) {
   // 既存のコンポーネントロジックを使用
   return (
     <div className="mt-16">
-      {/* 既存のコンテンツをここに */}
+      <StaticServiceContent />
     </div>
   );
 } 

@@ -155,4 +155,9 @@ export function getRecentPosts(count: number = 3): Post[] {
 
 export function getPostsByCategory(category: string): Post[] {
   return getAllPosts().filter(post => post.categories.includes(category));
+}
+
+// getPostBySlug関数を追加
+export function getPostBySlug(slug: string): BlogPost | undefined {
+  return blogPosts.find(post => post.slug === slug);
 } 

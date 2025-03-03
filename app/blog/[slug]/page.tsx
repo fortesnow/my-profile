@@ -1,5 +1,8 @@
 import { Suspense } from 'react';
 import Loading from './loading';
+import BlogHeader from '../components/BlogHeader';
+import BlogContent from '../components/BlogContent';
+import RelatedPosts from '../components/RelatedPosts';
 
 export default function BlogPost({ params }: { params: { slug: string } }) {
   return (
