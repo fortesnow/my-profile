@@ -91,7 +91,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-03-03",
     category: "SNS運用",
     slug: "sns-operation-difficulties",
-    thumbnail: "/images/blog/sns-operation.jpg",
+    thumbnail: "/blog/eye-catch/sns-operation.jpg",
     author: "あおい"
   },
 ];
@@ -134,7 +134,7 @@ export const posts: Post[] = [
     date: "2025-03-03",
     author: "あおい",
     categories: ["SNS運用", "マーケティング"],
-    thumbnail: "/images/blog/sns-operation.jpg",
+    thumbnail: "/blog/eye-catch/sns-operation.jpg",
   },
   
   // 他の記事...

@@ -1,3 +1,5 @@
+"use client";
+
 import type { Service } from "@/lib/services";
 import Image from "next/image";
 import { BarChart, Target, TrendingUp } from "lucide-react";
@@ -6,7 +8,16 @@ type Props = {
   service: Service;
 };
 
-export default function AdsServiceContent({}: Props) {
+export function InteractiveFeature() {
+  // インタラクティブな要素
+  return (
+    <button onClick={() => console.log('Clicked')}>
+      詳細を見る
+    </button>
+  );
+}
+
+export function StaticServiceContent() {
   const platforms = [
     {
       name: "Google広告",
@@ -159,6 +170,16 @@ export default function AdsServiceContent({}: Props) {
           </li>
         </ol>
       </div>
+    </div>
+  );
+}
+
+// デフォルトエクスポートを追加
+export default function AdsServiceContent({ service }: Props) {
+  // 既存のコンポーネントロジックを使用
+  return (
+    <div className="mt-16">
+      {/* 既存のコンテンツをここに */}
     </div>
   );
 } 

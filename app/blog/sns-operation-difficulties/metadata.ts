@@ -12,10 +12,10 @@ export const metadata: Metadata = {
     authors: ["あおい"],
     images: [
       {
-        url: "/images/blog/sns-operation-difficulties.jpg",
+        url: "/blog/eye-catch/sns-operation.jpg",
         width: 1200,
         height: 630,
-        alt: "SNS運用の難しさと向いている人",
+        alt: "SNS運用の難しさと向いている人の特徴"
       },
     ],
   },

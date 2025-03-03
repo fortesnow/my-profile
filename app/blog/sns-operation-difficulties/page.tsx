@@ -35,7 +35,7 @@ export default function BlogPost() {
           
           <div className="relative w-full h-64 md:h-96 rounded-xl overflow-hidden mb-8">
             <Image 
-              src="/images/blog/sns-operation.jpg"
+              src="/blog/eye-catch/sns-operation.jpg"
               alt="SNS運用の難しさと向いている人の特徴"
               fill
               className="object-cover"
