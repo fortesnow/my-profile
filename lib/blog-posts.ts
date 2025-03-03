@@ -101,7 +101,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-03-03",
     category: "SNS運用",
     slug: "tiktok-recruitment-strategy",
-    thumbnail: "/blog/eye-catch/tiktok-recruitment.jpg",
+    thumbnail: "/blog/eye-catch/tiktok-recruitment.webp",
     author: "Stellarium マーケティング"
   },
 ];
