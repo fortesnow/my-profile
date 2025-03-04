@@ -121,7 +121,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-03-04",
     category: "LP制作",
     slug: "lp-self-study-roadmap",
-    thumbnail: "/blog/eye-catch/lp-self-study-roadmap.webp",
+    thumbnail: "/blog/eye-catch/lp-self-study-roadmap.jpg",
     author: "Stellarium マーケティング"
   },
 ];

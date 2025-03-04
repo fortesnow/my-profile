@@ -35,7 +35,7 @@ export default function BlogPost() {
           
           <div className="relative w-full h-64 md:h-96 rounded-xl overflow-hidden mb-8">
             <Image 
-              src="/blog/eye-catch/lp-self-study-roadmap.webp"
+              src="/blog/eye-catch/lp-self-study-roadmap.jpg"
               alt="LP制作を独学で成功させる完全ロードマップ"
               fill
               className="object-cover"
