@@ -104,6 +104,16 @@ export const blogPosts: BlogPost[] = [
     thumbnail: "/blog/eye-catch/tiktok-recruitment.webp",
     author: "Stellarium マーケティング"
   },
+  {
+    id: "ad-operation-mistakes",
+    title: "広告運用の失敗から学ぶ！回避すべき7つのミスと実践的な改善策",
+    excerpt: "広告運用でよくある失敗事例と、それを回避するための実践的な対策を徹底解説。投資対効果を高め、ブランドイメージを守るための具体的なノウハウを紹介します。",
+    date: "2025-03-04",
+    category: "広告運用",
+    slug: "ad-operation-mistakes",
+    thumbnail: "/blog/eye-catch/ad-operation-mistakes.webp",
+    author: "Stellarium マーケティング"
+  },
 ];
 
 // 記事を日付順にソートする関数
@@ -158,6 +168,17 @@ export const posts: Post[] = [
     author: "Stellarium マーケティング",
     categories: ["SNS運用"],
     thumbnail: "/blog/eye-catch/tiktok-recruitment.webp",
+  },
+  
+  // 新しい広告運用の失敗の記事を追加
+  {
+    id: "ad-operation-mistakes",
+    title: "広告運用の失敗から学ぶ！回避すべき7つのミスと実践的な改善策",
+    excerpt: "広告運用でよくある失敗事例と、それを回避するための実践的な対策を徹底解説。投資対効果を高め、ブランドイメージを守るための具体的なノウハウを紹介します。",
+    date: "2025-03-04",
+    author: "Stellarium マーケティング",
+    categories: ["広告運用"],
+    thumbnail: "/blog/eye-catch/ad-operation-mistakes.webp",
   },
 ]
 
