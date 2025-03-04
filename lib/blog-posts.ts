@@ -11,77 +11,35 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  // 最新の記事から順に並べる
   {
-    id: 1,
-    title: "【2025年最新】ECサイト・ネットショップのMeta広告運用完全ガイド｜費用対効果2倍のテクニック",
-    excerpt: "ECサイト・ネットショップ向けMeta広告の戦略的運用方法を徹底解説。広告予算の最適化から高CVR施策まで具体的なノウハウを公開します。",
-    date: "2025.03.01",
+    id: "tiktok-business-benefits",
+    title: '法人がTikTokをやるべき7つの理由|ビジネス成長を加速させる戦略的活用法',
+    date: '2025-03-05',
+    excerpt: '法人企業がTikTokを活用すべき具体的な理由と戦略を解説。若年層へのリーチ拡大、低コスト高効果なマーケティング手法など、今すぐビジネスを成長させるTikTok活用法を学びましょう。',
+    category: 'SNS運用',
+    slug: 'tiktok-business-benefits',
+    thumbnail: '/blog/eye-catch/tiktok-business-benefits.webp',
+    author: 'Stellarium マーケティング'
+  },
+  {
+    id: "ad-operation-mistakes",
+    title: "広告運用の失敗から学ぶ！回避すべき7つのミスと実践的な改善策",
+    excerpt: "広告運用でよくある失敗事例と、それを回避するための実践的な対策を徹底解説。投資対効果を高め、ブランドイメージを守るための具体的なノウハウを紹介します。",
+    date: "2025-03-04",
     category: "広告運用",
-    slug: "ec-site-meta-ads-strategy",
-    thumbnail: "/blog/eye-catch/for-meta-ec.webp"
+    slug: "ad-operation-mistakes",
+    thumbnail: "/blog/eye-catch/ad-operation-mistakes.webp",
+    author: "Stellarium マーケティング"
   },
   {
-    id: 2,
-    title: '【2025年最新】飲食店のMeta広告運用完全ガイド | 集客率2倍の実践テクニック',
-    excerpt: '飲食店向けMeta広告(旧Facebook広告)の運用方法を徹底解説。効果的なターゲティング、予算設定から実際の成功事例まで、集客アップにつながる広告運用テクニックをご紹介します。',
-    date: '2025.03.01',
-    category: '広告運用',
-    slug: 'meta-ads-for-restaurant',
-    thumbnail: '/blog/eye-catch/meta-ads-restaurant.jpg'
-  },
-  {
-    id: 3,
-    title: "【2025年最新】エステサロンのMeta広告運用完全ガイド",
-    excerpt: "エステサロン向けMeta広告の運用方法を徹底解説。効果的なターゲティング、予算設定から実際の成功事例まで。",
-    date: "2025.02.28",
-    category: "広告運用",
-    slug: "meta-ads-for-esthetic-salon",
-    thumbnail: "/blog/eye-catch/meta-ads-esthetic.jpg"
-  },
-  {
-    id: 4,
-    title: "【2025年最新】Webサイト保守のストック型ビジネスモデル完全ガイド | 内容と相場",
-    excerpt: "Webサイト保守をストック型ビジネスとして展開する方法を徹底解説。具体的なサービス内容や料金相場、クライアントへの提案方法まで、Web制作会社の収益安定化に役立つ情報をご紹介します。",
-    date: "2025.03.02",
-    category: "Web制作",
-    slug: "website-maintenance-stock-business",
-    thumbnail: "/blog/eye-catch/for-website-maintenance.jpg"
-  },
-  {
-    id: 5,
-    title: "Notion API でできること - ビジネスを自動化する11の活用例",
-    excerpt: "Notion APIを活用したビジネス自動化の可能性を探ります。データベース操作からワークフロー自動化まで、実践的な11の活用例を解説します。",
-    date: "2025.02.27",
-    category: "API活用",
-    slug: "notion-api-usage",
-    thumbnail: "/blog/eye-catch/for-notion.jpeg"
-  },
-  {
-    id: 6,
-    title: "結果の出るホームページの作り方～プロが教える7つの成功戦略と実践事例",
-    excerpt: "ホームページの成果を最大化するための実践的な戦略と具体的な改善手法を解説。",
-    date: "2025.02.22",
-    category: "Web制作",
-    slug: "homepage-success",
-    thumbnail: "/blog/eye-catch/homepage-success.jpg"
-  },
-  {
-    id: 7,
-    title: "【事業者向け】LPはただ作るだけではダメ！作ってからがスタートラインその理由とは？",
-    excerpt: "LPの本質的な目的と、制作後の運用の重要性について解説します。",
-    date: "2025.02.16",
+    id: "lp-self-study-roadmap",
+    title: "LP制作を独学で成功させる完全ロードマップ｜初心者が陥りがちな失敗と対策",
+    excerpt: "LP制作を独学で成功させるための具体的なロードマップを解説。初心者が陥りがちな失敗事例とその対策を詳しく紹介します。",
+    date: "2025-03-04",
     category: "LP制作",
-    slug: "lp-development",
-    thumbnail: "/blog/eye-catch/for-LPO.webp"
-  },
-  {
-    id: "studio-seo-optimization",
-    slug: "studio-seo-optimization",
-    title: "StudioのSEO対策完全ガイド〜レンダリング方式から理解する根本的弱点と克服法〜",
-    date: "2025-03-02",
-    category: "Web制作",
-    excerpt: "UniverseのStudio SEOが弱い本質的理由をSSR/CSRの技術的観点から徹底解説。内部構造を理解し、効果的に検索順位を向上させるための具体的な実装方法を紹介します。",
-    thumbnail: "/blog/eye-catch/for-studio.jpg",
+    slug: "lp-self-study-roadmap",
+    thumbnail: "/blog/eye-catch/lp-self-study-roadmap.jpg",
     author: "Stellarium マーケティング"
   },
   {
@@ -105,24 +63,77 @@ export const blogPosts: BlogPost[] = [
     author: "Stellarium マーケティング"
   },
   {
-    id: "ad-operation-mistakes",
-    title: "広告運用の失敗から学ぶ！回避すべき7つのミスと実践的な改善策",
-    excerpt: "広告運用でよくある失敗事例と、それを回避するための実践的な対策を徹底解説。投資対効果を高め、ブランドイメージを守るための具体的なノウハウを紹介します。",
-    date: "2025-03-04",
-    category: "広告運用",
-    slug: "ad-operation-mistakes",
-    thumbnail: "/blog/eye-catch/ad-operation-mistakes.webp",
+    id: 4,
+    title: "【2025年最新】Webサイト保守のストック型ビジネスモデル完全ガイド | 内容と相場",
+    excerpt: "Webサイト保守をストック型ビジネスとして展開する方法を徹底解説。具体的なサービス内容や料金相場、クライアントへの提案方法まで、Web制作会社の収益安定化に役立つ情報をご紹介します。",
+    date: "2025-03-02",
+    category: "Web制作",
+    slug: "website-maintenance-stock-business",
+    thumbnail: "/blog/eye-catch/for-website-maintenance.jpg"
+  },
+  {
+    id: "studio-seo-optimization",
+    slug: "studio-seo-optimization",
+    title: "StudioのSEO対策完全ガイド〜レンダリング方式から理解する根本的弱点と克服法〜",
+    date: "2025-03-02",
+    category: "Web制作",
+    excerpt: "UniverseのStudio SEOが弱い本質的理由をSSR/CSRの技術的観点から徹底解説。内部構造を理解し、効果的に検索順位を向上させるための具体的な実装方法を紹介します。",
+    thumbnail: "/blog/eye-catch/for-studio.jpg",
     author: "Stellarium マーケティング"
   },
   {
-    id: "lp-self-study-roadmap",
-    title: "LP制作を独学で成功させる完全ロードマップ｜初心者が陥りがちな失敗と対策",
-    excerpt: "LP制作を独学で成功させるための具体的なロードマップを解説。初心者が陥りがちな失敗事例とその対策を詳しく紹介します。",
-    date: "2025-03-04",
+    id: 1,
+    title: "【2025年最新】ECサイト・ネットショップのMeta広告運用完全ガイド｜費用対効果2倍のテクニック",
+    excerpt: "ECサイト・ネットショップ向けMeta広告の戦略的運用方法を徹底解説。広告予算の最適化から高CVR施策まで具体的なノウハウを公開します。",
+    date: "2025-03-01",
+    category: "広告運用",
+    slug: "ec-site-meta-ads-strategy",
+    thumbnail: "/blog/eye-catch/for-meta-ec.webp"
+  },
+  {
+    id: 2,
+    title: '【2025年最新】飲食店のMeta広告運用完全ガイド | 集客率2倍の実践テクニック',
+    excerpt: '飲食店向けMeta広告(旧Facebook広告)の運用方法を徹底解説。効果的なターゲティング、予算設定から実際の成功事例まで、集客アップにつながる広告運用テクニックをご紹介します。',
+    date: '2025-03-01',
+    category: '広告運用',
+    slug: 'meta-ads-for-restaurant',
+    thumbnail: '/blog/eye-catch/meta-ads-restaurant.jpg'
+  },
+  {
+    id: 3,
+    title: "【2025年最新】エステサロンのMeta広告運用完全ガイド",
+    excerpt: "エステサロン向けMeta広告の運用方法を徹底解説。効果的なターゲティング、予算設定から実際の成功事例まで。",
+    date: "2025-02-28",
+    category: "広告運用",
+    slug: "meta-ads-for-esthetic-salon",
+    thumbnail: "/blog/eye-catch/meta-ads-esthetic.jpg"
+  },
+  {
+    id: 5,
+    title: "Notion API でできること - ビジネスを自動化する11の活用例",
+    excerpt: "Notion APIを活用したビジネス自動化の可能性を探ります。データベース操作からワークフロー自動化まで、実践的な11の活用例を解説します。",
+    date: "2025-02-27",
+    category: "API活用",
+    slug: "notion-api-usage",
+    thumbnail: "/blog/eye-catch/for-notion.jpeg"
+  },
+  {
+    id: 6,
+    title: "結果の出るホームページの作り方～プロが教える7つの成功戦略と実践事例",
+    excerpt: "ホームページの成果を最大化するための実践的な戦略と具体的な改善手法を解説。",
+    date: "2025-02-22",
+    category: "Web制作",
+    slug: "homepage-success",
+    thumbnail: "/blog/eye-catch/homepage-success.jpg"
+  },
+  {
+    id: 7,
+    title: "【事業者向け】LPはただ作るだけではダメ！作ってからがスタートラインその理由とは？",
+    excerpt: "LPの本質的な目的と、制作後の運用の重要性について解説します。",
+    date: "2025-02-16",
     category: "LP制作",
-    slug: "lp-self-study-roadmap",
-    thumbnail: "/blog/eye-catch/lp-self-study-roadmap.jpg",
-    author: "Stellarium マーケティング"
+    slug: "lp-development",
+    thumbnail: "/blog/eye-catch/for-LPO.webp"
   },
 ];
 
@@ -212,4 +223,23 @@ export function getPostsByCategory(category: string): Post[] {
 // getPostBySlug関数を追加
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find(post => post.slug === slug);
+}
+
+// PC表示用のページネーション関数（1ページあたり9記事）
+export function getPaginatedPosts(page: number = 1, perPage: number = 9): {
+  posts: BlogPost[],
+  totalPages: number,
+  currentPage: number
+} {
+  const sortedPosts = getSortedPosts();
+  const totalPages = Math.ceil(sortedPosts.length / perPage);
+  const normalizedPage = page < 1 ? 1 : page > totalPages ? totalPages : page;
+  const startIndex = (normalizedPage - 1) * perPage;
+  const endIndex = startIndex + perPage;
+  
+  return {
+    posts: sortedPosts.slice(startIndex, endIndex),
+    totalPages,
+    currentPage: normalizedPage
+  };
 } 

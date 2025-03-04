@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { BlogPost } from "@/lib/blog-posts"
@@ -13,11 +13,75 @@ export function BlogCategoryFilter({
   categories: string[] 
 }) {
   const [selectedCategory, setSelectedCategory] = useState("すべて");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [isPC, setIsPC] = useState(false);
+  const [paginatedData, setPaginatedData] = useState<{
+    posts: BlogPost[],
+    totalPages: number,
+    currentPage: number
+  }>({ posts: [], totalPages: 1, currentPage: 1 });
+  
+  // ウィンドウサイズを検知してPC表示かどうかを判断
+  useEffect(() => {
+    const handleResize = () => {
+      setIsPC(window.innerWidth >= 768); // 768px以上をPC表示と判断
+    };
+    
+    // 初期化
+    handleResize();
+    
+    // リサイズイベントのリスナー登録
+    window.addEventListener('resize', handleResize);
+    
+    // クリーンアップ
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   
   // 選択されたカテゴリーに基づいて記事をフィルタリング
   const filteredPosts = selectedCategory === "すべて" 
     ? allPosts 
     : allPosts.filter(post => post.category === selectedCategory);
+  
+  // カテゴリーが変更されたらページを1に戻す
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCategory]);
+  
+  // PC表示時はページネーションを適用
+  useEffect(() => {
+    if (isPC) {
+      // カテゴリーフィルタリング後、ページネーション処理
+      const categoryFilteredPosts = selectedCategory === "すべて" 
+        ? allPosts 
+        : allPosts.filter(post => post.category === selectedCategory);
+        
+      // 9記事ごとにページネーション
+      const result = {
+        posts: categoryFilteredPosts.slice((currentPage - 1) * 9, currentPage * 9),
+        totalPages: Math.ceil(categoryFilteredPosts.length / 9),
+        currentPage: currentPage
+      };
+      
+      setPaginatedData(result);
+    } else {
+      // モバイル表示の場合は全記事表示
+      setPaginatedData({
+        posts: filteredPosts,
+        totalPages: 1,
+        currentPage: 1
+      });
+    }
+  }, [allPosts, selectedCategory, currentPage, isPC, filteredPosts]);
+  
+  // 表示する記事
+  const displayPosts = isPC ? paginatedData.posts : filteredPosts;
+  
+  // ページの変更ハンドラ
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    // ページトップにスクロール
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   
   return (
     <>
@@ -69,7 +133,7 @@ export function BlogCategoryFilter({
       
       {/* 記事一覧 */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filteredPosts.map((post) => (
+        {displayPosts.map((post) => (
           <article key={post.id} className="bg-gray-800/40 rounded-xl overflow-hidden hover:shadow-lg hover:shadow-cyan-900/20 transition-all border border-gray-700 hover:border-cyan-800">
             <Link href={`/blog/${post.slug}`} className="block h-full">
               <div className="relative aspect-video">
@@ -96,7 +160,7 @@ export function BlogCategoryFilter({
       </div>
       
       {/* フィルター結果が0件の場合のメッセージ */}
-      {filteredPosts.length === 0 && (
+      {displayPosts.length === 0 && (
         <div className="text-center py-10">
           <p className="text-gray-300 text-lg">
             該当する記事が見つかりませんでした。別のカテゴリーを選択してください。
@@ -104,20 +168,53 @@ export function BlogCategoryFilter({
         </div>
       )}
       
-      {/* ページネーション（記事が増えたら実装） */}
-      {filteredPosts.length > 12 && (
+      {/* PC表示用ページネーション */}
+      {isPC && paginatedData.totalPages > 1 && (
         <div className="flex justify-center mt-16">
           <nav aria-label="ページネーション">
-            <ul className="flex space-x-2">
-              <li>
-                <span className="px-4 py-2 bg-cyan-600 text-white rounded-md">1</span>
-              </li>
-              <li>
-                <Link href="/blog/page/2/" className="px-4 py-2 bg-gray-800 text-gray-300 rounded-md hover:bg-gray-700">2</Link>
-              </li>
-              <li>
-                <Link href="/blog/page/3/" className="px-4 py-2 bg-gray-800 text-gray-300 rounded-md hover:bg-gray-700">3</Link>
-              </li>
+            <ul className="flex flex-wrap space-x-2">
+              {/* 前のページボタン */}
+              {currentPage > 1 && (
+                <li>
+                  <button 
+                    onClick={() => handlePageChange(currentPage - 1)}
+                    className="px-4 py-2 bg-gray-800 text-gray-300 rounded-md hover:bg-gray-700"
+                    aria-label="前のページ"
+                  >
+                    &laquo;
+                  </button>
+                </li>
+              )}
+              
+              {/* ページ番号ボタン */}
+              {Array.from({ length: paginatedData.totalPages }, (_, i) => i + 1).map((page) => (
+                <li key={page}>
+                  <button
+                    onClick={() => handlePageChange(page)}
+                    className={`px-4 py-2 rounded-md ${
+                      currentPage === page
+                        ? "bg-cyan-600 text-white"
+                        : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                    }`}
+                    aria-current={currentPage === page ? "page" : undefined}
+                  >
+                    {page}
+                  </button>
+                </li>
+              ))}
+              
+              {/* 次のページボタン */}
+              {currentPage < paginatedData.totalPages && (
+                <li>
+                  <button 
+                    onClick={() => handlePageChange(currentPage + 1)}
+                    className="px-4 py-2 bg-gray-800 text-gray-300 rounded-md hover:bg-gray-700"
+                    aria-label="次のページ"
+                  >
+                    &raquo;
+                  </button>
+                </li>
+              )}
             </ul>
           </nav>
         </div>
