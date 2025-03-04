@@ -114,6 +114,16 @@ export const blogPosts: BlogPost[] = [
     thumbnail: "/blog/eye-catch/ad-operation-mistakes.webp",
     author: "Stellarium マーケティング"
   },
+  {
+    id: "lp-self-study-roadmap",
+    title: "LP制作を独学で成功させる完全ロードマップ｜初心者が陥りがちな失敗と対策",
+    excerpt: "LP制作を独学で成功させるための具体的なロードマップを解説。初心者が陥りがちな失敗事例とその対策を詳しく紹介します。",
+    date: "2025-03-04",
+    category: "LP制作",
+    slug: "lp-self-study-roadmap",
+    thumbnail: "/blog/eye-catch/lp-self-study-roadmap.webp",
+    author: "Stellarium マーケティング"
+  },
 ];
 
 // 記事を日付順にソートする関数
