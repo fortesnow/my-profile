@@ -60,7 +60,7 @@ export default function SEOService() {
             SEO対策サービス
           </h1>
           <p className="text-xl text-gray-300 mt-6">
-            戦略的なSEO施策で、あなたのビジネスの可能性を広げます
+            戦略的なSEO施策であなたのビジネスの可能性を広げます
           </p>
         </div>
 
