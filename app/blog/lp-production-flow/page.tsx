@@ -20,7 +20,9 @@ export default function BlogPost() {
             </div>
             <div className="flex items-center">
               <Tag className="h-4 w-4 mr-1" />
-              <span>Web制作</span>
+              <Link href="/blog/category/web-production">
+                <span className="hover:text-cyan-400 transition-colors duration-200">Web制作</span>
+              </Link>
             </div>
           </div>
           

@@ -145,6 +145,16 @@ export const blogPosts: BlogPost[] = [
     slug: "lp-development",
     thumbnail: "/blog/eye-catch/for-LPO.webp"
   },
+  {
+    id: 'local-ad-management-strategy',
+    title: '地方・田舎での広告運用成功術 | 都市部とは異なる戦略とアプローチ',
+    date: '2025-03-06',
+    excerpt: '都市部の広告戦略をそのまま地方や田舎に適用しても思うような成果は得られません。地域特性を理解し最適化された広告運用が成功への鍵です。本記事では地方・田舎での広告運用に特化した戦略とアプローチを解説します。',
+    category: 'デジタルマーケティング',
+    slug: 'local-ad-management-strategy',
+    thumbnail: '/blog/eye-catch/local-ad-management.jpg',
+    author: 'Stellarium マーケティング'
+  },
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()); // 日付順に並べ替え
 
 // 記事を日付順にソートする関数
