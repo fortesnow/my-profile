@@ -11,7 +11,17 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
-  // 最新の記事から順に並べる
+  // 記事を日付順に並べ替えて追加
+  {
+    id: "lp-production-flow",
+    title: "LP制作の流れを徹底解説｜成功するランディングページの作り方",
+    date: "2025-03-05",
+    excerpt: "LP制作の正しい流れをステップバイステップで解説。初心者でもわかるランディングページ制作のノウハウを公開します。",
+    category: "LP制作",
+    slug: "lp-production-flow",
+    thumbnail: "/blog/eye-catch/lp-production-flow.jpg",
+    author: "Stellarium マーケティング"
+  },
   {
     id: "tiktok-business-benefits",
     title: '法人がTikTokをやるべき7つの理由|ビジネス成長を加速させる戦略的活用法',
@@ -135,7 +145,7 @@ export const blogPosts: BlogPost[] = [
     slug: "lp-development",
     thumbnail: "/blog/eye-catch/for-LPO.webp"
   },
-];
+].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()); // 日付順に並べ替え
 
 // 記事を日付順にソートする関数
 export function getSortedPosts(): BlogPost[] {
@@ -242,4 +252,4 @@ export function getPaginatedPosts(page: number = 1, perPage: number = 9): {
     totalPages,
     currentPage: normalizedPage
   };
-} 
+}
