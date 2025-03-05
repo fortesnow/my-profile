@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "地方・田舎での広告運用成功術 | 都市部とは異なる戦略とアプローチ",
   description: "都市部の広告戦略をそのまま地方や田舎に適用しても思うような成果は得られません。地域特性を理解し最適化された広告運用が成功への鍵です。本記事では地方・田舎での広告運用に特化した戦略とアプローチを解説します。",
-  keywords: "広告運用, 地方, 田舎, マーケティング, ローカルSEO, デジタルマーケティング",
+  keywords: "広告運用, 地方, 田舎, マーケティング, ローカルSEO, 地域広告",
   openGraph: {
     title: "地方・田舎での広告運用成功術 | 都市部とは異なる戦略とアプローチ",
     description: "都市部の広告戦略をそのまま地方や田舎に適用しても思うような成果は得られません。地域特性を理解し最適化された広告運用が成功への鍵です。",
@@ -42,8 +42,8 @@ export default function BlogPost() {
             </div>
             <div className="flex items-center">
               <Tag className="h-4 w-4 mr-1" />
-              <Link href="/blog/category/digital-marketing">
-                <span className="hover:text-cyan-400 transition-colors duration-200">デジタルマーケティング</span>
+              <Link href="/blog/category/ad-operation">
+                <span className="hover:text-cyan-400 transition-colors duration-200">広告運用</span>
               </Link>
             </div>
           </div>
