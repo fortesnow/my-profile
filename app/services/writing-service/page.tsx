@@ -1,5 +1,5 @@
 import Image from "next/image";
-// import Link from "next/link"; // 未使用のためコメントアウト
+import Link from "next/link";
 import { 
   PenTool, 
   FileText, 
@@ -125,7 +125,7 @@ export default function WritingService() {
               <div className="text-center">
                 <p className="text-lg text-gray-300 mb-2">詳しいサービス内容をご確認ください</p>
               </div>
-              <a
+              <Link
                 href="/services/writing-service/press-release"
                 className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
               >
@@ -133,7 +133,7 @@ export default function WritingService() {
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         </section>
