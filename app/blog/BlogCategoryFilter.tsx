@@ -134,8 +134,8 @@ export function BlogCategoryFilter({
       {/* 記事一覧 */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {displayPosts.map((post) => (
-          <article key={post.id} className="bg-gray-800/40 rounded-xl overflow-hidden hover:shadow-lg hover:shadow-cyan-900/20 transition-all border border-gray-700 hover:border-cyan-800">
-            <Link href={`/blog/${post.slug}`} className="block h-full">
+          <article key={post.id.toString()} className="bg-gray-800/40 rounded-xl overflow-hidden hover:shadow-lg hover:shadow-cyan-900/20 transition-all border border-gray-700 hover:border-cyan-800">
+            <Link href={`/blog/${post.slug}`} passHref className="block h-full">
               <div className="relative aspect-video">
                 <Image
                   src={post.thumbnail}

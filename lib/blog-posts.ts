@@ -96,7 +96,7 @@ export const blogPosts: BlogPost[] = [
     slug: "studio-seo-optimization",
     title: "StudioのSEO対策完全ガイド〜レンダリング方式から理解する根本的弱点と克服法〜",
     date: "2025-03-02",
-    category: "Web制作",
+    category: "SEO対策",
     excerpt: "UniverseのStudio SEOが弱い本質的理由をSSR/CSRの技術的観点から徹底解説。内部構造を理解し、効果的に検索順位を向上させるための具体的な実装方法を紹介します。",
     thumbnail: "/blog/eye-catch/for-studio.jpg",
     author: "Stellarium マーケティング"
@@ -206,6 +206,17 @@ export const posts: Post[] = [
     author: "Stellarium マーケティング",
     categories: ["SEO対策", "Webマーケティング"],
     thumbnail: "/blog/eye-catch/restaurant-seo-strategy.jpg",
+  },
+  
+  // StudioのSEO対策記事を追加
+  {
+    id: "studio-seo-optimization",
+    title: "StudioのSEO対策完全ガイド〜レンダリング方式から理解する根本的弱点と克服法〜",
+    excerpt: "UniverseのStudio SEOが弱い本質的理由をSSR/CSRの技術的観点から徹底解説。内部構造を理解し、効果的に検索順位を向上させるための具体的な実装方法を紹介します。",
+    date: "2025-03-02",
+    author: "Stellarium マーケティング",
+    categories: ["SEO対策"],
+    thumbnail: "/blog/eye-catch/for-studio.jpg",
   },
   
   // SNS運用の記事
