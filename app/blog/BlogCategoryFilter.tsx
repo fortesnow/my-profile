@@ -83,6 +83,11 @@ export function BlogCategoryFilter({
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   
+  // 記事クリック時のハンドラを追加
+  const handlePostClick = (slug: string) => {
+    window.location.href = `/blog/${slug}`;
+  };
+  
   return (
     <>
       {/* パンくずリスト */}
@@ -134,8 +139,12 @@ export function BlogCategoryFilter({
       {/* 記事一覧 */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {displayPosts.map((post) => (
-          <article key={post.id.toString()} className="bg-gray-800/40 rounded-xl overflow-hidden hover:shadow-lg hover:shadow-cyan-900/20 transition-all border border-gray-700 hover:border-cyan-800">
-            <Link href={`/blog/${post.slug}`} passHref className="block h-full">
+          <article 
+            key={post.id.toString()} 
+            className="bg-gray-800/40 rounded-xl overflow-hidden hover:shadow-lg hover:shadow-cyan-900/20 transition-all border border-gray-700 hover:border-cyan-800 cursor-pointer"
+            onClick={() => handlePostClick(post.slug)}
+          >
+            <div className="block h-full">
               <div className="relative aspect-video">
                 <Image
                   src={post.thumbnail}
@@ -154,7 +163,7 @@ export function BlogCategoryFilter({
                 <h2 className="text-xl font-bold text-white my-3 line-clamp-2">{post.title}</h2>
                 <p className="text-gray-300 line-clamp-3">{post.excerpt}</p>
               </div>
-            </Link>
+            </div>
           </article>
         ))}
       </div>

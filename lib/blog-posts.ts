@@ -165,6 +165,16 @@ export const blogPosts: BlogPost[] = [
     thumbnail: '/blog/eye-catch/local-ad-management.jpg',
     author: 'Stellarium マーケティング'
   },
+  {
+    id: "tiktok-marketing-strategy",
+    title: "【2025年最新】TikTokマーケティング完全攻略｜集客効果を2倍にする実践戦略",
+    excerpt: "TikTokを活用したマーケティング戦略を徹底解説。アルゴリズムの仕組みからバズらせるコンテンツ制作法、効果測定まで専門家が実践的なノウハウを公開。短期間で認知拡大と集客につなげる具体的な手法を学べます。",
+    date: "2025-03-06",
+    category: "SNS運用",
+    slug: "tiktok-marketing-strategy",
+    thumbnail: "/blog/eye-catch/tiktok-marketing-strategy.jpg",
+    author: "Stellarium マーケティング"
+  },
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()); // 日付順に並べ替え
 
 // 記事を日付順にソートする関数
@@ -195,6 +205,16 @@ export type Post = {
 
 // 記事一覧配列
 export const posts: Post[] = [
+  // 最新の記事を上に追加
+  {
+    id: "tiktok-marketing-strategy",
+    title: "【2025年最新】TikTokマーケティング完全攻略｜集客効果を2倍にする実践戦略",
+    excerpt: "TikTokを活用したマーケティング戦略を徹底解説。アルゴリズムの仕組みからバズらせるコンテンツ制作法、効果測定まで専門家が実践的なノウハウを公開。短期間で認知拡大と集客につなげる具体的な手法を学べます。",
+    date: "2025-03-06",
+    author: "Stellarium マーケティング",
+    categories: ["SNS運用"],
+    thumbnail: "/blog/eye-catch/tiktok-marketing-strategy.jpg",
+  },
   // 既存の記事...
   
   // 新しい飲食店SEO対策の記事を追加
