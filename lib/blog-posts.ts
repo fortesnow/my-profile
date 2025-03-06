@@ -13,6 +13,16 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   // 記事を日付順に並べ替えて追加
   {
+    id: "restaurant-seo-strategy",
+    title: "飲食店のSEO対策完全ガイド｜集客数を2倍にする実践テクニック",
+    date: "2025-03-06",
+    excerpt: "飲食店のためのSEO対策を徹底解説。Googleで上位表示させるためのウェブサイト改善策や、地域検索で見つけてもらうための具体的な施策を紹介。集客アップにつながる実践的なノウハウを公開します。",
+    category: "SEO対策",
+    slug: "restaurant-seo-strategy",
+    thumbnail: "/blog/eye-catch/restaurant-seo-strategy.jpg",
+    author: "Stellarium マーケティング"
+  },
+  {
     id: "lp-production-flow",
     title: "LP制作の流れを徹底解説｜成功するランディングページの作り方",
     date: "2025-03-05",
@@ -187,7 +197,18 @@ export type Post = {
 export const posts: Post[] = [
   // 既存の記事...
   
-  // 新しいSNS運用の記事を追加
+  // 新しい飲食店SEO対策の記事を追加
+  {
+    id: "restaurant-seo-strategy",
+    title: "飲食店のSEO対策完全ガイド｜集客数を2倍にする実践テクニック",
+    excerpt: "飲食店のためのSEO対策を徹底解説。Googleで上位表示させるためのウェブサイト改善策や、地域検索で見つけてもらうための具体的な施策を紹介。集客アップにつながる実践的なノウハウを公開します。",
+    date: "2025-03-06",
+    author: "Stellarium マーケティング",
+    categories: ["SEO対策", "Webマーケティング"],
+    thumbnail: "/blog/eye-catch/restaurant-seo-strategy.jpg",
+  },
+  
+  // SNS運用の記事
   {
     id: "sns-operation-difficulties",
     title: "SNS運用が難しいと感じる5つの理由と、実は向いている人の特徴",
