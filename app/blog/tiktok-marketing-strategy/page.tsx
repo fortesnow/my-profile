@@ -395,7 +395,7 @@ export default function BlogPost() {
           <h2 className="text-2xl font-bold mt-12 mb-6 text-white">3. 成果を出すTikTok運用戦略</h2>
           
           <p>
-            継続的に成果を出すTikTokマーケティングを実践するためには、単発のバズる動画だけでなく、システマチックな運用戦略が不可欠です。ここでは、実際に成果を挙げている企業やクリエイターの手法から、再現性の高い戦略をご紹介します。
+            継続的に成果を出すTikTokマーケティングを実践するためには単発のバズる動画だけでなく、システマチックな運用戦略が不可欠です。ここでは、実際に成果を挙げている企業やクリエイターの手法から、再現性の高い戦略をご紹介します。
           </p>
 
           <h3 className="text-xl font-semibold mt-8 mb-4 text-cyan-300">TikTokマーケティング成功の3つの柱</h3>
