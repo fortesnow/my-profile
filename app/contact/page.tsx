@@ -53,7 +53,7 @@ export default function ContactPage() {
                 </li>
               </ul>
               <a 
-                href="https://line.me/nag6553k?oat_content=url&openQrModal=true" 
+                href="https://page.line.me/nag6553k?oat_content=url&openQrModal=true" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="block w-full bg-[#06C755] hover:bg-[#05B74B] text-white font-bold py-4 px-6 rounded-lg transition-colors duration-300 text-center"

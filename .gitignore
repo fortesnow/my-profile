@@ -39,3 +39,37 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# IDE - JetBrains (WebStorm, IntelliJ など)
+.idea/
+
+# Local Netlify folder
+.netlify
+
+# PWA関連
+**/public/sw.js
+**/public/workbox-*.js
+**/public/worker-*.js
+**/public/sw.js.map
+**/public/workbox-*.js.map
+**/public/worker-*.js.map
+
+# バックアップファイル
+*.bak
+*.swp
+*.swo
+*~
+
+# キャッシュディレクトリ
+.cache/
+
+# LINE関連の機密ファイル
+line-config.json
+line-credentials.json
