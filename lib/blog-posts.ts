@@ -195,6 +195,16 @@ export const blogPosts: BlogPost[] = [
     thumbnail: "/blog/eye-catch/luxury-sushi-branding.jpg",
     author: "Stellarium マーケティング"
   },
+  {
+    id: "farm-sns-marketing",
+    title: "【2025年版】農家のSNS集客術｜売上を2倍にする実践的活用法",
+    date: "2025-03-08",
+    excerpt: "農家がSNSを活用して効果的に集客・販売促進する方法を徹底解説。Instagram、Facebook、TikTokなど各プラットフォームの特性を活かした投稿術から、直販・ファンづくりのコツまで。実例を交えた農家向けSNS活用ガイド。",
+    category: "SNS運用",
+    slug: "farm-sns-marketing",
+    thumbnail: "/blog/eye-catch/farm-sns-marketing.jpg",
+    author: "Stellarium マーケティング"
+  },
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()); // 日付順に並べ替え
 
 // 記事を日付順にソートする関数
@@ -226,6 +236,15 @@ export type Post = {
 // 記事一覧配列
 export const posts: Post[] = [
   // 最新の記事を上に追加
+  {
+    id: "farm-sns-marketing",
+    title: "【2025年版】農家のSNS集客術｜売上を2倍にする実践的活用法",
+    excerpt: "農家がSNSを活用して効果的に集客・販売促進する方法を徹底解説。Instagram、Facebook、TikTokなど各プラットフォームの特性を活かした投稿術から、直販・ファンづくりのコツまで。実例を交えた農家向けSNS活用ガイド。",
+    date: "2025-03-08",
+    author: "Stellarium マーケティング",
+    categories: ["SNS運用"],
+    thumbnail: "/blog/eye-catch/farm-sns-marketing.jpg",
+  },
   {
     id: "luxury-sushi-marketing",
     title: "高級鮨店のマーケティング戦略｜客単価と集客率を高める実践テクニック",
