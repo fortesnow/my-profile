@@ -19,7 +19,7 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="max-w-2xl mx-auto mb-20">
           {/* 問い合わせカード: LINE */}
           <div className="bg-gradient-to-br from-gray-800/70 to-gray-900/70 rounded-2xl overflow-hidden shadow-xl transform transition-all hover:scale-[1.01] border border-gray-700/50">
             <div className="relative h-40 bg-gradient-to-r from-green-500/20 to-green-400/20">
@@ -72,90 +72,39 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
+        </div>
 
-          {/* 問い合わせカード: メールフォーム */}
-          <div className="bg-gradient-to-br from-gray-800/70 to-gray-900/70 rounded-2xl overflow-hidden shadow-xl border border-gray-700/50">
-            <div className="relative h-40 bg-gradient-to-r from-blue-500/20 to-purple-500/20">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center">
-                  <svg className="w-10 h-10 text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+        {/* メールお問い合わせ準備中セクション */}
+        <div className="max-w-4xl mx-auto mt-20 mb-16">
+          <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 rounded-2xl overflow-hidden shadow-xl border border-blue-700/30 p-10 text-center relative">
+            <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-2xl"></div>
+            <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-gradient-to-br from-cyan-400/20 to-blue-400/20 rounded-full blur-2xl"></div>
+            
+            <div className="relative">
+              <div className="flex items-center justify-center mb-6">
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-full flex items-center justify-center">
+                  <svg className="w-10 h-10 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                   </svg>
                 </div>
               </div>
-            </div>
-            <div className="p-8">
-              <h2 className="text-2xl font-bold mb-4 text-white">メールでのお問い合わせ</h2>
-              <p className="text-gray-300 mb-6">
-                詳細なご相談やお見積りのご依頼は、以下のフォームからお願いいたします。
+              <h2 className="text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300">
+                メールフォーム準備中
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-6">
+                より便利なお問い合わせ体験のため、メールフォームを現在アップデートしています。
+                <br />完成までしばらくお待ちください。
               </p>
-
-              <form className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
-                    お名前 <span className="text-red-400">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    className="w-full px-4 py-3 bg-gray-800/70 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent text-white"
-                    placeholder="山田 太郎"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
-                    メールアドレス <span className="text-red-400">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="w-full px-4 py-3 bg-gray-800/70 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent text-white"
-                    placeholder="example@email.com"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-1">
-                    件名
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    className="w-full px-4 py-3 bg-gray-800/70 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent text-white"
-                    placeholder="お問い合わせ内容のタイトル"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">
-                    お問い合わせ内容 <span className="text-red-400">*</span>
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    required
-                    className="w-full px-4 py-3 bg-gray-800/70 border border-gray-700 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent text-white resize-none"
-                    placeholder="ご質問やご相談内容をご記入ください"
-                  ></textarea>
-                </div>
-                
-                <div className="pt-2">
-                  <button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 shadow-lg"
-                  >
-                    送信する
-                  </button>
-                </div>
-              </form>
+              <div className="flex justify-center space-x-2 mb-8">
+                <span className="w-3 h-3 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></span>
+                <span className="w-3 h-3 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></span>
+                <span className="w-3 h-3 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></span>
+              </div>
+              <div className="bg-blue-900/30 py-4 px-6 rounded-lg inline-block">
+                <p className="text-gray-300">
+                  ただいまLINEからのお問い合わせを優先的に対応しております
+                </p>
+              </div>
             </div>
           </div>
         </div>
