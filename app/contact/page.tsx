@@ -24,15 +24,13 @@ export default function ContactPage() {
           <div className="bg-gradient-to-br from-gray-800/70 to-gray-900/70 rounded-2xl overflow-hidden shadow-xl transform transition-all hover:scale-[1.01] border border-gray-700/50">
             <div className="relative h-40 bg-gradient-to-r from-green-500/20 to-green-400/20">
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center">
-                  <Image 
-                    src="/images/contact.png" 
-                    alt="LINE" 
-                    width={60} 
-                    height={60}
-                    className="object-contain"
-                  />
-                </div>
+                <Image 
+                  src="/images/contact.png" 
+                  alt="LINE" 
+                  width={80} 
+                  height={80}
+                  className="object-contain"
+                />
               </div>
             </div>
             <div className="p-8">
