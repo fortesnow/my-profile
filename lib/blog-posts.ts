@@ -175,6 +175,26 @@ export const blogPosts: BlogPost[] = [
     thumbnail: "/blog/eye-catch/tiktok-marketing-strategy.jpg",
     author: "Stellarium マーケティング"
   },
+  {
+    id: "luxury-sushi-marketing",
+    title: "高級鮨店のマーケティング戦略｜客単価と集客率を高める実践テクニック",
+    date: "2025-03-07",
+    excerpt: "高級鮨店のマーケティング手法を徹底解説。顧客心理を理解した集客方法から、リピーター獲得のための施策、デジタルマーケティングの活用法まで、売上向上につながる具体的な戦略をプロが解説します。",
+    category: "マーケティング",
+    slug: "luxury-sushi-marketing",
+    thumbnail: "/blog/eye-catch/luxury-sushi-marketing.jpg",
+    author: "Stellarium マーケティング"
+  },
+  {
+    id: "luxury-sushi-branding",
+    title: "高級鮨店のブランディング戦略｜差別化と顧客体験向上で成功する秘訣",
+    date: "2025-03-07",
+    excerpt: "高級鮨店のブランディング戦略を徹底解説。伝統と革新を融合させたコンセプト設計から、顧客体験の向上、SNS活用まで、他店と差別化するための具体的なアプローチを紹介します。ブランド価値を高め、固定客を増やすための実践的ノウハウを公開。",
+    category: "マーケティング",
+    slug: "luxury-sushi-branding",
+    thumbnail: "/blog/eye-catch/luxury-sushi-branding.jpg",
+    author: "Stellarium マーケティング"
+  },
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()); // 日付順に並べ替え
 
 // 記事を日付順にソートする関数
@@ -206,6 +226,24 @@ export type Post = {
 // 記事一覧配列
 export const posts: Post[] = [
   // 最新の記事を上に追加
+  {
+    id: "luxury-sushi-marketing",
+    title: "高級鮨店のマーケティング戦略｜客単価と集客率を高める実践テクニック",
+    excerpt: "高級鮨店のマーケティング手法を徹底解説。顧客心理を理解した集客方法から、リピーター獲得のための施策、デジタルマーケティングの活用法まで、売上向上につながる具体的な戦略をプロが解説します。",
+    date: "2025-03-07",
+    author: "Stellarium マーケティング",
+    categories: ["マーケティング"],
+    thumbnail: "/blog/eye-catch/luxury-sushi-marketing.jpg",
+  },
+  {
+    id: "luxury-sushi-branding",
+    title: "高級鮨店のブランディング戦略｜差別化と顧客体験向上で成功する秘訣",
+    excerpt: "高級鮨店のブランディング戦略を徹底解説。伝統と革新を融合させたコンセプト設計から、顧客体験の向上、SNS活用まで、他店と差別化するための具体的なアプローチを紹介します。ブランド価値を高め、固定客を増やすための実践的ノウハウを公開。",
+    date: "2025-03-07",
+    author: "Stellarium マーケティング",
+    categories: ["マーケティング"],
+    thumbnail: "/blog/eye-catch/luxury-sushi-branding.jpg",
+  },
   {
     id: "tiktok-marketing-strategy",
     title: "【2025年最新】TikTokマーケティング完全攻略｜集客効果を2倍にする実践戦略",
