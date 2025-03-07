@@ -25,7 +25,7 @@ export default function Navigation() {
       ]
     },
     { label: "ブログ", href: "/blog" },
-    { label: "お問い合わせ", href: "https://line.me/nag6553k?oat_content=url&openQrModal=true", external: true },
+    { label: "お問い合わせ", href: "/contact" },
   ]
 
   return (
