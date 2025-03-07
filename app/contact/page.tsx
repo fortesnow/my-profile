@@ -26,10 +26,10 @@ export default function ContactPage() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center">
                   <Image 
-                    src="/images/line-logo.png" 
+                    src="/images/contact.png" 
                     alt="LINE" 
-                    width={40} 
-                    height={40}
+                    width={60} 
+                    height={60}
                     className="object-contain"
                   />
                 </div>
@@ -177,7 +177,7 @@ export default function ContactPage() {
               </div>
               <h3 className="text-xl font-semibold mb-2 text-white">迅速な対応</h3>
               <p className="text-gray-300">
-                お問い合わせはすべて48時間以内に初回返信。お急ぎの場合はLINEが最適です。
+                お問い合わせはすべて24時間以内に初回返信。お急ぎの場合はLINEが最適です。
               </p>
             </div>
             
