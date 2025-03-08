@@ -205,6 +205,16 @@ export const blogPosts: BlogPost[] = [
     thumbnail: "/blog/eye-catch/farm-sns-marketing.jpg",
     author: "Stellarium マーケティング"
   },
+  {
+    id: "medical-site-seo",
+    title: "【2025年最新】医療サイトのSEO対策完全ガイド｜患者集客数を2倍にする実践テクニック",
+    date: "2025-03-08",
+    excerpt: "医療機関のためのSEO対策を徹底解説。Googleで上位表示させるための具体的な施策から、医療特化型のコンテンツ戦略まで。E-E-A-Tを意識した患者集客に直結するSEO実践ノウハウを公開します。",
+    category: "SEO対策",
+    slug: "medical-site-seo",
+    thumbnail: "/blog/eye-catch/medical-site-seo.jpg",
+    author: "Stellarium マーケティング"
+  },
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()); // 日付順に並べ替え
 
 // 記事を日付順にソートする関数
@@ -236,6 +246,15 @@ export type Post = {
 // 記事一覧配列
 export const posts: Post[] = [
   // 最新の記事を上に追加
+  {
+    id: "medical-site-seo",
+    title: "【2025年最新】医療サイトのSEO対策完全ガイド｜患者集客数を2倍にする実践テクニック",
+    excerpt: "医療機関のためのSEO対策を徹底解説。Googleで上位表示させるための具体的な施策から、医療特化型のコンテンツ戦略まで。E-E-A-Tを意識した患者集客に直結するSEO実践ノウハウを公開します。",
+    date: "2025-03-08",
+    author: "Stellarium マーケティング",
+    categories: ["SEO対策"],
+    thumbnail: "/blog/eye-catch/medical-site-seo.jpg",
+  },
   {
     id: "farm-sns-marketing",
     title: "【2025年版】農家のSNS集客術｜売上を2倍にする実践的活用法",
@@ -272,44 +291,6 @@ export const posts: Post[] = [
     categories: ["SNS運用"],
     thumbnail: "/blog/eye-catch/tiktok-marketing-strategy.jpg",
   },
-  // 既存の記事...
-  
-  // 新しい飲食店SEO対策の記事を追加
-  {
-    id: "restaurant-seo-strategy",
-    title: "飲食店のSEO対策完全ガイド｜集客数を2倍にする実践テクニック",
-    excerpt: "飲食店のためのSEO対策を徹底解説。Googleで上位表示させるためのウェブサイト改善策や、地域検索で見つけてもらうための具体的な施策を紹介。集客アップにつながる実践的なノウハウを公開します。",
-    date: "2025-03-06",
-    author: "Stellarium マーケティング",
-    categories: ["SEO対策", "Webマーケティング"],
-    thumbnail: "/blog/eye-catch/restaurant-seo-strategy.jpg",
-  },
-  
-  // StudioのSEO対策記事を追加
-  {
-    id: "studio-seo-optimization",
-    title: "StudioのSEO対策完全ガイド〜レンダリング方式から理解する根本的弱点と克服法〜",
-    excerpt: "UniverseのStudio SEOが弱い本質的理由をSSR/CSRの技術的観点から徹底解説。内部構造を理解し、効果的に検索順位を向上させるための具体的な実装方法を紹介します。",
-    date: "2025-03-02",
-    author: "Stellarium マーケティング",
-    categories: ["SEO対策"],
-    thumbnail: "/blog/eye-catch/for-studio.jpg",
-  },
-  
-  // SNS運用の記事
-  {
-    id: "sns-operation-difficulties",
-    title: "SNS運用が難しいと感じる5つの理由と、実は向いている人の特徴",
-    excerpt: "SNS運用の難しさを感じる理由と、SNS運用に向いている人の特徴を紹介。継続するためのコツや効率的な運用方法も解説します。",
-    date: "2025-03-03",
-    author: "あおい",
-    categories: ["SNS運用", "マーケティング"],
-    thumbnail: "/blog/eye-catch/sns-operation.jpg",
-  },
-  
-  // 他の記事...
-  
-  // 新しいTikTok採用の記事を追加
   {
     id: "tiktok-recruitment-strategy",
     title: "【2025年最新】TikTok運用で人材採用を成功させる求人活用術 | 事例と実践テクニック",
@@ -319,8 +300,6 @@ export const posts: Post[] = [
     categories: ["SNS運用"],
     thumbnail: "/blog/eye-catch/tiktok-recruitment.webp",
   },
-  
-  // 新しい広告運用の失敗の記事を追加
   {
     id: "ad-operation-mistakes",
     title: "広告運用の失敗から学ぶ！回避すべき7つのミスと実践的な改善策",
@@ -330,8 +309,6 @@ export const posts: Post[] = [
     categories: ["広告運用"],
     thumbnail: "/blog/eye-catch/ad-operation-mistakes.webp",
   },
-  
-  // 地方・田舎での広告運用成功術の記事を追加
   {
     id: "local-ad-management-strategy",
     title: "地方・田舎での広告運用成功術 | 都市部とは異なる戦略とアプローチ",
