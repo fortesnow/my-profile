@@ -13,6 +13,16 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   // 記事を日付順に並べ替えて追加
   {
+    id: "web-production-failures",
+    title: "WEB制作で失敗しないための7つのポイント｜経験者が語る回避策と対処法",
+    date: "2025-03-10",
+    excerpt: "WEB制作で陥りがちな失敗と、それを未然に防ぐための具体的な方法を解説。予算オーバーやスケジュール遅延、デザイン不一致など、よくある失敗事例と対策を実例を交えて紹介。これからサイト制作を依頼する方必見の失敗回避ガイドです。",
+    category: "Web制作",
+    slug: "web-production-failures",
+    thumbnail: "/blog/eye-catch/web-production-failures.jpg",
+    author: "Stellarium マーケティング"
+  },
+  {
     id: "restaurant-instagram-marketing",
     title: "飲食店のインスタグラム活用ガイド｜集客率2倍を実現した実践テクニック",
     date: "2025-03-10",
