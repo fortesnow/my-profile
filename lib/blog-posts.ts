@@ -233,6 +233,16 @@ export const blogPosts: BlogPost[] = [
     author: 'Stellarium マーケティング'
   },
   {
+    id: "tiktok-marketing-strategy",
+    title: "TikTokマーケティング完全攻略｜集客効果を2倍にする実践戦略",
+    excerpt: "TikTokを活用したマーケティング戦略を徹底解説。アルゴリズムの仕組みからバズらせるコンテンツ制作法、効果測定まで専門家が実践的なノウハウを公開。短期間で認知拡大と集客につなげる具体的な手法を学べます。",
+    date: "2025-03-06",
+    category: "SNS運用",
+    slug: "tiktok-marketing-strategy",
+    thumbnail: "/blog/eye-catch/tiktok-marketing-strategy.jpg",
+    author: "Stellarium マーケティング"
+  },
+  {
     id: "farm-sns-marketing",
     title: "【2025年版】農家のSNS集客術｜売上を2倍にする実践的活用法",
     date: "2025-03-08",
