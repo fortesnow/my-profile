@@ -15,7 +15,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "mvp-personal-development",
     title: "【個人開発者必見】MVP開発で挫折しない5つの秘訣｜アイデアを最速で形にする方法",
-    date: "2025-03-15",
+    date: "2025-03-11",
     excerpt: "個人開発でよくある「完成しない」問題を解決するMVP開発の重要性と実践方法を解説。リソースが限られた個人開発者が効率的にアイデアを形にするための5つの具体的な秘訣と成功事例を紹介します。",
     category: "開発",
     slug: "mvp-personal-development",
