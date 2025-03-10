@@ -234,53 +234,6 @@ export default function Profile({ data }: { data: ProfileData }) {
               </div>
             </div>
 
-            {/* メディアコンテンツセクション */}
-            <section className="py-16 px-6" id="media">
-              <div className="container mx-auto">
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                  メディアコンテンツ
-                </h2>
-                
-                <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                  <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-8 border border-cyan-900/20">
-                    <h3 className="text-xl font-bold text-cyan-400 mb-4">最新の記事</h3>
-                    <div>
-                      <span className="text-gray-400 text-sm">2025.02.27</span>
-                      <Link 
-                        href="/blog/notion-api-usage" 
-                        className="block text-white hover:text-cyan-400 transition-colors mt-1"
-                      >
-                        Notion API でできること - ビジネスを自動化する11の活用例
-                      </Link>
-                      <Link 
-                        href="/blog" 
-                        className="inline-flex items-center text-cyan-400 mt-4 text-sm"
-                      >
-                        すべての記事を見る 
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                        </svg>
-                      </Link>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-8 border border-cyan-900/20">
-                    <h3 className="text-xl font-bold text-cyan-400 mb-4">メディア掲載</h3>
-                    <Link 
-                      href="https://note.com" 
-                      target="_blank" 
-                      className="block"
-                    >
-                      <span className="text-gray-400">note</span>
-                      <div className="text-white hover:text-cyan-400 transition-colors mt-1">
-                        Web制作とマーケティングの実践知識
-                      </div>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </section>
-
             {/* わたしの強みセクション */}
             <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md p-8 border-4 border-cyan-200 [box-shadow:8px_8px_0_theme(colors.cyan.900)]">
               <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">

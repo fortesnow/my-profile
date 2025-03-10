@@ -13,6 +13,16 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   // 記事を日付順に並べ替えて追加
   {
+    id: "restaurant-instagram-marketing",
+    title: "飲食店のインスタグラム活用ガイド｜集客率2倍を実現した実践テクニック",
+    date: "2025-03-10",
+    excerpt: "飲食店がインスタグラムを効果的に活用するための実践的なガイド。フォロワー獲得から売上アップまで、具体的な投稿内容や写真撮影のコツ、分析方法まで徹底解説。事例を交えながら成功するためのノウハウを紹介します。",
+    category: "SNS運用",
+    slug: "restaurant-instagram-marketing",
+    thumbnail: "/blog/eye-catch/restaurant-instagram-marketing.jpg",
+    author: "Stellarium マーケティング"
+  },
+  {
     id: "lp-freelance-cost",
     title: "フリーランスのLP制作費用の相場と選び方｜失敗しない依頼のコツ",
     date: "2025-03-10",

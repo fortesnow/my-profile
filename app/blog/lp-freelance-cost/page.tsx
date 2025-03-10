@@ -407,9 +407,8 @@ export default function BlogPost() {
           <div className="bg-cyan-900/30 border-l-4 border-cyan-400 p-5 my-8">
             <p className="m-0 text-lg font-medium">重要ポイント</p>
             <p className="m-0 mt-2">
-              特に「前払い100%」を要求するフリーランスには注意が必要です。
-              一般的には「着手金30〜40%、中間納品時30%、最終納品後30〜40%」など
-              段階的な支払いが標準的です。
+              支払いの仕方や契約は商いにとって一番重要なポイントです。
+              必ず明確化してお互いの価値観の誤解がないように提示しましょう。
             </p>
           </div>
 
@@ -432,20 +431,45 @@ export default function BlogPost() {
             ビジネス成果に直結するLPを制作し、マーケティング効果を最大化させましょう。
           </p>
 
-          <div className="bg-gradient-to-r from-blue-600/30 to-cyan-600/30 p-6 rounded-lg my-10">
-            <h3 className="text-xl font-bold mb-4 text-white">お問い合わせ</h3>
-            <p>
-              LP制作やWeb制作に関するご相談は、お気軽にStellarium（ステラリウム）までご連絡ください。
-              フリーランスとの連携も含め、最適なご提案をさせていただきます。
-            </p>
-            <div className="mt-6">
-              <a 
-                href="/contact" 
-                className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
-              >
-                無料相談・お問い合わせ
-              </a>
+          <div className="bg-gradient-to-r from-blue-600/40 to-purple-600/40 p-8 rounded-lg my-10 shadow-xl border border-blue-400/20">
+            <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-300">あなたのビジネスを加速させる最高のLPを一緒に創りませんか？</h3>
+            <div className="space-y-4">
+              <p className="text-lg">
+                <span className="font-bold text-cyan-300">「もっと成約率の高いLP」</span>が欲しい。
+                <span className="font-bold text-cyan-300">「投資対効果の高いWebマーケティング」</span>がしたい。
+              </p>
+              <p>
+                そんなあなたに朗報です。Stellariumでは、単なるデザインだけでなく、<span className="underline decoration-cyan-400 decoration-2">成果にこだわったLP制作</span>をご提供しています。
+              </p>
+              <p>
+                フリーランスとの連携実績も豊富で、あなたのビジネス目標と予算に合わせた<span className="font-bold">最適なLP制作プランをご提案</span>いたします。
+              </p>
+              
+              <div className="bg-blue-900/40 p-5 rounded-md mt-6">
+                <h4 className="text-lg font-semibold text-cyan-300 mb-2">＼ Stellariumのお客様の声 ／</h4>
+                <p className="italic text-gray-300">「依頼後わずか2週間でLPが完成し、問い合わせ数が<span className="font-bold text-white">前月比180%増</span>になりました！投資以上の価値がありました」</p>
+                <p className="text-right text-sm text-gray-400 mt-2">- 美容クリニック経営 S様</p>
+              </div>
             </div>
+            
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link 
+                href="/services/lp-production" 
+                className="w-full sm:w-auto inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-4 px-10 rounded-lg shadow-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-center transform hover:scale-105"
+              >
+                LP制作サービスを詳しく見る
+              </Link>
+              <Link 
+                href="/services/lp-production#contact" 
+                className="w-full sm:w-auto inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-4 px-10 rounded-lg shadow-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 text-center transform hover:scale-105"
+              >
+                無料相談・お見積り依頼
+              </Link>
+            </div>
+            
+            <p className="text-center mt-6 text-sm text-gray-400">
+              ※ 初回相談は完全無料。あなたのビジネスに最適なLP戦略をご提案します
+            </p>
           </div>
         </div>
       </div>
