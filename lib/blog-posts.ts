@@ -13,6 +13,26 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   // 記事を日付順に並べ替えて追加
   {
+    id: "lp-freelance-cost",
+    title: "フリーランスのLP制作費用の相場と選び方｜失敗しない依頼のコツ",
+    date: "2025-03-10",
+    excerpt: "フリーランスに依頼するLP制作の費用相場と選び方を徹底解説。予算別のメリット・デメリットや依頼時の注意点、相場を決める5つの要因まで。失敗しない依頼方法と成功事例から学ぶ実践的なガイドです。",
+    category: "LP制作",
+    slug: "lp-freelance-cost",
+    thumbnail: "/blog/eye-catch/lp-freelance-cost.jpeg",
+    author: "Stellarium マーケティング"
+  },
+  {
+    id: "medical-site-seo",
+    title: "医療サイトのSEO対策完全ガイド｜患者集客数を2倍にする実践テクニック",
+    date: "2025-03-08",
+    excerpt: "医療機関のためのSEO対策を徹底解説。Googleで上位表示させるための具体的な施策から、医療特化型のコンテンツ戦略まで。E-E-A-Tを意識した患者集客に直結するSEO実践ノウハウを公開します。",
+    category: "SEO対策",
+    slug: "medical-site-seo",
+    thumbnail: "/blog/eye-catch/medical-site-seo.jpg",
+    author: "Stellarium マーケティング"
+  },
+  {
     id: "restaurant-seo-strategy",
     title: "飲食店のSEO対策完全ガイド｜集客数を2倍にする実践テクニック",
     date: "2025-03-06",
@@ -74,8 +94,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "tiktok-recruitment-strategy",
-    title: "【2025年最新】TikTok運用で人材採用を成功させる求人活用術 | 事例と実践テクニック",
-    excerpt: "TikTokを活用した効果的な求人・採用戦略を徹底解説。Z世代へのリーチ方法や企業文化の発信テクニック、成功事例まで網羅的に紹介します。採用担当者必見の実践的ガイド。",
+    title: "TikTok運用で人材採用を成功させる求人活用術 | 事例と実践テクニック",
+    excerpt: "TikTokを活用した効果的な求人・採用戦略を徹底解説。Z世代へのリーチ方法や企業文化の発信テクニック、成功事例まで紹介します。採用担当者必見の実践的ガイド。",
     date: "2025-03-03",
     category: "SNS運用",
     slug: "tiktok-recruitment-strategy",
@@ -84,7 +104,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 4,
-    title: "【2025年最新】Webサイト保守のストック型ビジネスモデル完全ガイド | 内容と相場",
+    title: "Webサイト保守のストック型ビジネスモデル完全ガイド | 内容と相場",
     excerpt: "Webサイト保守をストック型ビジネスとして展開する方法を徹底解説。具体的なサービス内容や料金相場、クライアントへの提案方法まで、Web制作会社の収益安定化に役立つ情報をご紹介します。",
     date: "2025-03-02",
     category: "Web制作",
@@ -103,7 +123,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 1,
-    title: "【2025年最新】ECサイト・ネットショップのMeta広告運用完全ガイド｜費用対効果2倍のテクニック",
+    title: "ECサイト・ネットショップのMeta広告運用完全ガイド｜費用対効果2倍のテクニック",
     excerpt: "ECサイト・ネットショップ向けMeta広告の戦略的運用方法を徹底解説。広告予算の最適化から高CVR施策まで具体的なノウハウを公開します。",
     date: "2025-03-01",
     category: "広告運用",
@@ -112,7 +132,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 2,
-    title: '【2025年最新】飲食店のMeta広告運用完全ガイド | 集客率2倍の実践テクニック',
+    title: '飲食店のMeta広告運用完全ガイド | 集客率2倍の実践テクニック',
     excerpt: '飲食店向けMeta広告(旧Facebook広告)の運用方法を徹底解説。効果的なターゲティング、予算設定から実際の成功事例まで、集客アップにつながる広告運用テクニックをご紹介します。',
     date: '2025-03-01',
     category: '広告運用',
@@ -121,7 +141,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: 3,
-    title: "【2025年最新】エステサロンのMeta広告運用完全ガイド",
+    title: "エステサロンのMeta広告運用完全ガイド",
     excerpt: "エステサロン向けMeta広告の運用方法を徹底解説。効果的なターゲティング、予算設定から実際の成功事例まで。",
     date: "2025-02-28",
     category: "広告運用",
@@ -167,7 +187,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "tiktok-marketing-strategy",
-    title: "【2025年最新】TikTokマーケティング完全攻略｜集客効果を2倍にする実践戦略",
+    title: "TikTokマーケティング完全攻略｜集客効果を2倍にする実践戦略",
     excerpt: "TikTokを活用したマーケティング戦略を徹底解説。アルゴリズムの仕組みからバズらせるコンテンツ制作法、効果測定まで専門家が実践的なノウハウを公開。短期間で認知拡大と集客につなげる具体的な手法を学べます。",
     date: "2025-03-06",
     category: "SNS運用",
@@ -205,16 +225,6 @@ export const blogPosts: BlogPost[] = [
     thumbnail: "/blog/eye-catch/farm-sns-marketing.jpg",
     author: "Stellarium マーケティング"
   },
-  {
-    id: "medical-site-seo",
-    title: "【2025年最新】医療サイトのSEO対策完全ガイド｜患者集客数を2倍にする実践テクニック",
-    date: "2025-03-08",
-    excerpt: "医療機関のためのSEO対策を徹底解説。Googleで上位表示させるための具体的な施策から、医療特化型のコンテンツ戦略まで。E-E-A-Tを意識した患者集客に直結するSEO実践ノウハウを公開します。",
-    category: "SEO対策",
-    slug: "medical-site-seo",
-    thumbnail: "/blog/eye-catch/medical-site-seo.jpg",
-    author: "Stellarium マーケティング"
-  },
 ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()); // 日付順に並べ替え
 
 // 記事を日付順にソートする関数
@@ -248,7 +258,7 @@ export const posts: Post[] = [
   // 最新の記事を上に追加
   {
     id: "medical-site-seo",
-    title: "【2025年最新】医療サイトのSEO対策完全ガイド｜患者集客数を2倍にする実践テクニック",
+    title: "医療サイトのSEO対策完全ガイド｜患者集客数を2倍にする実践テクニック",
     excerpt: "医療機関のためのSEO対策を徹底解説。Googleで上位表示させるための具体的な施策から、医療特化型のコンテンツ戦略まで。E-E-A-Tを意識した患者集客に直結するSEO実践ノウハウを公開します。",
     date: "2025-03-08",
     author: "Stellarium マーケティング",
@@ -284,7 +294,7 @@ export const posts: Post[] = [
   },
   {
     id: "tiktok-marketing-strategy",
-    title: "【2025年最新】TikTokマーケティング完全攻略｜集客効果を2倍にする実践戦略",
+    title: "TikTokマーケティング完全攻略｜集客効果を2倍にする実践戦略",
     excerpt: "TikTokを活用したマーケティング戦略を徹底解説。アルゴリズムの仕組みからバズらせるコンテンツ制作法、効果測定まで専門家が実践的なノウハウを公開。短期間で認知拡大と集客につなげる具体的な手法を学べます。",
     date: "2025-03-06",
     author: "Stellarium マーケティング",
@@ -293,7 +303,7 @@ export const posts: Post[] = [
   },
   {
     id: "tiktok-recruitment-strategy",
-    title: "【2025年最新】TikTok運用で人材採用を成功させる求人活用術 | 事例と実践テクニック",
+    title: "TikTok運用で人材採用を成功させる求人活用術 | 事例と実践テクニック",
     excerpt: "TikTokを活用した効果的な求人・採用戦略を徹底解説。Z世代へのリーチ方法や企業文化の発信テクニック、成功事例まで紹介します。",
     date: "2025-03-03",
     author: "Stellarium マーケティング",
