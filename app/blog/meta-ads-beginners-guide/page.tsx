@@ -78,10 +78,10 @@ export default function BlogMetaAdsBeginners() {
             <span className="px-3 py-1 bg-indigo-900/50 text-indigo-300 text-xs font-medium rounded-full border border-indigo-700/30">
               広告運用
             </span>
-            <span className="px-3 py-1 bg-slate-800/50 text-slate-300 text-xs font-medium rounded-full border border-slate-700/30">
+            <span className="px-3 py-1 bg-slate-800/50 text-white text-xs font-medium rounded-full border border-slate-700/30">
               初心者向け
             </span>
-            <span className="px-3 py-1 bg-slate-800/50 text-slate-300 text-xs font-medium rounded-full border border-slate-700/30">
+            <span className="px-3 py-1 bg-slate-800/50 text-white text-xs font-medium rounded-full border border-slate-700/30">
               Meta広告
             </span>
           </div>
@@ -90,7 +90,7 @@ export default function BlogMetaAdsBeginners() {
             【初心者必見】Meta広告が難しいと感じる3つの理由と解決策
           </h1>
           
-          <div className="flex items-center mt-6 text-slate-400">
+          <div className="flex items-center mt-6 text-white">
             <div className="flex items-center">
               <Image 
                 src="/images/zunda-pic.png" 
@@ -114,33 +114,33 @@ export default function BlogMetaAdsBeginners() {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg prose-invert max-w-none">
             {/* イントロダクション */}
-            <p className="lead">
+            <p className="lead text-white">
               「Meta広告ってなんだか難しそう…」
               「設定項目が多くて何から始めていいかわからない…」
               「予算を無駄にしてしまわないか不安…」
             </p>
             
-            <p>
+            <p className="text-white">
               このような悩みを抱えている方、とても多いです。最近の調査によれば、デジタルマーケティングに関わる人の約70%がMeta広告の運用に何らかの困難を感じているとのこと。
             </p>
             
-            <p>
+            <p className="text-white">
               Web広告を始めるならGoogle広告かMeta広告が定番ですが、特にMeta広告は直感的でないUIや頻繁な仕様変更などから「難しい」というイメージがついています。じつは私も最初は同じように感じていました。
             </p>
             
-            <p>
+            <p className="text-white">
               でも安心してください。この記事では、Meta広告が初心者に「難しい」と感じられる本当の理由と、それを乗り越えるための具体的な方法を解説します。
             </p>
             
             <h2 className="text-2xl font-bold text-cyan-400 mt-12 mb-6">Meta広告が難しいと感じる3つの本当の理由</h2>
             
-            <p>
+            <p className="text-white">
               Meta広告が難しいと感じる原因は、ただ「複雑だから」というわけではありません。その背景には明確な理由があります。
             </p>
             
             <h3 className="text-xl font-bold text-indigo-300 mt-8 mb-4">① 広告マネージャーの複雑なインターフェース</h3>
             
-            <p>
+            <p className="text-white">
               Meta広告の管理画面（広告マネージャー）は、初めて見るとかなり圧倒されます。キャンペーン、広告セット、広告という3層構造に、さらに各層で詳細な設定が必要。「どこで何を設定すればいいのか」がわかりにくいのが現実です。
             </p>
             
@@ -149,26 +149,26 @@ export default function BlogMetaAdsBeginners() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-indigo-900/30 p-4 rounded-lg border border-indigo-800/30">
                   <div className="font-bold text-indigo-300 mb-2">キャンペーン</div>
-                  <p className="text-sm text-slate-300">広告の目的を設定する層。認知拡大か、コンバージョン重視かなど。</p>
+                  <p className="text-white text-sm">広告の目的を設定する層。認知拡大か、コンバージョン重視かなど。</p>
                 </div>
                 <div className="bg-indigo-900/30 p-4 rounded-lg border border-indigo-800/30">
                   <div className="font-bold text-indigo-300 mb-2">広告セット</div>
-                  <p className="text-sm text-slate-300">ターゲティングや予算、配信スケジュールなどを設定する層。</p>
+                  <p className="text-white text-sm">ターゲティングや予算、配信スケジュールなどを設定する層。</p>
                 </div>
                 <div className="bg-indigo-900/30 p-4 rounded-lg border border-indigo-800/30">
                   <div className="font-bold text-indigo-300 mb-2">広告</div>
-                  <p className="text-sm text-slate-300">実際の広告クリエイティブ（画像・テキストなど）を設定する層。</p>
+                  <p className="text-white text-sm">実際の広告クリエイティブ（画像・テキストなど）を設定する層。</p>
                 </div>
               </div>
             </div>
             
-            <p>
+            <p className="text-white">
               私が初めてMeta広告を設定したとき、「広告セットで設定すべきことを間違えてキャンペーンレベルで設定しようとしていた」ということがありました。この構造を理解するだけでも、かなりハードルが下がります。
             </p>
             
             <h3 className="text-xl font-bold text-indigo-300 mt-8 mb-4">② 頻繁な仕様変更とアップデート</h3>
             
-            <p>
+            <p className="text-white">
               Meta広告の難しさの2つ目の理由は、その頻繁な仕様変更です。検索すれば多くの解説記事がヒットしますが、1年前の情報はすでに古くなっていることも少なくありません。
             </p>
 
@@ -184,19 +184,19 @@ export default function BlogMetaAdsBeginners() {
                   </thead>
                   <tbody>
                     <tr className="border-b border-slate-700/30">
-                      <td className="p-2 text-slate-300">2021年</td>
-                      <td className="p-2 text-slate-300">iOS14アップデートへの対応</td>
-                      <td className="p-2 text-slate-300">コンバージョン計測の精度低下</td>
+                      <td className="p-2 text-white">2021年</td>
+                      <td className="p-2 text-white">iOS14アップデートへの対応</td>
+                      <td className="p-2 text-white">コンバージョン計測の精度低下</td>
                     </tr>
                     <tr className="border-b border-slate-700/30">
-                      <td className="p-2 text-slate-300">2022年</td>
-                      <td className="p-2 text-slate-300">詳細ターゲティングの制限強化</td>
-                      <td className="p-2 text-slate-300">一部属性での配信ができなくなる</td>
+                      <td className="p-2 text-white">2022年</td>
+                      <td className="p-2 text-white">詳細ターゲティングの制限強化</td>
+                      <td className="p-2 text-white">一部属性での配信ができなくなる</td>
                     </tr>
                     <tr>
-                      <td className="p-2 text-slate-300">2023年</td>
-                      <td className="p-2 text-slate-300">新Meta広告マネージャーへの移行</td>
-                      <td className="p-2 text-slate-300">UI変更によるナビゲーションの変化</td>
+                      <td className="p-2 text-white">2023年</td>
+                      <td className="p-2 text-white">新Meta広告マネージャーへの移行</td>
+                      <td className="p-2 text-white">UI変更によるナビゲーションの変化</td>
                     </tr>
                   </tbody>
                 </table>
@@ -206,17 +206,17 @@ export default function BlogMetaAdsBeginners() {
               </figcaption>
             </figure>
             
-            <p>
+            <p className="text-white">
               こういった変更に常に対応しなければならないのは、確かに大変です。だからこそ、原理原則を理解することが重要になってきます。
             </p>
             
             <h3 className="text-xl font-bold text-indigo-300 mt-8 mb-4">③ 効果測定と予算管理の難しさ</h3>
             
-            <p>
+            <p className="text-white">
               3つ目の理由は「お金がかかる」という心理的ハードルです。特に初心者のうちは、「効果が出ないのに予算だけ消費してしまうのでは？」という不安が大きいもの。
             </p>
             
-            <p>
+            <p className="text-white">
               実際、適切なターゲティングや広告クリエイティブの設定ができていないと、コストパフォーマンスは悪くなります。また、どの指標を見るべきか（クリック数？コンバージョン数？ROAS？）の判断も初心者には難しいポイントです。
             </p>
             
@@ -230,14 +230,14 @@ export default function BlogMetaAdsBeginners() {
             
             <h2 className="text-2xl font-bold text-cyan-400 mt-12 mb-6">解決策1: まずは「簡易作成」から始める</h2>
             
-            <p>
+            <p className="text-white">
               Meta広告の入り口として、通常の広告マネージャーではなく「簡易作成」機能から始めるのがおすすめです。これはFacebookページやInstagramのアカウントから直接「投稿を宣伝する」形で広告を出稿できる機能です。
             </p>
             
             <div className="flex flex-col md:flex-row gap-6 my-8">
               <div className="md:w-1/2 bg-slate-800/50 rounded-lg p-5 border border-slate-700/30">
                 <h4 className="font-bold text-indigo-300 mb-3">簡易作成のメリット</h4>
-                <ul className="space-y-2 text-slate-300">
+                <ul className="space-y-2 text-white">
                   <li>• 設定項目が少なく、シンプル</li>
                   <li>• すでに反応のある投稿を活用できる</li>
                   <li>• 少額から試せる（日予算500円〜）</li>
@@ -246,7 +246,7 @@ export default function BlogMetaAdsBeginners() {
               </div>
               <div className="md:w-1/2 bg-slate-800/50 rounded-lg p-5 border border-slate-700/30">
                 <h4 className="font-bold text-indigo-300 mb-3">簡易作成の手順</h4>
-                <ol className="space-y-2 text-slate-300 list-decimal pl-5">
+                <ol className="space-y-2 text-white list-decimal pl-5">
                   <li>投稿を選択し「宣伝する」をクリック</li>
                   <li>ボタンの文言とリンク先を設定</li>
                   <li>ターゲット（興味・関心/地域）を簡易設定</li>
@@ -255,13 +255,13 @@ export default function BlogMetaAdsBeginners() {
               </div>
             </div>
             
-            <p>
+            <p className="text-white">
               私の経験では、この簡易作成から始めることで「Meta広告の仕組み」に慣れることができます。ここでパフォーマンスが良かった広告は、後ほど本格的な広告キャンペーンの参考にもなります。
             </p>
             
             <h2 className="text-2xl font-bold text-cyan-400 mt-12 mb-6">解決策2: ターゲティングは「広すぎず、狭すぎず」</h2>
             
-            <p>
+            <p className="text-white">
               ターゲティングは難しいと感じやすい部分ですが、実は「完璧を目指さない」のがコツです。Metaのアルゴリズムは非常に洗練されているため、ある程度のターゲット設定さえできていれば、適切なユーザーに広告を表示してくれます。
             </p>
             
@@ -277,29 +277,29 @@ export default function BlogMetaAdsBeginners() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
                 <div className="bg-red-900/20 p-4 rounded-lg border border-red-800/30">
                   <h5 className="font-bold text-red-300 mb-2">狭すぎる例</h5>
-                  <p className="text-sm text-slate-300">25-28歳・東京都渋谷区・大学院卒・年収800万以上・ヨガと料理好き</p>
+                  <p className="text-white text-sm">25-28歳・東京都渋谷区・大学院卒・年収800万以上・ヨガと料理好き</p>
                   <p className="text-xs text-red-300 mt-2">リーチが少なすぎて学習データ不足になる</p>
                 </div>
                 <div className="bg-green-900/20 p-4 rounded-lg border border-green-800/30">
                   <h5 className="font-bold text-green-300 mb-2">適切な例</h5>
-                  <p className="text-sm text-slate-300">25-34歳・東京都内・健康志向・ヨガに興味がある</p>
+                  <p className="text-white text-sm">25-34歳・東京都内・健康志向・ヨガに興味がある</p>
                   <p className="text-xs text-green-300 mt-2">十分なリーチがあり、かつ関連性も高い</p>
                 </div>
                 <div className="bg-red-900/20 p-4 rounded-lg border border-red-800/30">
                   <h5 className="font-bold text-red-300 mb-2">広すぎる例</h5>
-                  <p className="text-sm text-slate-300">全年齢・全国・興味関心指定なし</p>
+                  <p className="text-white text-sm">全年齢・全国・興味関心指定なし</p>
                   <p className="text-xs text-red-300 mt-2">無関係なユーザーへの配信で予算を消費</p>
                 </div>
               </div>
             </div>
             
-            <p>
+            <p className="text-white">
               私はいつも「ペルソナを1人思い浮かべて、その人が持ちそうな特徴を3-4個設定する」というアプローチを取っています。例えば「30代後半の共働き女性で、時短家事に興味があり、インテリアや収納が好き」といった感じです。
             </p>
             
             <h2 className="text-2xl font-bold text-cyan-400 mt-12 mb-6">解決策3: クリエイティブは「A/Bテスト」で改善する</h2>
             
-            <p>
+            <p className="text-white">
               「どんな広告素材が効果的か」は、実は誰も正確にはわかりません。だからこそ、A/Bテスト（複数のパターンを同時に配信して効果を比較すること）が重要になります。
             </p>
             
@@ -311,10 +311,10 @@ export default function BlogMetaAdsBeginners() {
                   <div className="space-y-4">
                     <h5 className="font-bold text-indigo-300">バリエーションA</h5>
                     <div className="aspect-video bg-slate-700/50 rounded-lg flex items-center justify-center">
-                      <p className="text-sm text-slate-400">商品メリットを説明する画像</p>
+                      <p className="text-white text-sm">商品メリットを説明する画像</p>
                     </div>
                     <div className="space-y-1">
-                      <p className="text-sm font-bold text-slate-300">見出し: 「時間を節約する新しい方法」</p>
+                      <p className="text-sm font-bold text-white">見出し: 「時間を節約する新しい方法」</p>
                       <p className="text-xs text-slate-400">本文: 機能説明中心の論理的アプローチ</p>
                       <p className="text-xs text-slate-400">CTA: 「詳細を見る」</p>
                     </div>
@@ -323,10 +323,10 @@ export default function BlogMetaAdsBeginners() {
                   <div className="space-y-4">
                     <h5 className="font-bold text-indigo-300">バリエーションB</h5>
                     <div className="aspect-video bg-slate-700/50 rounded-lg flex items-center justify-center">
-                      <p className="text-sm text-slate-400">ユーザー体験を示す画像</p>
+                      <p className="text-white text-sm">ユーザー体験を示す画像</p>
                     </div>
                     <div className="space-y-1">
-                      <p className="text-sm font-bold text-slate-300">見出し: 「あなたの悩みを解決します」</p>
+                      <p className="text-sm font-bold text-white">見出し: 「あなたの悩みを解決します」</p>
                       <p className="text-xs text-slate-400">本文: 感情に訴えかける体験重視のアプローチ</p>
                       <p className="text-xs text-slate-400">CTA: 「今すぐ試す」</p>
                     </div>
@@ -338,13 +338,13 @@ export default function BlogMetaAdsBeginners() {
               </figcaption>
             </figure>
             
-            <p>
+            <p className="text-white">
               私の体験では、最初の予想と実際の結果が大きく異なることがよくあります。例えば「プロっぽい洗練された写真より、スマホで撮ったような自然な写真の方がクリック率が3倍高かった」というケースもありました。データに基づいて改善を続けることが、Meta広告成功の鍵です。
             </p>
             
             <h2 className="text-2xl font-bold text-cyan-400 mt-12 mb-6">解決策4: 予算管理は「小さく始めて徐々に拡大」</h2>
             
-            <p>
+            <p className="text-white">
               予算の不安を解消するため、始めは必要最低限の予算から始めて、効果が見えてきたら徐々に拡大していくアプローチが有効です。
             </p>
             
@@ -362,7 +362,7 @@ export default function BlogMetaAdsBeginners() {
                     </div>
                     <div className="md:w-3/4">
                       <h5 className="font-bold text-indigo-300 mb-2">テストフェーズ（3-5日間）</h5>
-                      <p className="text-slate-300 text-sm">
+                      <p className="text-white text-sm">
                         日予算1,000円〜2,000円で複数の広告セットをテスト。クリエイティブやターゲティングのパターンを検証します。
                       </p>
                     </div>
@@ -376,7 +376,7 @@ export default function BlogMetaAdsBeginners() {
                     </div>
                     <div className="md:w-3/4">
                       <h5 className="font-bold text-indigo-300 mb-2">最適化フェーズ（7-10日間）</h5>
-                      <p className="text-slate-300 text-sm">
+                      <p className="text-white text-sm">
                         テストで効果が高かった広告セットに絞り、日予算3,000円〜5,000円で運用。パフォーマンスデータを収集します。
                       </p>
                     </div>
@@ -390,7 +390,7 @@ export default function BlogMetaAdsBeginners() {
                     </div>
                     <div className="md:w-3/4">
                       <h5 className="font-bold text-indigo-300 mb-2">スケールフェーズ（継続）</h5>
-                      <p className="text-slate-300 text-sm">
+                      <p className="text-white text-sm">
                         ROIがプラスになっていることを確認し、予算を徐々に増やしていきます。20%ずつ増額するのが安全です。
                       </p>
                     </div>
@@ -399,13 +399,13 @@ export default function BlogMetaAdsBeginners() {
               </div>
             </div>
             
-            <p>
+            <p className="text-white">
               私の経験では、最初から大きな予算をかけるよりも、このステップを踏んだ方が結果的にコスト効率が良くなります。「学習のための投資」と考えて、最初の数万円は広告の勉強代だと割り切りましょう。
             </p>
             
             <h2 className="text-2xl font-bold text-cyan-400 mt-12 mb-6">解決策5: レポーティングは「シンプルな指標」に絞る</h2>
             
-            <p>
+            <p className="text-white">
               広告レポートの数字の羅列を見ると頭が痛くなりますよね。初心者のうちは、見るべき指標を絞ることが大切です。
             </p>
             
@@ -420,21 +420,21 @@ export default function BlogMetaAdsBeginners() {
                       <span className="text-green-400 font-bold mr-2">◎</span>
                       <div>
                         <span className="font-bold text-white">リーチ数</span>
-                        <p className="text-xs text-slate-300">広告が表示されたユニークユーザー数</p>
+                        <p className="text-white text-sm">広告が表示されたユニークユーザー数</p>
                       </div>
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-400 font-bold mr-2">◎</span>
                       <div>
                         <span className="font-bold text-white">CPM</span>
-                        <p className="text-xs text-slate-300">1,000インプレッション当たりのコスト</p>
+                        <p className="text-white text-sm">1,000インプレッション当たりのコスト</p>
                       </div>
                     </li>
                     <li className="flex items-start">
                       <span className="text-amber-400 font-bold mr-2">○</span>
                       <div>
                         <span className="font-bold text-white">エンゲージメント率</span>
-                        <p className="text-xs text-slate-300">いいね・コメント・シェアの割合</p>
+                        <p className="text-white text-sm">いいね・コメント・シェアの割合</p>
                       </div>
                     </li>
                   </ul>
@@ -447,21 +447,21 @@ export default function BlogMetaAdsBeginners() {
                       <span className="text-green-400 font-bold mr-2">◎</span>
                       <div>
                         <span className="font-bold text-white">クリック数</span>
-                        <p className="text-xs text-slate-300">広告から遷移した回数</p>
+                        <p className="text-white text-sm">広告から遷移した回数</p>
                       </div>
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-400 font-bold mr-2">◎</span>
                       <div>
                         <span className="font-bold text-white">CPC</span>
-                        <p className="text-xs text-slate-300">1クリック当たりのコスト</p>
+                        <p className="text-white text-sm">クリック単価（1クリックあたりのコスト）</p>
                       </div>
                     </li>
                     <li className="flex items-start">
                       <span className="text-amber-400 font-bold mr-2">○</span>
                       <div>
                         <span className="font-bold text-white">CTR</span>
-                        <p className="text-xs text-slate-300">インプレッション数に対するクリック率</p>
+                        <p className="text-white text-sm">クリック率（表示に対するクリックの割合）</p>
                       </div>
                     </li>
                   </ul>
@@ -474,21 +474,21 @@ export default function BlogMetaAdsBeginners() {
                       <span className="text-green-400 font-bold mr-2">◎</span>
                       <div>
                         <span className="font-bold text-white">コンバージョン数</span>
-                        <p className="text-xs text-slate-300">目標達成（購入・申込など）の数</p>
+                        <p className="text-white text-sm">購入や申込など、目標達成の回数</p>
                       </div>
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-400 font-bold mr-2">◎</span>
                       <div>
                         <span className="font-bold text-white">CPA</span>
-                        <p className="text-xs text-slate-300">1コンバージョン獲得当たりのコスト</p>
+                        <p className="text-white text-sm">コンバージョン単価（1獲得あたりのコスト）</p>
                       </div>
                     </li>
                     <li className="flex items-start">
                       <span className="text-amber-400 font-bold mr-2">○</span>
                       <div>
                         <span className="font-bold text-white">ROAS</span>
-                        <p className="text-xs text-slate-300">広告費用に対する売上の比率</p>
+                        <p className="text-white text-sm">広告費用対効果（売上÷広告費）</p>
                       </div>
                     </li>
                   </ul>
@@ -496,48 +496,48 @@ export default function BlogMetaAdsBeginners() {
               </div>
             </div>
             
-            <p>
+            <p className="text-white">
               私のクライアント案件では、「指標の森に迷い込む」ことがないよう、毎週のレポートは目的に合わせた3つの指標だけに絞っています。それだけでも十分に広告効果の判断と次のアクションが決められます。
             </p>
             
             <h2 className="text-2xl font-bold text-cyan-400 mt-12 mb-6">Meta広告で成果を出すための実践的なステップ</h2>
             
-            <p>
+            <p className="text-white">
               ここからは、初心者がMeta広告で具体的に成果を出すための実践的なステップを紹介します。今までの解決策を踏まえて、実際のアクションプランとして落とし込んでみましょう。
             </p>
             
             <div className="my-8 space-y-4">
               <div className="bg-slate-800/50 p-5 rounded-lg border-l-4 border-indigo-500">
                 <h3 className="text-xl font-bold text-white mb-2">STEP 1: 目標と予算を明確にする</h3>
-                <p className="text-slate-300">
+                <p className="text-white text-sm">
                   「何を達成したいのか」を具体的な数字で設定します。例えば「月間20件の資料請求」「ECサイト売上10%増加」など。その目標に合わせた予算を設定します。
                 </p>
               </div>
               
               <div className="bg-slate-800/50 p-5 rounded-lg border-l-4 border-indigo-500">
                 <h3 className="text-xl font-bold text-white mb-2">STEP 2: ターゲットを理解する</h3>
-                <p className="text-slate-300">
+                <p className="text-white text-sm">
                   ペルソナを設定し、そのペルソナがどのような課題を持っていて、あなたの商品/サービスがどう解決するのかを明確にします。そこから、適切なターゲティング設定を導き出します。
                 </p>
               </div>
               
               <div className="bg-slate-800/50 p-5 rounded-lg border-l-4 border-indigo-500">
                 <h3 className="text-xl font-bold text-white mb-2">STEP 3: 簡易広告でテスト配信</h3>
-                <p className="text-slate-300">
+                <p className="text-white text-sm">
                   まずは簡易作成で3-5パターンの広告を少額予算で配信してみましょう。どの訴求・画像・ターゲティングが効果的かの検証期間です。
                 </p>
               </div>
               
               <div className="bg-slate-800/50 p-5 rounded-lg border-l-4 border-indigo-500">
                 <h3 className="text-xl font-bold text-white mb-2">STEP 4: データに基づく最適化</h3>
-                <p className="text-slate-300">
+                <p className="text-white text-sm">
                   初期テストから得られたデータを分析し、効果が高かった要素を組み合わせて本格的なキャンペーンを構築します。2-3週間の運用データを基に微調整していきます。
                 </p>
               </div>
               
               <div className="bg-slate-800/50 p-5 rounded-lg border-l-4 border-indigo-500">
                 <h3 className="text-xl font-bold text-white mb-2">STEP 5: スケールと改善の継続</h3>
-                <p className="text-slate-300">
+                <p className="text-white text-sm">
                   成果が出ている広告セットの予算を徐々に増やしていきます。同時に、定期的に新しいクリエイティブやターゲティングをテストし、広告疲れを防ぎます。
                 </p>
               </div>
@@ -551,7 +551,7 @@ export default function BlogMetaAdsBeginners() {
                   <span className="w-8 h-8 rounded-full bg-cyan-900/50 flex items-center justify-center text-cyan-300 font-bold mr-3 flex-shrink-0">1</span>
                   <div>
                     <h3 className="font-bold text-white">辛抱強く継続する</h3>
-                    <p className="text-slate-300">広告効果は即日で出るものではありません。最低でも2週間は同じ設定で運用してデータを収集しましょう。</p>
+                    <p className="text-white text-sm">広告効果は即日で出るものではありません。最低でも2週間は同じ設定で運用してデータを収集しましょう。</p>
                   </div>
                 </div>
                 
@@ -559,7 +559,7 @@ export default function BlogMetaAdsBeginners() {
                   <span className="w-8 h-8 rounded-full bg-cyan-900/50 flex items-center justify-center text-cyan-300 font-bold mr-3 flex-shrink-0">2</span>
                   <div>
                     <h3 className="font-bold text-white">クリエイティブの重要性を理解する</h3>
-                    <p className="text-slate-300">ターゲティングが完璧でも、クリエイティブが刺さらなければ効果は出ません。定期的に新しいビジュアルやコピーをテストしましょう。</p>
+                    <p className="text-white text-sm">ターゲティングが完璧でも、クリエイティブが刺さらなければ効果は出ません。定期的に新しいビジュアルやコピーをテストしましょう。</p>
                   </div>
                 </div>
                 
@@ -567,7 +567,7 @@ export default function BlogMetaAdsBeginners() {
                   <span className="w-8 h-8 rounded-full bg-cyan-900/50 flex items-center justify-center text-cyan-300 font-bold mr-3 flex-shrink-0">3</span>
                   <div>
                     <h3 className="font-bold text-white">着地ページの質を高める</h3>
-                    <p className="text-slate-300">どれだけ広告が素晴らしくても、遷移先のページが悪ければコンバージョンは発生しません。LPの最適化も同時に行いましょう。</p>
+                    <p className="text-white text-sm">どれだけ広告が素晴らしくても、遷移先のページが悪ければコンバージョンは発生しません。LPの最適化も同時に行いましょう。</p>
                   </div>
                 </div>
               </div>
@@ -575,20 +575,20 @@ export default function BlogMetaAdsBeginners() {
             
             <h2 className="text-2xl font-bold text-cyan-400 mt-12 mb-6">まとめ：初心者でも始められるMeta広告</h2>
             
-            <p>
+            <p className="text-white">
               Meta広告は確かに難しい面はありますが、その壁を乗り越えれば非常に強力なマーケティングツールとなります。この記事で紹介した5つの解決策を実践すれば、初心者でも効果的な広告運用を始められるはずです。
             </p>
             
-            <p>
+            <p className="text-white">
               私自身、最初は「難しい」と感じていたMeta広告ですが、小さく始めて徐々にスケールしていくアプローチで、今ではクライアントの集客や売上アップに大きく貢献できています。
             </p>
             
-            <p>
+            <p className="text-white">
               「Meta広告は難しい」という先入観を捨て、一歩一歩着実に進んでいきましょう。適切なターゲティング、魅力的なクリエイティブ、データに基づく改善の繰り返しが、あなたのビジネス成長につながります。
             </p>
             
             <div className="my-8 p-4 bg-indigo-900/20 rounded-lg border border-indigo-800/30">
-              <p className="text-sm text-slate-300 italic">
+              <p className="text-white text-sm italic">
                 ※本記事は2025年3月時点の情報に基づいています。Meta広告は頻繁にアップデートされるため、最新の情報は公式ヘルプセンターをご確認ください。
               </p>
             </div>
@@ -601,7 +601,7 @@ export default function BlogMetaAdsBeginners() {
                   私たちのプロフェッショナルが解決します
                 </h2>
                 
-                <p className="text-slate-300 mb-6 max-w-3xl">
+                <p className="text-white text-sm mb-6 max-w-3xl">
                   記事を読んでもまだ不安がある方、自社で運用する時間がない方、プロに任せてより効果的な広告運用をしたい方…。
                   Stellariumの広告運用サービスなら、これまで数百の案件で培ったノウハウをもとに、あなたのビジネスに最適な広告戦略を提案・実行します。
                 </p>
