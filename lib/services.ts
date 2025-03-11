@@ -170,6 +170,47 @@ export const services: Service[] = [
       'データ分析に基づく改善提案',
       'トレンド分析とタイムリーな対応'
     ]
+  },
+  {
+    id: 'website-service',
+    title: 'Webサイト制作',
+    description: '勝つための結果を出すWebサイト制作。ただきれいなだけではなく、ビジネス成果につながるWebサイトを戦略的に設計・構築します。顧客分析からUI/UXデザイン、SEO対策まで一貫したアプローチでビジネスを加速します。',
+    shortDescription: 'ビジネス成果を出すための戦略的Webサイト制作',
+    category: 'デザイン',
+    thumbnail: '/images/zunda-pic.png',
+    icon: "globe",
+    price: "65万円〜",
+    slug: "website-service",
+    features: [
+      '成果にコミットする設計',
+      'データドリブンな改善',
+      'モバイルファースト対応',
+      'SEO最適化',
+      'コンバージョン導線設計',
+      'アクセス解析設定'
+    ],
+    customContent: {
+      casestudy: [
+        {
+          title: "士業事務所のサイトリニューアル",
+          result: "問い合わせ数200%増加、顧客獲得コスト40%削減",
+          image: "/images/zunda-pic.png"
+        },
+        {
+          title: "飲食店チェーンのブランドサイト",
+          result: "予約数150%増加、客単価25%向上",
+          image: "/images/zunda-pic.png"
+        }
+      ],
+      process: [
+        "戦略策定・分析",
+        "設計・構造化",
+        "UI/UXデザイン",
+        "開発・コーディング",
+        "テスト・公開",
+        "運用・改善"
+      ]
+    }
   }
 ];
 
