@@ -5,13 +5,8 @@ import {
   BarChart2, 
   Smartphone, 
   Search,
-  Award,
-  Zap,
   CheckCircle,
-  ArrowRight,
-  Users,
-  PenTool,
-  Layers
+  ArrowRight
 } from "lucide-react"
 
 export const metadata: Metadata = {
