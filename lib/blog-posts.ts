@@ -15,7 +15,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: "ramen-instagram-strategy",
     title: "【集客率アップ】ラーメン店のインスタ運用方法｜フォロワー10倍の実践テクニック",
-    date: "2025-03-11",
+    date: "2025-03-12",
     excerpt: "ラーメン店オーナー向けにInstagramでの効果的な運用方法を解説。写真の撮り方からハッシュタグ戦略、投稿頻度まで、実店舗の集客につながる具体的なノウハウを紹介。フォロワー増加と来店促進のための実践的なガイドです。",
     category: "SNS運用",
     slug: "ramen-instagram-strategy",

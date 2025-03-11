@@ -56,7 +56,7 @@ export default function BlogRamenInstagramStrategy() {
       {/* ブログ記事のヘッダー */}
       <div className="relative w-full h-[50vh] min-h-[400px]">
         <Image
-          src="/blog/eye-catch/ramen-instagram-strategy.jpg"
+          src="/blog/eye-catch/ramen-instagram-strategy.webp"
           alt="ラーメン店のInstagram運用ガイド"
           fill
           className="object-cover opacity-60"
@@ -65,7 +65,16 @@ export default function BlogRamenInstagramStrategy() {
         
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent" />
         
-        <div className="container mx-auto px-4 relative h-full flex flex-col justify-end pb-16">
+        {/* 背景にラーメン画像のパターン追加 */}
+        <div className="absolute inset-0 opacity-15 bg-repeat z-10"
+          style={{ 
+            backgroundImage: 'url(/blog/eye-catch/ramen-instagram-strategy.webp)',
+            backgroundSize: '300px',
+            mixBlendMode: 'overlay'
+          }}
+        />
+        
+        <div className="container mx-auto px-4 relative h-full flex flex-col justify-end pb-16 z-20">
           <Link 
             href="/blog" 
             className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors mb-6"
@@ -102,9 +111,7 @@ export default function BlogRamenInstagramStrategy() {
               <span>Stellarium マーケティング</span>
             </div>
             <span className="mx-3">|</span>
-            <span>2025.03.11</span>
-            <span className="mx-3">|</span>
-            <span>読了時間: 約11分</span>
+            <span>2025.03.12</span>
           </div>
         </div>
       </div>

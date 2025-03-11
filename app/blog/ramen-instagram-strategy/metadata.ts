@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     ],
     url: 'https://stellarium.jp/blog/ramen-instagram-strategy',
     siteName: 'Stellarium マーケティング',
-    publishedTime: '2025-03-11T00:00:00+09:00',
-    modifiedTime: '2025-03-11T00:00:00+09:00',
+    publishedTime: '2025-03-12T00:00:00+09:00',
+    modifiedTime: '2025-03-12T00:00:00+09:00',
     authors: ['Stellarium マーケティング'],
   },
   twitter: {
