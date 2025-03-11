@@ -176,7 +176,7 @@ export default function WebsiteServicePage() {
   const plans = [
     {
       title: "スタンダードプラン",
-      price: "65万円〜",
+      price: "20万円〜",
       features: [
         "ヒアリング・競合分析",
         "レスポンシブWebデザイン",
@@ -190,7 +190,7 @@ export default function WebsiteServicePage() {
     },
     {
       title: "プレミアムプラン",
-      price: "120万円〜",
+      price: "50万円〜",
       features: [
         "詳細な市場・競合分析",
         "ユーザーペルソナ設計",
@@ -207,7 +207,7 @@ export default function WebsiteServicePage() {
     },
     {
       title: "エンタープライズプラン",
-      price: "250万円〜",
+      price: "100万円以上",
       features: [
         "包括的な市場分析・戦略策定",
         "カスタム機能・システム開発",
@@ -383,6 +383,105 @@ export default function WebsiteServicePage() {
                 </ul>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+      
+      {/* 高い技術力とフルスクラッチ開発 */}
+      <div className="container mx-auto px-6 mb-20">
+        <h2 className="text-3xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-cyan-400">
+          プロフェッショナルな技術力で<br />あらゆるWEB制作ニーズに対応
+        </h2>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mb-12">
+          <div className="lg:col-span-3 bg-gradient-to-br from-gray-800/50 to-blue-900/50 rounded-xl p-8 border border-cyan-800/30">
+            <h3 className="text-2xl font-bold mb-4 text-amber-300">
+              WordPress だけでなく、<br />フルスクラッチ開発まで対応
+            </h3>
+            <p className="text-gray-300 mb-4">
+              多くのWeb制作会社はWordPressテンプレートのカスタマイズのみを提供しますが、私たちはプログラマとしての高い技術力を活かし、完全オーダーメイドのWebサイト開発まで幅広く対応します。
+            </p>
+            <p className="text-gray-300 mb-6">
+              フロントエンド開発（React、Next.js、Vue.js）からバックエンド開発（Node.js、PHP、Python）、データベース設計まで、ビジネス要件に最適な技術スタックを選定し、一からの構築が可能です。
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-blue-900/30 rounded-lg p-4 border border-cyan-700/30">
+                <h4 className="text-lg font-medium mb-2 text-cyan-300">WordPressの場合</h4>
+                <ul className="space-y-2 text-gray-300 text-sm">
+                  <li>• 更新のしやすさを重視するサイト</li>
+                  <li>• コストを抑えた迅速な構築</li>
+                  <li>• ブログ・ニュース機能が重要な場合</li>
+                  <li>• 運用コストの最適化</li>
+                </ul>
+              </div>
+              <div className="bg-blue-900/30 rounded-lg p-4 border border-cyan-700/30">
+                <h4 className="text-lg font-medium mb-2 text-cyan-300">フルスクラッチ開発の場合</h4>
+                <ul className="space-y-2 text-gray-300 text-sm">
+                  <li>• 独自の機能・仕様が必要な場合</li>
+                  <li>• パフォーマンスを極限まで追求</li>
+                  <li>• 拡張性・スケーラビリティが重要</li>
+                  <li>• Web アプリケーション開発</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div className="lg:col-span-2">
+            <div className="bg-gradient-to-br from-gray-800/50 to-blue-900/50 rounded-xl p-8 border border-cyan-800/30 h-full">
+              <h3 className="text-xl font-bold mb-4 text-cyan-300">使用技術・言語</h3>
+              
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-amber-300 font-medium mb-2">フロントエンド</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {["HTML5", "CSS3/SCSS", "JavaScript", "TypeScript", "React", "Next.js", "Vue.js"].map((tech, i) => (
+                      <span key={i} className="px-3 py-1 bg-blue-900/50 text-cyan-200 text-sm rounded-full border border-cyan-800/30">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                <div>
+                  <h4 className="text-amber-300 font-medium mb-2">バックエンド</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {["PHP", "Node.js", "Python", "Ruby", "MySQL", "PostgreSQL", "MongoDB"].map((tech, i) => (
+                      <span key={i} className="px-3 py-1 bg-blue-900/50 text-cyan-200 text-sm rounded-full border border-cyan-800/30">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                <div>
+                  <h4 className="text-amber-300 font-medium mb-2">開発環境・ツール</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {["Git", "Docker", "AWS", "Vercel", "CI/CD", "Webpack"].map((tech, i) => (
+                      <span key={i} className="px-3 py-1 bg-blue-900/50 text-cyan-200 text-sm rounded-full border border-cyan-800/30">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="bg-gradient-to-r from-amber-900/30 to-blue-900/30 rounded-xl p-6 border border-amber-700/30">
+          <div className="flex flex-col md:flex-row items-center">
+            <div className="md:w-1/4 flex justify-center mb-4 md:mb-0">
+              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-amber-400 to-cyan-400 flex items-center justify-center">
+                <span className="text-4xl font-bold text-gray-900">10+</span>
+              </div>
+            </div>
+            <div className="md:w-3/4 md:pl-6">
+              <h3 className="text-xl font-bold mb-2 text-white text-center md:text-left">プログラミング経験10年以上</h3>
+              <p className="text-gray-300">
+                単なるWeb制作会社ではなく、プログラマとしての豊富な経験とスキルを持つ専門家がプロジェクトを担当します。複雑なビジネス要件も、最適な技術で解決します。WEB制作とシステム開発の両方の知見を活かした、ビジネス成果を最大化するサイト構築が強みです。
+              </p>
+            </div>
           </div>
         </div>
       </div>

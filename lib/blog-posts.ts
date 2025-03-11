@@ -13,6 +13,16 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   // 記事を日付順に並べ替えて追加
   {
+    id: "meta-ads-beginners-guide",
+    title: "【初心者必見】Meta広告が難しいと感じる3つの理由と解決策｜わかりやすく解説",
+    date: "2025-03-11",
+    excerpt: "Meta広告（旧Facebook広告）を始めたい初心者向けに、なぜ難しく感じるのか、その3つの原因と克服法を解説。実践的なステップとコツで、広告運用の壁を乗り越え、効果的なキャンペーンを実現するガイドです。",
+    category: "広告運用",
+    slug: "meta-ads-beginners-guide",
+    thumbnail: "/blog/eye-catch/meta-ads-beginners-guide.jpg",
+    author: "Stellarium マーケティング"
+  },
+  {
     id: "mvp-personal-development",
     title: "【個人開発者必見】MVP開発で挫折しない5つの秘訣｜アイデアを最速で形にする方法",
     date: "2025-03-11",

@@ -179,7 +179,7 @@ export const services: Service[] = [
     category: 'デザイン',
     thumbnail: '/images/zunda-pic.png',
     icon: "globe",
-    price: "65万円〜",
+    price: "20万円〜",
     slug: "website-service",
     features: [
       '成果にコミットする設計',
