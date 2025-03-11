@@ -354,42 +354,45 @@ export default function BlogMetaAdsBeginners() {
               </div>
               <div className="p-6">
                 <div className="space-y-6">
-                  <div className="flex flex-col md:flex-row">
-                    <div className="md:w-1/4 flex justify-center mb-3 md:mb-0">
-                      <div className="w-16 h-16 rounded-full bg-indigo-900/30 flex items-center justify-center text-xl font-bold text-indigo-300 border border-indigo-800/30">
-                        STEP<br />1
+                  <div className="flex flex-col sm:flex-row items-start">
+                    <div className="sm:w-1/4 flex items-center justify-start sm:justify-center mb-3 sm:mb-0">
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-indigo-900/30 flex items-center justify-center text-base sm:text-xl font-bold text-indigo-300 border border-indigo-800/30 mr-3 sm:mr-0 flex-shrink-0">
+                        STEP 1
                       </div>
+                      <h5 className="font-bold text-indigo-300 sm:hidden">テストフェーズ（3-5日間）</h5>
                     </div>
-                    <div className="md:w-3/4">
-                      <h5 className="font-bold text-indigo-300 mb-2">テストフェーズ（3-5日間）</h5>
+                    <div className="sm:w-3/4 w-full">
+                      <h5 className="font-bold text-indigo-300 mb-2 hidden sm:block">テストフェーズ（3-5日間）</h5>
                       <p className="text-white text-sm">
                         日予算1,000円〜2,000円で複数の広告セットをテスト。クリエイティブやターゲティングのパターンを検証します。
                       </p>
                     </div>
                   </div>
                   
-                  <div className="flex flex-col md:flex-row">
-                    <div className="md:w-1/4 flex justify-center mb-3 md:mb-0">
-                      <div className="w-16 h-16 rounded-full bg-indigo-900/30 flex items-center justify-center text-xl font-bold text-indigo-300 border border-indigo-800/30">
-                        STEP<br />2
+                  <div className="flex flex-col sm:flex-row items-start">
+                    <div className="sm:w-1/4 flex items-center justify-start sm:justify-center mb-3 sm:mb-0">
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-indigo-900/30 flex items-center justify-center text-base sm:text-xl font-bold text-indigo-300 border border-indigo-800/30 mr-3 sm:mr-0 flex-shrink-0">
+                        STEP 2
                       </div>
+                      <h5 className="font-bold text-indigo-300 sm:hidden">最適化フェーズ（7-10日間）</h5>
                     </div>
-                    <div className="md:w-3/4">
-                      <h5 className="font-bold text-indigo-300 mb-2">最適化フェーズ（7-10日間）</h5>
+                    <div className="sm:w-3/4 w-full">
+                      <h5 className="font-bold text-indigo-300 mb-2 hidden sm:block">最適化フェーズ（7-10日間）</h5>
                       <p className="text-white text-sm">
                         テストで効果が高かった広告セットに絞り、日予算3,000円〜5,000円で運用。パフォーマンスデータを収集します。
                       </p>
                     </div>
                   </div>
                   
-                  <div className="flex flex-col md:flex-row">
-                    <div className="md:w-1/4 flex justify-center mb-3 md:mb-0">
-                      <div className="w-16 h-16 rounded-full bg-indigo-900/30 flex items-center justify-center text-xl font-bold text-indigo-300 border border-indigo-800/30">
-                        STEP<br />3
+                  <div className="flex flex-col sm:flex-row items-start">
+                    <div className="sm:w-1/4 flex items-center justify-start sm:justify-center mb-3 sm:mb-0">
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-indigo-900/30 flex items-center justify-center text-base sm:text-xl font-bold text-indigo-300 border border-indigo-800/30 mr-3 sm:mr-0 flex-shrink-0">
+                        STEP 3
                       </div>
+                      <h5 className="font-bold text-indigo-300 sm:hidden">スケールフェーズ（継続）</h5>
                     </div>
-                    <div className="md:w-3/4">
-                      <h5 className="font-bold text-indigo-300 mb-2">スケールフェーズ（継続）</h5>
+                    <div className="sm:w-3/4 w-full">
+                      <h5 className="font-bold text-indigo-300 mb-2 hidden sm:block">スケールフェーズ（継続）</h5>
                       <p className="text-white text-sm">
                         ROIがプラスになっていることを確認し、予算を徐々に増やしていきます。20%ずつ増額するのが安全です。
                       </p>
@@ -589,7 +592,7 @@ export default function BlogMetaAdsBeginners() {
             
             <div className="my-8 p-4 bg-indigo-900/20 rounded-lg border border-indigo-800/30">
               <p className="text-white text-sm italic">
-                ※本記事は2025年3月時点の情報に基づいています。Meta広告は頻繁にアップデートされるため、最新の情報は公式ヘルプセンターをご確認ください。
+                ※Meta広告は頻繁にアップデートされるため、最新の情報は公式ヘルプセンターをご確認ください。
               </p>
             </div>
             

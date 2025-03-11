@@ -13,6 +13,16 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   // 記事を日付順に並べ替えて追加
   {
+    id: "ramen-instagram-strategy",
+    title: "【集客率アップ】ラーメン店のインスタ運用方法｜フォロワー10倍の実践テクニック",
+    date: "2025-03-11",
+    excerpt: "ラーメン店オーナー向けにInstagramでの効果的な運用方法を解説。写真の撮り方からハッシュタグ戦略、投稿頻度まで、実店舗の集客につながる具体的なノウハウを紹介。フォロワー増加と来店促進のための実践的なガイドです。",
+    category: "SNS運用",
+    slug: "ramen-instagram-strategy",
+    thumbnail: "/blog/eye-catch/ramen-instagram-strategy.webp",
+    author: "Stellarium マーケティング"
+  },
+  {
     id: "meta-ads-beginners-guide",
     title: "【初心者必見】Meta広告が難しいと感じる3つの理由と解決策｜わかりやすく解説",
     date: "2025-03-11",
@@ -282,7 +292,7 @@ export const blogPosts: BlogPost[] = [
     thumbnail: "/blog/eye-catch/luxury-sushi-branding.jpg",
     author: "Stellarium マーケティング"
   }
-].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()); // 日付順に並べ替え
+];
 
 // 記事を日付順にソートする関数
 export function getSortedPosts(): BlogPost[] {
@@ -299,7 +309,7 @@ export function getLatestPosts(count: number = 3): BlogPost[] {
   return getSortedPosts().slice(0, count);
 }
 
-// 既存のインポート文
+// 別の記事フォーマット用の型定義
 export type Post = {
   id: string;
   title: string;
@@ -375,32 +385,35 @@ export const posts: Post[] = [
     author: "Stellarium マーケティング",
     categories: ["広告運用"],
     thumbnail: "/blog/eye-catch/local-ad-management.jpg",
-  },
-]
+  }
+];
 
-// 以下の関数は既存のまま
+// 投稿IDから記事を取得する関数
 export function getPostById(id: string): Post | undefined {
   return posts.find(post => post.id === id);
 }
 
+// すべての記事を取得する関数
 export function getAllPosts(): Post[] {
   return [...posts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
+// 最近の記事を取得する関数
 export function getRecentPosts(count: number = 3): Post[] {
   return getAllPosts().slice(0, count);
 }
 
+// カテゴリーで記事をフィルタリングする関数
 export function getPostsByCategory(category: string): Post[] {
   return getAllPosts().filter(post => post.categories.includes(category));
 }
 
-// getPostBySlug関数を追加
+// スラッグから記事を取得する関数
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find(post => post.slug === slug);
 }
 
-// PC表示用のページネーション関数（1ページあたり9記事）
+// ページネーション用の関数（1ページあたり9記事）
 export function getPaginatedPosts(page: number = 1, perPage: number = 9): {
   posts: BlogPost[],
   totalPages: number,
