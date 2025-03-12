@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     locale: 'ja_JP',
     images: [
       {
-        url: '/blog/eye-catch/old-website-renewal-guide.webp',
+        url: '/blog/eye-catch/old-website-renewal-guide.png',
         width: 1200,
         height: 630,
         alt: '古いホームページのリニューアルガイド',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '【2025年最新】古いホームページをリニューアルすべき5つの理由と成功事例',
     description: '10年選手の古いホームページが抱える問題点と、最新のUI/UXを取り入れたリニューアル方法を解説。',
-    images: ['/blog/eye-catch/old-website-renewal-guide.webp'],
+    images: ['/blog/eye-catch/old-website-renewal-guide.png'],
     creator: '@StellariumMkt',
     site: '@StellariumMkt',
   },
@@ -57,7 +57,7 @@ export default function BlogOldWebsiteRenewalGuide() {
       {/* ブログ記事のヘッダー */}
       <div className="relative w-full h-[50vh] min-h-[400px]">
         <Image
-          src="/blog/eye-catch/old-website-renewal-guide.webp"
+          src="/blog/eye-catch/old-website-renewal-guide.png"
           alt="古いホームページのリニューアルガイド"
           fill
           className="object-cover opacity-75"
