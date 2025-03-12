@@ -59,22 +59,13 @@ export default function BlogRamenInstagramStrategy() {
           src="/blog/eye-catch/ramen-instagram-strategy.webp"
           alt="ラーメン店のInstagram運用ガイド"
           fill
-          className="object-cover opacity-60"
+          className="object-cover opacity-75"
           priority
         />
         
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent" />
         
-        {/* 背景にラーメン画像のパターン追加 */}
-        <div className="absolute inset-0 opacity-15 bg-repeat z-10"
-          style={{ 
-            backgroundImage: 'url(/blog/eye-catch/ramen-instagram-strategy.webp)',
-            backgroundSize: '300px',
-            mixBlendMode: 'overlay'
-          }}
-        />
-        
-        <div className="container mx-auto px-4 relative h-full flex flex-col justify-end pb-16 z-20">
+        <div className="container mx-auto px-4 relative h-full flex flex-col justify-end pb-16">
           <Link 
             href="/blog" 
             className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors mb-6"

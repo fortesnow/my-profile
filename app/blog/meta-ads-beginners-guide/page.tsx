@@ -223,7 +223,7 @@ export default function BlogMetaAdsBeginners() {
             <div className="my-12 p-6 bg-gradient-to-br from-indigo-900/30 to-purple-900/30 rounded-lg border border-indigo-700/30">
               <h2 className="text-2xl font-bold text-cyan-400 mb-6">初心者でもMeta広告の壁を乗り越える5つの解決策</h2>
               
-              <p className="mb-4">
+              <p className="mb-4 text-white">
                 これまで私が数十のクライアント案件でMeta広告運用を行ってきた経験から、初心者がつまずきやすいポイントとその解決法をお伝えします。これさえ押さえておけば、Meta広告の「難しさの壁」はぐっと低くなるはずです。
               </p>
             </div>
