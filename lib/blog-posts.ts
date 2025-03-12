@@ -13,6 +13,16 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   // 記事を日付順に並べ替えて追加
   {
+    id: "old-website-renewal-guide",
+    title: "【2025年最新】古いホームページをリニューアルすべき5つの理由と成功事例",
+    date: "2025-03-13",
+    excerpt: "10年選手の古いホームページが抱える問題点と、最新のUI/UXを取り入れたリニューアル方法を解説。デザイン、SEO、モバイル対応などの視点から、ビジネスに貢献するサイトへの変革事例を紹介します。",
+    category: "Web制作",
+    slug: "old-website-renewal-guide",
+    thumbnail: "/blog/eye-catch/old-website-renewal-guide.webp",
+    author: "Stellarium マーケティング"
+  },
+  {
     id: "ramen-instagram-strategy",
     title: "【集客率アップ】ラーメン店のインスタ運用方法｜フォロワー10倍の実践テクニック",
     date: "2025-03-12",
