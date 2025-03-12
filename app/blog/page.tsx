@@ -1,7 +1,7 @@
 // サーバーコンポーネント
 import type { Metadata } from "next"
 import { BlogCategoryFilter } from "./BlogCategoryFilter"
-import { blogPosts } from "@/lib/blog-posts"
+import { getSortedPosts } from "@/lib/blog-posts"
 
 export const metadata: Metadata = {
   title: 'Web制作 SEO対策 集客ブログ | 効果的なマーケティング戦略 | Web制作あおい',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPage() {
-  const allPosts = blogPosts;
+  const allPosts = getSortedPosts();
   const categories = ["すべて", ...new Set(allPosts.map(post => post.category))];
   
   return (
