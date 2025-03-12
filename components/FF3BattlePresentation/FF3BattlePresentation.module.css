@@ -1,0 +1,795 @@
+/* FF3バトルプレゼンテーションのスタイル */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* 基本コンテナ */
+.battleContainer {
+  width: 100%;
+  height: 90vh;
+  max-height: 800px;
+  min-height: 480px;
+  background-color: #000428;
+  background-image: linear-gradient(to bottom, #000428, #004e92);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Press Start 2P', monospace;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* バトルフィールド (50%) */
+.battleField {
+  flex: 0 0 50%;
+  height: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* コマンドエリア (40%) */
+.commandArea {
+  flex: 0 0 40%;
+  height: 40%;
+  display: flex;
+  padding: 5px;
+  gap: 5px;
+}
+
+/* ダイアログウィンドウ (10%) */
+.dialogWindow {
+  flex: 0 0 10%;
+  height: 10%;
+  background: rgba(30, 30, 120, 0.9);
+  border: 4px solid;
+  border-image: linear-gradient(to bottom right, #FFFFFF, #A0A0FF, #6060FF, #0000FF) 1;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  box-shadow: 0 0 10px rgba(100, 150, 255, 0.5);
+}
+
+/* パララックス背景 */
+.parallaxBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3"><circle cx="1.5" cy="1.5" r="0.5" fill="white" opacity="0.5"/></svg>'),
+    linear-gradient(to bottom, transparent 50%, rgba(0, 10, 30, 0.5) 100%);
+  background-size: 50px 50px, 100% 100%;
+  z-index: 1;
+  animation: parallax 60s linear infinite;
+}
+
+/* 光の粒子 */
+.lightParticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.lightParticles::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.7) 0%, transparent 60%);
+  background-size: 5px 5px;
+  animation: twinkle 4s ease-in-out infinite alternate;
+}
+
+/* モンスターコンテナ */
+.monsterContainer {
+  position: absolute;
+  left: 10%;
+  bottom: 20%;
+  z-index: 4;
+}
+
+/* モンスター */
+.monster {
+  width: 200px;
+  max-width: 30%;
+  aspect-ratio: 1 / 1;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31"><rect width="31" height="31" fill="purple" opacity="0.8" /></svg>');
+  background-size: contain;
+  animation: monster-idle 3s ease-in-out infinite alternate;
+}
+
+/* ダメージ数字 */
+.damageNumber {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  text-shadow: 2px 2px 0 #000;
+  animation: damage-effect 1.5s forwards;
+  z-index: 15;
+}
+
+.damageNumber.heal {
+  color: #00FF00;
+}
+
+/* キャラクターコンテナ */
+.characterContainer {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 5;
+}
+
+/* キャラクター */
+.character {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.character:hover {
+  transform: scale(1.05);
+}
+
+.character.selected {
+  animation: character-bounce 3s infinite alternate;
+}
+
+/* スライド情報 */
+.slideInfo {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  max-width: 500px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 4px solid;
+  border-image: linear-gradient(to bottom right, #FFFFFF, #A0A0FF, #6060FF, #0000FF) 1;
+  padding: 16px;
+  z-index: 20;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(100, 150, 255, 0.5);
+}
+
+/* スライドタイトル */
+.slideTitle {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  margin-bottom: 8px;
+  color: #FFCC00;
+  text-shadow: 0 0 5px rgba(255, 220, 150, 0.7);
+}
+
+/* スライドサブタイトル */
+.slideSubtitle {
+  font-size: clamp(0.7rem, 2vw, 1rem);
+  margin-bottom: 16px;
+  color: #A0A0FF;
+}
+
+/* スライドコンテンツ */
+.slideContent {
+  font-size: clamp(0.6rem, 1.5vw, 0.8rem);
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* コマンドウィンドウ (20%) */
+.commandWindow {
+  flex: 0 0 20%;
+  width: 20%;
+  background: rgba(30, 30, 120, 0.9);
+  border: 4px solid;
+  border-image: linear-gradient(to bottom right, #FFFFFF, #A0A0FF, #6060FF, #0000FF) 1;
+  padding: 8px;
+  box-shadow: 0 0 10px rgba(100, 150, 255, 0.5);
+  animation: window-shine 3s infinite;
+}
+
+/* 情報ウィンドウ (20%) */
+.infoWindow {
+  flex: 0 0 20%;
+  width: 20%;
+  background: rgba(30, 30, 120, 0.9);
+  border: 4px solid;
+  border-image: linear-gradient(to bottom right, #FFFFFF, #A0A0FF, #6060FF, #0000FF) 1;
+  padding: 8px;
+  box-shadow: 0 0 10px rgba(100, 150, 255, 0.5);
+  animation: window-shine 3s infinite;
+}
+
+/* ステータスウィンドウ (60%) */
+.statusWindow {
+  flex: 0 0 60%;
+  width: 60%;
+  background: rgba(30, 30, 120, 0.9);
+  border: 4px solid;
+  border-image: linear-gradient(to bottom right, #FFFFFF, #A0A0FF, #6060FF, #0000FF) 1;
+  padding: 8px;
+  box-shadow: 0 0 10px rgba(100, 150, 255, 0.5);
+  animation: window-shine 3s infinite;
+  overflow-y: auto;
+}
+
+/* ウィンドウタイトル */
+.windowTitle {
+  font-size: clamp(0.6rem, 1.3vw, 0.8rem);
+  color: #FFCC00;
+  margin-bottom: 8px;
+  text-shadow: 0 0 5px rgba(255, 220, 150, 0.7);
+}
+
+/* コマンドリスト */
+.commandList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* コマンドアイテム */
+.commandItem {
+  padding: 5px 0 5px 15px;
+  position: relative;
+  font-size: clamp(0.6rem, 1.3vw, 0.7rem);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.commandItem:hover {
+  color: #FFCC00;
+}
+
+.commandItem.selected {
+  color: #FFCC00;
+}
+
+.commandItem.selected::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  animation: cursor-pulse 0.8s infinite;
+}
+
+/* 情報コンテンツ */
+.infoContent {
+  font-size: clamp(0.5rem, 1vw, 0.6rem);
+  line-height: 1.5;
+}
+
+/* ステータスリスト */
+.statusList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ステータスアイテム */
+.statusItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* キャラクターアイコン */
+.charIcon {
+  flex-shrink: 0;
+}
+
+/* キャラクター情報 */
+.charInfo {
+  flex-grow: 1;
+  width: 100%;
+}
+
+/* キャラクター名 */
+.charName {
+  font-size: clamp(0.5rem, 1vw, 0.6rem);
+  margin-bottom: 3px;
+  color: #A0A0FF;
+}
+
+/* ステータスバー */
+.statusBars {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* HPコンテナ */
+.hpContainer, .mpContainer {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: clamp(0.4rem, 0.8vw, 0.5rem);
+}
+
+/* ステータスラベル */
+.statLabel {
+  width: 20px;
+  text-align: right;
+}
+
+/* HPバー背景 */
+.hpBarBg, .mpBarBg {
+  flex-grow: 1;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+/* HPバー */
+.hpBar {
+  height: 100%;
+  background: linear-gradient(to right, #00AA00, #00FF00);
+}
+
+/* MPバー */
+.mpBar {
+  height: 100%;
+  background: linear-gradient(to right, #3333AA, #6666FF);
+}
+
+/* ステータス値 */
+.statValue {
+  width: 70px;
+  text-align: right;
+}
+
+/* ダイアログテキスト */
+.dialogText {
+  margin-left: 10px;
+  font-size: clamp(0.6rem, 1.3vw, 0.7rem);
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+/* カーソル */
+.cursor {
+  animation: cursor-pulse 0.8s infinite;
+}
+
+/* 続行プロンプト */
+.continuePrompt {
+  animation: cursor-pulse 0.8s infinite;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* ナビゲーション */
+.navigation {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+  z-index: 50;
+}
+
+/* ナビゲーションボタン */
+.navButton {
+  background: rgba(30, 30, 120, 0.9);
+  border: 2px solid;
+  border-image: linear-gradient(to bottom right, #FFFFFF, #A0A0FF, #6060FF, #0000FF) 1;
+  color: white;
+  padding: 5px 10px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(0.5rem, 1vw, 0.6rem);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.navButton:hover:not(:disabled) {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 0 5px rgba(100, 150, 255, 0.5);
+}
+
+.navButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* アニメーション定義 */
+@keyframes parallax {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 0; }
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes monster-idle {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(0, -5px) rotate(1deg); }
+}
+
+@keyframes character-bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-2px); }
+}
+
+@keyframes cursor-pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+@keyframes window-shine {
+  0% { box-shadow: 0 0 5px rgba(100, 150, 255, 0.3); }
+  50% { box-shadow: 0 0 10px rgba(100, 150, 255, 0.6); }
+  100% { box-shadow: 0 0 5px rgba(100, 150, 255, 0.3); }
+}
+
+@keyframes damage-effect {
+  0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
+  20% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+  80% { transform: translate(-50%, -80%) scale(1); opacity: 1; }
+  100% { transform: translate(-50%, -100%) scale(1); opacity: 0; }
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+  .battleContainer {
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 20px;
+  }
+  
+  /* バトルフィールドの高さを調整 */
+  .battleField {
+    flex: 0 0 40%;
+    height: 40%;
+    min-height: 250px;
+  }
+  
+  /* コマンドエリアのレイアウト変更 */
+  .commandArea {
+    flex-direction: column;
+    flex: 0 0 auto;
+    height: auto;
+    padding: 2px;
+    gap: 2px;
+  }
+  
+  /* 各ウィンドウの幅調整 */
+  .commandWindow, .infoWindow, .statusWindow {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-width: 2px;
+  }
+
+  /* コマンドウィンドウとインフォウィンドウを1行に並べる */
+  .commandWindow, .infoWindow {
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .commandWindow {
+    margin-right: 1%;
+  }
+  
+  .infoWindow {
+    margin-left: 1%;
+  }
+  
+  /* ステータスウィンドウを100%に */
+  .statusWindow {
+    width: 100%;
+    max-height: 200px;
+  }
+  
+  /* ダイアログウィンドウの調整 */
+  .dialogWindow {
+    flex: 0 0 auto;
+    height: auto;
+    min-height: 60px;
+    padding: 5px;
+    margin: 2px;
+    border-width: 2px;
+  }
+  
+  /* キャラクターとモンスターの位置調整 */
+  .characterContainer {
+    right: 2%;
+    bottom: 5%;
+    transform: scale(0.8);
+    /* モバイル向けに並び方を変更 */
+    flex-direction: row;
+    gap: 5px;
+  }
+  
+  .monsterContainer {
+    left: 2%;
+    bottom: 10%;
+    transform: scale(0.8);
+  }
+  
+  /* スライド情報の調整 */
+  .slideInfo {
+    width: 90%;
+    top: 10%;
+    padding: 10px;
+    max-width: none;
+  }
+  
+  /* フォントサイズの調整 */
+  .slideTitle {
+    font-size: clamp(0.8rem, 5vw, 1.2rem);
+  }
+  
+  .slideSubtitle {
+    font-size: clamp(0.6rem, 4vw, 0.9rem);
+  }
+  
+  .slideContent {
+    font-size: clamp(0.5rem, 3vw, 0.7rem);
+  }
+  
+  .windowTitle {
+    font-size: clamp(0.5rem, 3vw, 0.7rem);
+  }
+  
+  .commandItem {
+    font-size: clamp(0.5rem, 3vw, 0.6rem);
+    padding: 3px 0 3px 10px;
+  }
+  
+  /* ステータスアイテムのレイアウト調整 */
+  .statusItem {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .charInfo {
+    flex-grow: 1;
+  }
+  
+  /* ナビゲーションボタンの調整 */
+  .navigation {
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+    z-index: 100;
+  }
+  
+  .navButton {
+    padding: 4px 8px;
+    font-size: 0.6rem;
+    /* タッチしやすいサイズに */
+    min-width: 60px;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* 設定ボタンの位置調整 */
+  .settingsButton {
+    bottom: 10px;
+    left: 10px;
+    width: 36px;
+    height: 36px;
+    z-index: 100;
+  }
+  
+  /* ダメージ表示の調整 */
+  .damageNumber {
+    font-size: 20px;
+  }
+  
+  /* モンスターとキャラクターの透明度を下げてスライド内容を見やすく */
+  .monsterContainer, .characterContainer {
+    opacity: 0.8;
+  }
+  
+  .monsterContainer:hover, .characterContainer:hover,
+  .character.selected {
+    opacity: 1;
+  }
+}
+
+/* スマートフォン向けの調整（さらに小さい画面） */
+@media (max-width: 480px) {
+  .battleContainer {
+    min-height: 100vh;
+  }
+  
+  .battleField {
+    min-height: 200px;
+  }
+  
+  /* スライド内容の調整 */
+  .slideInfo {
+    width: 95%;
+    padding: 8px;
+    /* 小さい画面ではスライド位置を下げて、モンスターとキャラクターと被らないようにする */
+    top: 5%;
+  }
+  
+  /* キャラクターとモンスターをさらに小さく */
+  .characterContainer, .monsterContainer {
+    transform: scale(0.65);
+  }
+  
+  /* コマンドウィンドウとインフォウィンドウも縦に並べる */
+  .commandWindow, .infoWindow {
+    width: 100%;
+    margin: 0 0 5px 0;
+  }
+  
+  /* フォントサイズをさらに小さく */
+  .slideTitle {
+    font-size: clamp(0.7rem, 4.5vw, 1rem);
+  }
+  
+  .slideSubtitle {
+    font-size: clamp(0.5rem, 3.5vw, 0.8rem);
+  }
+  
+  .slideContent {
+    font-size: clamp(0.4rem, 2.5vw, 0.6rem);
+  }
+  
+  /* ダイアログテキストの調整 */
+  .dialogText {
+    font-size: clamp(0.4rem, 2.5vw, 0.6rem);
+  }
+  
+  /* タッチ要素の調整 */
+  .commandItem, .navButton, .settingsButton {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent; /* タップハイライトを無効に */
+  }
+  
+  /* キャラクターの配置を改善 */
+  .characterContainer {
+    right: 5%;
+    bottom: 2%;
+    width: 90%;
+    justify-content: center;
+  }
+  
+  /* モンスターの位置調整 */
+  .monsterContainer {
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 50%) scale(0.65);
+  }
+  
+  /* ステータスアイテムを横方向にスクロール可能に */
+  .statusList {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 5px;
+  }
+  
+  .statusItem {
+    flex: 0 0 auto;
+    width: 80%;
+    margin-right: 10px;
+  }
+}
+
+/* 設定ボタン */
+.settingsButton {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  width: 36px;
+  height: 36px;
+  background: rgba(30, 30, 120, 0.9);
+  border: 2px solid;
+  border-image: linear-gradient(to bottom right, #FFFFFF, #A0A0FF, #6060FF, #0000FF) 1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 50;
+  transition: all 0.2s;
+}
+
+.settingsButton:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(100, 150, 255, 0.5);
+}
+
+/* テーマ固有のスタイル */
+/* クラシックテーマはデフォルト */
+
+/* モダンテーマ */
+.theme-modern .battleContainer {
+  background-color: #0a1128;
+  background-image: linear-gradient(to bottom, #0a1128, #1a237e);
+}
+
+.theme-modern .commandWindow,
+.theme-modern .infoWindow,
+.theme-modern .statusWindow,
+.theme-modern .dialogWindow {
+  background: rgba(10, 25, 50, 0.9);
+  border: 2px solid #3949ab;
+  box-shadow: 0 0 15px rgba(50, 100, 255, 0.4);
+}
+
+.theme-modern .windowTitle {
+  color: #2979ff;
+}
+
+/* ダークテーマ */
+.theme-dark .battleContainer {
+  background-color: #000000;
+  background-image: linear-gradient(to bottom, #000000, #1a1a1a);
+}
+
+.theme-dark .commandWindow,
+.theme-dark .infoWindow,
+.theme-dark .statusWindow,
+.theme-dark .dialogWindow {
+  background: rgba(10, 10, 10, 0.9);
+  border: 2px solid #444444;
+  box-shadow: 0 0 15px rgba(80, 80, 80, 0.4);
+}
+
+.theme-dark .windowTitle {
+  color: #bbbbbb;
+}
+
+.theme-dark .slideTitle {
+  color: #bbbbbb;
+}
+
+.theme-dark .slideSubtitle {
+  color: #888888;
+}
+
+/* ライトテーマ */
+.theme-light .battleContainer {
+  background-color: #e8eaf6;
+  background-image: linear-gradient(to bottom, #e8eaf6, #c5cae9);
+}
+
+.theme-light .commandWindow,
+.theme-light .infoWindow,
+.theme-light .statusWindow,
+.theme-light .dialogWindow {
+  background: rgba(230, 230, 250, 0.9);
+  border: 2px solid #7986cb;
+  box-shadow: 0 0 15px rgba(100, 120, 240, 0.4);
+  color: #303f9f;
+}
+
+.theme-light .windowTitle {
+  color: #3949ab;
+}
+
+.theme-light .slideTitle {
+  color: #303f9f;
+}
+
+.theme-light .slideSubtitle {
+  color: #5c6bc0;
+}
+
+.theme-light .slideContent {
+  color: #3d5afe;
+} 

@@ -1,0 +1,174 @@
+.effectsContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 51;
+  box-shadow: 0 0 10px 2px currentColor;
+}
+
+/* 火属性エフェクト */
+.fire {
+  animation: pulse 0.5s infinite alternate;
+  filter: blur(1px);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+}
+
+/* 氷属性エフェクト */
+.ice {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  animation: spin 2s linear infinite;
+  filter: blur(0.5px);
+}
+
+/* 雷属性エフェクト */
+.thunder {
+  clip-path: polygon(40% 0%, 60% 0%, 100% 50%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 50%);
+  animation: flicker 0.2s infinite alternate;
+}
+
+.thunderSvg {
+  z-index: 52;
+}
+
+.thunderPath {
+  animation: dashOffset 0.5s linear forwards;
+  stroke-dashoffset: 100;
+}
+
+/* 回復エフェクト */
+.heal {
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: float 1.5s ease-in-out infinite;
+}
+
+/* 防御エフェクト */
+.defend {
+  border-radius: 0;
+  transform: rotate(45deg);
+  animation: shield 2s ease-in-out infinite;
+  filter: blur(1px);
+}
+
+/* 攻撃エフェクト */
+.attack {
+  border-radius: 0;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  animation: slash 0.5s ease-out forwards;
+}
+
+/* 勝利エフェクト */
+.victory {
+  animation: rise 2s ease-out forwards, twinkle 0.5s infinite alternate;
+}
+
+/* アニメーション定義 */
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-10px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+}
+
+@keyframes shield {
+  0% {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1);
+    box-shadow: 0 0 5px 2px currentColor;
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1.5);
+    box-shadow: 0 0 15px 5px currentColor;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1);
+    box-shadow: 0 0 5px 2px currentColor;
+  }
+}
+
+@keyframes slash {
+  0% {
+    transform: translate(-50%, -50%) scale(0.2) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5) rotate(180deg);
+  }
+}
+
+@keyframes rise {
+  0% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(-100vh);
+  }
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes dashOffset {
+  0% {
+    stroke-dashoffset: 500;
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+} 

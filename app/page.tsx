@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 import { ProfileServer } from '@/components/profile-server'
-import ProfileClient from '@/components/profile'
 import '@/app/globals.css';
-import Image from 'next/image';
-import Link from 'next/link';
-import { ArrowRight } from "lucide-react"
-import { getLatestPosts, BlogPost } from '../lib/blog-posts';
+import { getLatestPosts } from '../lib/blog-posts';
+import { FF3BattlePresentationWrapper } from "@/components/FF3BattlePresentationWrapper";
 
 export const metadata: Metadata = {
   title: 'Web制作 あおい | フロントエンド開発・LP制作',
@@ -30,7 +27,7 @@ export const metadata: Metadata = {
     description: 'フロントエンド開発とLP制作のフリーランスエンジニア。高品質な開発と成果の出るLP制作を提供します。',
     images: [
       {
-        url: '/images/og-home.jpg', // OGP画像を用意する必要があります
+        url: '/images/og-home.jpg',
         width: 1200,
         height: 630,
         alt: 'Web制作 あおい',
@@ -51,60 +48,48 @@ export default async function Home() {
   
   console.log("Latest posts:", latestPosts); // デバッグ用
   
+  // FF3プレゼンテーション用のデータ
+  const presentationData = {
+    creator: "あおい",
+    audience: "クライアント様",
+    theme: "Webデザインと開発",
+    brand: {
+      name: "プロフェッショナルデザイン",
+      colorPalette: "青をベースとした配色",
+      font: "モダンサンセリフ"
+    },
+    presentationType: "ポートフォリオ",
+    slides: [
+      {
+        title: "フロントエンド開発",
+        subtitle: "React, Next.js, TypeScript",
+        content: "最新のフロントエンド技術を駆使した、高品質なウェブサイト開発を提供します。\nユーザー体験とパフォーマンスを重視した設計を心がけています。",
+        dialog: "フロントエンド開発には最新のReactとNext.jsを使用し、TypeScriptで型安全なコードを書いています。"
+      },
+      {
+        title: "LP制作",
+        subtitle: "コンバージョン率にコミットする",
+        content: "単なるデザインだけでなく、成果につながるランディングページを制作します。\nユーザー心理と行動分析に基づいたデザインを提供します。",
+        dialog: "ランディングページはコンバージョンが命です。A/Bテストとデータ分析を通じて継続的に改善していきます。"
+      },
+      {
+        title: "SEO対策",
+        subtitle: "検索エンジン最適化",
+        content: "SEOを考慮したコーディングとコンテンツ設計で、検索エンジンからの流入を増やします。\n技術的SEOとコンテンツSEOの両面からアプローチします。",
+        dialog: "検索エンジン対策は技術とコンテンツの両輪が大切です。最新のSEOトレンドを常に取り入れています。"
+      }
+    ]
+  };
+  
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
-      {/* ヒーローセクション */
-        /* ... */}
-
-      {/* サービスセクション */
-        /* ... */}
-
-      {/* プロフィールセクション */}
-      <ProfileClient data={data} />
-
-      {/* ブログセクション */}
-      <section className="py-20 px-6 bg-gradient-to-b from-[#0d1631] to-[#0f172a]">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-400 mb-16 text-center">
-            ブログ
-          </h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {latestPosts.map((post: BlogPost) => (
-              <article key={post.id} className="bg-[#0d1631]/70 rounded-xl overflow-hidden border border-gray-800 shadow-lg hover:shadow-cyan-900/20 transition-all group">
-                <Link href={`/blog/${post.slug}`} className="block">
-                  <div className="relative h-48 overflow-hidden">
-                    <Image 
-                      src={post.thumbnail}
-                      alt={post.title}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
-                    <div className="absolute bottom-0 left-0 p-4 z-10">
-                      <span className="bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded text-xs">{post.category}</span>
-                    </div>
-                  </div>
-                  
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-cyan-400 transition-colors">
-                      {post.title}
-                    </h3>
-                    <time className="text-gray-500 text-sm">{post.date}</time>
-                  </div>
-                </Link>
-              </article>
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <Link href="/blog" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-teal-600 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-teal-500 transition-all">
-              ブログ一覧を見る
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* FF3バトルプレゼンテーション */}
+      <FF3BattlePresentationWrapper 
+        presentationData={presentationData}
+        profileData={data}
+      />
+      
+      {/* 元のページコンテンツはFF3BattlePresentationWrapperコンポーネント内部に移動されました */}
     </main>
   )
 }
