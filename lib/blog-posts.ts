@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "10年選手の古いホームページが抱える問題点と、最新のUI/UXを取り入れたリニューアル方法を解説。デザイン、SEO、モバイル対応などの視点から、ビジネスに貢献するサイトへの変革事例を紹介します。",
     category: "Web制作",
     slug: "old-website-renewal-guide",
-    thumbnail: "/blog/eye-catch/old-website-renewal-guide.webp",
+    thumbnail: "/blog/eye-catch/old-website-renewal-guide.png",
     author: "Stellarium マーケティング"
   },
   {

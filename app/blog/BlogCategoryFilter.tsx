@@ -37,44 +37,32 @@ export function BlogCategoryFilter({
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   
-  // 選択されたカテゴリーに基づいて記事をフィルタリング
-  const filteredPosts = selectedCategory === "すべて" 
-    ? allPosts 
-    : allPosts.filter(post => post.category === selectedCategory);
-  
   // カテゴリーが変更されたらページを1に戻す
   useEffect(() => {
     setCurrentPage(1);
   }, [selectedCategory]);
   
-  // PC表示時はページネーションを適用
+  // ページネーションを適用
   useEffect(() => {
-    if (isPC) {
-      // カテゴリーフィルタリング後、ページネーション処理
-      const categoryFilteredPosts = selectedCategory === "すべて" 
-        ? allPosts 
-        : allPosts.filter(post => post.category === selectedCategory);
-        
-      // 9記事ごとにページネーション
-      const result = {
-        posts: categoryFilteredPosts.slice((currentPage - 1) * 9, currentPage * 9),
-        totalPages: Math.ceil(categoryFilteredPosts.length / 9),
-        currentPage: currentPage
-      };
+    // カテゴリーフィルタリング後、ページネーション処理
+    const categoryFilteredPosts = selectedCategory === "すべて" 
+      ? allPosts 
+      : allPosts.filter(post => post.category === selectedCategory);
       
-      setPaginatedData(result);
-    } else {
-      // モバイル表示の場合は全記事表示
-      setPaginatedData({
-        posts: filteredPosts,
-        totalPages: 1,
-        currentPage: 1
-      });
-    }
-  }, [allPosts, selectedCategory, currentPage, isPC, filteredPosts]);
+    // PC表示時は9記事、モバイル表示時は6記事ごとにページネーション
+    const postsPerPage = isPC ? 9 : 6;
+    
+    const result = {
+      posts: categoryFilteredPosts.slice((currentPage - 1) * postsPerPage, currentPage * postsPerPage),
+      totalPages: Math.ceil(categoryFilteredPosts.length / postsPerPage),
+      currentPage: currentPage
+    };
+    
+    setPaginatedData(result);
+  }, [allPosts, selectedCategory, currentPage, isPC]);
   
   // 表示する記事
-  const displayPosts = isPC ? paginatedData.posts : filteredPosts;
+  const displayPosts = paginatedData.posts;
   
   // ページの変更ハンドラ
   const handlePageChange = (page: number) => {
@@ -177,17 +165,17 @@ export function BlogCategoryFilter({
         </div>
       )}
       
-      {/* PC表示用ページネーション */}
-      {isPC && paginatedData.totalPages > 1 && (
+      {/* ページネーション */}
+      {paginatedData.totalPages > 1 && (
         <div className="flex justify-center mt-16">
           <nav aria-label="ページネーション">
-            <ul className="flex flex-wrap space-x-2">
+            <ul className={`flex flex-wrap ${isPC ? 'space-x-2' : 'space-x-1 justify-center'}`}>
               {/* 前のページボタン */}
               {currentPage > 1 && (
                 <li>
                   <button 
                     onClick={() => handlePageChange(currentPage - 1)}
-                    className="px-4 py-2 bg-gray-800 text-gray-300 rounded-md hover:bg-gray-700"
+                    className={`${isPC ? 'px-4 py-2' : 'px-3 py-1.5'} bg-gray-800 text-gray-300 rounded-md hover:bg-gray-700`}
                     aria-label="前のページ"
                   >
                     &laquo;
@@ -195,21 +183,42 @@ export function BlogCategoryFilter({
                 </li>
               )}
               
-              {/* ページ番号ボタン */}
-              {Array.from({ length: paginatedData.totalPages }, (_, i) => i + 1).map((page) => (
-                <li key={page}>
-                  <button
-                    onClick={() => handlePageChange(page)}
-                    className={`px-4 py-2 rounded-md ${
-                      currentPage === page
-                        ? "bg-cyan-600 text-white"
-                        : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-                    }`}
-                    aria-current={currentPage === page ? "page" : undefined}
-                  >
-                    {page}
-                  </button>
-                </li>
+              {/* ページ番号ボタン - モバイルでは省略表示 */}
+              {Array.from({ length: paginatedData.totalPages }, (_, i) => i + 1)
+                // モバイルでは表示するページ番号を制限
+                .filter(page => isPC || 
+                  page === 1 || 
+                  page === paginatedData.totalPages || 
+                  Math.abs(page - currentPage) <= 1)
+                // 省略記号を追加
+                .reduce((acc, page, i, arr) => {
+                  if (i > 0 && arr[i - 1] !== page - 1) {
+                    acc.push(-1); // 省略記号のプレースホルダー
+                  }
+                  acc.push(page);
+                  return acc;
+                }, [] as number[])
+                .map((page) => (
+                  page === -1 ? (
+                    // 省略記号
+                    <li key={`ellipsis-${page}`} className="flex items-center px-1">
+                      <span className="text-gray-500">...</span>
+                    </li>
+                  ) : (
+                    <li key={page}>
+                      <button
+                        onClick={() => handlePageChange(page)}
+                        className={`${isPC ? 'px-4 py-2' : 'px-3 py-1.5'} rounded-md ${
+                          currentPage === page
+                            ? "bg-cyan-600 text-white"
+                            : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                        }`}
+                        aria-current={currentPage === page ? "page" : undefined}
+                      >
+                        {page}
+                      </button>
+                    </li>
+                  )
               ))}
               
               {/* 次のページボタン */}
@@ -217,7 +226,7 @@ export function BlogCategoryFilter({
                 <li>
                   <button 
                     onClick={() => handlePageChange(currentPage + 1)}
-                    className="px-4 py-2 bg-gray-800 text-gray-300 rounded-md hover:bg-gray-700"
+                    className={`${isPC ? 'px-4 py-2' : 'px-3 py-1.5'} bg-gray-800 text-gray-300 rounded-md hover:bg-gray-700`}
                     aria-label="次のページ"
                   >
                     &raquo;
