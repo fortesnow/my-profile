@@ -91,16 +91,23 @@
   left: 10%;
   bottom: 20%;
   z-index: 4;
+  width: 250px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* モンスター */
 .monster {
-  width: 200px;
-  max-width: 30%;
-  aspect-ratio: 1 / 1;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31"><rect width="31" height="31" fill="purple" opacity="0.8" /></svg>');
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/boss.png');
+  background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
   animation: monster-idle 3s ease-in-out infinite alternate;
+  image-rendering: pixelated;
 }
 
 /* ダメージ数字 */
@@ -444,7 +451,7 @@
   .battleContainer {
     height: auto;
     min-height: 100vh;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
   
   /* バトルフィールドの高さを調整 */
@@ -490,7 +497,7 @@
   /* ステータスウィンドウを100%に */
   .statusWindow {
     width: 100%;
-    max-height: 200px;
+    max-height: 180px;
   }
   
   /* ダイアログウィンドウの調整 */
@@ -499,7 +506,7 @@
     height: auto;
     min-height: 60px;
     padding: 5px;
-    margin: 2px;
+    margin: 2px 2px 8px 2px;
     border-width: 2px;
   }
   
@@ -514,9 +521,11 @@
   }
   
   .monsterContainer {
-    left: 2%;
-    bottom: 10%;
-    transform: scale(0.8);
+    left: 10%;
+    bottom: 15%;
+    width: 200px;
+    height: 150px;
+    transform: scale(1);
   }
   
   /* スライド情報の調整 */
@@ -562,7 +571,7 @@
   
   /* ナビゲーションボタンの調整 */
   .navigation {
-    bottom: 10px;
+    bottom: 5px;
     right: 10px;
     display: flex;
     gap: 5px;
@@ -582,7 +591,7 @@
   
   /* 設定ボタンの位置調整 */
   .settingsButton {
-    bottom: 10px;
+    bottom: 5px;
     left: 10px;
     width: 36px;
     height: 36px;
@@ -611,6 +620,7 @@
     min-height: 100vh;
     /* モバイルでのセーフエリア対応（ノッチや画面上部UI考慮） */
     padding-top: 5px;
+    padding-bottom: 5px;
   }
   
   .battleField {
@@ -671,23 +681,40 @@
   /* モンスターの位置調整 */
   .monsterContainer {
     left: 50%;
-    bottom: 50%;
-    transform: translate(-50%, 50%) scale(0.65);
+    bottom: 40%;
+    width: 180px;
+    height: 140px;
+    transform: translate(-50%, 0) scale(1);
   }
   
-  /* ステータスアイテムを横方向にスクロール可能に */
+  /* ステータスアイテムを固定表示に戻す - スクロールしないように変更 */
   .statusList {
     display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow-x: visible;
     padding-bottom: 5px;
+    gap: 5px;
   }
   
   .statusItem {
     flex: 0 0 auto;
-    width: 80%;
-    margin-right: 10px;
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  /* 下部のボタン位置を調整 */
+  .navigation {
+    bottom: 2px;
+  }
+  
+  .settingsButton {
+    bottom: 2px;
+  }
+  
+  /* ダイアログウィンドウとボタンの間の余白を調整 */
+  .dialogWindow {
+    margin-bottom: 40px;
   }
 }
 
@@ -732,18 +759,34 @@
   }
   
   .monsterContainer {
-    transform: translate(-50%, 50%) scale(0.55);
+    width: 160px;
+    height: 120px;
+    left: 50%;
+    bottom: 35%;
+    transform: translate(-50%, 0) scale(0.9);
   }
   
   /* UI要素の最適化 */
   .dialogWindow {
-    min-height: 50px;
+    min-height: 45px;
+    margin-bottom: 35px;
   }
   
   .navButton {
     min-width: 50px;
     min-height: 30px;
     font-size: 0.5rem;
+  }
+  
+  /* ステータスウィンドウの高さを調整 */
+  .statusWindow {
+    max-height: 160px;
+    margin-bottom: 2px;
+  }
+  
+  /* 下部の余白をさらに最適化 */
+  .navigation, .settingsButton {
+    bottom: 1px;
   }
 }
 

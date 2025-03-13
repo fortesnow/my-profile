@@ -2,12 +2,11 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './FF3BattlePresentation.module.css';
-import { PixelCharacter } from './PixelCharacter';
-import { MonsterPixelArt } from './MonsterPixelArt';
 import { BattleEffects, EffectType } from './BattleEffects';
 import { SlideTransition, TransitionType } from './SlideTransition';
 import { SettingsPanel, FF3Settings } from './SettingsPanel';
 import { Settings } from 'lucide-react';
+import { PixelCharacter } from './PixelCharacter';
 
 // プレゼンテーションデータの型定義
 interface PresentationData {
@@ -43,6 +42,9 @@ const defaultSettings: FF3Settings = {
   autoAdvanceDelay: 5
 };
 
+// ダメージエフェクト用の型を追加
+type MBattleEffect = 'fire' | 'ice' | 'thunder' | 'heal' | 'defend' | 'attack' | 'victory' | 'damage';
+
 export const FF3BattlePresentation: React.FC<FF3BattlePresentationProps> = ({ presentationData }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [selectedCharacter, setSelectedCharacter] = useState(0);
@@ -53,14 +55,17 @@ export const FF3BattlePresentation: React.FC<FF3BattlePresentationProps> = ({ pr
   const [battleState, setBattleState] = useState<'command' | 'action' | 'victory'>('command');
   const [showDamage, setShowDamage] = useState(false);
   const [damageValue, setDamageValue] = useState(0);
-  const [monsterType, setMonsterType] = useState<string>('slime');
+  const [monsterType, setMonsterType] = useState<string>('dragon');
   const [isMonsterAttacked, setIsMonsterAttacked] = useState(false);
   
   // エフェクト表示用の状態
   const [activeEffect, setActiveEffect] = useState<EffectType | null>(null);
   const [effectTarget, setEffectTarget] = useState<{ x: number, y: number } | null>(null);
   
-  // モンスターコンテナのrefを追加
+  // モンスターエフェクト用の状態
+  const [monsterEffect, setMonsterEffect] = useState<MBattleEffect | null>(null);
+  
+  // モンスターコンテナの参照を追加
   const monsterContainerRef = useRef<HTMLDivElement>(null);
 
   // キャラクターデータ
@@ -290,9 +295,53 @@ export const FF3BattlePresentation: React.FC<FF3BattlePresentationProps> = ({ pr
     }
   };
 
-  // エフェクト完了時のコールバック
+  // モンスターコンポーネント - ボス画像を表示
+  const Monster = () => {
+    const monsterRef = useRef<HTMLDivElement>(null);
+    const [damage, setDamage] = useState<number | null>(null);
+    
+    useEffect(() => {
+      if (monsterEffect === 'damage' && monsterRef.current) {
+        // ダメージエフェクト
+        setDamage(Math.floor(Math.random() * 9999) + 1);
+        setTimeout(() => setDamage(null), 1500);
+        
+        // 被ダメージアニメーション
+        monsterRef.current.animate([
+          { filter: 'brightness(1)', transform: 'translateX(0)' },
+          { filter: 'brightness(2)', transform: 'translateX(-10px)' },
+          { filter: 'brightness(2)', transform: 'translateX(10px)' },
+          { filter: 'brightness(1)', transform: 'translateX(0)' }
+        ], {
+          duration: 300,
+          iterations: 1
+        });
+      }
+    }, [monsterEffect]);
+
+    return (
+      <>
+        <div ref={monsterRef} className={styles.monster}></div>
+        {damage && (
+          <div className={styles.damageNumber}>
+            {damage}
+          </div>
+        )}
+      </>
+    );
+  };
+
+  // エフェクト完了時の処理
   const handleEffectComplete = () => {
-    // エフェクト完了時の処理が必要な場合に実装
+    setActiveEffect(null);
+    setMonsterEffect(null);
+  };
+
+  // マジック実行時などにモンスターエフェクトを設定
+  const applyMonsterEffect = (effect: MBattleEffect) => {
+    setMonsterEffect(effect);
+    // 一定時間後にエフェクトをクリア
+    setTimeout(() => setMonsterEffect(null), 1500);
   };
 
   // 設定パネルの表示/非表示を切り替え
@@ -346,14 +395,7 @@ export const FF3BattlePresentation: React.FC<FF3BattlePresentationProps> = ({ pr
         {/* モンスター */}
         {settings.monsterDisplay && (
           <div className={styles.monsterContainer} ref={monsterContainerRef}>
-            <MonsterPixelArt type={monsterType} isAttacked={isMonsterAttacked} />
-            
-            {/* ダメージ表示 */}
-            {showDamage && (
-              <div className={`${styles.damageNumber} ${damageValue < 0 ? styles.heal : ''}`}>
-                {Math.abs(damageValue)}
-              </div>
-            )}
+            <Monster />
           </div>
         )}
         
