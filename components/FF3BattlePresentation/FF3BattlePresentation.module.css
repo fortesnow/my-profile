@@ -678,41 +678,45 @@
     justify-content: center;
   }
   
-  /* モンスターの位置調整 */
+  /* モンスターの位置調整 - 下方に移動 */
   .monsterContainer {
     left: 50%;
-    bottom: 45%;
+    bottom: 30%; /* 45%から30%に下方修正 */
     width: 180px;
     height: 140px;
     transform: translate(-50%, 0) scale(1);
   }
   
-  /* ステータスウィンドウを100%に */
+  /* ステータスウィンドウの完全固定化 */
   .statusWindow {
     width: 100%;
     max-height: 180px;
-    overflow-x: hidden; /* 横スクロールを完全に無効化 */
+    overflow-x: hidden !important; /* 横スクロールを強制的に無効化 */
+    overflow: hidden; /* スクロール全般を無効化 */
   }
   
-  /* ステータスアイテムを固定表示に - スクロールできないように強制 */
+  /* ステータスリストの完全固定化 - より強力な設定 */
   .statusList {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap; /* 折り返しを禁止 */
-    overflow-x: hidden; /* 横スクロールを明示的に無効化 */
-    overflow-y: auto; /* 縦スクロールのみ許可 */
+    overflow: hidden !important; /* スクロール全般を強制的に無効化 */
+    overflow-y: auto !important; /* 縦スクロールのみ許可 */
     padding-bottom: 5px;
     gap: 5px;
-    width: 100%; /* 幅を制限して横にはみ出さないように */
-    position: relative; /* ポジションを固定 */
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    white-space: normal; /* テキスト折り返しを許可 */
   }
   
   .statusItem {
     flex: 0 0 auto;
     width: 100%;
     margin-right: 0;
-    min-width: 0; /* 幅を制限して横にはみ出さないように */
-    position: relative; /* ポジションを固定 */
+    min-width: 0; 
+    position: relative;
+    white-space: normal; /* テキスト折り返しを許可 */
   }
   
   /* キャラクター情報の幅を制限 */
@@ -741,6 +745,13 @@
   /* ダイアログウィンドウとボタンの間の余白を調整 */
   .dialogWindow {
     margin-bottom: 40px;
+  }
+  
+  /* コマンドエリアのスクロール防止 */
+  .commandArea {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -788,7 +799,7 @@
     width: 140px;
     height: 110px;
     left: 50%;
-    bottom: 45%;
+    bottom: 25%; /* 45%から25%に下方修正 */
     transform: translate(-50%, 0) scale(0.9);
   }
   
@@ -828,7 +839,7 @@
     width: 120px;
     height: 90px;
     left: 50%;
-    bottom: 47%;
+    bottom: 22%; /* 47%から22%に下方修正 */
     transform: translate(-50%, 0) scale(0.85);
   }
   
