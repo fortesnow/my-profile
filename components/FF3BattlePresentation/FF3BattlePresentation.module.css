@@ -521,11 +521,11 @@
   }
   
   .monsterContainer {
-    left: 10%;
-    bottom: 15%;
+    left: 50%;
+    bottom: 25%;
     width: 200px;
     height: 150px;
-    transform: scale(1);
+    transform: translate(-50%, 0) scale(1);
   }
   
   /* スライド情報の調整 */
@@ -681,26 +681,52 @@
   /* モンスターの位置調整 */
   .monsterContainer {
     left: 50%;
-    bottom: 40%;
+    bottom: 45%;
     width: 180px;
     height: 140px;
     transform: translate(-50%, 0) scale(1);
   }
   
-  /* ステータスアイテムを固定表示に戻す - スクロールしないように変更 */
+  /* ステータスウィンドウを100%に */
+  .statusWindow {
+    width: 100%;
+    max-height: 180px;
+    overflow-x: hidden; /* 横スクロールを完全に無効化 */
+  }
+  
+  /* ステータスアイテムを固定表示に - スクロールできないように強制 */
   .statusList {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    overflow-x: visible;
+    flex-wrap: nowrap; /* 折り返しを禁止 */
+    overflow-x: hidden; /* 横スクロールを明示的に無効化 */
+    overflow-y: auto; /* 縦スクロールのみ許可 */
     padding-bottom: 5px;
     gap: 5px;
+    width: 100%; /* 幅を制限して横にはみ出さないように */
+    position: relative; /* ポジションを固定 */
   }
   
   .statusItem {
     flex: 0 0 auto;
     width: 100%;
     margin-right: 0;
+    min-width: 0; /* 幅を制限して横にはみ出さないように */
+    position: relative; /* ポジションを固定 */
+  }
+  
+  /* キャラクター情報の幅を制限 */
+  .charInfo {
+    flex-grow: 1;
+    width: 100%;
+    min-width: 0; /* 内容が溢れないように */
+    overflow: hidden; /* はみ出した内容を隠す */
+  }
+  
+  /* HP・MPバーの幅調整 */
+  .hpBarBg, .mpBarBg {
+    max-width: 100%;
+    min-width: 0;
   }
   
   /* 下部のボタン位置を調整 */
@@ -759,10 +785,10 @@
   }
   
   .monsterContainer {
-    width: 160px;
-    height: 120px;
+    width: 140px;
+    height: 110px;
     left: 50%;
-    bottom: 35%;
+    bottom: 45%;
     transform: translate(-50%, 0) scale(0.9);
   }
   
@@ -782,11 +808,42 @@
   .statusWindow {
     max-height: 160px;
     margin-bottom: 2px;
+    overflow-x: hidden; /* 横スクロールを完全に無効化 */
+  }
+  
+  /* ステータスリストのさらなる最適化 */
+  .statusList {
+    gap: 3px; /* より密集したレイアウト */
   }
   
   /* 下部の余白をさらに最適化 */
   .navigation, .settingsButton {
     bottom: 1px;
+  }
+}
+
+/* 極小スマホ向けの調整（iPhone SE等） */
+@media (max-width: 320px) {
+  .monsterContainer {
+    width: 120px;
+    height: 90px;
+    left: 50%;
+    bottom: 47%;
+    transform: translate(-50%, 0) scale(0.85);
+  }
+  
+  /* バトルフィールドの高さをさらに調整 */
+  .battleField {
+    min-height: 160px;
+    flex: 0 0 30%;
+    height: 30%;
+  }
+  
+  /* スライド情報をさらに小さく */
+  .slideInfo {
+    top: 1%;
+    width: 98%;
+    padding: 3px;
   }
 }
 
