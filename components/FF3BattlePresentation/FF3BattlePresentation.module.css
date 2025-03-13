@@ -517,7 +517,7 @@
   /* キャラクターとモンスターの位置調整 */
   .characterContainer {
     right: 2%;
-    bottom: 5%;
+    bottom: 3%;
     transform: scale(0.8);
     /* モバイル向けに並び方を変更 */
     flex-direction: row;
@@ -679,7 +679,7 @@
   /* キャラクターとモンスターをさらに小さく調整 - FF3風の左右対向を維持 */
   .characterContainer {
     right: 8%;
-    bottom: 2%; /* さらに下方向に調整 (7%→2%) */
+    bottom: 1%;
     transform: scale(0.5);
     flex-direction: column;
     gap: 6px;
@@ -688,62 +688,62 @@
   .monsterContainer {
     width: 140px;
     height: 110px;
-    left: 3%; /* より左側に調整 (8%→3%) */
-    bottom: 7%; /* 下方向に調整 (20%→7%) */
+    left: 3%;
+    bottom: 7%;
     transform: scale(0.85);
   }
   
   /* ステータスウィンドウの高さを調整 */
   .statusWindow {
-    max-height: 240px; /* 高さ調整 (220px→240px) */
-    min-height: 200px; /* 最小高さ調整 (180px→200px) */
+    max-height: 240px;
+    min-height: 200px;
     margin-bottom: 5px;
     overflow-x: hidden;
-    padding: 10px; /* パディング調整 (8px→10px) */
-    border-width: 2px; /* 枠線を元に戻す (なし→2px) */
+    padding: 10px;
+    border-width: 2px;
   }
   
   /* ステータスリストのさらなる最適化 */
   .statusList {
-    gap: 12px; /* 間隔調整 (10px→12px) */
-    padding-bottom: 8px; /* パディング調整 (なし→8px) */
+    gap: 12px;
+    padding-bottom: 8px;
   }
   
   /* ステータスアイテムの高さ調整 */
   .statusItem {
-    min-height: 48px; /* 最小高さ調整 (45px→48px) */
-    padding: 5px 3px; /* パディング調整 (4px 2px→5px 3px) */
+    min-height: 48px;
+    padding: 5px 3px;
     border-bottom: 1px solid rgba(100, 150, 255, 0.2);
   }
   
   /* HP/MPコンテナの小型画面での調整 */
   .hpContainer, .mpContainer {
-    gap: 5px; /* 間隔調整 (4px→5px) */
-    font-size: clamp(0.45rem, 3vw, 0.6rem); /* フォントサイズ調整 */
-    margin-bottom: 4px; /* マージン調整 (3px→4px) */
+    gap: 5px;
+    font-size: clamp(0.45rem, 3vw, 0.6rem);
+    margin-bottom: 4px;
   }
   
   /* HP・MPバーの幅調整 */
   .hpBarBg, .mpBarBg {
-    height: 8px; /* 高さ調整 (なし→8px) */
-    margin: 0 2px; /* マージン調整 (なし→0 2px) */
+    height: 8px;
+    margin: 0 2px;
   }
   
   /* キャラクター名の調整 */
   .charName {
-    font-size: clamp(0.55rem, 3.2vw, 0.7rem); /* フォントサイズ調整 */
-    margin-bottom: 6px; /* マージン調整 (5px→6px) */
+    font-size: clamp(0.55rem, 3.2vw, 0.7rem);
+    margin-bottom: 6px;
   }
   
   /* ステータス値とラベルの小型画面での調整 */
   .statValue {
-    width: 60px; /* 幅調整 (55px→60px) */
-    font-size: clamp(0.45rem, 3vw, 0.6rem); /* フォントサイズ調整 */
+    width: 60px;
+    font-size: clamp(0.45rem, 3vw, 0.6rem);
   }
   
   .statLabel {
-    width: 28px; /* 幅調整 (25px→28px) */
-    font-size: clamp(0.45rem, 3vw, 0.6rem); /* フォントサイズ調整 */
+    width: 28px;
+    font-size: clamp(0.45rem, 3vw, 0.6rem);
   }
   
   /* コマンドウィンドウとインフォウィンドウの調整 */
@@ -762,14 +762,14 @@
   .monsterContainer {
     width: 120px;
     height: 90px;
-    left: 2%; /* より左側に調整 (5%→2%) */
-    bottom: 6%; /* 下方向に調整 (22%→6%) */
+    left: 2%;
+    bottom: 6%;
     transform: scale(0.8);
   }
   
   .characterContainer {
     right: 5%;
-    bottom: 1%; /* さらに下方向に調整 (6%→1%) */
+    bottom: 0.5%;
     transform: scale(0.42);
     gap: 4px;
   }
@@ -818,45 +818,45 @@
   
   /* ステータスウィンドウの調整 */
   .statusWindow {
-    max-height: 220px; /* 高さ調整 (200px→220px) */
-    min-height: 180px; /* 最小高さ調整 (160px→180px) */
-    padding: 8px; /* パディング調整 (6px→8px) */
+    max-height: 220px;
+    min-height: 180px;
+    padding: 8px;
   }
   
   /* ステータスリストの最適化 */
   .statusList {
-    gap: 10px; /* 間隔調整 (8px→10px) */
-    padding-bottom: 6px; /* パディング調整 (5px→6px) */
+    gap: 10px;
+    padding-bottom: 6px;
   }
   
   /* ステータスアイテムの調整 */
   .statusItem {
-    min-height: 45px; /* 最小高さ調整 (42px→45px) */
-    padding: 4px 2px; /* パディング調整 (3px 1px→4px 2px) */
+    min-height: 45px;
+    padding: 4px 2px;
   }
   
   /* キャラクター名とステータスの調整 */
   .charName {
-    font-size: clamp(0.5rem, 3vw, 0.65rem); /* フォントサイズ調整 */
-    margin-bottom: 5px; /* マージン調整 (4px→5px) */
+    font-size: clamp(0.5rem, 3vw, 0.65rem);
+    margin-bottom: 5px;
   }
   
   /* HP/MPコンテナの極小画面での調整 */
   .hpContainer, .mpContainer {
-    gap: 4px; /* 間隔調整 (3px→4px) */
-    font-size: clamp(0.42rem, 2.8vw, 0.55rem); /* フォントサイズ調整 */
-    margin-bottom: 3px; /* マージン調整 (2px→3px) */
+    gap: 4px;
+    font-size: clamp(0.42rem, 2.8vw, 0.55rem);
+    margin-bottom: 3px;
   }
   
   /* ステータス値とラベルの極小画面での調整 */
   .statValue {
-    width: 56px; /* 幅調整 (50px→56px) */
-    font-size: clamp(0.42rem, 2.8vw, 0.55rem); /* フォントサイズ調整 */
+    width: 56px;
+    font-size: clamp(0.42rem, 2.8vw, 0.55rem);
   }
   
   .statLabel {
-    width: 25px; /* 幅調整 (22px→25px) */
-    font-size: clamp(0.42rem, 2.8vw, 0.55rem); /* フォントサイズ調整 */
+    width: 25px;
+    font-size: clamp(0.42rem, 2.8vw, 0.55rem);
   }
   
   /* コマンドウィンドウとインフォウィンドウの調整 */
@@ -987,7 +987,7 @@
   .characterContainer {
     right: 10%;
     left: auto;
-    bottom: 3%; /* さらに下方向に調整 (8%→3%) */
+    bottom: 1.5%;
     width: auto;
     transform: scale(0.6);
     justify-content: flex-end;
@@ -998,9 +998,9 @@
   
   /* モンスターの位置調整 - FF3風に左側に配置 PC表示に近づける */
   .monsterContainer {
-    left: 5%; /* より左側に調整 (10%→5%) */
+    left: 5%;
     right: auto;
-    bottom: 8%; /* より下方向に調整 (15%→8%) */
+    bottom: 8%;
     width: 180px;
     height: 140px;
     transform: scale(0.9);
