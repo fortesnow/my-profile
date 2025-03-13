@@ -69,19 +69,6 @@ export const FF3BattlePresentationWrapper: React.FC<FF3BattlePresentationWrapper
         }}
       >
         <FF3BattlePresentation presentationData={presentationData} />
-        
-        <div 
-          className="presentation-info" 
-          style={{ 
-            fontSize: '12px', 
-            textAlign: 'center', 
-            margin: '10px 0', 
-            color: '#a0aec0',
-            padding: '0 10px' // モバイル用の左右パディング追加
-          }}
-        >
-          <p>FF3風バトルプレゼンテーションフレームワーク - リッチなプレゼンテーション体験のために</p>
-        </div>
       </div>
 
       {/* プロフィールセクション */}
