@@ -1,6 +1,7 @@
 'use client';
+/* eslint-disable @typescript-eslint/no-unused-vars */
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import styles from './FF3BattlePresentation.module.css';
 import { BattleEffects, EffectType } from './BattleEffects';
 import { SlideTransition, TransitionType } from './SlideTransition';
@@ -82,9 +83,6 @@ export const FF3BattlePresentation: React.FC<FF3BattlePresentationProps> = ({ pr
   // 魔法
   const magics = ["ファイア", "ブリザド", "サンダー", "ケアル"];
 
-  // モンスターの種類のリスト
-  const monsterTypes = ['slime', 'dragon', 'ghost', 'cactuar'];
-
   // スライド遷移用の状態
   const [isSlideTransitioning, setIsSlideTransitioning] = useState(false);
   const [transitionType, setTransitionType] = useState<TransitionType>('fade');
@@ -93,10 +91,55 @@ export const FF3BattlePresentation: React.FC<FF3BattlePresentationProps> = ({ pr
   const [showSettings, setShowSettings] = useState(false);
   const [settings, setSettings] = useState<FF3Settings>(defaultSettings);
 
-  // スライド変更時にモンスターもランダムに変更
+  // 次のスライドへ（トランジション付き）
+  const goToNextSlide = useCallback(() => {
+    if (currentSlide < presentationData.slides.length - 1 && !isSlideTransitioning) {
+      // ランダムな遷移効果を選択
+      const transitions: TransitionType[] = ['wipe-left', 'flash', 'battle-transition', 'fade'];
+      const randomTransition = transitions[Math.floor(Math.random() * transitions.length)];
+      setTransitionType(randomTransition);
+      
+      // トランジション開始
+      setIsSlideTransitioning(true);
+      
+      // トランジション後にスライドを変更
+      setTimeout(() => {
+        setCurrentSlide(currentSlide + 1);
+        
+        // トランジション完了を少し遅らせてスライド変更を見せる
+        setTimeout(() => {
+          setIsSlideTransitioning(false);
+        }, 100);
+      }, 500);
+    }
+  }, [currentSlide, isSlideTransitioning, presentationData.slides.length]);
+
+  // 前のスライドへ（トランジション付き）
+  const goToPrevSlide = useCallback(() => {
+    if (currentSlide > 0 && !isSlideTransitioning) {
+      // ランダムな遷移効果を選択（前に戻る場合は右からのワイプを含める）
+      const transitions: TransitionType[] = ['wipe-right', 'fade', 'flash'];
+      const randomTransition = transitions[Math.floor(Math.random() * transitions.length)];
+      setTransitionType(randomTransition);
+      
+      // トランジション開始
+      setIsSlideTransitioning(true);
+      
+      // トランジション後にスライドを変更
+      setTimeout(() => {
+        setCurrentSlide(currentSlide - 1);
+        
+        // トランジション完了を少し遅らせてスライド変更を見せる
+        setTimeout(() => {
+          setIsSlideTransitioning(false);
+        }, 100);
+      }, 500);
+    }
+  }, [currentSlide, isSlideTransitioning]);
+
+  // スライド変更時の処理
   useEffect(() => {
-    const newMonsterType = monsterTypes[Math.floor(Math.random() * monsterTypes.length)];
-    setMonsterType(newMonsterType);
+    // スライド変更時の処理をここに記述
   }, [currentSlide]);
 
   // 自動進行の処理
@@ -108,7 +151,7 @@ export const FF3BattlePresentation: React.FC<FF3BattlePresentationProps> = ({ pr
       
       return () => clearTimeout(timer);
     }
-  }, [currentSlide, settings.autoAdvance, settings.autoAdvanceDelay, isSlideTransitioning, showMagicMenu, battleState]);
+  }, [currentSlide, settings.autoAdvance, settings.autoAdvanceDelay, isSlideTransitioning, showMagicMenu, battleState, goToNextSlide]);
 
   // テキスト速度の適用
   useEffect(() => {
@@ -126,6 +169,83 @@ export const FF3BattlePresentation: React.FC<FF3BattlePresentationProps> = ({ pr
     setDialogText(currentSlideDialog);
     setTextIndex(0);
   }, [currentSlide, presentationData.slides]);
+
+  // モンスターコンポーネント - ボス画像を表示
+  const Monster = () => {
+    const monsterRef = useRef<HTMLDivElement>(null);
+    const [damage, setDamage] = useState<number | null>(null);
+    
+    useEffect(() => {
+      if (monsterEffect === 'damage' && monsterRef.current) {
+        // ダメージエフェクト
+        setDamage(Math.floor(Math.random() * 9999) + 1);
+        setTimeout(() => setDamage(null), 1500);
+        
+        // 被ダメージアニメーション
+        monsterRef.current.animate([
+          { filter: 'brightness(1)', transform: 'translateX(0)' },
+          { filter: 'brightness(2)', transform: 'translateX(-10px)' },
+          { filter: 'brightness(2)', transform: 'translateX(10px)' },
+          { filter: 'brightness(1)', transform: 'translateX(0)' }
+        ], {
+          duration: 300,
+          iterations: 1
+        });
+      }
+    }, []);
+
+    return (
+      <>
+        <div ref={monsterRef} className={styles.monster}></div>
+        {damage && (
+          <div className={styles.damageNumber}>
+            {damage}
+          </div>
+        )}
+      </>
+    );
+  };
+
+  // エフェクト完了時の処理
+  const handleEffectComplete = () => {
+    setActiveEffect(null);
+    setMonsterEffect(null);
+  };
+
+  // マジック実行時などにモンスターエフェクトを設定
+  const applyMonsterEffect = (effect: MBattleEffect) => {
+    setMonsterEffect(effect);
+    // 一定時間後にエフェクトをクリア
+    setTimeout(() => setMonsterEffect(null), 1500);
+  };
+
+  // 設定パネルの表示/非表示を切り替え
+  const toggleSettings = () => {
+    setShowSettings(!showSettings);
+  };
+
+  // 設定の更新
+  const handleSettingsChange = (newSettings: FF3Settings) => {
+    setSettings(newSettings);
+  };
+
+  // 現在の背景スタイルを取得
+  const getBackgroundStyle = () => {
+    return {
+      backgroundImage: settings.backgroundStyle === 'pixel' 
+        ? `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3"><circle cx="1.5" cy="1.5" r="0.5" fill="white" opacity="0.5"/></svg>'), linear-gradient(to bottom, transparent 50%, rgba(0, 10, 30, 0.5) 100%)`
+        : settings.backgroundStyle === 'stars'
+          ? `radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 2px), linear-gradient(to bottom, transparent 50%, rgba(0, 10, 30, 0.5) 100%)`
+          : settings.backgroundStyle === 'mountains'
+            ? `linear-gradient(rgba(6, 17, 60, 0.7) 20px, transparent 100px), linear-gradient(to bottom, transparent 90%, rgba(0, 13, 60, 0.8) 100%)`
+            : 'linear-gradient(to bottom, #000428, #004e92)',
+      backgroundSize: settings.backgroundStyle === 'pixel' 
+        ? '50px 50px, 100% 100%' 
+        : settings.backgroundStyle === 'stars'
+          ? '50px 50px, 100% 100%'
+          : '100% 100%'
+    };
+  };
 
   // コマンド実行処理
   const executeCommand = (commandIndex: number) => {
@@ -146,21 +266,12 @@ export const FF3BattlePresentation: React.FC<FF3BattlePresentationProps> = ({ pr
       // 攻撃エフェクトを表示
       setActiveEffect('attack');
       
-      // モンスター攻撃アニメーション
-      setTimeout(() => {
-        setIsMonsterAttacked(true);
-        setTimeout(() => setIsMonsterAttacked(false), 300);
-      }, 200);
-      
-      // ダメージ表示
-      setTimeout(() => {
-        setShowDamage(true);
-        setDamageValue(Math.floor(Math.random() * 500) + 500);
-      }, 500);
+      // モンスターエフェクトを設定
+      setMonsterEffect('damage');
       
       setTimeout(() => {
-        setShowDamage(false);
         setActiveEffect(null);
+        setMonsterEffect(null);
         goToNextSlide();
         setBattleState('command');
         setSelectedCommand(-1);
@@ -220,156 +331,18 @@ export const FF3BattlePresentation: React.FC<FF3BattlePresentationProps> = ({ pr
     }
     setActiveEffect(effectType);
     
-    // モンスター攻撃アニメーション（ケアル以外の場合）
+    // モンスターエフェクトを設定（ケアル以外の場合）
     if (magicIndex !== 3) {
-      setTimeout(() => {
-        setIsMonsterAttacked(true);
-        setTimeout(() => setIsMonsterAttacked(false), 300);
-      }, 300);
+      setMonsterEffect('damage');
     }
     
-    // ダメージ表示
     setTimeout(() => {
-      setShowDamage(true);
-      
-      // 魔法の種類に応じてダメージ値を設定
-      if (magicIndex === 3) { // ケアル（回復魔法）
-        setDamageValue(-Math.floor(Math.random() * 300) - 200);
-      } else {
-        setDamageValue(Math.floor(Math.random() * 800) + 300);
-      }
-    }, 600);
-    
-    setTimeout(() => {
-      setShowDamage(false);
       setActiveEffect(null);
+      setMonsterEffect(null);
       goToNextSlide();
       setBattleState('command');
       setSelectedCommand(-1);
     }, 1800);
-  };
-
-  // 次のスライドへ（トランジション付き）
-  const goToNextSlide = () => {
-    if (currentSlide < presentationData.slides.length - 1 && !isSlideTransitioning) {
-      // ランダムな遷移効果を選択
-      const transitions: TransitionType[] = ['wipe-left', 'flash', 'battle-transition', 'fade'];
-      const randomTransition = transitions[Math.floor(Math.random() * transitions.length)];
-      setTransitionType(randomTransition);
-      
-      // トランジション開始
-      setIsSlideTransitioning(true);
-      
-      // トランジション後にスライドを変更
-      setTimeout(() => {
-        setCurrentSlide(currentSlide + 1);
-        
-        // トランジション完了を少し遅らせてスライド変更を見せる
-        setTimeout(() => {
-          setIsSlideTransitioning(false);
-        }, 100);
-      }, 500);
-    }
-  };
-
-  // 前のスライドへ（トランジション付き）
-  const goToPrevSlide = () => {
-    if (currentSlide > 0 && !isSlideTransitioning) {
-      // ランダムな遷移効果を選択（前に戻る場合は右からのワイプを含める）
-      const transitions: TransitionType[] = ['wipe-right', 'fade', 'flash'];
-      const randomTransition = transitions[Math.floor(Math.random() * transitions.length)];
-      setTransitionType(randomTransition);
-      
-      // トランジション開始
-      setIsSlideTransitioning(true);
-      
-      // トランジション後にスライドを変更
-      setTimeout(() => {
-        setCurrentSlide(currentSlide - 1);
-        
-        // トランジション完了を少し遅らせてスライド変更を見せる
-        setTimeout(() => {
-          setIsSlideTransitioning(false);
-        }, 100);
-      }, 500);
-    }
-  };
-
-  // モンスターコンポーネント - ボス画像を表示
-  const Monster = () => {
-    const monsterRef = useRef<HTMLDivElement>(null);
-    const [damage, setDamage] = useState<number | null>(null);
-    
-    useEffect(() => {
-      if (monsterEffect === 'damage' && monsterRef.current) {
-        // ダメージエフェクト
-        setDamage(Math.floor(Math.random() * 9999) + 1);
-        setTimeout(() => setDamage(null), 1500);
-        
-        // 被ダメージアニメーション
-        monsterRef.current.animate([
-          { filter: 'brightness(1)', transform: 'translateX(0)' },
-          { filter: 'brightness(2)', transform: 'translateX(-10px)' },
-          { filter: 'brightness(2)', transform: 'translateX(10px)' },
-          { filter: 'brightness(1)', transform: 'translateX(0)' }
-        ], {
-          duration: 300,
-          iterations: 1
-        });
-      }
-    }, [monsterEffect]);
-
-    return (
-      <>
-        <div ref={monsterRef} className={styles.monster}></div>
-        {damage && (
-          <div className={styles.damageNumber}>
-            {damage}
-          </div>
-        )}
-      </>
-    );
-  };
-
-  // エフェクト完了時の処理
-  const handleEffectComplete = () => {
-    setActiveEffect(null);
-    setMonsterEffect(null);
-  };
-
-  // マジック実行時などにモンスターエフェクトを設定
-  const applyMonsterEffect = (effect: MBattleEffect) => {
-    setMonsterEffect(effect);
-    // 一定時間後にエフェクトをクリア
-    setTimeout(() => setMonsterEffect(null), 1500);
-  };
-
-  // 設定パネルの表示/非表示を切り替え
-  const toggleSettings = () => {
-    setShowSettings(!showSettings);
-  };
-
-  // 設定の更新
-  const handleSettingsChange = (newSettings: FF3Settings) => {
-    setSettings(newSettings);
-  };
-
-  // 現在の背景スタイルを取得
-  const getBackgroundStyle = () => {
-    return {
-      backgroundImage: settings.backgroundStyle === 'pixel' 
-        ? `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" viewBox="0 0 3 3"><circle cx="1.5" cy="1.5" r="0.5" fill="white" opacity="0.5"/></svg>'), linear-gradient(to bottom, transparent 50%, rgba(0, 10, 30, 0.5) 100%)`
-        : settings.backgroundStyle === 'stars'
-          ? `radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 2px), linear-gradient(to bottom, transparent 50%, rgba(0, 10, 30, 0.5) 100%)`
-          : settings.backgroundStyle === 'mountains'
-            ? `linear-gradient(rgba(6, 17, 60, 0.7) 20px, transparent 100px), linear-gradient(to bottom, transparent 90%, rgba(0, 13, 60, 0.8) 100%)`
-            : 'linear-gradient(to bottom, #000428, #004e92)',
-      backgroundSize: settings.backgroundStyle === 'pixel' 
-        ? '50px 50px, 100% 100%' 
-        : settings.backgroundStyle === 'stars'
-          ? '50px 50px, 100% 100%'
-          : '100% 100%'
-    };
   };
 
   return (
