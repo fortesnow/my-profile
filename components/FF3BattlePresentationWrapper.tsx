@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FF3BattlePresentation } from "@/components/FF3BattlePresentation";
 import Image from 'next/image';
 import Link from 'next/link';
@@ -39,6 +39,24 @@ export const FF3BattlePresentationWrapper: React.FC<FF3BattlePresentationWrapper
 }) => {
   // 最新の投稿を取得
   const latestPosts = getLatestPosts(3);
+  // レスポンシブ対応のための状態管理
+  const [isMobile, setIsMobile] = useState(false);
+
+  // 画面サイズの変更を検知して状態を更新
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    // 初期チェック
+    checkIfMobile();
+    
+    // リサイズイベントでチェック
+    window.addEventListener('resize', checkIfMobile);
+    
+    // クリーンアップ
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
 
   return (
     <div className="ff3-battle-content">
@@ -46,7 +64,7 @@ export const FF3BattlePresentationWrapper: React.FC<FF3BattlePresentationWrapper
       <div 
         className="ff3-presentation-wrapper" 
         style={{ 
-          marginTop: '60px',
+          marginTop: isMobile ? '80px' : '60px', // モバイル表示時はより大きなマージンを設定
           overflowX: 'hidden' // 横スクロールを防止
         }}
       >

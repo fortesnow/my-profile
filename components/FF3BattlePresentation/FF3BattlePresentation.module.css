@@ -609,13 +609,15 @@
 @media (max-width: 480px) {
   .battleContainer {
     min-height: 100vh;
+    /* モバイルでのセーフエリア対応（ノッチや画面上部UI考慮） */
+    padding-top: 5px;
   }
   
   .battleField {
     min-height: 200px;
   }
   
-  /* スライド内容の調整 */
+  /* スライド情報の調整 */
   .slideInfo {
     width: 95%;
     padding: 8px;
@@ -686,6 +688,62 @@
     flex: 0 0 auto;
     width: 80%;
     margin-right: 10px;
+  }
+}
+
+/* 超小型スマホ向けの調整 */
+@media (max-width: 375px) {
+  .battleContainer {
+    min-height: 90vh;
+  }
+  
+  /* さらにスペースを確保 */
+  .battleField {
+    min-height: 180px;
+    flex: 0 0 35%;
+    height: 35%;
+  }
+  
+  /* コンテンツの重ならないよう位置調整 */
+  .slideInfo {
+    top: 2%;
+    padding: 5px;
+  }
+  
+  /* フォントサイズをさらに最適化 */
+  .slideTitle {
+    font-size: clamp(0.6rem, 4vw, 0.9rem);
+    margin-bottom: 5px;
+  }
+  
+  .slideSubtitle {
+    font-size: clamp(0.4rem, 3vw, 0.7rem);
+    margin-bottom: 10px;
+  }
+  
+  .slideContent {
+    font-size: clamp(0.35rem, 2.3vw, 0.55rem);
+  }
+  
+  /* キャラクターとモンスターをさらに小さく調整 */
+  .characterContainer {
+    transform: scale(0.55);
+    bottom: 1%;
+  }
+  
+  .monsterContainer {
+    transform: translate(-50%, 50%) scale(0.55);
+  }
+  
+  /* UI要素の最適化 */
+  .dialogWindow {
+    min-height: 50px;
+  }
+  
+  .navButton {
+    min-width: 50px;
+    min-height: 30px;
+    font-size: 0.5rem;
   }
 }
 
