@@ -201,7 +201,7 @@ export default function BlogPost() {
                   </li>
                   <li className="flex items-start">
                     <span className="text-green-500 mr-2">✓</span>
-                    <span>プライバシーポリシー・免責事項の明示</span>
+                    <span>プライバシーポリシーと免責事項の明示</span>
                   </li>
                 </ul>
               </div>

@@ -155,11 +155,11 @@
 /* スライド情報 */
 .slideInfo {
   position: absolute;
-  top: 15%;
+  top: 8%;
   left: 50%;
   transform: translateX(-50%);
-  width: 70%;
-  max-width: 500px;
+  width: 80%;
+  max-width: 600px;
   background: rgba(0, 0, 0, 0.7);
   border: 4px solid;
   border-image: linear-gradient(to bottom right, #FFFFFF, #A0A0FF, #6060FF, #0000FF) 1;
@@ -167,6 +167,8 @@
   z-index: 20;
   text-align: center;
   box-shadow: 0 0 15px rgba(100, 150, 255, 0.5);
+  max-height: 85%;
+  overflow-y: auto;
 }
 
 /* スライドタイトル */
@@ -528,25 +530,37 @@
     transform: translate(-50%, 0) scale(1);
   }
   
-  /* スライド情報の調整 */
+  /* スライド情報を上部に */
   .slideInfo {
-    width: 90%;
-    top: 10%;
-    padding: 10px;
-    max-width: none;
+    width: 95%;
+    max-width: 95%;
+    padding: 8px;
+    top: 1%;
+    z-index: 25;
+    max-height: 70%;
+    overflow-y: auto;
+    font-size: clamp(0.45rem, 2.2vw, 0.6rem);
+    -webkit-overflow-scrolling: touch;
   }
   
-  /* フォントサイズの調整 */
-  .slideTitle {
-    font-size: clamp(0.8rem, 5vw, 1.2rem);
+  /* スライドの内容をモバイル向けに最適化 */
+  .slideInfo .slideTitle {
+    font-size: clamp(0.75rem, 3.8vw, 1.1rem);
+    margin-bottom: 4px;
   }
   
-  .slideSubtitle {
-    font-size: clamp(0.6rem, 4vw, 0.9rem);
+  .slideInfo .slideSubtitle {
+    font-size: clamp(0.55rem, 2.8vw, 0.85rem);
+    margin-bottom: 6px;
   }
   
-  .slideContent {
-    font-size: clamp(0.5rem, 3vw, 0.7rem);
+  .slideInfo .slideContent {
+    font-size: clamp(0.44rem, 2.1vw, 0.58rem);
+    line-height: 1.3;
+    max-height: 25vh;
+    overflow-y: auto;
+    padding-right: 5px;
+    text-align: left;
   }
   
   .windowTitle {
@@ -624,41 +638,63 @@
   }
   
   .battleField {
-    min-height: 240px; /* さらに高さを増やす (220px→240px) */
-    flex: 0 0 45%; /* 高さの比率を増やす (なし→45%) */
-    height: 45%;
+    min-height: 220px;
+    flex: 0 0 40%;
+    height: 40%;
   }
   
   /* キャラクターの配置を改善 - FF3風に右側に配置 PC表示に近づける */
   .characterContainer {
-    right: 10%; /* PCと同じ値 (5%→10%) */
+    right: 10%;
     left: auto;
-    bottom: 15%; /* PCに近い位置 (25%→15%) */
+    bottom: 12%;
     width: auto;
-    transform: scale(0.65); /* スケール調整 */
+    transform: scale(0.6);
     justify-content: flex-end;
     flex-direction: column;
-    gap: 8px; /* 間隔を広げる (5px→8px) */
-    opacity: 1; /* 透明度を解除して完全表示 (0.8→1) */
+    gap: 8px;
+    opacity: 1;
   }
   
   /* モンスターの位置調整 - FF3風に左側に配置 PC表示に近づける */
   .monsterContainer {
-    left: 10%; /* PCと同じ値 (5%→10%) */
+    left: 10%;
     right: auto;
-    bottom: 20%; /* PCと同じ値 (25%→20%) */
+    bottom: 15%;
     width: 180px;
     height: 140px;
-    transform: scale(1); /* スケール調整 */
-    opacity: 1; /* 透明度を解除して完全表示 (0.8→1) */
+    transform: scale(0.9);
+    opacity: 1;
   }
   
   /* スライド情報を上部に */
   .slideInfo {
-    width: 95%;
-    padding: 8px;
-    top: 5%; /* より上部に配置を調整 (2%→5%) */
-    z-index: 25; /* 重なり順序を上げる (20→25) */
+    width: 96%;
+    max-width: 96%;
+    padding: 5px;
+    top: 0.5%;
+    z-index: 25;
+    max-height: 75%;
+    overflow-y: auto;
+    font-size: clamp(0.42rem, 2vw, 0.55rem);
+    border-width: 2px;
+  }
+  
+  .slideInfo .slideTitle {
+    font-size: clamp(0.7rem, 3.5vw, 1rem);
+    margin-bottom: 3px;
+  }
+  
+  .slideInfo .slideSubtitle {
+    font-size: clamp(0.5rem, 2.5vw, 0.75rem);
+    margin-bottom: 4px;
+  }
+  
+  .slideInfo .slideContent {
+    font-size: clamp(0.42rem, 2vw, 0.55rem);
+    line-height: 1.2;
+    max-height: none;
+    padding-right: 3px;
   }
   
   /* コマンドウィンドウとインフォウィンドウも縦に並べる */
@@ -808,16 +844,37 @@
   
   /* バトルフィールドの高さをさらに調整 */
   .battleField {
-    min-height: 200px; /* 高さ調整 (180px→200px) */
-    flex: 0 0 40%;
-    height: 40%;
+    min-height: 190px;
+    flex: 0 0 35%;
+    height: 35%;
   }
   
-  /* コンテンツの重ならないよう位置調整 */
+  /* スライド情報をさらに最適化 */
   .slideInfo {
-    top: 3%;
-    padding: 6px;
+    top: 0.5%;
+    width: 98%;
+    max-width: 98%;
+    padding: 4px;
     z-index: 25;
+    max-height: 80%;
+    font-size: clamp(0.38rem, 1.9vw, 0.52rem);
+    border-width: 2px;
+  }
+  
+  .slideInfo .slideTitle {
+    font-size: clamp(0.65rem, 3.2vw, 0.9rem);
+    margin-bottom: 2px;
+  }
+  
+  .slideInfo .slideSubtitle {
+    font-size: clamp(0.48rem, 2.4vw, 0.7rem);
+    margin-bottom: 4px;
+  }
+  
+  .slideInfo .slideContent {
+    font-size: clamp(0.38rem, 1.9vw, 0.52rem);
+    line-height: 1.2;
+    max-height: none;
   }
   
   /* キャラクターとモンスターをさらに小さく調整 - FF3風の左右対向を維持 */
@@ -911,16 +968,37 @@
   
   /* バトルフィールドの高さをさらに調整 */
   .battleField {
-    min-height: 180px; /* 高さ調整 (160px→180px) */
-    flex: 0 0 38%; /* 比率調整 (35%→38%) */
-    height: 38%;
+    min-height: 170px;
+    flex: 0 0 33%;
+    height: 33%;
   }
   
   /* スライド情報をさらに小さく */
   .slideInfo {
-    top: 2%; /* 位置調整 (1%→2%) */
-    width: 96%; /* 幅調整 (98%→96%) */
-    padding: 4px; /* パディング調整 (3px→4px) */
+    top: 0.2%;
+    width: 98%;
+    max-width: 98%;
+    padding: 3px;
+    z-index: 25;
+    max-height: 85%;
+    font-size: clamp(0.36rem, 1.8vw, 0.48rem);
+    border-width: 1px;
+  }
+  
+  .slideInfo .slideTitle {
+    font-size: clamp(0.6rem, 3vw, 0.85rem);
+    margin-bottom: 2px;
+  }
+  
+  .slideInfo .slideSubtitle {
+    font-size: clamp(0.42rem, 2.2vw, 0.65rem);
+    margin-bottom: 3px;
+  }
+  
+  .slideInfo .slideContent {
+    font-size: clamp(0.36rem, 1.8vw, 0.48rem);
+    line-height: 1.15;
+    max-height: none;
   }
   
   /* ステータスウィンドウの調整 */
