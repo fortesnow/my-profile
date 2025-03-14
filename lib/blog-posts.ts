@@ -205,22 +205,12 @@ export const blogPosts: BlogPost[] = [
   {
     id: "studio-seo-optimization",
     slug: "studio-seo-optimization",
-    title: "StudioのSEO対策完全ガイド〜レンダリング方式から理解する根本的弱点と克服法〜",
-    date: "2025-03-02",
+    title: "StudioのSEO対策完全ガイド｜レンダリング方式から理解する根本的弱点と克服法",
+    date: "2025-03-01",
     category: "SEO対策",
     excerpt: "UniverseのStudio SEOが弱い本質的理由をSSR/CSRの技術的観点から徹底解説。内部構造を理解し、効果的に検索順位を向上させるための具体的な実装方法を紹介します。",
     thumbnail: "/blog/eye-catch/for-studio.jpg",
     author: "Stellarium マーケティング"
-  },
-  {
-    id: "medical-seo",
-    title: "医療サイトのSEO対策完全ガイド｜専門性と信頼性を高める7つの施策",
-    date: "2025-03-01",
-    excerpt: "医療サイトに特化したSEO戦略を徹底解説。Googleの医療系コンテンツに対する評価基準「E-A-T」を満たすためのコンテンツ設計から、医療キーワードの選定方法、信頼性を高めるWebサイト構造まで、成果につながる具体的な施策をご紹介します。",
-    category: "SEO",
-    slug: "medical-seo",
-    thumbnail: "/blog/eye-catch/medical-seo.jpg",
-    author: "Stellarium SEOコンサルタント"
   },
   {
     id: 1,

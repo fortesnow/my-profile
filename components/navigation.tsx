@@ -37,7 +37,7 @@ export default function Navigation() {
           <div className="flex justify-between items-center h-20">
             {/* ロゴ */}
             <Link href="/" className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              Stellarium マーケティング
+              Stellarium
             </Link>
 
             {/* PCメニュー */}
