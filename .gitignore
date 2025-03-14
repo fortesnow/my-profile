@@ -73,3 +73,7 @@ next-env.d.ts
 # LINE関連の機密ファイル
 line-config.json
 line-credentials.json
+
+# local env files
+.env
+.env*.local

@@ -3,8 +3,8 @@ import { google } from 'googleapis';
 
 async function submitSitemap() {
   try {
-    const SITE_URL = process.env.SITE_URL || 'https://www.stellarium.jp';
-    const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY || 'AIzaSyCYaoNBEdVxluhkflX_YY3LqHVmKSPYOe4';
+    const SITE_URL = process.env.SITE_URL;
+    const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 
     if (!GOOGLE_API_KEY || !SITE_URL) {
       throw new Error('環境変数GOOGLE_API_KEYまたはSITE_URLが設定されていません。');
