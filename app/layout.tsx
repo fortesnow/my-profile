@@ -46,15 +46,7 @@ export default function RootLayout({
         <GoogleTagManager />
         <Navigation />
         {children}
-        <Analytics 
-          beforeSend={(event) => {
-            // Cookieがある場合は分析から除外
-            if (typeof document !== 'undefined' && document.cookie.includes('analytics-exclude=true')) {
-              return null; // イベントをドロップ
-            }
-            return event;
-          }} 
-        />
+        <Analytics />
       </body>
     </html>
   )

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     locale: 'ja_JP',
     images: [
       {
-        url: '/blog/eye-catch/restaurant-marketing-strategy.jpg',
+        url: '/blog/eye-catch/restaurant-marketing-strategy.jpeg',
         width: 1200,
         height: 630,
         alt: '飲食店のマーケティング戦略ガイド',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '飲食店マーケティング戦略の最前線',
     description: '飲食店経営者必見のマーケティング戦略を実践例とともに徹底解説。集客からリピーター獲得まで。',
-    images: ['/blog/eye-catch/restaurant-marketing-strategy.jpg'],
+    images: ['/blog/eye-catch/restaurant-marketing-strategy.jpeg'],
     creator: '@StellariumMkt',
     site: '@StellariumMkt',
   },
