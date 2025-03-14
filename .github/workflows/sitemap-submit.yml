@@ -20,9 +20,15 @@ jobs:
       
       - name: Install dependencies
         run: npm ci
+        
+      - name: Install next-sitemap
+        run: npm install next-sitemap --save-dev
       
       - name: Generate sitemap
         run: npm run generate-sitemap
+        
+      - name: Install googleapis
+        run: npm install googleapis --save
       
       - name: Submit sitemap to Google
         run: node scripts/submit-sitemap.js

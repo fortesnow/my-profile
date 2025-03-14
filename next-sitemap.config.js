@@ -1,5 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
-module.exports = {
+export default {
   siteUrl: process.env.SITE_URL || 'https://www.stellarium.jp', // 実際の運用サイトのドメインに変更しました
   generateRobotsTxt: true,
   sitemapSize: 7000,

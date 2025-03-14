@@ -1,5 +1,9 @@
 // Google Search Consoleにサイトマップを送信するスクリプト
 import { google } from 'googleapis';
+import dotenv from 'dotenv';
+
+// 開発環境では.envファイルを読み込む
+dotenv.config();
 
 async function submitSitemap() {
   try {
@@ -19,13 +23,12 @@ async function submitSitemap() {
     });
 
     // サイトマップの送信
-    await searchconsole.sitemaps.submit({
+    const result = await searchconsole.sitemaps.submit({
       siteUrl: SITE_URL,
-      feedpath: '/sitemap.xml',
-      key: GOOGLE_API_KEY
+      feedpath: '/sitemap.xml'
     });
 
-    console.log('サイトマップの送信に成功しました');
+    console.log('サイトマップの送信に成功しました', result.status);
   } catch (error) {
     console.error('サイトマップの送信に失敗しました:', error.response?.status || error.code);
     console.error(error.response?.data || error);
