@@ -428,7 +428,7 @@ export default function SEOService() {
                   <p className="text-gray-200 leading-relaxed">
                     技術とマーケティングの両面からアプローチできることが私の強みです。単なる表面的な対策ではなく、サイト構造やビジネスモデルに合わせた本質的なSEO改善を提案します。
                   </p>
-                </div>
+              </div>
               </div>
             </div>
           </section>
@@ -785,29 +785,29 @@ export default function SEOService() {
           onClose={() => setShowModal(false)}
         />
       )}
-
-      {/* CTAセクション */}
-      <section className="text-center">
-        <div className="bg-gradient-to-br from-gray-900/80 to-blue-900/80 backdrop-blur-md rounded-lg p-8 max-w-2xl mx-auto">
-          <h2 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-            まずはご相談ください
-          </h2>
-          <p className="text-gray-300 mb-6">
-            あなたのビジネスに最適なSEO戦略をご提案いたします
-          </p>
-          <a
-            href="https://lin.ee/ATZ4bog"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold hover:scale-105 transition-transform duration-300"
-          >
-            <span>お問い合わせ</span>
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
-        </div>
-      </section>
+          
+          {/* CTAセクション */}
+          <section className="text-center">
+            <div className="bg-gradient-to-br from-gray-900/80 to-blue-900/80 backdrop-blur-md rounded-lg p-8 max-w-2xl mx-auto">
+              <h2 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                まずはご相談ください
+              </h2>
+              <p className="text-gray-300 mb-6">
+                あなたのビジネスに最適なSEO戦略をご提案いたします
+              </p>
+              <a
+                href="https://lin.ee/ATZ4bog"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold hover:scale-105 transition-transform duration-300"
+              >
+                <span>お問い合わせ</span>
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </section>
     </div>
   )
 } 
