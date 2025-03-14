@@ -103,8 +103,6 @@ export default function BlogLocalSEORuralAreas() {
             </div>
             <span className="mx-3">|</span>
             <span>2025.03.14</span>
-            <span className="mx-3">|</span>
-            <span>読了時間: 約12分</span>
           </div>
         </div>
       </div>
