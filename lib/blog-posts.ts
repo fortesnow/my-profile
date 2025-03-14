@@ -13,6 +13,16 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   // 記事を日付順に並べ替えて追加
   {
+    id: "local-seo-rural-areas",
+    title: "【2025年最新】地方でのローカルSEO対策完全ガイド｜都市部と差をつける効果的な戦略",
+    date: "2025-03-14",
+    excerpt: "地方・田舎でのローカルSEO対策を徹底解説。都市部とは異なる地域特性を活かし、Googleマップ上位表示やMEO対策など、地域密着型ビジネスの集客力を高める具体的な施策を紹介します。",
+    category: "SEO対策",
+    slug: "local-seo-rural-areas",
+    thumbnail: "/blog/eye-catch/local-seo-rural-areas.jpg",
+    author: "Stellarium マーケティング"
+  },
+  {
     id: "old-website-renewal-guide",
     title: "【2025年最新】古いホームページをリニューアルすべき5つの理由と成功事例",
     date: "2025-03-13",
@@ -333,6 +343,15 @@ export type Post = {
 // 記事一覧配列
 export const posts: Post[] = [
   // 最新の記事を上に追加
+  {
+    id: "local-seo-rural-areas",
+    title: "【2025年最新】地方でのローカルSEO対策完全ガイド｜都市部と差をつける効果的な戦略",
+    excerpt: "地方・田舎でのローカルSEO対策を徹底解説。都市部とは異なる地域特性を活かし、Googleマップ上位表示やMEO対策など、地域密着型ビジネスの集客力を高める具体的な施策を紹介します。",
+    date: "2025-03-14",
+    author: "Stellarium マーケティング",
+    categories: ["SEO対策"],
+    thumbnail: "/blog/eye-catch/local-seo-rural-areas.jpg",
+  },
   {
     id: "medical-site-seo",
     title: "医療サイトのSEO対策完全ガイド｜患者集客数を2倍にする実践テクニック",
