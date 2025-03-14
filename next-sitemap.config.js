@@ -1,14 +1,14 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://stellarium-marketing.com', // あなたのサイトのURLに変更してください
+  siteUrl: process.env.SITE_URL || 'https://yourdomain.com', // あなたの実際のドメインに変更してください
   generateRobotsTxt: true,
+  sitemapSize: 7000,
   changefreq: 'daily',
   priority: 0.7,
-  sitemapSize: 7000,
-  exclude: ['/server-sitemap.xml'],
+  outDir: 'public',
   robotsTxtOptions: {
     additionalSitemaps: [
-      'https://stellarium-marketing.com/server-sitemap.xml',
+      'https://yourdomain.com/sitemap.xml', // あなたの実際のドメインに変更してください
     ],
   },
 } 
