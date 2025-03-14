@@ -8,8 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate-sitemap": "npx next-sitemap",
-    "postinstall": "npm install next-sitemap --save-dev"
+    "generate-sitemap": "npx next-sitemap"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.4",

@@ -16,10 +16,26 @@ async function submitSitemap() {
 
     console.log('サイトマップ送信を開始:', `${SITE_URL}/sitemap.xml`);
 
+    // サービスアカウントのJSONキーを解析
+    let authClient;
+    try {
+      const keyFile = JSON.parse(GOOGLE_API_KEY);
+      authClient = new google.auth.JWT(
+        keyFile.client_email,
+        null,
+        keyFile.private_key,
+        ['https://www.googleapis.com/auth/webmasters']
+      );
+      await authClient.authorize();
+    } catch (error) {
+      console.error('認証でエラーが発生しました:', error);
+      throw error;
+    }
+
     // Search Console APIの初期化
     const searchconsole = google.searchconsole({
       version: 'v1',
-      auth: GOOGLE_API_KEY
+      auth: authClient
     });
 
     // サイトマップの送信
@@ -31,7 +47,11 @@ async function submitSitemap() {
     console.log('サイトマップの送信に成功しました', result.status);
   } catch (error) {
     console.error('サイトマップの送信に失敗しました:', error.response?.status || error.code);
-    console.error(error.response?.data || error);
+    if (error.response?.data) {
+      console.error(JSON.stringify(error.response.data, null, 2));
+    } else {
+      console.error(error);
+    }
     process.exit(1);
   }
 }
