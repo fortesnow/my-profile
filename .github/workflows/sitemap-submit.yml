@@ -28,4 +28,4 @@ jobs:
         run: node scripts/submit-sitemap.js
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-          SITE_URL: 'https://yourdomain.com'  # あなたの実際のドメインに変更してください 
+          SITE_URL: 'https://www.stellarium.jp'  # 実際の運用サイトのドメインに変更しました 
