@@ -56,7 +56,7 @@ export default function BlogRestaurantMarketingStrategy() {
       {/* ブログ記事のヘッダー */}
       <div className="relative w-full h-[50vh] min-h-[400px]">
         <Image
-          src="/blog/eye-catch/restaurant-marketing-strategy.jpg"
+          src="/blog/eye-catch/restaurant-marketing-strategy.jpeg"
           alt="飲食店のマーケティング戦略ガイド"
           fill
           className="object-cover opacity-60"

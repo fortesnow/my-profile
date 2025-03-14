@@ -29,7 +29,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "飲食店経営者必見のマーケティング戦略を徹底解説。地域密着型の集客施策からデジタルマーケティング、顧客体験設計まで、現場で即実践できる効果的な手法を具体例とともに紹介します。",
     category: "マーケティング",
     slug: "restaurant-marketing-strategy",
-    thumbnail: "/blog/eye-catch/restaurant-marketing-strategy.jpg",
+    thumbnail: "/blog/eye-catch/restaurant-marketing-strategy.jpeg",
     author: "Stellarium マーケティング"
   },
   {
@@ -379,7 +379,7 @@ export const posts: Post[] = [
     date: "2025-03-14",
     author: "Stellarium マーケティング",
     categories: ["マーケティング"],
-    thumbnail: "/blog/eye-catch/restaurant-marketing-strategy.jpg",
+    thumbnail: "/blog/eye-catch/restaurant-marketing-strategy.jpeg",
   },
   {
     id: "local-seo-rural-areas",
