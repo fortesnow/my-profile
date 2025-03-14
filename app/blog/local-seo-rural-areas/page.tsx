@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     locale: 'ja_JP',
     images: [
       {
-        url: '/blog/eye-catch/local-seo-rural-areas.jpg',
+        url: '/blog/eye-catch/local-seo-rural-areas.png',
         width: 1200,
         height: 630,
         alt: '地方・田舎でのローカルSEO対策ガイド',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '地方でのローカルSEO対策完全ガイド',
     description: '地方・田舎でのローカルSEO対策を徹底解説。地域特性を活かした実践的な戦略を公開。',
-    images: ['/blog/eye-catch/local-seo-rural-areas.jpg'],
+    images: ['/blog/eye-catch/local-seo-rural-areas.png'],
     creator: '@StellariumMkt',
     site: '@StellariumMkt',
   },
@@ -56,7 +56,7 @@ export default function BlogLocalSEORuralAreas() {
       {/* ブログ記事のヘッダー */}
       <div className="relative w-full h-[50vh] min-h-[400px]">
         <Image
-          src="/blog/eye-catch/local-seo-rural-areas.jpg"
+          src="/blog/eye-catch/local-seo-rural-areas.png"
           alt="地方・田舎でのローカルSEO対策ガイド"
           fill
           className="object-cover opacity-60"

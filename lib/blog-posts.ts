@@ -13,13 +13,33 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   // 記事を日付順に並べ替えて追加
   {
+    id: "chiropractic-seo-strategy",
+    title: "【実績公開】整骨院・整体院のSEO対策完全ガイド｜集客数を2倍にする戦略",
+    date: "2025-03-14",
+    excerpt: "整骨院・整体院のためのSEO対策を徹底解説。Googleで上位表示させるための具体的な施策から、業界特化型のコンテンツ戦略まで。地域密着型ビジネスの集客力を高める実践的なSEOノウハウを公開します。",
+    category: "SEO対策",
+    slug: "chiropractic-seo-strategy",
+    thumbnail: "/blog/eye-catch/chiropractic-seo-strategy.png",
+    author: "Stellarium マーケティング"
+  },
+  {
+    id: "restaurant-marketing-strategy",
+    title: "飲食店マーケティング戦略の最前線｜集客からリピーター獲得まで徹底解説",
+    date: "2025-03-14",
+    excerpt: "飲食店経営者必見のマーケティング戦略を徹底解説。地域密着型の集客施策からデジタルマーケティング、顧客体験設計まで、現場で即実践できる効果的な手法を具体例とともに紹介します。",
+    category: "マーケティング",
+    slug: "restaurant-marketing-strategy",
+    thumbnail: "/blog/eye-catch/restaurant-marketing-strategy.jpg",
+    author: "Stellarium マーケティング"
+  },
+  {
     id: "local-seo-rural-areas",
     title: "地方でのローカルSEO対策完全ガイド｜都市部と差をつける効果的な戦略",
     date: "2025-03-14",
     excerpt: "地方・田舎でのローカルSEO対策を徹底解説。都市部とは異なる地域特性を活かし、Googleマップ上位表示やMEO対策など、地域密着型ビジネスの集客力を高める具体的な施策を紹介します。",
     category: "SEO対策",
     slug: "local-seo-rural-areas",
-    thumbnail: "/blog/eye-catch/local-seo-rural-areas.jpg",
+    thumbnail: "/blog/eye-catch/local-seo-rural-areas.png",
     author: "Stellarium マーケティング"
   },
   {
@@ -344,13 +364,31 @@ export type Post = {
 export const posts: Post[] = [
   // 最新の記事を上に追加
   {
+    id: "chiropractic-seo-strategy",
+    title: "【実績公開】整骨院・整体院のSEO対策完全ガイド｜集客数を2倍にする戦略",
+    excerpt: "整骨院・整体院のためのSEO対策を徹底解説。Googleで上位表示させるための具体的な施策から、業界特化型のコンテンツ戦略まで。地域密着型ビジネスの集客力を高める実践的なSEOノウハウを公開します。",
+    date: "2025-03-14",
+    author: "Stellarium マーケティング",
+    categories: ["SEO対策"],
+    thumbnail: "/blog/eye-catch/chiropractic-seo-strategy.png",
+  },
+  {
+    id: "restaurant-marketing-strategy",
+    title: "飲食店マーケティング戦略の最前線｜集客からリピーター獲得まで徹底解説",
+    excerpt: "飲食店経営者必見のマーケティング戦略を徹底解説。地域密着型の集客施策からデジタルマーケティング、顧客体験設計まで、現場で即実践できる効果的な手法を具体例とともに紹介します。",
+    date: "2025-03-14",
+    author: "Stellarium マーケティング",
+    categories: ["マーケティング"],
+    thumbnail: "/blog/eye-catch/restaurant-marketing-strategy.jpg",
+  },
+  {
     id: "local-seo-rural-areas",
     title: "地方でのローカルSEO対策完全ガイド｜都市部と差をつける効果的な戦略",
     excerpt: "地方・田舎でのローカルSEO対策を徹底解説。都市部とは異なる地域特性を活かし、Googleマップ上位表示やMEO対策など、地域密着型ビジネスの集客力を高める具体的な施策を紹介します。",
     date: "2025-03-14",
     author: "Stellarium マーケティング",
     categories: ["SEO対策"],
-    thumbnail: "/blog/eye-catch/local-seo-rural-areas.jpg",
+    thumbnail: "/blog/eye-catch/local-seo-rural-areas.png",
   },
   {
     id: "medical-site-seo",
