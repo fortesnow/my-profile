@@ -13,6 +13,16 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   // 記事を日付順に並べ替えて追加
   {
+    id: "business-account-website-requirement",
+    title: "法人口座の開設や融資申請でホームページは必要？実務家が解説する真実",
+    date: "2025-03-15",
+    excerpt: "法人口座の開設や事業融資の申請時にホームページは必要なのか、実務家の視点から徹底解説。審査に与える影響や、ホームページがない場合の対応策、効果的なホームページの作り方まで網羅。",
+    category: "Webサイト活用",
+    slug: "business-account-website-requirement",
+    thumbnail: "/blog/eye-catch/business-account-website-requirement.png",
+    author: "Stellarium マーケティング"
+  },
+  {
     id: "chiropractic-seo-strategy",
     title: "【実績公開】整骨院・整体院のSEO対策完全ガイド｜集客数を2倍にする戦略",
     date: "2025-03-14",

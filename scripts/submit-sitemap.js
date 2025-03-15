@@ -7,14 +7,22 @@ dotenv.config();
 
 async function submitSitemap() {
   try {
-    const SITE_URL = process.env.SITE_URL;
+    let SITE_URL = process.env.SITE_URL;
     const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 
     if (!GOOGLE_API_KEY || !SITE_URL) {
       throw new Error('環境変数GOOGLE_API_KEYまたはSITE_URLが設定されていません。');
     }
 
-    console.log('サイトマップ送信を開始:', `${SITE_URL}/sitemap.xml`);
+    // ドメインプロパティの場合は「sc-domain:」プレフィックスを追加
+    // URLプレフィックスの場合はそのまま使用
+    if (!SITE_URL.startsWith('sc-domain:') && !SITE_URL.startsWith('http')) {
+      SITE_URL = `sc-domain:${SITE_URL.replace(/^(https?:\/\/)?(www\.)?/, '')}`;
+      console.log('ドメインプロパティとして処理します:', SITE_URL);
+    }
+
+    console.log('サイトマップ送信を開始:', `${process.env.SITE_URL}/sitemap.xml`);
+    console.log('Search Console API使用サイトURL:', SITE_URL);
 
     // サービスアカウントのJSONキーを解析
     let authClient;
@@ -26,7 +34,10 @@ async function submitSitemap() {
         keyFile.private_key,
         ['https://www.googleapis.com/auth/webmasters']
       );
+      
+      console.log('使用するサービスアカウント:', keyFile.client_email);
       await authClient.authorize();
+      console.log('認証成功');
     } catch (error) {
       console.error('認証でエラーが発生しました:', error);
       throw error;
@@ -37,6 +48,17 @@ async function submitSitemap() {
       version: 'v1',
       auth: authClient
     });
+
+    // サイトの権限確認
+    try {
+      const sites = await searchconsole.sites.list();
+      console.log('アクセス可能なサイト一覧:');
+      sites.data.siteEntry?.forEach(site => {
+        console.log(`- ${site.siteUrl} (${site.permissionLevel})`);
+      });
+    } catch (siteError) {
+      console.error('サイト一覧取得エラー:', siteError.message);
+    }
 
     // サイトマップの送信
     const result = await searchconsole.sitemaps.submit({
