@@ -271,29 +271,29 @@ export default function CrmMarketingCustomerAcquisition() {
                 </thead>
                 <tbody className="divide-y divide-slate-700">
                   <tr>
-                    <td className="px-4 py-3 whitespace-nowrap text-white">リードナーチャリングメール</td>
-                    <td className="px-4 py-3 text-white">見込み客の育成、コンバージョン率向上</td>
-                    <td className="px-4 py-3 text-white">★★☆☆☆</td>
+                    <td className="px-4 py-3 whitespace-normal md:whitespace-nowrap text-white text-xs md:text-sm">リードナーチャリングメール</td>
+                    <td className="px-4 py-3 text-white text-xs md:text-sm">見込み客の育成、コンバージョン率向上</td>
+                    <td className="px-4 py-3 text-white text-xs md:text-sm">★★☆☆☆</td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-3 whitespace-nowrap text-white">リードスコアリング</td>
-                    <td className="px-4 py-3 text-white">営業リソースの最適配分、成約率向上</td>
-                    <td className="px-4 py-3 text-white">★★★☆☆</td>
+                    <td className="px-4 py-3 whitespace-normal md:whitespace-nowrap text-white text-xs md:text-sm">リードスコアリング</td>
+                    <td className="px-4 py-3 text-white text-xs md:text-sm">営業リソースの最適配分、成約率向上</td>
+                    <td className="px-4 py-3 text-white text-xs md:text-sm">★★★☆☆</td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-3 whitespace-nowrap text-white">ウェブサイト行動に基づくトリガーメール</td>
-                    <td className="px-4 py-3 text-white">タイムリーなアプローチによる購買促進</td>
-                    <td className="px-4 py-3 text-white">★★★☆☆</td>
+                    <td className="px-4 py-3 whitespace-normal md:whitespace-nowrap text-white text-xs md:text-sm">ウェブサイト行動に基づくトリガーメール</td>
+                    <td className="px-4 py-3 text-white text-xs md:text-sm">タイムリーなアプローチによる購買促進</td>
+                    <td className="px-4 py-3 text-white text-xs md:text-sm">★★★☆☆</td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-3 whitespace-nowrap text-white">SNS投稿の自動化</td>
-                    <td className="px-4 py-3 text-white">認知拡大、ブランディング強化</td>
-                    <td className="px-4 py-3 text-white">★☆☆☆☆</td>
+                    <td className="px-4 py-3 whitespace-normal md:whitespace-nowrap text-white text-xs md:text-sm">SNS投稿の自動化</td>
+                    <td className="px-4 py-3 text-white text-xs md:text-sm">認知拡大、ブランディング強化</td>
+                    <td className="px-4 py-3 text-white text-xs md:text-sm">★☆☆☆☆</td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-3 whitespace-nowrap text-white">再購入リマインド</td>
-                    <td className="px-4 py-3 text-white">顧客生涯価値の向上、リピート率増加</td>
-                    <td className="px-4 py-3 text-white">★★☆☆☆</td>
+                    <td className="px-4 py-3 whitespace-normal md:whitespace-nowrap text-white text-xs md:text-sm">再購入リマインド</td>
+                    <td className="px-4 py-3 text-white text-xs md:text-sm">顧客生涯価値の向上、リピート率増加</td>
+                    <td className="px-4 py-3 text-white text-xs md:text-sm">★★☆☆☆</td>
                   </tr>
                 </tbody>
               </table>
@@ -301,15 +301,15 @@ export default function CrmMarketingCustomerAcquisition() {
 
             <h3 className="text-xl font-bold text-indigo-300 mt-8 mb-4">CRMを活用した集客自動化の具体例</h3>
 
-            <div className="bg-gradient-to-r from-cyan-900/20 to-indigo-900/20 rounded-lg p-6 my-6 border border-cyan-800/20">
+            <div className="bg-gradient-to-r from-cyan-900/20 to-indigo-900/20 rounded-lg p-4 md:p-6 my-6 border border-cyan-800/20">
               <h4 className="text-lg font-bold text-white mb-4">リードナーチャリングの自動化フロー事例</h4>
               
               <div className="flex flex-col space-y-3">
                 <div className="flex items-start relative">
                   <div className="bg-cyan-900/50 text-cyan-300 rounded-full w-8 h-8 flex items-center justify-center font-medium mr-3 flex-shrink-0 z-10">1</div>
-                  <div className="bg-slate-800/80 rounded-lg p-4 flex-grow border border-slate-700/50">
-                    <h5 className="font-medium text-cyan-300">トリガー：資料ダウンロード</h5>
-                    <p className="mt-1 text-white text-sm">ユーザーが自社サイトで資料をダウンロードした時点でCRMにリード情報が登録される</p>
+                  <div className="bg-slate-800/80 rounded-lg p-3 md:p-4 flex-grow border border-slate-700/50">
+                    <h5 className="font-medium text-cyan-300 text-sm md:text-base">トリガー：資料ダウンロード</h5>
+                    <p className="mt-1 text-white text-xs md:text-sm">ユーザーが自社サイトで資料をダウンロードした時点でCRMにリード情報が登録される</p>
                   </div>
                 </div>
                 
@@ -317,9 +317,9 @@ export default function CrmMarketingCustomerAcquisition() {
 
                 <div className="flex items-start relative">
                   <div className="bg-cyan-900/50 text-cyan-300 rounded-full w-8 h-8 flex items-center justify-center font-medium mr-3 flex-shrink-0 z-10">2</div>
-                  <div className="bg-slate-800/80 rounded-lg p-4 flex-grow border border-slate-700/50">
-                    <h5 className="font-medium text-cyan-300">自動アクション：お礼メール（Day 0）</h5>
-                    <p className="mt-1 text-white text-sm">資料ダウンロードのお礼と、関連する追加情報へのリンクを自動送信</p>
+                  <div className="bg-slate-800/80 rounded-lg p-3 md:p-4 flex-grow border border-slate-700/50">
+                    <h5 className="font-medium text-cyan-300 text-sm md:text-base">自動アクション：お礼メール（Day 0）</h5>
+                    <p className="mt-1 text-white text-xs md:text-sm">資料ダウンロードのお礼と、関連する追加情報へのリンクを自動送信</p>
                   </div>
                 </div>
 
@@ -327,9 +327,9 @@ export default function CrmMarketingCustomerAcquisition() {
 
                 <div className="flex items-start relative">
                   <div className="bg-cyan-900/50 text-cyan-300 rounded-full w-8 h-8 flex items-center justify-center font-medium mr-3 flex-shrink-0 z-10">3</div>
-                  <div className="bg-slate-800/80 rounded-lg p-4 flex-grow border border-slate-700/50">
-                    <h5 className="font-medium text-cyan-300">条件分岐：メール開封確認（Day 3）</h5>
-                    <p className="mt-1 text-white text-sm">最初のメールを開封したユーザーとそうでないユーザーでフローを分岐</p>
+                  <div className="bg-slate-800/80 rounded-lg p-3 md:p-4 flex-grow border border-slate-700/50">
+                    <h5 className="font-medium text-cyan-300 text-sm md:text-base">条件分岐：メール開封確認（Day 3）</h5>
+                    <p className="mt-1 text-white text-xs md:text-sm">最初のメールを開封したユーザーとそうでないユーザーでフローを分岐</p>
                   </div>
                 </div>
 
@@ -337,9 +337,9 @@ export default function CrmMarketingCustomerAcquisition() {
 
                 <div className="flex items-start relative">
                   <div className="bg-cyan-900/50 text-cyan-300 rounded-full w-8 h-8 flex items-center justify-center font-medium mr-3 flex-shrink-0 z-10">4</div>
-                  <div className="bg-slate-800/80 rounded-lg p-4 flex-grow border border-slate-700/50">
-                    <h5 className="font-medium text-cyan-300">自動アクション：価値提供コンテンツ（Day 7）</h5>
-                    <p className="mt-1 text-white text-sm">業界の課題解決に役立つ独自コンテンツを提供し、興味関心を深める</p>
+                  <div className="bg-slate-800/80 rounded-lg p-3 md:p-4 flex-grow border border-slate-700/50">
+                    <h5 className="font-medium text-cyan-300 text-sm md:text-base">自動アクション：価値提供コンテンツ（Day 7）</h5>
+                    <p className="mt-1 text-white text-xs md:text-sm">業界の課題解決に役立つ独自コンテンツを提供し、興味関心を深める</p>
                   </div>
                 </div>
 
@@ -347,9 +347,9 @@ export default function CrmMarketingCustomerAcquisition() {
 
                 <div className="flex items-start relative">
                   <div className="bg-cyan-900/50 text-cyan-300 rounded-full w-8 h-8 flex items-center justify-center font-medium mr-3 flex-shrink-0 z-10">5</div>
-                  <div className="bg-slate-800/80 rounded-lg p-4 flex-grow border border-slate-700/50">
-                    <h5 className="font-medium text-cyan-300">自動アクション：無料相談・デモ案内（Day 14）</h5>
-                    <p className="mt-1 text-white text-sm">興味を示したユーザーに対し、無料相談やデモの予約ページへの誘導メールを送信</p>
+                  <div className="bg-slate-800/80 rounded-lg p-3 md:p-4 flex-grow border border-slate-700/50">
+                    <h5 className="font-medium text-cyan-300 text-sm md:text-base">自動アクション：無料相談・デモ案内（Day 14）</h5>
+                    <p className="mt-1 text-white text-xs md:text-sm">興味を示したユーザーに対し、無料相談やデモの予約ページへの誘導メールを送信</p>
                   </div>
                 </div>
               </div>
@@ -434,26 +434,26 @@ export default function CrmMarketingCustomerAcquisition() {
 
             <h3 className="text-xl font-bold text-indigo-300 mt-8 mb-4">集客を強化するパーソナライズの段階</h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 my-8">
-              <div className="bg-gradient-to-b from-slate-800/90 to-slate-800/70 p-5 rounded-xl border border-slate-700/50">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 my-8">
+              <div className="bg-gradient-to-b from-slate-800/90 to-slate-800/70 p-4 md:p-5 rounded-xl border border-slate-700/50">
                 <div className="bg-indigo-900/50 text-indigo-300 rounded-full w-10 h-10 flex items-center justify-center font-medium mb-4 border border-indigo-700/30">1</div>
-                <h4 className="font-bold text-cyan-400 mb-3">基本情報の活用</h4>
-                <p className="text-sm text-white">名前、所属、役職などの基本情報を使ったパーソナライズ。単純ながらも効果的で、「○○様へ」と名前を呼ぶだけでも開封率が向上。</p>
+                <h4 className="font-bold text-cyan-400 mb-3 text-sm md:text-base">基本情報の活用</h4>
+                <p className="text-xs md:text-sm text-white">名前、所属、役職などの基本情報を使ったパーソナライズ。単純ながらも効果的で、「○○様へ」と名前を呼ぶだけでも開封率が向上。</p>
               </div>
-              <div className="bg-gradient-to-b from-slate-800/90 to-slate-800/70 p-5 rounded-xl border border-slate-700/50">
+              <div className="bg-gradient-to-b from-slate-800/90 to-slate-800/70 p-4 md:p-5 rounded-xl border border-slate-700/50">
                 <div className="bg-indigo-900/50 text-indigo-300 rounded-full w-10 h-10 flex items-center justify-center font-medium mb-4 border border-indigo-700/30">2</div>
-                <h4 className="font-bold text-cyan-400 mb-3">行動ベース</h4>
-                <p className="text-sm text-white">Webサイトでの行動履歴に基づくパーソナライズ。特定ページの閲覧履歴から興味を推測し、関連コンテンツを提案。</p>
+                <h4 className="font-bold text-cyan-400 mb-3 text-sm md:text-base">行動ベース</h4>
+                <p className="text-xs md:text-sm text-white">Webサイトでの行動履歴に基づくパーソナライズ。特定ページの閲覧履歴から興味を推測し、関連コンテンツを提案。</p>
               </div>
-              <div className="bg-gradient-to-b from-slate-800/90 to-slate-800/70 p-5 rounded-xl border border-slate-700/50">
+              <div className="bg-gradient-to-b from-slate-800/90 to-slate-800/70 p-4 md:p-5 rounded-xl border border-slate-700/50">
                 <div className="bg-indigo-900/50 text-indigo-300 rounded-full w-10 h-10 flex items-center justify-center font-medium mb-4 border border-indigo-700/30">3</div>
-                <h4 className="font-bold text-cyan-400 mb-3">コンテキスト活用</h4>
-                <p className="text-sm text-white">アクセス時間帯、デバイス、地域などの文脈情報を活用。たとえば、モバイルからのアクセスが多いユーザーにはモバイルに最適化したコンテンツを提供。</p>
+                <h4 className="font-bold text-cyan-400 mb-3 text-sm md:text-base">コンテキスト活用</h4>
+                <p className="text-xs md:text-sm text-white">アクセス時間帯、デバイス、地域などの文脈情報を活用。たとえば、モバイルからのアクセスが多いユーザーにはモバイルに最適化したコンテンツを提供。</p>
               </div>
-              <div className="bg-gradient-to-b from-slate-800/90 to-slate-800/70 p-5 rounded-xl border border-slate-700/50">
+              <div className="bg-gradient-to-b from-slate-800/90 to-slate-800/70 p-4 md:p-5 rounded-xl border border-slate-700/50">
                 <div className="bg-indigo-900/50 text-indigo-300 rounded-full w-10 h-10 flex items-center justify-center font-medium mb-4 border border-indigo-700/30">4</div>
-                <h4 className="font-bold text-cyan-400 mb-3">予測型パーソナライズ</h4>
-                <p className="text-sm text-white">AI技術を活用した高度なレコメンデーション。過去の行動パターンから次の行動を予測し、先回りした提案を実施。</p>
+                <h4 className="font-bold text-cyan-400 mb-3 text-sm md:text-base">予測型パーソナライズ</h4>
+                <p className="text-xs md:text-sm text-white">AI技術を活用した高度なレコメンデーション。過去の行動パターンから次の行動を予測し、先回りした提案を実施。</p>
               </div>
             </div>
 
@@ -579,43 +579,45 @@ export default function CrmMarketingCustomerAcquisition() {
 
             <h3 className="text-xl font-bold text-indigo-300 mt-8 mb-4">集客最適化のための重要指標</h3>
 
-            <div className="overflow-x-auto">
-              <table className="min-w-full bg-slate-800/50 rounded-lg overflow-hidden my-6 border border-slate-700/30">
-                <thead className="bg-slate-800/80">
-                  <tr>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">指標カテゴリ</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">具体的指標</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">意義</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">分析時の注目点</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-700">
-                  <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-white">アクセス指標</td>
-                    <td className="px-6 py-4 text-sm text-white">訪問者数、PV数<br/>滞在時間、直帰率</td>
-                    <td className="px-6 py-4 text-sm text-white">集客の量的評価<br/>コンテンツの初期評価</td>
-                    <td className="px-6 py-4 text-sm text-white">セグメント別比較<br/>時間帯/曜日別傾向</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-white">獲得指標</td>
-                    <td className="px-6 py-4 text-sm text-white">リード獲得数<br/>獲得単価(CPL)<br/>CVR(コンバージョン率)</td>
-                    <td className="px-6 py-4 text-sm text-white">集客施策の効率性<br/>投資対効果</td>
-                    <td className="px-6 py-4 text-sm text-white">チャネル別比較<br/>ターゲット属性別効果</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-white">エンゲージメント指標</td>
-                    <td className="px-6 py-4 text-sm text-white">コンテンツ消費率<br/>メール開封/クリック率<br/>資料ダウンロード率</td>
-                    <td className="px-6 py-4 text-sm text-white">ユーザーの関心度<br/>コンテンツの魅力度</td>
-                    <td className="px-6 py-4 text-sm text-white">高エンゲージ要素特定<br/>ドロップオフポイント分析</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-white">品質指標</td>
-                    <td className="px-6 py-4 text-sm text-white">SQL率(商談化率)<br/>商談成約率<br/>初期解約率</td>
-                    <td className="px-6 py-4 text-sm text-white">獲得リードの質<br/>長期的ROI評価</td>
-                    <td className="px-6 py-4 text-sm text-white">獲得源別質の差<br/>リードスコア妥当性</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div className="overflow-x-auto -mx-4 sm:mx-0">
+              <div className="inline-block min-w-full align-middle">
+                <table className="min-w-full bg-slate-800/50 rounded-lg overflow-hidden my-6 border border-slate-700/30">
+                  <thead className="bg-slate-800/80">
+                    <tr>
+                      <th className="px-3 md:px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">指標カテゴリ</th>
+                      <th className="px-3 md:px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">具体的指標</th>
+                      <th className="px-3 md:px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">意義</th>
+                      <th className="px-3 md:px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">分析時の注目点</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-700">
+                    <tr>
+                      <td className="px-3 md:px-6 py-4 whitespace-normal text-xs md:text-sm text-white">アクセス指標</td>
+                      <td className="px-3 md:px-6 py-4 text-xs md:text-sm text-white">訪問者数、PV数<br/>滞在時間、直帰率</td>
+                      <td className="px-3 md:px-6 py-4 text-xs md:text-sm text-white">集客の量的評価<br/>コンテンツの初期評価</td>
+                      <td className="px-3 md:px-6 py-4 text-xs md:text-sm text-white">セグメント別比較<br/>時間帯/曜日別傾向</td>
+                    </tr>
+                    <tr>
+                      <td className="px-3 md:px-6 py-4 whitespace-normal text-xs md:text-sm text-white">獲得指標</td>
+                      <td className="px-3 md:px-6 py-4 text-xs md:text-sm text-white">リード獲得数<br/>獲得単価(CPL)<br/>CVR(コンバージョン率)</td>
+                      <td className="px-3 md:px-6 py-4 text-xs md:text-sm text-white">集客施策の効率性<br/>投資対効果</td>
+                      <td className="px-3 md:px-6 py-4 text-xs md:text-sm text-white">チャネル別比較<br/>ターゲット属性別効果</td>
+                    </tr>
+                    <tr>
+                      <td className="px-3 md:px-6 py-4 whitespace-normal text-xs md:text-sm text-white">エンゲージメント指標</td>
+                      <td className="px-3 md:px-6 py-4 text-xs md:text-sm text-white">コンテンツ消費率<br/>メール開封/クリック率<br/>資料ダウンロード率</td>
+                      <td className="px-3 md:px-6 py-4 text-xs md:text-sm text-white">ユーザーの関心度<br/>コンテンツの魅力度</td>
+                      <td className="px-3 md:px-6 py-4 text-xs md:text-sm text-white">高エンゲージ要素特定<br/>ドロップオフポイント分析</td>
+                    </tr>
+                    <tr>
+                      <td className="px-3 md:px-6 py-4 whitespace-normal text-xs md:text-sm text-white">品質指標</td>
+                      <td className="px-3 md:px-6 py-4 text-xs md:text-sm text-white">SQL率(商談化率)<br/>商談成約率<br/>初期解約率</td>
+                      <td className="px-3 md:px-6 py-4 text-xs md:text-sm text-white">獲得リードの質<br/>長期的ROI評価</td>
+                      <td className="px-3 md:px-6 py-4 text-xs md:text-sm text-white">獲得源別質の差<br/>リードスコア妥当性</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
 
             <div className="bg-gradient-to-r from-slate-900 to-indigo-900/10 p-6 rounded-lg my-8 border border-slate-700/30">
@@ -723,23 +725,23 @@ export default function CrmMarketingCustomerAcquisition() {
 
             {/* CTA */}
             <div className="bg-gradient-to-r from-indigo-900 to-cyan-900 rounded-lg overflow-hidden shadow-lg mt-12">
-              <div className="px-6 py-8 sm:p-10">
-                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+              <div className="px-4 py-6 sm:p-8 md:p-10">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4">
                   CRMマーケティングで集客力を2倍に！専門家による無料診断実施中
                 </h2>
-                <p className="text-white text-lg mb-6">
+                <p className="text-white text-sm md:text-lg mb-6">
                   「どこから始めればいいのか分からない」「現状のCRM活用に課題がある」という方に。マーケティング戦略のプロフェッショナルが、あなたのビジネスに最適なCRM集客戦略をご提案します。まずは無料診断からお気軽にどうぞ。
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link 
                     href="/services/marketing-service" 
-                    className="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition-colors text-center"
+                    className="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition-colors text-center text-sm md:text-base"
                   >
                     マーケティングサービスを見る
                   </Link>
                   <Link 
                     href="/contact" 
-                    className="bg-transparent text-white border-2 border-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:bg-opacity-10 transition-colors text-center"
+                    className="bg-transparent text-white border-2 border-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:bg-opacity-10 transition-colors text-center text-sm md:text-base"
                   >
                     まずは無料相談する
                   </Link>
