@@ -64,7 +64,7 @@ export const FF3BattlePresentationWrapper: React.FC<FF3BattlePresentationWrapper
       <div 
         className="ff3-presentation-wrapper" 
         style={{ 
-          marginTop: isMobile ? '80px' : '60px', // モバイル表示時はより大きなマージンを設定
+          marginTop: isMobile ? '80px' : '100px', // PCの場合は100pxに変更（元は60px）
           overflowX: 'hidden' // 横スクロールを防止
         }}
       >
