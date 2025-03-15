@@ -14,9 +14,9 @@ export const blogPosts: BlogPost[] = [
   // 記事を日付順に並べ替えて追加
   {
     id: "crm-marketing-customer-acquisition",
-    title: "CRMマーケティングで顧客獲得率が2倍に！実証済み集客テクニック",
+    title: "CRMマーケティングで売上増加！集客で無視出来ない実践テクニック",
     date: "2025-03-15",
-    excerpt: "CRMマーケティングを活用した効果的な集客方法をご紹介。顧客データの戦略的活用、ターゲティングの精度向上、自動化とパーソナライズの実践方法など、集客力を2倍に高める実証済みテクニックを解説します。",
+    excerpt: "CRMマーケティングを活用して売上を増加させる実践的テクニックを解説。顧客データの戦略的活用から効率的な集客施策まで、ビジネス成長に必須の方法論をご紹介します。",
     category: "マーケティング",
     slug: "crm-marketing-customer-acquisition",
     thumbnail: "/blog/eye-catch/crm-marketing-customer-acquisition.png",
@@ -375,8 +375,8 @@ export const posts: Post[] = [
   // 最新の記事を上に追加
   {
     id: "crm-marketing-customer-acquisition",
-    title: "CRMマーケティングで顧客獲得率が2倍に！実証済み集客テクニック",
-    excerpt: "CRMマーケティングを活用した効果的な集客方法をご紹介。顧客データの戦略的活用、ターゲティングの精度向上、自動化とパーソナライズの実践方法など、集客力を2倍に高める実証済みテクニックを解説します。",
+    title: "CRMマーケティングで売上増加！集客で無視出来ない実践テクニック",
+    excerpt: "CRMマーケティングを活用して売上を増加させる実践的テクニックを解説。顧客データの戦略的活用から効率的な集客施策まで、ビジネス成長に必須の方法論をご紹介します。",
     date: "2025-03-15",
     author: "Stellarium マーケティング",
     categories: ["マーケティング", "CRM"],

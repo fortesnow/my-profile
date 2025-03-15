@@ -39,7 +39,7 @@ export default function CrmMarketingCustomerAcquisition() {
           </div>
           
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white max-w-4xl leading-tight">
-            CRMマーケティングで顧客獲得率が2倍に！実証済み集客テクニック
+            CRMマーケティングで売上増加！集客で無視出来ない実践テクニック
           </h1>
           
           <div className="flex items-center mt-6 text-white">
@@ -65,15 +65,15 @@ export default function CrmMarketingCustomerAcquisition() {
           <div className="prose prose-lg prose-invert max-w-none">
             {/* イントロダクション */}
             <p className="lead text-xl text-cyan-300 font-medium">
-              昨今のビジネス環境で顧客を獲得し続けるのは簡単ではありません。特に競合が多い業界では、単に広告を出稿するだけでは十分な成果を得られないことも。そんな中、CRMマーケティングを駆使した集客戦略が注目を集めています。
+              昨今のビジネス環境で売上を伸ばし続けるのは簡単ではありません。特に競合が多い業界では、単に広告を出稿するだけでは十分な成果を得られないことも。そんな中、CRMマーケティングを駆使した集客戦略から売上増加へつなげるアプローチが注目を集めています。
             </p>
             
             <p className="text-white">
-              CRM（Customer Relationship Management）は「顧客関係管理」と訳されますが、単なる顧客データの管理システムではありません。適切に活用すれば強力な集客ツールになり得るのです。
+              CRM（Customer Relationship Management）は「顧客関係管理」と訳されますが、単なる顧客データの管理システムではありません。適切に活用すれば強力な売上向上ツールになり得るのです。
             </p>
             
             <p className="text-white">
-              私たちが500社以上のマーケティング支援を行ってきた経験から言えるのは、CRMを集客に活かせている企業とそうでない企業では、新規顧客の獲得率に約2倍の差がついているという事実です。この記事では、CRMマーケティングを活用した効果的な集客手法を具体的に解説します。
+              私たちが500社以上のマーケティング支援を行ってきた経験から言えるのは、CRMを集客から売上向上に活かせている企業とそうでない企業では、最終的な売上げに約2倍の差がついているという事実です。この記事では、CRMマーケティングを活用した効果的な集客から売上増加につなげる手法を具体的に解説します。
             </p>
             
             <div className="bg-slate-800/50 p-6 rounded-lg my-8 border border-slate-700/30">
@@ -81,38 +81,38 @@ export default function CrmMarketingCustomerAcquisition() {
               <ul className="space-y-2 text-white">
                 <li className="flex items-start">
                   <span className="text-cyan-400 mr-2">✓</span>
-                  <span>CRMマーケティングの基本と集客への活用方法</span>
+                  <span>CRMマーケティングの基本と売上向上への活用方法</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-cyan-400 mr-2">✓</span>
-                  <span>顧客データを活用した効果的なターゲティング手法</span>
+                  <span>顧客データを活用した効果的なターゲティングと収益化手法</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-cyan-400 mr-2">✓</span>
-                  <span>CRMツールを使った自動化で集客効率を高める方法</span>
+                  <span>CRMツールを使った自動化で集客から売上までの効率を高める方法</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-cyan-400 mr-2">✓</span>
-                  <span>コンバージョン率を向上させるパーソナライズ戦略</span>
+                  <span>コンバージョン率と客単価を向上させるパーソナライズ戦略</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-cyan-400 mr-2">✓</span>
-                  <span>データ分析に基づく集客戦略の最適化プロセス</span>
+                  <span>データ分析に基づく売上最大化のための最適化プロセス</span>
                 </li>
               </ul>
             </div>
 
-            <h2 className="text-2xl font-bold text-cyan-400 mt-12 mb-6" id="crm-marketing-basics">1. CRMマーケティングとは？集客における可能性</h2>
+            <h2 className="text-2xl font-bold text-cyan-400 mt-12 mb-6" id="crm-marketing-basics">1. CRMマーケティングとは？売上向上における可能性</h2>
             
             <p className="text-white">
-              CRMマーケティングとは、顧客データを戦略的に活用して、ターゲットに最適化されたマーケティング活動を行うアプローチです。従来の「とにかく多くの人に見てもらう」という手法と異なり、「最も反応しそうな人に、最適なタイミングで、最適なメッセージを届ける」という考え方がベースになっています。
+              CRMマーケティングとは、顧客データを戦略的に活用して、ターゲットに最適化されたマーケティング活動を行い、最終的な売上向上を目指すアプローチです。従来の「とにかく多くの人に見てもらう」という手法と異なり、「最も反応しそうな人に、最適なタイミングで、最適なメッセージを届け、購入や契約につなげる」という考え方がベースになっています。
             </p>
 
             <p className="text-white">
               CRMの核となるのは顧客データです。購入履歴、問い合わせ内容、Webサイトでの行動パターン、メール開封率など、様々なデータを収集・分析し、それに基づいたマーケティング施策を展開します。
             </p>
 
-            <h3 className="text-xl font-bold text-indigo-300 mt-8 mb-4">なぜ今CRMマーケティングが集客に効果的なのか</h3>
+            <h3 className="text-xl font-bold text-indigo-300 mt-8 mb-4">なぜ今CRMマーケティングが売上向上に効果的なのか</h3>
             
             <div className="bg-slate-800/80 p-5 rounded-lg my-6 border border-slate-700/50">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -129,14 +129,14 @@ export default function CrmMarketingCustomerAcquisition() {
                   <p className="text-sm text-white">AIや機械学習の発展により、膨大な顧客データからパターンを見出し、予測モデルを構築することが可能に。これにより、高度にパーソナライズされた集客アプローチが実現します。</p>
                 </div>
                 <div>
-                  <h4 className="font-bold text-cyan-400 mb-3">コスト効率の重要性</h4>
-                  <p className="text-sm text-white">経済情勢の変化に伴い、企業は効率的なマーケティング投資を求めています。CRMマーケティングは既存の顧客データを活用するため、新規リード獲得コストを抑えられます。</p>
+                  <h4 className="font-bold text-cyan-400 mb-3">コスト効率と売上最大化</h4>
+                  <p className="text-sm text-white">経済情勢の変化に伴い、企業は効率的なマーケティング投資と売上最大化を求めています。CRMマーケティングは既存の顧客データを活用するため、新規リード獲得コストを抑えながら、既存顧客からの売上も増加させることができます。</p>
                 </div>
               </div>
             </div>
 
             <p className="text-white">
-              CRMマーケティングの本質は「顧客理解」です。ただデータを集めるだけでなく、そこから「この顧客は何を求めているのか」「どんなタイミングで接点を持つべきか」といった洞察を得ることが重要なのです。
+              CRMマーケティングの本質は「顧客理解と売上向上」です。ただデータを集めるだけでなく、そこから「この顧客は何を求めているのか」「どんなタイミングで、どんな商品・サービスを提案すべきか」といった売上に直結する洞察を得ることが重要なのです。
             </p>
 
             <p className="text-white">
@@ -684,53 +684,53 @@ export default function CrmMarketingCustomerAcquisition() {
               データ分析はCRMマーケティングの羅針盤です。「なんとなく効果がありそう」という勘や経験だけでなく、データに基づいた意思決定を行うことで、集客効果は確実に向上します。特に継続的な改善を行うことで、時間の経過とともに競合との差は広がっていくでしょう。
             </p>
 
-            <h2 className="text-2xl font-bold text-cyan-400 mt-12 mb-6" id="conclusion">まとめ：CRMマーケティングで集客力を高めるために</h2>
+            <h2 className="text-2xl font-bold text-cyan-400 mt-12 mb-6" id="conclusion">まとめ：CRMマーケティングで売上を高めるために</h2>
             
             <p className="text-white">
-              本記事では、CRMマーケティングを活用した効果的な集客方法について解説してきました。重要なポイントをまとめると以下の通りです：
+              本記事では、CRMマーケティングを活用した効果的な集客方法と売上向上策について解説してきました。重要なポイントをまとめると以下の通りです：
             </p>
 
             <div className="bg-slate-800/50 p-6 rounded-lg my-6 border border-slate-700/30">
               <ul className="space-y-3 text-white">
                 <li className="flex items-start">
                   <div className="bg-cyan-900/50 text-cyan-300 rounded-full w-6 h-6 flex items-center justify-center font-medium mr-3 flex-shrink-0">1</div>
-                  <p>CRMマーケティングは単なる顧客管理ではなく、顧客データを活用した戦略的なマーケティングアプローチ</p>
+                  <p>CRMマーケティングは単なる顧客管理ではなく、顧客データを活用した売上向上のための戦略的なマーケティングアプローチ</p>
                 </li>
                 <li className="flex items-start">
                   <div className="bg-cyan-900/50 text-cyan-300 rounded-full w-6 h-6 flex items-center justify-center font-medium mr-3 flex-shrink-0">2</div>
-                  <p>顧客データを基にした精密なセグメンテーションで、ターゲティングの精度を高めることが可能</p>
+                  <p>顧客データを基にした精密なセグメンテーションで、ターゲティングの精度を高め、売上機会を逃さない体制を構築可能</p>
                 </li>
                 <li className="flex items-start">
                   <div className="bg-cyan-900/50 text-cyan-300 rounded-full w-6 h-6 flex items-center justify-center font-medium mr-3 flex-shrink-0">3</div>
-                  <p>自動化を活用することで、少ないリソースでも質の高い集客活動を継続できる</p>
+                  <p>自動化を活用することで、少ないリソースでも質の高い集客活動と顧客フォローが継続でき、効率的な売上向上を実現</p>
                 </li>
                 <li className="flex items-start">
                   <div className="bg-cyan-900/50 text-cyan-300 rounded-full w-6 h-6 flex items-center justify-center font-medium mr-3 flex-shrink-0">4</div>
-                  <p>パーソナライズによって顧客体験を向上させ、コンバージョン率を高められる</p>
+                  <p>パーソナライズによって顧客体験を向上させ、コンバージョン率と客単価の両方を高められる</p>
                 </li>
                 <li className="flex items-start">
                   <div className="bg-cyan-900/50 text-cyan-300 rounded-full w-6 h-6 flex items-center justify-center font-medium mr-3 flex-shrink-0">5</div>
-                  <p>データ分析と継続的な最適化によって、時間の経過とともに集客効果は向上する</p>
+                  <p>データ分析と継続的な最適化によって、時間の経過とともに集客効果と売上効率は向上する</p>
                 </li>
               </ul>
             </div>
 
             <p className="text-white">
-              CRMマーケティングの導入は一朝一夕にはいきませんが、段階的に取り組むことで、確実に集客力を高めることができます。まずは自社の現状と目標を明確にし、できるところから始めてみましょう。
+              CRMマーケティングの導入は一朝一夕にはいきませんが、段階的に取り組むことで、確実に売上を高めることができます。まずは自社の現状と目標を明確にし、できるところから始めてみましょう。
             </p>
 
             <p className="text-white">
-              多くの企業で、CRMマーケティングの効果的な活用により集客効率が2倍、3倍と向上した事例があります。あなたの会社も、適切なCRMマーケティング戦略で、より効率的な集客を実現できるはずです。
+              多くの企業で、CRMマーケティングの効果的な活用により売上が2倍、3倍と向上した事例があります。あなたの会社も、適切なCRMマーケティング戦略で、より効率的な集客と売上増加を実現できるはずです。
             </p>
 
             {/* CTA */}
             <div className="bg-gradient-to-r from-indigo-900 to-cyan-900 rounded-lg overflow-hidden shadow-lg mt-12">
               <div className="px-4 py-6 sm:p-8 md:p-10">
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4">
-                  CRMマーケティングで集客力を2倍に！専門家による無料診断実施中
+                  CRMマーケティングで売上アップ！専門家による無料診断実施中
                 </h2>
                 <p className="text-white text-sm md:text-lg mb-6">
-                  「どこから始めればいいのか分からない」「現状のCRM活用に課題がある」という方に。マーケティング戦略のプロフェッショナルが、あなたのビジネスに最適なCRM集客戦略をご提案します。まずは無料診断からお気軽にどうぞ。
+                  「どこから始めればいいのか分からない」「現状のCRM活用に課題がある」という方に。マーケティング戦略のプロフェッショナルが、あなたのビジネスに最適なCRM戦略をご提案します。まずは無料診断からお気軽にどうぞ。
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link 
