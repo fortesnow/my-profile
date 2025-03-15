@@ -7,8 +7,8 @@ export default {
   priority: 0.7,
   outDir: 'public',
   robotsTxtOptions: {
-    additionalSitemaps: [
-      'https://www.stellarium.jp/sitemap.xml', // 実際の運用サイトのドメインに変更しました
+    policies: [
+      { userAgent: '*', allow: '/' }
     ],
   },
 } 

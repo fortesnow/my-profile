@@ -13,6 +13,16 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   // 記事を日付順に並べ替えて追加
   {
+    id: "crm-marketing-customer-acquisition",
+    title: "CRMマーケティングで顧客獲得率が2倍に！実証済み集客テクニック",
+    date: "2025-03-15",
+    excerpt: "CRMマーケティングを活用した効果的な集客方法をご紹介。顧客データの戦略的活用、ターゲティングの精度向上、自動化とパーソナライズの実践方法など、集客力を2倍に高める実証済みテクニックを解説します。",
+    category: "マーケティング",
+    slug: "crm-marketing-customer-acquisition",
+    thumbnail: "/blog/eye-catch/crm-marketing-customer-acquisition.png",
+    author: "Stellarium マーケティング"
+  },
+  {
     id: "business-account-website-requirement",
     title: "法人口座の開設や融資申請でホームページは必要？実務家が解説する真実",
     date: "2025-03-15",
@@ -363,6 +373,15 @@ export type Post = {
 // 記事一覧配列
 export const posts: Post[] = [
   // 最新の記事を上に追加
+  {
+    id: "crm-marketing-customer-acquisition",
+    title: "CRMマーケティングで顧客獲得率が2倍に！実証済み集客テクニック",
+    excerpt: "CRMマーケティングを活用した効果的な集客方法をご紹介。顧客データの戦略的活用、ターゲティングの精度向上、自動化とパーソナライズの実践方法など、集客力を2倍に高める実証済みテクニックを解説します。",
+    date: "2025-03-15",
+    author: "Stellarium マーケティング",
+    categories: ["マーケティング", "CRM"],
+    thumbnail: "/blog/eye-catch/crm-marketing-customer-acquisition.png",
+  },
   {
     id: "chiropractic-seo-strategy",
     title: "【実績公開】整骨院・整体院のSEO対策完全ガイド｜集客数を2倍にする戦略",
