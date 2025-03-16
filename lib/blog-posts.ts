@@ -13,6 +13,16 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   // 記事を日付順に並べ替えて追加
   {
+    id: "clinic-seo-strategy",
+    title: "【2025年最新】クリニックのSEO対策完全ガイド｜患者数を増やす実践テクニック",
+    date: "2025-03-16",
+    excerpt: "クリニック・医療機関専門のSEO対策を徹底解説。地域検索で上位表示させるためのローカルSEO施策から、医療コンテンツの作り方まで。実績に基づいた患者集客数アップの具体的手法を公開します。",
+    category: "SEO対策",
+    slug: "clinic-seo-strategy",
+    thumbnail: "/blog/eye-catch/clinic-seo-strategy.png",
+    author: "Stellarium マーケティング"
+  },
+  {
     id: "crm-marketing-customer-acquisition",
     title: "CRMマーケティングで売上増加！集客で無視出来ない実践テクニック",
     date: "2025-03-15",
