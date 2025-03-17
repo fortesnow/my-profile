@@ -13,7 +13,8 @@ export const metadata: Metadata = {
     '事業融資 審査基準',
     '法人ウェブサイト 必要性',
     'ビジネスサイト 重要性',
-    '法人設立 必要な準備'
+    '法人設立 必要な準備',
+    'Web制作 法人向け'
   ].join(', '),
   alternates: {
     canonical: 'https://www.stellarium.jp/blog/business-account-website-requirement',

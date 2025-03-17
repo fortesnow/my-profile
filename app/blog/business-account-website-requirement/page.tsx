@@ -28,13 +28,13 @@ export default function BusinessAccountWebsiteRequirement() {
           
           <div className="flex flex-wrap gap-2 mb-4">
             <span className="px-3 py-1 bg-emerald-900/50 text-emerald-300 text-xs font-medium rounded-full border border-emerald-700/30">
+              Web制作
+            </span>
+            <span className="px-3 py-1 bg-slate-800/50 text-white text-xs font-medium rounded-full border border-slate-700/30">
               法人口座
             </span>
             <span className="px-3 py-1 bg-slate-800/50 text-white text-xs font-medium rounded-full border border-slate-700/30">
               事業融資
-            </span>
-            <span className="px-3 py-1 bg-slate-800/50 text-white text-xs font-medium rounded-full border border-slate-700/30">
-              ホームページ作成
             </span>
           </div>
           

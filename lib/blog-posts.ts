@@ -37,7 +37,7 @@ export const blogPosts: BlogPost[] = [
     title: "法人口座の開設や融資申請でホームページは必要？実務家が解説する真実",
     date: "2025-03-15",
     excerpt: "法人口座の開設や事業融資の申請時にホームページは必要なのか、実務家の視点から徹底解説。審査に与える影響や、ホームページがない場合の対応策、効果的なホームページの作り方まで網羅。",
-    category: "Webサイト活用",
+    category: "Web制作",
     slug: "business-account-website-requirement",
     thumbnail: "/blog/eye-catch/business-account-website-requirement.png",
     author: "Stellarium マーケティング"
