@@ -13,6 +13,16 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   // 記事を日付順に並べ替えて追加
   {
+    id: "local-government-sns-strategy",
+    title: "【2025年最新】地方・自治体のSNS運用成功事例｜人手不足でも成果を出す具体的戦略",
+    date: "2025-03-19",
+    excerpt: "地方自治体のSNS運用における具体的な成功事例と実践手法を紹介。限られたリソースでも効果を最大化するための7つの戦略、住民エンゲージメントを高めるコンテンツ設計、運用体制の構築まで徹底解説します。",
+    category: "SNS運用",
+    slug: "local-government-sns-strategy",
+    thumbnail: "/blog/eye-catch/local-government-sns-strategy.png",
+    author: "Stellarium マーケティング"
+  },
+  {
     id: "new-store-customer-acquisition",
     title: "【2025年版】新規店舗の集客を成功させる7つの戦略｜オープン初月から黒字化する方法",
     date: "2025-03-18",
