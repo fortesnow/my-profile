@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     locale: 'ja_JP',
     images: [
       {
-        url: '/blog/eye-catch/local-government-sns-strategy.png',
+        url: '/blog/eye-catch/local-government-sns-strategy.jpg',
         width: 1200,
         height: 630,
         alt: '地方・自治体のSNS運用戦略',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '地方・自治体のSNS運用成功事例と実践戦略',
     description: '地方自治体がSNSを効果的に活用するための具体的手法を公開。人手不足でも成果を出すポイントを解説。',
-    images: ['/blog/eye-catch/local-government-sns-strategy.png'],
+    images: ['/blog/eye-catch/local-government-sns-strategy.jpg'],
     creator: '@StellariumMkt',
     site: '@StellariumMkt',
   },

@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "地方自治体のSNS運用における具体的な成功事例と実践手法を紹介。限られたリソースでも効果を最大化するための7つの戦略、住民エンゲージメントを高めるコンテンツ設計、運用体制の構築まで徹底解説します。",
     category: "SNS運用",
     slug: "local-government-sns-strategy",
-    thumbnail: "/blog/eye-catch/local-government-sns-strategy.png",
+    thumbnail: "/blog/eye-catch/local-government-sns-strategy.jpg",
     author: "Stellarium マーケティング"
   },
   {

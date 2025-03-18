@@ -56,7 +56,7 @@ export default function LocalGovernmentSNSStrategy() {
       {/* ブログ記事のヘッダー */}
       <div className="relative w-full h-[50vh] min-h-[400px]">
         <Image
-          src="/blog/eye-catch/local-government-sns-strategy.png"
+          src="/blog/eye-catch/local-government-sns-strategy.jpg"
           alt="地方・自治体のSNS運用戦略"
           fill
           className="object-cover opacity-60"
