@@ -13,6 +13,16 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   // 記事を日付順に並べ替えて追加
   {
+    id: "new-store-customer-acquisition",
+    title: "【2025年版】新規店舗の集客を成功させる7つの戦略｜オープン初月から黒字化する方法",
+    date: "2025-03-18",
+    excerpt: "新規店舗のオープン時に必要な集客戦略を徹底解説。初月から客足を確保し、早期黒字化を実現するための実践的な7つの手法をご紹介。地域特性を活かした効果的なプロモーション方法から、リピーター獲得まで網羅的に解説します。",
+    category: "マーケティング",
+    slug: "new-store-customer-acquisition",
+    thumbnail: "/blog/eye-catch/new-store-customer-acquisition.png",
+    author: "Stellarium マーケティング"
+  },
+  {
     id: "clinic-seo-strategy",
     title: "【2025年最新】クリニックのSEO対策完全ガイド｜患者数を増やす実践テクニック",
     date: "2025-03-16",

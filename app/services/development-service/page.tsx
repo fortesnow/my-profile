@@ -1,29 +1,32 @@
 "use client"
 
 import Image from "next/image"
-import { Code, Server, Database, Layout } from "lucide-react"
+// 二重インポートを削除
+// import '@hackernoon/pixel-icon-library/fonts/iconfont.css';
+// Lucide Reactのアイコンは不要になるので削除
+// import { Code, Server, Database, Layout } from "lucide-react"
 
 export default function DevelopmentServicePage() {
   const services = [
     {
       title: "フルスタック開発",
       description: "フロントエンドからバックエンドまで、一貫した開発体制でシステム構築を提供します。",
-      icon: <Code className="w-6 h-6" />,
+      icon: <i className="hn hn-bracket text-2xl"></i>,
     },
     {
       title: "サーバー構築・運用",
       description: "AWSやGCPを活用したクラウドインフラの設計から運用保守まで対応します。",
-      icon: <Server className="w-6 h-6" />,
+      icon: <i className="hn hn-aws text-2xl"></i>,
     },
     {
       title: "データベース設計",
       description: "効率的なデータ構造の設計と、パフォーマンスを考慮した実装を行います。",
-      icon: <Database className="w-6 h-6" />,
+      icon: <i className="hn hn-table text-2xl"></i>,
     },
     {
       title: "UI/UX設計",
       description: "使いやすさと見た目の美しさを両立したインターフェース設計を提供します。",
-      icon: <Layout className="w-6 h-6" />,
+      icon: <i className="hn hn-grid text-2xl"></i>,
     },
   ]
 
@@ -153,19 +156,19 @@ export default function DevelopmentServicePage() {
               <div className="grid md:grid-cols-3 gap-6 pt-6 border-t border-gray-700">
                 <div className="flex items-center gap-3">
                   <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
-                    <Database className="w-5 h-5 text-white" />
+                    <i className="hn hn-table text-2xl"></i>
                   </div>
                   <span className="text-gray-300">データベース設計・構築</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
-                    <Layout className="w-5 h-5 text-white" />
+                    <i className="hn hn-grid text-2xl"></i>
                   </div>
                   <span className="text-gray-300">モダンなUI/UX設計</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-2 rounded-lg">
-                    <Server className="w-5 h-5 text-white" />
+                    <i className="hn hn-aws text-2xl"></i>
                   </div>
                   <span className="text-gray-300">クラウドインフラ構築</span>
                 </div>
@@ -214,9 +217,7 @@ export default function DevelopmentServicePage() {
               className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
             >
               <span>お問い合わせ</span>
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+              <i className="hn hn-chevron-right text-xl ml-2"></i>
             </a>
           </div>
         </section>
