@@ -110,7 +110,7 @@ export default function LocalGovernmentSNSStrategy() {
       {/* 記事本文 */}
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
-          <div className="prose prose-lg prose-invert max-w-none">
+          <div className="prose prose-lg prose-invert text-white max-w-none">
             {/* 導入部 */}
             <p className="lead">
               地方自治体によるSNS活用は、今や住民サービスの重要な柱の一つとなっています。しかし、<strong>限られた人員・予算・専門知識</strong>の中で、どのように効果的な運用を実現すればよいのでしょうか？
