@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: '【2025年最新】構造化データがSEOに与える7つの影響｜検索順位を上げる実装テクニック',
-  description: '構造化データがSEOに与える影響を徹底解説。リッチスニペットによるCTR向上から、Googleの理解度を高める仕組みまで。検索結果で目立つための実装方法と、順位向上につながる具体的なテクニックを公開します。',
+  title: '【完全解説】構造化データがSEOに与える7つの影響｜検索順位を上げる実装テクニック',
+  description: '構造化データがSEOに与える具体的な影響と実装方法を徹底解説。リッチスニペット表示やCTR向上など間接的な効果を最大化する7つの手法を紹介。JSON-LDでの正しい実装例も公開。',
   keywords: [
     '構造化データ SEO',
     '構造化データ SEO 影響',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: 'https://stellarium.jp/blog/structured-data-seo-impact',
   },
   openGraph: {
-    title: '【2025年最新】構造化データがSEOに与える7つの影響｜検索順位を上げる実装テクニック',
+    title: '【完全解説】構造化データがSEOに与える7つの影響｜検索順位を上げる実装テクニック',
     description: '構造化データがSEOに与える影響と効果的な実装方法を徹底解説。リッチスニペット獲得によるCTR向上から検索エンジンの理解度を高める具体的な手法を公開。',
     type: 'article',
     locale: 'ja_JP',

@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: '【2025年最新】クリニックのSEO対策完全ガイド｜患者数を増やす実践テクニック',
+  title: '【医療専門】クリニックのSEO対策完全ガイド｜患者数を増やす実践テクニック',
   description: 'クリニック・医療機関専門のSEO対策を徹底解説。地域検索で上位表示させるためのローカルSEO施策から、医療コンテンツの作り方まで。実績に基づいた患者集客数アップの具体的手法を公開します。',
   keywords: [
     'クリニック SEO対策',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: 'https://stellarium.jp/blog/clinic-seo-strategy',
   },
   openGraph: {
-    title: '【2025年最新】クリニックのSEO対策完全ガイド｜患者数を増やす実践テクニック',
+    title: '【医療専門】クリニックのSEO対策完全ガイド｜患者数を増やす実践テクニック',
     description: 'クリニック・医療機関専門のSEO対策を徹底解説。地域特性を活かし、患者集客力を高める実践的な戦略とノウハウを公開します。',
     type: 'article',
     locale: 'ja_JP',

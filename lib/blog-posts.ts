@@ -13,7 +13,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: 9,
-    title: '【2025年最新】構造化データがSEOに与える7つの影響｜検索順位を上げる実装テクニック',
+    title: '【完全解説】構造化データがSEOに与える7つの影響｜検索順位を上げる実装テクニック',
     date: '2025-03-23',
     excerpt: '構造化データはSEOに直接的な影響はありませんが、間接的に検索順位を向上させる重要な要素です。本記事では、構造化データがSEOに与える7つの影響と、効果的な実装方法について詳しく解説します。',
     category: 'SEO対策',
@@ -23,7 +23,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "local-government-sns-strategy",
-    title: "【2025年最新】地方・自治体のSNS運用成功事例｜人手不足でも成果を出す具体的戦略",
+    title: "【成功事例】地方・自治体のSNS運用戦略｜人手不足でも成果を出す具体的手法",
     date: "2025-03-19",
     excerpt: "地方自治体のSNS運用における具体的な成功事例と実践手法を紹介。限られたリソースでも効果を最大化するための7つの戦略、住民エンゲージメントを高めるコンテンツ設計、運用体制の構築まで徹底解説します。",
     category: "SNS運用",
@@ -33,7 +33,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "new-store-customer-acquisition",
-    title: "【2025年版】新規店舗の集客を成功させる7つの戦略｜オープン初月から黒字化する方法",
+    title: "【実践ガイド】新規店舗の集客を成功させる7つの戦略｜オープン初月から黒字化する方法",
     date: "2025-03-18",
     excerpt: "新規店舗のオープン時に必要な集客戦略を徹底解説。初月から客足を確保し、早期黒字化を実現するための実践的な7つの手法をご紹介。地域特性を活かした効果的なプロモーション方法から、リピーター獲得まで網羅的に解説します。",
     category: "マーケティング",
@@ -43,7 +43,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "clinic-seo-strategy",
-    title: "【2025年最新】クリニックのSEO対策完全ガイド｜患者数を増やす実践テクニック",
+    title: "【医療専門】クリニックのSEO対策完全ガイド｜患者数を増やす実践テクニック",
     date: "2025-03-16",
     excerpt: "クリニック・医療機関専門のSEO対策を徹底解説。地域検索で上位表示させるためのローカルSEO施策から、医療コンテンツの作り方まで。実績に基づいた患者集客数アップの具体的手法を公開します。",
     category: "SEO対策",
@@ -103,7 +103,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "old-website-renewal-guide",
-    title: "【2025年最新】古いホームページをリニューアルすべき5つの理由と成功事例",
+    title: "【必見】古いホームページをリニューアルすべき5つの理由と成功事例",
     date: "2025-03-13",
     excerpt: "10年選手の古いホームページが抱える問題点と、最新のUI/UXを取り入れたリニューアル方法を解説。デザイン、SEO、モバイル対応などの視点から、ビジネスに貢献するサイトへの変革事例を紹介します。",
     category: "Web制作",
@@ -353,7 +353,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "farm-sns-marketing",
-    title: "【2025年版】農家のSNS集客術｜売上を2倍にする実践的活用法",
+    title: "【収益アップ】農家のSNS集客術｜売上を2倍にする実践的活用法",
     date: "2025-03-08",
     excerpt: "農家がSNSを活用して効果的に集客・販売促進する方法を徹底解説。Instagram、Facebook、TikTokなど各プラットフォームの特性を活かした投稿術から、直販・ファンづくりのコツまで。実例を交えた農家向けSNS活用ガイド。",
     category: "SNS運用",
@@ -459,7 +459,7 @@ export const posts: Post[] = [
   },
   {
     id: "farm-sns-marketing",
-    title: "【2025年版】農家のSNS集客術｜売上を2倍にする実践的活用法",
+    title: "【収益アップ】農家のSNS集客術｜売上を2倍にする実践的活用法",
     excerpt: "農家がSNSを活用して効果的に集客・販売促進する方法を徹底解説。Instagram、Facebook、TikTokなど各プラットフォームの特性を活かした投稿術から、直販・ファンづくりのコツまで。実例を交えた農家向けSNS活用ガイド。",
     date: "2025-03-08",
     author: "Stellarium マーケティング",

@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: '【2025年最新】地方・自治体のSNS運用成功事例｜人手不足でも成果を出す具体的戦略',
+  title: '【成功事例】地方・自治体のSNS運用戦略｜人手不足でも成果を出す具体的手法',
   description: '地方自治体のSNS運用における具体的な成功事例と実践手法を紹介。限られたリソースでも効果を最大化するための7つの戦略、住民エンゲージメントを高めるコンテンツ設計、運用体制の構築まで徹底解説します。',
   keywords: [
     'SNS運用 地方',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: 'https://stellarium.jp/blog/local-government-sns-strategy',
   },
   openGraph: {
-    title: '【2025年最新】地方・自治体のSNS運用成功事例｜人手不足でも成果を出す具体的戦略',
+    title: '【成功事例】地方・自治体のSNS運用戦略｜人手不足でも成果を出す具体的手法',
     description: '地方自治体のSNS運用における成功事例と実践戦略を紹介。限られたリソースでも効果を最大化する具体的な手法を解説します。',
     type: 'article',
     locale: 'ja_JP',

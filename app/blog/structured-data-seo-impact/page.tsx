@@ -4,7 +4,7 @@ import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: '【2025年最新】構造化データがSEOに与える7つの影響｜検索順位を上げる実装テクニック',
+  title: '【完全解説】構造化データがSEOに与える7つの影響｜検索順位を上げる実装テクニック',
   description: '構造化データがSEOに与える影響を徹底解説。リッチスニペットによるCTR向上から、Googleの理解度を高める仕組みまで。検索結果で目立つための実装方法と、順位向上につながる具体的なテクニックを公開します。',
   keywords: [
     '構造化データ SEO',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     canonical: 'https://stellarium.jp/blog/structured-data-seo-impact',
   },
   openGraph: {
-    title: '【2025年最新】構造化データがSEOに与える7つの影響｜検索順位を上げる実装テクニック',
+    title: '【完全解説】構造化データがSEOに与える7つの影響｜検索順位を上げる実装テクニック',
     description: '構造化データがSEOに与える影響と効果的な実装方法を徹底解説。リッチスニペット獲得によるCTR向上から検索エンジンの理解度を高める具体的な手法を公開。',
     type: 'article',
     locale: 'ja_JP',
@@ -72,7 +72,7 @@ export default function StructuredDataSeoImpact() {
           </div>
           
           <h1 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-            【2025年最新】構造化データがSEOに与える7つの影響｜検索順位を上げる実装テクニック
+            【完全解説】構造化データがSEOに与える7つの影響｜検索順位を上げる実装テクニック
           </h1>
           
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-6">
@@ -112,7 +112,7 @@ export default function StructuredDataSeoImpact() {
           <p>
             Googleの検索結果に表示される星評価やFAQ、価格情報といったリッチスニペット。
             これらを獲得するためのカギとなるのが「構造化データ（Structured Data）」です。
-            2025年の最新SEO事情において、構造化データの重要性はますます高まっていますが、
+            最新SEO事情において、構造化データの重要性はますます高まっていますが、
             正しく理解して実装している方はまだ少ないのが現状です。
           </p>
 
@@ -129,8 +129,8 @@ export default function StructuredDataSeoImpact() {
               <li>構造化データがSEOに与える7つの具体的な影響</li>
               <li>検索結果でリッチスニペットを獲得するための正しい実装方法</li>
               <li>よくある構造化データの実装ミスと対処法</li>
-              <li>業種別・目的別の最適な構造化データの選び方</li>
-              <li>2025年最新のGoogleが推奨する構造化データの種類</li>
+              <li>業種別・目的別の適切な構造化データの選び方</li>
+              <li>最新のGoogleが推奨する構造化データの種類</li>
             </ul>
           </div>
 

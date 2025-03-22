@@ -19,7 +19,7 @@ export default function BlogPost() {
         {/* 記事ヘッダー */}
         <div className="mb-12">
           <h1 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-            【2025年最新】TikTokマーケティング完全攻略｜集客効果を2倍にする実践戦略
+            【実践ガイド】TikTokマーケティング完全攻略｜集客効果を2倍にする実践戦略
           </h1>
           <div className="flex items-center text-sm text-gray-400 mb-4">
             <Clock className="mr-2 h-4 w-4" />

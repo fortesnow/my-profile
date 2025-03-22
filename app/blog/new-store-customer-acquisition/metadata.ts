@@ -11,7 +11,7 @@ export type MetaData = {
 
 // 記事メタデータ
 export const meta: MetaData = {
-  title: "【2025年版】新規店舗の集客を成功させる7つの戦略｜オープン初月から黒字化する方法",
+  title: "【実践ガイド】新規店舗の集客を成功させる7つの戦略｜オープン初月から黒字化する方法",
   publishedAt: "2025-03-18",
   updatedAt: "2025-03-18",
   category: "マーケティング",
