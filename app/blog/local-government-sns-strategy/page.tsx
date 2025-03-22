@@ -263,13 +263,16 @@ export default function LocalGovernmentSNSStrategy() {
                 <div className="bg-slate-800/30 rounded-xl overflow-hidden">
                   <div className="md:flex">
                     <div className="md:w-1/3 relative min-h-[200px]">
-                      <Image
-                        src="/blog/example-images/kamiyama.jpg"
-                        alt="神山町のSNS運用事例"
-                        fill
-                        className="object-cover"
-                      />
+                      <div className="absolute inset-0 bg-gradient-to-br from-emerald-800 to-green-600 flex items-center justify-center">
+                        <div className="text-white text-5xl">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-20 w-20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                          </svg>
+                        </div>
+                        <div className="absolute bottom-4 text-white font-medium text-center w-full">徳島県神山町</div>
+                      </div>
                     </div>
+                    
                     <div className="p-6 md:w-2/3">
                       <span className="text-sm bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full">Instagram活用事例</span>
                       <h3 className="text-xl font-semibold mt-3 mb-2 text-white">徳島県神山町「#かみやまライフ」プロジェクト</h3>
@@ -298,13 +301,16 @@ export default function LocalGovernmentSNSStrategy() {
                 <div className="bg-slate-800/30 rounded-xl overflow-hidden">
                   <div className="md:flex">
                     <div className="md:w-1/3 relative min-h-[200px]">
-                      <Image
-                        src="/blog/example-images/takeo.jpg"
-                        alt="武雄市のSNS運用事例"
-                        fill
-                        className="object-cover"
-                      />
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-800 to-cyan-600 flex items-center justify-center">
+                        <div className="text-white text-5xl">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-20 w-20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3" />
+                          </svg>
+                        </div>
+                        <div className="absolute bottom-4 text-white font-medium text-center w-full">佐賀県武雄市</div>
+                      </div>
                     </div>
+                    
                     <div className="p-6 md:w-2/3">
                       <span className="text-sm bg-emerald-900/50 text-emerald-300 px-3 py-1 rounded-full">クロスプラットフォーム戦略</span>
                       <h3 className="text-xl font-semibold mt-3 mb-2 text-white">佐賀県武雄市「TAKEO DX PROJECT」</h3>
@@ -333,13 +339,16 @@ export default function LocalGovernmentSNSStrategy() {
                 <div className="bg-slate-800/30 rounded-xl overflow-hidden">
                   <div className="md:flex">
                     <div className="md:w-1/3 relative min-h-[200px]">
-                      <Image
-                        src="/blog/example-images/shibuya.jpg"
-                        alt="渋谷区のSNS運用事例"
-                        fill
-                        className="object-cover"
-                      />
+                      <div className="absolute inset-0 bg-gradient-to-br from-purple-800 to-indigo-600 flex items-center justify-center">
+                        <div className="text-white text-5xl">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-20 w-20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
+                          </svg>
+                        </div>
+                        <div className="absolute bottom-4 text-white font-medium text-center w-full">東京都渋谷区</div>
+                      </div>
                     </div>
+                    
                     <div className="p-6 md:w-2/3">
                       <span className="text-sm bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full">若年層向けコミュニケーション</span>
                       <h3 className="text-xl font-semibold mt-3 mb-2 text-white">東京都渋谷区「SHIBUYA YOUTH」プロジェクト</h3>

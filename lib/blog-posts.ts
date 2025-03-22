@@ -11,7 +11,16 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
-  // 記事を日付順に並べ替えて追加
+  {
+    id: 9,
+    title: '【2025年最新】構造化データがSEOに与える7つの影響｜検索順位を上げる実装テクニック',
+    date: '2025-03-23',
+    excerpt: '構造化データはSEOに直接的な影響はありませんが、間接的に検索順位を向上させる重要な要素です。本記事では、構造化データがSEOに与える7つの影響と、効果的な実装方法について詳しく解説します。',
+    category: 'SEO対策',
+    slug: 'structured-data-seo-impact',
+    thumbnail: '/blog/eye-catch/structured-data-seo-impact.jpg',
+    author: 'Stellarium マーケティング'
+  },
   {
     id: "local-government-sns-strategy",
     title: "【2025年最新】地方・自治体のSNS運用成功事例｜人手不足でも成果を出す具体的戦略",
