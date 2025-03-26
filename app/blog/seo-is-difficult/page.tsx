@@ -36,35 +36,6 @@ export const metadata: Metadata = {
   },
 };
 
-// JSON-LD構造化データ (Article)
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: metadata.title as string,
-  description: metadata.description as string,
-  image: metadata.openGraph?.images ? (metadata.openGraph.images as { url: string }[])[0].url : '',
-  author: {
-    '@type': 'Person',
-    name: 'Stellarium マーケティング', // 著者名を修正
-    // url: '著者のプロフィールページのURL', // 必要であれば設定
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'ステラリウム', // サイト運営者名
-    logo: {
-      '@type': 'ImageObject',
-      url: '/images/logo.webp', // ロゴ画像のURLを確認・修正
-    },
-  },
-  datePublished: '2025-03-26',
-  dateModified: '2025-03-26', // 更新時に変更
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': metadata.openGraph?.url ?? `https://www.stellarium.jp/blog/seo-is-difficult`, // URLを修正
-  },
-};
-
-
 export default function SeoIsDifficultPage() {
   // 記事の公開日やカテゴリなどを変数化 (必要に応じて変更)
   const publishedDate = "2025-03-26";
