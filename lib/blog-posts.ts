@@ -12,6 +12,16 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'beauty-salon-ad-operation',
+    title: '【集客2倍】美容院の広告運用完全ガイド｜失敗しない7つの戦略と実践テクニック',
+    date: '2025-03-27',
+    excerpt: '美容院の広告運用で失敗したくないオーナー必見！Meta広告・Google広告・ホットペッパー等を活用し、費用対効果を最大化する7つの戦略と実践テクニックをプロが徹底解説。',
+    category: '広告運用',
+    slug: 'beauty-salon-ad-operation',
+    thumbnail: '/blog/eye-catch/beauty-salon-ad-operation.jpg',
+    author: 'Stellarium マーケティング'
+  },
+  {
     id: 9,
     title: '【完全解説】構造化データがSEOに与える7つの影響｜検索順位を上げる実装テクニック',
     date: '2025-03-23',
@@ -422,6 +432,15 @@ export type Post = {
 // 記事一覧配列
 export const posts: Post[] = [
   // 最新の記事を上に追加
+  {
+    id: "beauty-salon-ad-operation",
+    title: "【集客2倍】美容院の広告運用完全ガイド｜失敗しない7つの戦略と実践テクニック",
+    excerpt: "美容院の広告運用で失敗したくないオーナー必見！Meta広告・Google広告・ホットペッパー等を活用し、費用対効果を最大化する7つの戦略と実践テクニックをプロが徹底解説。",
+    date: "2025-03-27",
+    author: "Stellarium マーケティング",
+    categories: ["広告運用", "美容院"],
+    thumbnail: "/blog/eye-catch/beauty-salon-ad-operation.jpg",
+  },
   {
     id: "crm-marketing-customer-acquisition",
     title: "CRMマーケティングで売上増加！集客で無視出来ない実践テクニック",
