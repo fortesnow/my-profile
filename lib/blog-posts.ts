@@ -380,7 +380,17 @@ export const blogPosts: BlogPost[] = [
     slug: "luxury-sushi-branding",
     thumbnail: "/blog/eye-catch/luxury-sushi-branding.jpg",
     author: "Stellarium マーケティング"
-  }
+  },
+  {
+    id: 10,
+    title: '「SEO、もう無理…」は間違い？難しいと感じる原因と成果を出すための思考転換',
+    date: '2025-03-26',
+    excerpt: '「SEOって難しすぎる…」と感じていませんか？この記事では、SEOが難しいと感じる根本的な原因を解き明かし、成果を出すための思考法と具体的なステップを、あなたの目線に合わせて解説します。',
+    category: 'SEO',
+    slug: 'seo-is-difficult',
+    thumbnail: '/images/blog/thumbnails/seo-is-difficult-temp.webp', // 仮のアイキャッチ画像パス
+    author: 'Stellarium マーケティング', // 他の記事に合わせて修正
+  },
 ];
 
 // 記事を日付順にソートする関数
@@ -549,7 +559,7 @@ export function getPaginatedPosts(page: number = 1, perPage: number = 9): {
   const totalPages = Math.ceil(totalPosts / perPage);
   
   // ページ番号の検証と調整
-  const validatedPage = page < 1 ? 1 : page > totalPages ? totalPages : page;
+  const validatedPage = Math.max(1, Math.min(page, totalPages));
   
   // 表示する記事の範囲を計算
   const startIndex = (validatedPage - 1) * perPage;
