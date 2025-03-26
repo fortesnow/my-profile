@@ -7,42 +7,13 @@ import { Button } from '@/components/ui/button'; // CTAで使用
 import { FaExternalLinkAlt, FaInfoCircle, FaExclamationTriangle, FaQuestionCircle, FaCheckCircle, FaRocket, FaHeart, FaSyncAlt, FaUsers, FaChartLine, FaTools, FaSearch, FaPencilAlt, FaLink, FaChartBar } from 'react-icons/fa'; // アイコン追加
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
-// メタデータ設定
-export const metadata: Metadata = {
-  title: '「SEO、もう無理…」は間違い？難しいと感じる原因と成果を出すための思考転換',
-  description: '「SEOって難しすぎる…」と感じていませんか？この記事では、SEOが難しいと感じる根本的な原因を解き明かし、成果を出すための思考法と具体的なステップを、あなたの目線に合わせて解説します。',
-  keywords: ['SEO 難しい', 'SEO 初心者', 'SEO 対策', '検索エンジン最適化', 'SEO 効果でない'],
-  openGraph: {
-    title: '「SEO、もう無理…」は間違い？難しいと感じる原因と成果を出すための思考転換',
-    description: 'SEOが難しいと感じる原因を分析し、成果を出すための思考法と実践ステップを解説。初心者でも挫折しないためのヒントが満載です。',
-    type: 'article',
-    url: 'https://www.stellarium.jp/blog/seo-is-difficult', // TODO: 公開時に正しいURLに修正
-    images: [
-      {
-        url: '/images/blog/og/seo-is-difficult-og.webp', // TODO: OGP画像を作成しパスを修正
-        width: 1200,
-        height: 630,
-        alt: 'SEOが難しいと感じる原因と対策',
-      },
-    ],
-    siteName: 'ステラリウム | Webサイト制作・Webマーケティング',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: '「SEO、もう無理…」は間違い？難しいと感じる原因と成果を出すための思考転換',
-    description: 'SEOが難しいと感じる原因を分析し、成果を出すための思考法と実践ステップを解説。初心者でも挫折しないためのヒントが満載です。',
-    images: ['/images/blog/og/seo-is-difficult-og.webp'], // TODO: Twitterカード画像を作成しパスを修正
-    // creator: '@your_twitter_handle', // 必要であれば設定
-  },
-};
-
 export default function SeoIsDifficultPage() {
   // 記事の公開日やカテゴリなどを変数化 (必要に応じて変更)
   const publishedDate = "2025-03-26";
   const category = "SEO対策";
   const authorName = "Stellarium マーケティング";
   const authorIconPath = "/images/zunda-pic.png"; // 著者アイコンのパス
-  const eyeCatchImagePath = "/blog/eye-catch/seo-is-difficult.jpg"; // パスを修正
+  const eyeCatchImagePath = "/blog/eye-catch/seo-is-difficult-temp.jpg"; // パスを修正
   const eyeCatchAlt = "SEOが難しいと感じるイメージ";
   const articleTitle = "「SEO、もう無理…」は間違い？難しいと感じる原因と成果を出すための思考転換";
 
@@ -117,7 +88,7 @@ export default function SeoIsDifficultPage() {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": articleTitle,
-            "image": `https://stellarium.jp${eyeCatchImagePath}`, // 完全なURLに変更 (修正後のパスが反映される)
+            "image": `https://stellarium.jp${eyeCatchImagePath}`, // 完全なURLに変更
             "author": {
               "@type": "Organization",
               "name": authorName,
