@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+// import { Metadata } from 'next'; // 使用していないのでこの行を削除
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent } from "@/components/ui/card";
@@ -6,6 +6,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Button } from '@/components/ui/button'; // CTAで使用
 import { FaExternalLinkAlt, FaInfoCircle, FaExclamationTriangle, FaQuestionCircle, FaCheckCircle, FaRocket, FaHeart, FaSyncAlt, FaUsers, FaChartLine, FaTools, FaSearch, FaPencilAlt, FaLink, FaChartBar } from 'react-icons/fa'; // アイコン追加
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { metadata } from './metadata'; // metadata.tsからインポート
 
 export default function SeoIsDifficultPage() {
   // 記事の公開日やカテゴリなどを変数化 (必要に応じて変更)
@@ -88,27 +89,27 @@ export default function SeoIsDifficultPage() {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": articleTitle,
-            "image": `https://stellarium.jp${eyeCatchImagePath}`, // 完全なURLに変更
+            "image": `https://stellarium.jp${eyeCatchImagePath}`,
             "author": {
               "@type": "Organization",
               "name": authorName,
-              "url": "https://stellarium.jp" // 組織のURL
+              "url": "https://stellarium.jp"
             },
             "publisher": {
               "@type": "Organization",
               "name": authorName,
               "logo": {
                 "@type": "ImageObject",
-                "url": `https://stellarium.jp${authorIconPath}` // ロゴ画像の完全なURL
+                "url": `https://stellarium.jp${authorIconPath}`
               }
             },
             "datePublished": publishedDate,
-            "dateModified": publishedDate, // 更新日も同じにしておくか、実際の更新日に合わせる
+            "dateModified": publishedDate,
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": `https://stellarium.jp/blog/seo-is-difficult` // この記事の完全なURL
+              "@id": `https://stellarium.jp/blog/seo-is-difficult`
             },
-            "description": metadata.description // metadata.ts から description を使用
+            "description": metadata.description // 正しくインポートした metadata から参照
           })
         }}
       />
