@@ -388,8 +388,8 @@ export const blogPosts: BlogPost[] = [
     excerpt: '「SEOって難しすぎる…」と感じていませんか？この記事では、SEOが難しいと感じる根本的な原因を解き明かし、成果を出すための思考法と具体的なステップを、あなたの目線に合わせて解説します。',
     category: 'SEO対策',
     slug: 'seo-is-difficult',
-    thumbnail: '/images/blog/thumbnails/seo-is-difficult-temp.jpg', // 仮のアイキャッチ画像パス
-    author: 'Stellarium マーケティング', // 他の記事に合わせて修正
+    thumbnail: '/blog/eye-catch/seo-is-difficult.jpg',
+    author: 'Stellarium マーケティング',
   },
 ];
 

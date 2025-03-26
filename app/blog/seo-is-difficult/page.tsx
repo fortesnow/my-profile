@@ -42,7 +42,7 @@ export default function SeoIsDifficultPage() {
   const category = "SEO対策";
   const authorName = "Stellarium マーケティング";
   const authorIconPath = "/images/zunda-pic.png"; // 著者アイコンのパス
-  const eyeCatchImagePath = "/images/blog/thumbnails/seo-is-difficult-temp.jpg"; // アイキャッチ画像のパス
+  const eyeCatchImagePath = "/blog/eye-catch/seo-is-difficult.jpg"; // パスを修正
   const eyeCatchAlt = "SEOが難しいと感じるイメージ";
   const articleTitle = "「SEO、もう無理…」は間違い？難しいと感じる原因と成果を出すための思考転換";
 
@@ -117,7 +117,7 @@ export default function SeoIsDifficultPage() {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": articleTitle,
-            "image": `https://stellarium.jp${eyeCatchImagePath}`, // 完全なURLに変更
+            "image": `https://stellarium.jp${eyeCatchImagePath}`, // 完全なURLに変更 (修正後のパスが反映される)
             "author": {
               "@type": "Organization",
               "name": authorName,
