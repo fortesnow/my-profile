@@ -39,10 +39,10 @@ export const metadata: Metadata = {
 export default function SeoIsDifficultPage() {
   // 記事の公開日やカテゴリなどを変数化 (必要に応じて変更)
   const publishedDate = "2025-03-26";
-  const category = "SEO";
+  const category = "SEO対策";
   const authorName = "Stellarium マーケティング";
   const authorIconPath = "/images/zunda-pic.png"; // 著者アイコンのパス
-  const eyeCatchImagePath = "/images/blog/thumbnails/seo-is-difficult-temp.webp"; // アイキャッチ画像のパス
+  const eyeCatchImagePath = "/images/blog/thumbnails/seo-is-difficult-temp.jpg"; // アイキャッチ画像のパス
   const eyeCatchAlt = "SEOが難しいと感じるイメージ";
   const articleTitle = "「SEO、もう無理…」は間違い？難しいと感じる原因と成果を出すための思考転換";
 
