@@ -3,8 +3,9 @@ import Link from 'next/link';
 import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Button } from '@/components/ui/button';
-import { FaChartLine, FaBullseye, FaPaintBrush, FaMoneyBillWave, FaSearchDollar, FaLaptopCode, FaHandshake, FaExclamationTriangle, FaCheckCircle, FaExternalLinkAlt, FaInfoCircle, FaUsers } from 'react-icons/fa';
+import { FaChartLine, FaBullseye, FaPaintBrush, FaMoneyBillWave, FaSearchDollar, FaLaptopCode, FaHandshake, FaExclamationTriangle, FaCheckCircle, FaInfoCircle, FaUsers } from 'react-icons/fa';
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { metadata } from './metadata'; // metadata.ts からインポート
 
 export default function BeautySalonAdOperationPage() {
   // 記事の基本情報
@@ -108,7 +109,7 @@ export default function BeautySalonAdOperationPage() {
               "@type": "WebPage",
               "@id": `https://stellarium.jp/blog/beauty-salon-ad-operation` // TODO: 公開時に正しいURLに修正
             },
-            "description": '美容院の広告運用で失敗したくないオーナー必見！Meta広告・Google広告・ホットペッパー等を活用し、費用対効果を最大化する7つの戦略と実践テクニックをプロが徹底解説。'
+            "description": metadata.description // インポートした metadata オブジェクトから description を参照
           })
         }}
       />
@@ -200,7 +201,7 @@ export default function BeautySalonAdOperationPage() {
               それぞれのメリット・デメリットを理解し あなたのサロンに合った媒体を選ぶことが重要です。
             </p>
 
-            {/* 広告媒体比較表 */}
+            {/* 広告媒体比較表 (overflow-x-auto でレスポンシブ対応済み) */}
             <div className="overflow-x-auto">
               <Table className="w-full border border-slate-700">
                 <TableHeader>
@@ -416,39 +417,28 @@ export default function BeautySalonAdOperationPage() {
                 <div className="absolute bottom-0 right-0 translate-x-1/3 translate-y-1/3 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl" />
 
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-pink-400 to-orange-400 animate-gradient-x">
-                  もう広告運用で悩みたくない<br className="sm:hidden" />美容院オーナーのあなたへ
+                  広告運用、もう一人で悩まない。<br className="sm:hidden" />あなたのサロンを次のステージへ
                 </h2>
                 <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-                  ここまで読んで「広告運用の重要性は分かったけど、やっぱり自分でやるのは難しそう…」
-                  「もっと本業のサロンワークに集中したい！」と感じていませんか？<br />
-                  <strong className="text-yellow-300">その気持ち、痛いほど分かります。</strong> 広告運用は専門知識と時間が必要な、まさにプロの領域なのです。
+                  ここまで読んで「やっぱり専門知識が必要だな…」「もっとサロンワークに集中したい！」と感じたあなたへ。<br />
+                  <strong className="text-yellow-300">その直感、正しいです。</strong> 広告運用は、時間と専門知識を要する、まさにプロの仕事。
                 </p>
                 <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed max-w-3xl mx-auto">
-                  私たちステラリウムは、美容院をはじめとする多くの店舗ビジネスの広告運用を成功に導いてきた<strong className="text-yellow-300">Webマーケティングの専門家集団</strong>です。
-                  あなたのサロンの状況と目標を徹底的にヒアリングし、最適な広告戦略の立案から実行、改善まで<strong className="text-yellow-300">ワンストップでサポート</strong>します。<br />
-                  <strong className="text-yellow-300">もう無駄な広告費を垂れ流すのはやめませんか？</strong> プロの力で、あなたのサロンの集客を加速させましょう！
+                  <strong className="text-yellow-300">私は、</strong>美容院をはじめ多くの店舗ビジネスで広告運用の成果を出してきたWebマーケターです。
+                  あなたのサロンの現状と理想を深く理解し、最適な戦略立案から実行、改善まで<strong className="text-yellow-300">マンツーマンで伴走</strong>します。<br />
+                  <strong className="text-yellow-300">無駄な広告費を成果に変える時です。</strong> 私と一緒に、集客の悩みを解消し、サロンの成長を実現しませんか？
                 </p>
 
-                {/* ボタン */}
-                <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6">
-                  <Button
-                    asChild
-                    size="lg"
-                    className="bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 text-white font-bold text-lg shadow-lg transform transition-transform duration-300 hover:scale-105 w-full md:w-auto"
-                  >
-                    <Link href="/services/ad-operation"> {/* 適切なサービスページへのリンク */}
-                      広告運用サービスを見る
-                      <FaExternalLinkAlt className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
+                {/* ボタン (一つに統合し、文言変更) */}
+                <div className="flex justify-center"> {/* 中央寄せに変更 */}
                   <Button
                     asChild
                     size="lg"
                     variant="outline"
-                    className="border-cyan-500 text-cyan-400 hover:bg-cyan-900/30 hover:text-cyan-300 font-bold text-lg shadow-lg transform transition-transform duration-300 hover:scale-105 w-full md:w-auto"
+                    className="border-cyan-500 text-cyan-400 hover:bg-cyan-900/30 hover:text-cyan-300 font-bold text-lg shadow-lg transform transition-transform duration-300 hover:scale-105 w-full md:w-auto" // w-full を追加してスマホで幅いっぱいに
                   >
                     <Link href="/contact">
-                      無料で相談してみる
+                      相談してみる {/* 文言変更 */}
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                   </Button>
