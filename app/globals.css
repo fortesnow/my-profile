@@ -82,3 +82,80 @@ body {
     --chart-5: 340 75% 55%;
   }
 }
+
+/* タッチインタラクション最適化用のユーティリティクラス */
+.touch-manipulation {
+  touch-action: manipulation;
+}
+
+.touch-area {
+  position: relative;
+}
+
+.touch-area::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  z-index: -1;
+}
+
+/* モバイル向けスペーシング最適化 */
+@media (max-width: 640px) {
+  .mobile-spacing > * + * {
+    margin-top: 1.5rem;
+  }
+  
+  .mobile-touch-spacing > * + * {
+    margin-top: 1rem;
+  }
+  
+  .mobile-touch-spacing-lg > * {
+    margin-bottom: 1.25rem;
+  }
+  
+  .mobile-touch-target {
+    min-height: 48px;
+    min-width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* スワイプジェスチャー用のスタイル */
+.swipe-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scroll-snap-type: x mandatory;
+  display: flex;
+}
+
+.swipe-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.swipe-item {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+/* フローティングアクションボタン */
+.floating-action-button {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 50;
+}
