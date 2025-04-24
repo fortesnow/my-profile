@@ -58,14 +58,7 @@ const MobileOptimizedNav = () => {
     { name: 'お問い合わせ', href: '/contact', icon: <HiMail className="w-5 h-5" /> },
   ];
 
-  // 背景モーションバリアント
-  const backdropVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-    exit: { opacity: 0 }
-  };
-
-  // メニューモーションバリアント
+  // メニューモーションバリアント（全画面スライドイン）
   const menuVariants = {
     hidden: { x: '100%' },
     visible: { x: 0 },
@@ -103,26 +96,16 @@ const MobileOptimizedNav = () => {
       <AnimatePresence>
         {isOpen && (
           <>
-            {/* オーバーレイ背景 */}
-            <motion.div
-              variants={backdropVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              transition={{ duration: 0.2 }}
-              className="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm"
-              onClick={closeMenu}
-              aria-hidden="true"
-            />
+            {/* オーバーレイ背景 - 全画面表示時は不要なので削除 */}
             
-            {/* メニューコンテンツ */}
+            {/* メニューコンテンツ - 全画面表示 */}
             <motion.div 
               variants={menuVariants}
               initial="hidden"
               animate="visible"
               exit="exit"
               transition={{ type: "tween", duration: 0.3 }}
-              className="fixed inset-y-0 right-0 z-50 w-4/5 max-w-xs bg-white pt-16 touch-manipulation overflow-y-auto"
+              className="fixed inset-0 z-50 w-full bg-white pt-16 touch-manipulation overflow-y-auto"
               onClick={e => e.stopPropagation()}
             >
               <div className="absolute top-4 right-4">
@@ -135,42 +118,44 @@ const MobileOptimizedNav = () => {
                 </button>
               </div>
               
-              <nav className="container mx-auto px-4 pt-2">
-                <ul className="space-y-3">
-                  {menuItems.map((item, index) => (
-                    <motion.li 
-                      key={item.name}
-                      initial={{ opacity: 0, x: 10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.08, duration: 0.2 }}
-                    >
-                      <Link 
-                        href={item.href}
-                        className="flex items-center p-4 touch-area mobile-touch-target rounded-lg bg-gray-50 text-gray-700 hover:bg-gray-100 transition-colors"
-                        onClick={closeMenu}
+              <div className="container mx-auto px-4 flex flex-col h-full">
+                <nav className="flex-grow pt-2">
+                  <ul className="space-y-4">
+                    {menuItems.map((item, index) => (
+                      <motion.li 
+                        key={item.name}
+                        initial={{ opacity: 0, x: 10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.08, duration: 0.2 }}
                       >
-                        {item.icon}
-                        <span className="ml-3 font-medium">{item.name}</span>
-                      </Link>
-                    </motion.li>
-                  ))}
-                </ul>
-              </nav>
-              
-              <motion.div 
-                className="fixed bottom-8 left-0 right-0 flex justify-center px-4"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.3 }}
-              >
-                <Link 
-                  href="/contact" 
-                  className="bg-gradient-to-r from-purple-600 to-blue-600 w-full touch-area mobile-touch-target text-white font-semibold rounded-lg py-4 px-8 shadow-lg text-center"
-                  onClick={closeMenu}
+                        <Link 
+                          href={item.href}
+                          className="flex items-center p-4 touch-area mobile-touch-target rounded-lg bg-gray-50 text-gray-700 hover:bg-gray-100 transition-colors"
+                          onClick={closeMenu}
+                        >
+                          {item.icon}
+                          <span className="ml-3 font-medium">{item.name}</span>
+                        </Link>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </nav>
+                
+                <motion.div 
+                  className="pb-8 pt-4"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3, duration: 0.3 }}
                 >
-                  相談してみる
-                </Link>
-              </motion.div>
+                  <Link 
+                    href="/contact" 
+                    className="bg-gradient-to-r from-purple-600 to-blue-600 w-full touch-area mobile-touch-target text-white font-semibold rounded-lg py-4 px-8 shadow-lg text-center block"
+                    onClick={closeMenu}
+                  >
+                    相談してみる
+                  </Link>
+                </motion.div>
+              </div>
             </motion.div>
           </>
         )}

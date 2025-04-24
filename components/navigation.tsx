@@ -152,24 +152,13 @@ export default function Navigation() {
       <AnimatePresence>
         {isOpen && (
           <>
-            {/* 背景オーバーレイ（タップで閉じる） */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="fixed inset-0 z-40 bg-gray-900/95 backdrop-blur-md md:hidden"
-              onClick={closeMenu}
-              aria-hidden="true"
-            />
-            
-            {/* メニューコンテンツ */}
+            {/* メニューコンテンツ - 全画面表示 */}
             <motion.div
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'tween', duration: 0.3 }}
-              className="fixed inset-y-0 right-0 z-50 w-full max-w-xs bg-gray-900 shadow-xl md:hidden overflow-y-auto"
+              className="fixed inset-0 z-50 bg-gray-900 shadow-xl md:hidden overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex justify-end p-4">
@@ -184,73 +173,79 @@ export default function Navigation() {
                 </button>
               </div>
               
-              <nav className="px-4 py-2 space-y-4">
-                {navItems.map((item, index) => (
-                  <div key={index} className="border-b border-cyan-500/20 pb-4">
-                    {item.items ? (
-                      <>
-                        <h2 className="text-xl font-bold text-cyan-400 mb-2">
-                          <Link 
-                            href={item.href || "#"} 
-                            onClick={closeMenu}
-                            className="block py-3 px-2 rounded-lg touch-manipulation hover:bg-gray-800/50"
-                          >
-                            {item.label}
-                          </Link>
-                        </h2>
-                        <ul className="pl-2 space-y-1">
-                          {item.items.map((subItem, subIndex) => (
-                            <motion.li
-                              key={subIndex}
-                              initial={{ x: -10, opacity: 0 }}
-                              animate={{ x: 0, opacity: 1 }}
-                              transition={{ delay: 0.05 * subIndex, duration: 0.2 }}
-                            >
-                              <Link
-                                href={subItem.href}
-                                className="text-gray-300 hover:text-cyan-400 transition-colors block py-3 px-3 rounded-lg touch-manipulation hover:bg-gray-800/50"
+              <div className="container mx-auto flex flex-col h-[calc(100vh-80px)]">
+                <nav className="px-4 py-2 flex-grow">
+                  <div className="space-y-6">
+                    {navItems.map((item, index) => (
+                      <div key={index} className="border-b border-cyan-500/20 pb-4">
+                        {item.items ? (
+                          <>
+                            <h2 className="text-xl font-bold text-cyan-400 mb-2">
+                              <Link 
+                                href={item.href || "#"} 
                                 onClick={closeMenu}
+                                className="block py-3 px-2 rounded-lg touch-manipulation hover:bg-gray-800/50"
                               >
-                                {subItem.name}
+                                {item.label}
                               </Link>
-                            </motion.li>
-                          ))}
-                        </ul>
-                      </>
-                    ) : (
-                      <motion.div
-                        initial={{ x: -10, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 0.05 * index, duration: 0.2 }}
-                      >
-                        <Link
-                          href={item.href}
-                          className="text-xl font-bold text-cyan-400 hover:text-cyan-300 transition-colors block py-3 px-2 rounded-lg touch-manipulation hover:bg-gray-800/50"
-                          onClick={closeMenu}
-                        >
-                          {item.label}
-                        </Link>
-                      </motion.div>
-                    )}
+                            </h2>
+                            <ul className="pl-2 space-y-1">
+                              {item.items.map((subItem, subIndex) => (
+                                <motion.li
+                                  key={subIndex}
+                                  initial={{ x: -10, opacity: 0 }}
+                                  animate={{ x: 0, opacity: 1 }}
+                                  transition={{ delay: 0.05 * subIndex, duration: 0.2 }}
+                                >
+                                  <Link
+                                    href={subItem.href}
+                                    className="text-gray-300 hover:text-cyan-400 transition-colors block py-3 px-3 rounded-lg touch-manipulation hover:bg-gray-800/50"
+                                    onClick={closeMenu}
+                                  >
+                                    {subItem.name}
+                                  </Link>
+                                </motion.li>
+                              ))}
+                            </ul>
+                          </>
+                        ) : (
+                          <motion.div
+                            initial={{ x: -10, opacity: 0 }}
+                            animate={{ x: 0, opacity: 1 }}
+                            transition={{ delay: 0.05 * index, duration: 0.2 }}
+                          >
+                            <Link
+                              href={item.href}
+                              className="text-xl font-bold text-cyan-400 hover:text-cyan-300 transition-colors block py-3 px-2 rounded-lg touch-manipulation hover:bg-gray-800/50"
+                              onClick={closeMenu}
+                            >
+                              {item.label}
+                            </Link>
+                          </motion.div>
+                        )}
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </nav>
                 
                 {/* 追加のCTAボタン */}
-                <motion.div 
-                  className="pt-4"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.3 }}
-                >
-                  <Link
-                    href="/contact"
-                    onClick={closeMenu}
-                    className="block w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg py-4 text-center shadow-md mobile-touch-target"
+                <div className="px-4 pb-8">
+                  <motion.div 
+                    className="pt-4"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.3 }}
                   >
-                    今すぐ相談する
-                  </Link>
-                </motion.div>
-              </nav>
+                    <Link
+                      href="/contact"
+                      onClick={closeMenu}
+                      className="block w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg py-4 text-center shadow-md mobile-touch-target"
+                    >
+                      今すぐ相談する
+                    </Link>
+                  </motion.div>
+                </div>
+              </div>
             </motion.div>
           </>
         )}
