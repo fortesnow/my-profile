@@ -1,8 +1,9 @@
 import * as React from "react"
 import Image from "next/image"
 import { ProfileData } from './types'
-import { BarChart2, Users, PieChart, MessageSquare, LineChart, Code, Layout, Server, Database } from "lucide-react"
+import { BarChart2, Users, PieChart, MessageSquare, LineChart, Code, Layout, Server, Database, Palette, Trophy, LineChartIcon } from "lucide-react"
 import Link from "next/link"
+import { motion } from "framer-motion"
 
 interface Website {
   icon: string
@@ -17,6 +18,16 @@ const defaultWebsites: Website[] = [
   { icon: "/icons/line-pic.svg", name: "LINE", url: "https://lin.ee/ATZ4bog" },
   { icon: "/icons/threads-pic.svg", name: "Threads", url: "https://www.threads.net/@stellariumix" },
 ]
+
+// スキルのアイコンマッピング
+const skillIcons = {
+  "WEBサイト制作＆LP制作": <Layout className="w-5 h-5" />,
+  "SNS & 広告運用": <Users className="w-5 h-5" />,
+  "Webデザイン": <Palette className="w-5 h-5" />,
+  "プログラミング": <Code className="w-5 h-5" />,
+  "SEO & コンテンツ": <LineChartIcon className="w-5 h-5" />,
+  "前を向く誇り": <Trophy className="w-5 h-5" />,
+}
 
 export default function Profile({ data }: { data: ProfileData }) {
   const skills = [
@@ -79,6 +90,29 @@ export default function Profile({ data }: { data: ProfileData }) {
       gradient: "from-cyan-500 to-purple-500",
     },
   ]
+
+  // アニメーション用のバリアント
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  }
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { 
+      y: 0, 
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100
+      }
+    }
+  }
 
   return (
     <div className="w-full min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white font-sans">
@@ -207,41 +241,76 @@ export default function Profile({ data }: { data: ProfileData }) {
               </div>
             )}
 
-            {/* Skills Section */}
-            <div className="mt-8">
-              <h2 className="text-2xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400
-                [text-shadow:2px_2px_0_theme(colors.cyan.900)]"
+            {/* Skills Section - 改善版 */}
+            <motion.div 
+              className="mt-8"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={containerVariants}
+            >
+              <motion.h2 
+                className="text-2xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400
+                  [text-shadow:2px_2px_0_theme(colors.cyan.900)]"
+                variants={itemVariants}
               >
                 Skills
-              </h2>
-              <div className="space-y-4">
+              </motion.h2>
+              <motion.div className="space-y-4" variants={containerVariants}>
                 {skills.map((skill, index) => (
-                  <div key={index} className="bg-gray-900/50 backdrop-blur-md p-4 
-                    border-2 border-cyan-200 [box-shadow:4px_4px_0_theme(colors.cyan.900)]"
+                  <motion.div 
+                    key={index} 
+                    className="bg-gray-900/50 backdrop-blur-md p-4 
+                      border-2 border-cyan-200 [box-shadow:4px_4px_0_theme(colors.cyan.900)]
+                      hover:bg-gray-800/50 hover:border-cyan-300 transition-all duration-300
+                      hover:translate-y-[-2px] hover:shadow-cyan-900/30"
+                    variants={itemVariants}
+                    whileHover={{ scale: 1.02 }}
                   >
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-300">{skill.name}</span>
-                      <span className="text-cyan-400">{skill.level}%</span>
+                      <div className="flex items-center gap-2">
+                        <div className="bg-gradient-to-r from-cyan-500 to-purple-500 p-1.5 rounded-full">
+                          {skillIcons[skill.name as keyof typeof skillIcons]}
+                        </div>
+                        <span className="text-gray-300">{skill.name}</span>
+                      </div>
+                      <span className="text-cyan-400 font-semibold">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-gray-700 rounded-full h-2">
-                      <div
-                        className="bg-gradient-to-r from-cyan-500 to-purple-500 h-2"
-                        style={{ width: `${skill.level}%` }}
+                    <div className="w-full bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                      <motion.div
+                        className="bg-gradient-to-r from-cyan-500 to-purple-500 h-2.5"
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${skill.level}%` }}
+                        transition={{ duration: 1, ease: "easeOut" }}
+                        viewport={{ once: true }}
                       />
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* わたしの強みセクション */}
-            <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md p-8 border-4 border-cyan-200 [box-shadow:8px_8px_0_theme(colors.cyan.900)]">
-              <h2 className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+            <motion.section 
+              className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md p-8 border-4 border-cyan-200 [box-shadow:8px_8px_0_theme(colors.cyan.900)]"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={containerVariants}
+            >
+              <motion.h2 
+                className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"
+                variants={itemVariants}
+              >
                 わたしの強み
-              </h2>
+              </motion.h2>
               
-              <div className="space-y-8">
-                <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 transform hover:scale-[1.02] transition-all duration-300">
+              <motion.div className="space-y-8" variants={containerVariants}>
+                <motion.div 
+                  className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 transform hover:scale-[1.02] transition-all duration-300 border border-gray-800 hover:border-cyan-400/30 shadow-lg"
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.03, y: -5 }}
+                >
                   <div className="flex items-start gap-4">
                     <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -255,9 +324,13 @@ export default function Profile({ data }: { data: ProfileData }) {
                       </p>
                     </div>
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 transform hover:scale-[1.02] transition-all duration-300">
+                <motion.div 
+                  className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 transform hover:scale-[1.02] transition-all duration-300 border border-gray-800 hover:border-cyan-400/30 shadow-lg"
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.03, y: -5 }}
+                >
                   <div className="flex items-start gap-4">
                     <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -271,9 +344,13 @@ export default function Profile({ data }: { data: ProfileData }) {
                       </p>
                     </div>
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 transform hover:scale-[1.02] transition-all duration-300">
+                <motion.div 
+                  className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 transform hover:scale-[1.02] transition-all duration-300 border border-gray-800 hover:border-cyan-400/30 shadow-lg"
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.03, y: -5 }}
+                >
                   <div className="flex items-start gap-4">
                     <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -287,9 +364,9 @@ export default function Profile({ data }: { data: ProfileData }) {
                       </p>
                     </div>
                   </div>
-                </div>
-              </div>
-            </section>
+                </motion.div>
+              </motion.div>
+            </motion.section>
 
             {/* LP制作サービスセクション */}
             <section className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md p-8 border-4 border-cyan-200 [box-shadow:8px_8px_0_theme(colors.cyan.900)]">
@@ -826,38 +903,61 @@ export default function Profile({ data }: { data: ProfileData }) {
             </section>
 
             {/* サービス一覧セクション */}
-            <section className="py-20 px-4">
+            <motion.section 
+              className="py-20 px-4"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={containerVariants}
+            >
               <div className="container mx-auto">
-                <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                <motion.h2 
+                  className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"
+                  variants={itemVariants}
+                >
                   サービス一覧
-                </h2>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+                </motion.h2>
+                <motion.div 
+                  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+                  variants={containerVariants}
+                >
                   {services.map((service, index) => (
-                    <div
+                    <motion.div
                       key={index}
-                      className="bg-gray-900/50 backdrop-blur-md rounded-lg p-3 md:p-6 border border-cyan-500/20"
+                      className="bg-gray-900/60 backdrop-blur-md rounded-xl overflow-hidden shadow-lg border border-gray-800 hover:border-cyan-400/30 transition-all duration-300"
+                      variants={itemVariants}
+                      whileHover={{ 
+                        y: -10, 
+                        boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+                        transition: { type: "spring", stiffness: 400, damping: 10 }
+                      }}
                     >
-                      <div className={`bg-gradient-to-br ${service.gradient} p-3 rounded-lg w-fit mb-4`}>
-                        <div className="w-4 h-4 md:w-6 md:h-6">
+                      <div className={`h-2 bg-gradient-to-r ${service.gradient}`}></div>
+                      <div className="p-6">
+                        <div className={`p-3 rounded-lg inline-block mb-4 bg-gradient-to-r ${service.gradient}`}>
                           {service.icon}
                         </div>
+                        <h3 className="text-xl font-bold mb-3 text-white">
+                          {service.title}
+                        </h3>
+                        <p className="text-gray-300 text-sm mb-6">
+                          {service.description}
+                        </p>
+                        <Link 
+                          href={service.href} 
+                          className="inline-flex items-center text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
+                        >
+                          <span>詳しく見る</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                          </svg>
+                        </Link>
                       </div>
-                      <h3 className="text-sm md:text-xl font-semibold mb-2 md:mb-4 text-cyan-400">{service.title}</h3>
-                      <p className="text-xs md:text-base text-gray-300 mb-3 md:mb-6 line-clamp-3">{service.description}</p>
-                      <Link
-                        href={service.href}
-                        className="inline-flex items-center text-xs md:text-base text-cyan-400 hover:text-cyan-300 transition-colors"
-                      >
-                        詳しく見る
-                        <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    </div>
+                    </motion.div>
                   ))}
-                </div>
+                </motion.div>
               </div>
-            </section>
+            </motion.section>
           </div>
         </article>
       </main>
