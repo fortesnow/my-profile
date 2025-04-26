@@ -290,7 +290,7 @@ export default function Profile({ data }: { data: ProfileData }) {
               </motion.div>
             </motion.div>
 
-            {/* わたしの強みセクション */}
+            {/* わたしの強みセクション - 漫画風デザイン */}
             <motion.section 
               className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md p-8 border-4 border-cyan-200 [box-shadow:8px_8px_0_theme(colors.cyan.900)]"
               initial="hidden"
@@ -305,63 +305,286 @@ export default function Profile({ data }: { data: ProfileData }) {
                 わたしの強み
               </motion.h2>
               
-              <motion.div className="space-y-8" variants={containerVariants}>
+              <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative" variants={containerVariants}>
+                {/* 漫画風のコマ枠と背景のパターン */}
+                <div className="absolute inset-0 bg-[radial-gradient(black_1px,transparent_1px)] opacity-10 [background-size:20px_20px]"></div>
+                
+                {/* 強み1: 包括的なマルチスキル */}
                 <motion.div 
-                  className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 transform hover:scale-[1.02] transition-all duration-300 border border-gray-800 hover:border-cyan-400/30 shadow-lg"
+                  className="bg-white p-0 rounded-lg overflow-hidden relative border-[3px] border-black transform rotate-1"
                   variants={itemVariants}
-                  whileHover={{ scale: 1.03, y: -5 }}
+                  whileHover={{ scale: 1.03, rotate: 0, transition: { duration: 0.2 } }}
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2 text-cyan-400">包括的なマルチスキル</h3>
-                      <p className="text-gray-300 leading-relaxed">
-                        SNS運用、Webデザイン、プログラミング、SEOなど、デジタルマーケティングに必要な幅広いスキルを保有。複合的な視点でプロジェクトを推進できます。
+                  <div className="bg-gradient-to-r from-yellow-300 to-amber-300 p-3 border-b-[3px] border-black">
+                    <h3 className="text-xl font-bold text-gray-900 flex items-center">
+                      <span className="bg-white rounded-full w-8 h-8 inline-flex items-center justify-center mr-2 border-2 border-black text-black">1</span>
+                      包括的なマルチスキル
+                    </h3>
+                  </div>
+                  <div className="p-4 bg-white relative">
+                    <div className="relative p-3 bg-blue-50 rounded-lg border-2 border-black mb-3">
+                      <div className="absolute top-4 left-0 w-4 h-4 bg-blue-50 border-l-2 border-b-2 border-black transform -translate-x-2 rotate-45"></div>
+                      <p className="text-gray-900 text-sm">
+                        SNS運用、Webデザイン、プログラミング、SEOなど、デジタルマーケティングに必要な幅広いスキルを保有！
                       </p>
+                    </div>
+                    <div className="flex justify-center">
+                      <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg border-2 border-black">
+                        <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div className="absolute -bottom-2 -right-2">
+                      <div className="text-xs font-bold px-3 py-1 bg-red-500 text-white transform rotate-3 border-2 border-black">
+                        複合的視点
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+                
+                {/* 強み2: 実践的な経験 */}
+                <motion.div 
+                  className="bg-white p-0 rounded-lg overflow-hidden relative border-[3px] border-black transform -rotate-1"
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.03, rotate: 0, transition: { duration: 0.2 } }}
+                >
+                  <div className="bg-gradient-to-r from-pink-300 to-rose-300 p-3 border-b-[3px] border-black">
+                    <h3 className="text-xl font-bold text-gray-900 flex items-center">
+                      <span className="bg-white rounded-full w-8 h-8 inline-flex items-center justify-center mr-2 border-2 border-black text-black">2</span>
+                      実践的な経験
+                    </h3>
+                  </div>
+                  <div className="p-4 bg-white relative">
+                    <div className="flex justify-center mb-3">
+                      <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg border-2 border-black">
+                        <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div className="relative p-3 bg-pink-50 rounded-lg border-2 border-black">
+                      <div className="absolute top-4 right-0 w-4 h-4 bg-pink-50 border-r-2 border-t-2 border-black transform translate-x-2 rotate-45"></div>
+                      <p className="text-gray-900 text-sm">
+                        実業での経験を活かした実践的なアプローチが可能！理論だけでなく、実際のビジネスシーンで効果を発揮する施策を提案！
+                      </p>
+                    </div>
+                    <div className="absolute -bottom-2 -left-2">
+                      <div className="text-xs font-bold px-3 py-1 bg-blue-500 text-white transform -rotate-3 border-2 border-black">
+                        実績多数
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+                
+                {/* 強み3: 迅速な対応力 */}
+                <motion.div 
+                  className="bg-white p-0 rounded-lg overflow-hidden relative border-[3px] border-black md:col-span-2 transform rotate-0.5"
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.02, rotate: 0, transition: { duration: 0.2 } }}
+                >
+                  <div className="bg-gradient-to-r from-cyan-300 to-blue-300 p-3 border-b-[3px] border-black">
+                    <h3 className="text-xl font-bold text-gray-900 flex items-center">
+                      <span className="bg-white rounded-full w-8 h-8 inline-flex items-center justify-center mr-2 border-2 border-black text-black">3</span>
+                      迅速な対応力
+                    </h3>
+                  </div>
+                  <div className="p-4 bg-white relative">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+                      <div className="md:col-span-1 flex justify-center">
+                        <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg border-2 border-black">
+                          <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                          </svg>
+                        </div>
+                      </div>
+                      <div className="md:col-span-2 relative">
+                        <div className="relative p-3 bg-cyan-50 rounded-lg border-2 border-black">
+                          <div className="absolute top-1/2 -left-2 w-4 h-4 bg-cyan-50 border-l-2 border-t-2 border-black transform -translate-y-2 -translate-x-2 rotate-45"></div>
+                          <p className="text-gray-900 text-sm">
+                            デジタルマーケティングの急速な変化に対応し、最新のトレンドやテクノロジーを素早くキャッチアップ！クライアントのニーズに柔軟に対応します！
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex justify-end mt-2">
+                      <div className="inline-flex items-center">
+                        <div className="text-xs font-bold px-3 py-1 bg-yellow-400 text-black transform rotate-2 border-2 border-black">
+                          迅速対応
+                        </div>
+                        <div className="ml-2">
+                          <svg className="w-6 h-6 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm1-5h-2v-2h2v2zm0-4h-2V5h2v6z"/>
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </motion.div>
 
+                {/* 漫画風効果線 - 装飾 */}
+                <div className="absolute -top-4 -right-4 w-24 h-24 pointer-events-none opacity-30">
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="10" y1="10" x2="90" y2="90" stroke="white" stroke-width="2" />
+                    <line x1="20" y1="10" x2="90" y2="80" stroke="white" stroke-width="2" />
+                    <line x1="30" y1="10" x2="90" y2="70" stroke="white" stroke-width="2" />
+                    <line x1="40" y1="10" x2="90" y2="60" stroke="white" stroke-width="2" />
+                  </svg>
+                </div>
+                <div className="absolute -bottom-4 -left-4 w-24 h-24 pointer-events-none opacity-30 transform rotate-180">
+                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="10" y1="10" x2="90" y2="90" stroke="white" stroke-width="2" />
+                    <line x1="20" y1="10" x2="90" y2="80" stroke="white" stroke-width="2" />
+                    <line x1="30" y1="10" x2="90" y2="70" stroke="white" stroke-width="2" />
+                    <line x1="40" y1="10" x2="90" y2="60" stroke="white" stroke-width="2" />
+                  </svg>
+                </div>
+              </motion.div>
+            </motion.section>
+
+            {/* 実績・キャリア紹介セクション */}
+            <motion.section 
+              className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md p-8 border-4 border-cyan-200 [box-shadow:8px_8px_0_theme(colors.cyan.900)]"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={containerVariants}
+            >
+              <motion.h2 
+                className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"
+                variants={itemVariants}
+              >
+                実績・キャリア
+              </motion.h2>
+
+              {/* 実績カウンター */}
+              <motion.div 
+                className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
+                variants={containerVariants}
+              >
                 <motion.div 
-                  className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 transform hover:scale-[1.02] transition-all duration-300 border border-gray-800 hover:border-cyan-400/30 shadow-lg"
+                  className="bg-gray-900/50 backdrop-blur-md p-6 rounded-lg border border-cyan-500/30 text-center"
                   variants={itemVariants}
-                  whileHover={{ scale: 1.03, y: -5 }}
+                  whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
-                      </svg>
+                  <motion.h3 
+                    className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-2"
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                  >
+                    50+
+                  </motion.h3>
+                  <p className="text-gray-300 text-sm">プロジェクト実績</p>
+                </motion.div>
+
+                <motion.div 
+                  className="bg-gray-900/50 backdrop-blur-md p-6 rounded-lg border border-cyan-500/30 text-center"
+                  variants={itemVariants}
+                  whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
+                >
+                  <motion.h3 
+                    className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-2"
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                  >
+                    98%
+                  </motion.h3>
+                  <p className="text-gray-300 text-sm">クライアント満足度</p>
+                </motion.div>
+
+                <motion.div 
+                  className="bg-gray-900/50 backdrop-blur-md p-6 rounded-lg border border-cyan-500/30 text-center"
+                  variants={itemVariants}
+                  whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
+                >
+                  <motion.h3 
+                    className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-2"
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                  >
+                    200%
+                  </motion.h3>
+                  <p className="text-gray-300 text-sm">平均ROI改善率</p>
+                </motion.div>
+
+                <motion.div 
+                  className="bg-gray-900/50 backdrop-blur-md p-6 rounded-lg border border-cyan-500/30 text-center"
+                  variants={itemVariants}
+                  whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
+                >
+                  <motion.h3 
+                    className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-2"
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                  >
+                    8+
+                  </motion.h3>
+                  <p className="text-gray-300 text-sm">業界経験年数</p>
+                </motion.div>
+              </motion.div>
+
+              {/* キャリアタイムライン */}
+              <motion.div 
+                className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-cyan-500 before:to-purple-500 before:via-blue-500"
+                variants={containerVariants}
+              >
+                {/* タイムラインアイテム 1 */}
+                <motion.div 
+                  className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+                  variants={itemVariants}
+                >
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 border-4 border-gray-900 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                    <span className="text-white font-bold">1</span>
+                  </div>
+                  <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gray-900/50 backdrop-blur-md p-4 rounded-lg border border-cyan-500/30 shadow">
+                    <div className="flex items-center justify-between space-x-2 mb-1">
+                      <div className="text-cyan-400 font-bold">マーケティングエージェンシー</div>
+                      <time className="text-xs text-gray-500">2017 - 2020</time>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2 text-cyan-400">実践的な経験</h3>
-                      <p className="text-gray-300 leading-relaxed">
-                        実業での経験を活かした実践的なアプローチが可能。理論だけでなく、実際のビジネスシーンで効果を発揮する施策を提案できます。
-                      </p>
+                    <div className="text-gray-300 text-sm">
+                      大手Web制作会社でプロジェクトマネージャーとして50件以上のウェブサイト制作とデジタルマーケティングを担当。クライアントのKPI達成率95%を実現。
                     </div>
                   </div>
                 </motion.div>
 
+                {/* タイムラインアイテム 2 */}
                 <motion.div 
-                  className="bg-gray-900/50 backdrop-blur-md rounded-lg p-6 transform hover:scale-[1.02] transition-all duration-300 border border-gray-800 hover:border-cyan-400/30 shadow-lg"
+                  className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
                   variants={itemVariants}
-                  whileHover={{ scale: 1.03, y: -5 }}
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                      </svg>
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 border-4 border-gray-900 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                    <span className="text-white font-bold">2</span>
+                  </div>
+                  <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gray-900/50 backdrop-blur-md p-4 rounded-lg border border-cyan-500/30 shadow">
+                    <div className="flex items-center justify-between space-x-2 mb-1">
+                      <div className="text-cyan-400 font-bold">SEOスペシャリスト</div>
+                      <time className="text-xs text-gray-500">2020 - 2022</time>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2 text-cyan-400">迅速な対応力</h3>
-                      <p className="text-gray-300 leading-relaxed">
-                        デジタルマーケティングの急速な変化に対応し、最新のトレンドやテクノロジーを素早くキャッチアップ。クライアントのニーズに柔軟に対応します。
-                      </p>
+                    <div className="text-gray-300 text-sm">
+                      テクニカルSEOと戦略的コンテンツマーケティングを専門としたコンサルタントとして独立。複数のクライアントサイトで検索順位を平均30%改善。
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* タイムラインアイテム 3 */}
+                <motion.div 
+                  className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+                  variants={itemVariants}
+                >
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 border-4 border-gray-900 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                    <span className="text-white font-bold">3</span>
+                  </div>
+                  <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-gray-900/50 backdrop-blur-md p-4 rounded-lg border border-cyan-500/30 shadow">
+                    <div className="flex items-center justify-between space-x-2 mb-1">
+                      <div className="text-cyan-400 font-bold">フリーランス</div>
+                      <time className="text-xs text-gray-500">2022 - 現在</time>
+                    </div>
+                    <div className="text-gray-300 text-sm">
+                      フルスタックWeb開発とデジタルマーケティングのフリーランスとして活動中。20社以上のクライアントにサービス提供。特にSNSマーケティングと成果型LPに強み。
                     </div>
                   </div>
                 </motion.div>
