@@ -292,151 +292,115 @@ export default function Profile({ data }: { data: ProfileData }) {
 
             {/* わたしの強みセクション - 漫画風デザイン */}
             <motion.section 
-              className="mt-16 bg-gradient-to-br from-gray-900/80 via-blue-900/80 to-indigo-900/80 backdrop-blur-md p-8 border-4 border-cyan-200 [box-shadow:8px_8px_0_theme(colors.cyan.900)]"
+              id="my-strengths-manga"
+              className="mt-16 p-8 rounded-xl"
+              style={{
+                background: "linear-gradient(135deg,#fff 0%,#fdf6ff 100%)"
+              }}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
               variants={containerVariants}
             >
               <motion.h2 
-                className="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"
+                className="text-3xl font-bold mb-8 text-center text-gray-800"
+                style={{ fontFamily: "'Bangers','Anime Ace',sans-serif" }}
                 variants={itemVariants}
               >
                 わたしの強み
               </motion.h2>
               
-              <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative" variants={containerVariants}>
-                {/* 漫画風のコマ枠と背景のパターン */}
-                <div className="absolute inset-0 bg-[radial-gradient(black_1px,transparent_1px)] opacity-10 [background-size:20px_20px]"></div>
-                
-                {/* 強み1: 包括的なマルチスキル */}
+              <motion.div 
+                className="flex flex-col md:flex-row gap-4 relative"
+                variants={containerVariants}
+              >
+                {/* 漫画パネル1: 包括的なマルチスキル */}
                 <motion.div 
-                  className="bg-white p-0 rounded-lg overflow-hidden relative border-[3px] border-black transform rotate-1"
+                  className="flex-1 bg-white p-0 rounded-lg overflow-hidden relative border-[3px] border-black transform"
                   variants={itemVariants}
-                  whileHover={{ scale: 1.03, rotate: 0, transition: { duration: 0.2 } }}
+                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
                 >
-                  <div className="bg-gradient-to-r from-yellow-300 to-amber-300 p-3 border-b-[3px] border-black">
-                    <h3 className="text-xl font-bold text-gray-900 flex items-center">
-                      <span className="bg-white rounded-full w-8 h-8 inline-flex items-center justify-center mr-2 border-2 border-black text-black">1</span>
+                  <div className="relative aspect-square">
+                    <Image
+                      src="/assets/img/strengths_panel_1.png"
+                      alt="ノートPCを掲げ、幅広いスキルを示すマーケターのイラスト"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-4 bg-white">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">
                       包括的なマルチスキル
                     </h3>
-                  </div>
-                  <div className="p-4 bg-white relative">
-                    <div className="relative p-3 bg-blue-50 rounded-lg border-2 border-black mb-3">
-                      <div className="absolute top-4 left-0 w-4 h-4 bg-blue-50 border-l-2 border-b-2 border-black transform -translate-x-2 rotate-45"></div>
-                      <p className="text-gray-900 text-sm">
-                        SNS運用、Webデザイン、プログラミング、SEOなど、デジタルマーケティングに必要な幅広いスキルを保有！
-                      </p>
-                    </div>
-                    <div className="flex justify-center">
-                      <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg border-2 border-black">
-                        <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
-                        </svg>
-                      </div>
-                    </div>
-                    <div className="absolute -bottom-2 -right-2">
-                      <div className="text-xs font-bold px-3 py-1 bg-red-500 text-white transform rotate-3 border-2 border-black">
-                        複合的視点
-                      </div>
-                    </div>
+                    <p className="text-gray-700 text-sm text-center">
+                      SNS運用、Webデザイン、プログラミング、SEOなど、デジタルマーケティングに必要な幅広いスキルを保有！
+                    </p>
                   </div>
                 </motion.div>
                 
-                {/* 強み2: 実践的な経験 */}
+                {/* 漫画パネル2: 実践的な経験 */}
                 <motion.div 
-                  className="bg-white p-0 rounded-lg overflow-hidden relative border-[3px] border-black transform -rotate-1"
+                  className="flex-1 bg-white p-0 rounded-lg overflow-hidden relative border-[3px] border-black transform"
                   variants={itemVariants}
-                  whileHover={{ scale: 1.03, rotate: 0, transition: { duration: 0.2 } }}
+                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
                 >
-                  <div className="bg-gradient-to-r from-pink-300 to-rose-300 p-3 border-b-[3px] border-black">
-                    <h3 className="text-xl font-bold text-gray-900 flex items-center">
-                      <span className="bg-white rounded-full w-8 h-8 inline-flex items-center justify-center mr-2 border-2 border-black text-black">2</span>
+                  <div className="relative aspect-square">
+                    <Image
+                      src="/assets/img/strengths_panel_2.png"
+                      alt="ダッシュボードを指差し、実践的な分析を行うマーケターのイラスト"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-4 bg-white">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">
                       実践的な経験
                     </h3>
-                  </div>
-                  <div className="p-4 bg-white relative">
-                    <div className="flex justify-center mb-3">
-                      <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg border-2 border-black">
-                        <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
-                        </svg>
-                      </div>
-                    </div>
-                    <div className="relative p-3 bg-pink-50 rounded-lg border-2 border-black">
-                      <div className="absolute top-4 right-0 w-4 h-4 bg-pink-50 border-r-2 border-t-2 border-black transform translate-x-2 rotate-45"></div>
-                      <p className="text-gray-900 text-sm">
-                        実業での経験を活かした実践的なアプローチが可能！理論だけでなく、実際のビジネスシーンで効果を発揮する施策を提案！
-                      </p>
-                    </div>
-                    <div className="absolute -bottom-2 -left-2">
-                      <div className="text-xs font-bold px-3 py-1 bg-blue-500 text-white transform -rotate-3 border-2 border-black">
-                        実績多数
-                      </div>
-                    </div>
+                    <p className="text-gray-700 text-sm text-center">
+                      実業での経験を活かした実践的なアプローチが可能！理論だけでなく、実際のビジネスシーンで効果を発揮する施策を提案！
+                    </p>
                   </div>
                 </motion.div>
                 
-                {/* 強み3: 迅速な対応力 */}
+                {/* 漫画パネル3: 迅速な対応力 */}
                 <motion.div 
-                  className="bg-white p-0 rounded-lg overflow-hidden relative border-[3px] border-black md:col-span-2 transform rotate-0.5"
+                  className="flex-1 bg-white p-0 rounded-lg overflow-hidden relative border-[3px] border-black transform"
                   variants={itemVariants}
-                  whileHover={{ scale: 1.02, rotate: 0, transition: { duration: 0.2 } }}
+                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
                 >
-                  <div className="bg-gradient-to-r from-cyan-300 to-blue-300 p-3 border-b-[3px] border-black">
-                    <h3 className="text-xl font-bold text-gray-900 flex items-center">
-                      <span className="bg-white rounded-full w-8 h-8 inline-flex items-center justify-center mr-2 border-2 border-black text-black">3</span>
+                  <div className="relative aspect-square">
+                    <Image
+                      src="/assets/img/strengths_panel_3.png"
+                      alt="クライアントとハイタッチし、迅速な成果を祝うイラスト"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-4 bg-white">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">
                       迅速な対応力
                     </h3>
-                  </div>
-                  <div className="p-4 bg-white relative">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-                      <div className="md:col-span-1 flex justify-center">
-                        <div className="bg-gradient-to-br from-cyan-500 to-purple-500 p-3 rounded-lg border-2 border-black">
-                          <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                          </svg>
-                        </div>
-                      </div>
-                      <div className="md:col-span-2 relative">
-                        <div className="relative p-3 bg-cyan-50 rounded-lg border-2 border-black">
-                          <div className="absolute top-1/2 -left-2 w-4 h-4 bg-cyan-50 border-l-2 border-t-2 border-black transform -translate-y-2 -translate-x-2 rotate-45"></div>
-                          <p className="text-gray-900 text-sm">
-                            デジタルマーケティングの急速な変化に対応し、最新のトレンドやテクノロジーを素早くキャッチアップ！クライアントのニーズに柔軟に対応します！
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flex justify-end mt-2">
-                      <div className="inline-flex items-center">
-                        <div className="text-xs font-bold px-3 py-1 bg-yellow-400 text-black transform rotate-2 border-2 border-black">
-                          迅速対応
-                        </div>
-                        <div className="ml-2">
-                          <svg className="w-6 h-6 text-red-500" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm1-5h-2v-2h2v2zm0-4h-2V5h2v6z"/>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
+                    <p className="text-gray-700 text-sm text-center">
+                      デジタルマーケティングの急速な変化に対応し、最新のトレンドやテクノロジーを素早くキャッチアップ！クライアントのニーズに柔軟に対応します！
+                    </p>
                   </div>
                 </motion.div>
 
-                {/* 漫画風効果線 - 装飾 */}
+                {/* マンガ風装飾 - スピードライン */}
                 <div className="absolute -top-4 -right-4 w-24 h-24 pointer-events-none opacity-30">
                   <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="10" y1="10" x2="90" y2="90" stroke="white" stroke-width="2" />
-                    <line x1="20" y1="10" x2="90" y2="80" stroke="white" stroke-width="2" />
-                    <line x1="30" y1="10" x2="90" y2="70" stroke="white" stroke-width="2" />
-                    <line x1="40" y1="10" x2="90" y2="60" stroke="white" stroke-width="2" />
+                    <line x1="10" y1="10" x2="90" y2="90" stroke="black" strokeWidth="2" />
+                    <line x1="20" y1="10" x2="90" y2="80" stroke="black" strokeWidth="2" />
+                    <line x1="30" y1="10" x2="90" y2="70" stroke="black" strokeWidth="2" />
+                    <line x1="40" y1="10" x2="90" y2="60" stroke="black" strokeWidth="2" />
                   </svg>
                 </div>
                 <div className="absolute -bottom-4 -left-4 w-24 h-24 pointer-events-none opacity-30 transform rotate-180">
                   <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="10" y1="10" x2="90" y2="90" stroke="white" stroke-width="2" />
-                    <line x1="20" y1="10" x2="90" y2="80" stroke="white" stroke-width="2" />
-                    <line x1="30" y1="10" x2="90" y2="70" stroke="white" stroke-width="2" />
-                    <line x1="40" y1="10" x2="90" y2="60" stroke="white" stroke-width="2" />
+                    <line x1="10" y1="10" x2="90" y2="90" stroke="black" strokeWidth="2" />
+                    <line x1="20" y1="10" x2="90" y2="80" stroke="black" strokeWidth="2" />
+                    <line x1="30" y1="10" x2="90" y2="70" stroke="black" strokeWidth="2" />
+                    <line x1="40" y1="10" x2="90" y2="60" stroke="black" strokeWidth="2" />
                   </svg>
                 </div>
               </motion.div>
