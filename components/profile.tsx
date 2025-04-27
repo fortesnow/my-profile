@@ -322,7 +322,7 @@ export default function Profile({ data }: { data: ProfileData }) {
                 >
                   <div className="relative aspect-square">
                     <Image
-                      src="/assets/img/strengths_panel_1.png"
+                      src="/images/manga1.png"
                       alt="ノートPCを掲げ、幅広いスキルを示すマーケターのイラスト"
                       fill
                       className="object-cover"
@@ -346,7 +346,7 @@ export default function Profile({ data }: { data: ProfileData }) {
                 >
                   <div className="relative aspect-square">
                     <Image
-                      src="/assets/img/strengths_panel_2.png"
+                      src="/images/manga2.png"
                       alt="ダッシュボードを指差し、実践的な分析を行うマーケターのイラスト"
                       fill
                       className="object-cover"
@@ -370,7 +370,7 @@ export default function Profile({ data }: { data: ProfileData }) {
                 >
                   <div className="relative aspect-square">
                     <Image
-                      src="/assets/img/strengths_panel_3.png"
+                      src="/images/manga3.png"
                       alt="クライアントとハイタッチし、迅速な成果を祝うイラスト"
                       fill
                       className="object-cover"
