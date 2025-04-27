@@ -335,7 +335,7 @@ export default function Profile({ data }: { data: ProfileData }) {
                       包括的なマルチスキル
                     </h3>
                     <p className="text-gray-700 text-sm text-center">
-                      SNS運用、Webデザイン、プログラミング、SEOなど、デジタルマーケティングに必要な幅広いスキルを保有！
+                      SNS運用、Webデザイン、プログラミング、SEOなど、デジタルマーケティングに必要な幅広いスキルを保有し複合的な戦略を提起実地します
                     </p>
                   </div>
                 </motion.div>
@@ -387,7 +387,7 @@ export default function Profile({ data }: { data: ProfileData }) {
                       迅速な対応力
                     </h3>
                     <p className="text-gray-700 text-sm text-center">
-                      デジタルマーケティングの急速な変化に対応し、最新のトレンドやテクノロジーを素早くキャッチアップ！クライアントのニーズに柔軟に対応します！
+                      経験を活かして、潜在的な需要からニーズを深堀り。目的に応じて逆算した筋道を柔軟に整地します
                     </p>
                   </div>
                 </motion.div>
