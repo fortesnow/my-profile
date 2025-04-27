@@ -324,8 +324,10 @@ export default function Profile({ data }: { data: ProfileData }) {
                     <Image
                       src="/images/manga1.png"
                       alt="ノートPCを掲げ、幅広いスキルを示すマーケターのイラスト"
-                      fill
-                      className="object-cover"
+                      width={500}
+                      height={500}
+                      className="w-full h-full object-cover"
+                      priority
                     />
                   </div>
                   <div className="p-4 bg-white">
@@ -348,8 +350,10 @@ export default function Profile({ data }: { data: ProfileData }) {
                     <Image
                       src="/images/manga2.png"
                       alt="ダッシュボードを指差し、実践的な分析を行うマーケターのイラスト"
-                      fill
-                      className="object-cover"
+                      width={500}
+                      height={500}
+                      className="w-full h-full object-cover"
+                      priority
                     />
                   </div>
                   <div className="p-4 bg-white">
@@ -372,8 +376,10 @@ export default function Profile({ data }: { data: ProfileData }) {
                     <Image
                       src="/images/manga3.png"
                       alt="クライアントとハイタッチし、迅速な成果を祝うイラスト"
-                      fill
-                      className="object-cover"
+                      width={500}
+                      height={500}
+                      className="w-full h-full object-cover"
+                      priority
                     />
                   </div>
                   <div className="p-4 bg-white">
