@@ -97,7 +97,7 @@ export default function ContactPage() {
               </p>
               
               <a 
-                href="https://forms.gle/qXBE65hXf2EJzsJ97" 
+                href="https://forms.gle/rMTUqiSvNUfS7v6L6" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold py-4 px-8 rounded-lg transition-transform duration-300 hover:scale-105 shadow-lg hover:shadow-blue-500/25 mb-8"
