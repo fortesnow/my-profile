@@ -74,7 +74,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* メールお問い合わせ準備中セクション */}
+        {/* メールお問い合わせセクション */}
         <div className="max-w-4xl mx-auto mt-20 mb-16">
           <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 rounded-2xl overflow-hidden shadow-xl border border-blue-700/30 p-10 text-center relative">
             <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-2xl"></div>
@@ -89,20 +89,36 @@ export default function ContactPage() {
                 </div>
               </div>
               <h2 className="text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-300">
-                メールフォーム準備中
+                メールでのお問い合わせ
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-6">
-                より便利なお問い合わせ体験のため、メールフォームを現在アップデートしています。
-                <br />完成までしばらくお待ちください。
+                メールでのお問い合わせは下記のGoogleフォームからお願いいたします。
+                <br />ご質問・ご相談内容をご記入いただければ、順次ご返信いたします。
               </p>
-              <div className="flex justify-center space-x-2 mb-8">
-                <span className="w-3 h-3 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0s' }}></span>
-                <span className="w-3 h-3 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></span>
-                <span className="w-3 h-3 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></span>
+              
+              <a 
+                href="https://forms.gle/qXBE65hXf2EJzsJ97" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold py-4 px-8 rounded-lg transition-transform duration-300 hover:scale-105 shadow-lg hover:shadow-blue-500/25 mb-8"
+              >
+                <div className="flex items-center justify-center">
+                  <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                  </svg>
+                  Googleフォームでお問い合わせ
+                </div>
+              </a>
+              
+              <div className="flex justify-center space-x-2 mb-6">
+                <span className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse" style={{ animationDelay: '0s' }}></span>
+                <span className="w-3 h-3 bg-blue-400 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></span>
+                <span className="w-3 h-3 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></span>
               </div>
+              
               <div className="bg-blue-900/30 py-4 px-6 rounded-lg inline-block">
                 <p className="text-gray-300">
-                  ただいまLINEからのお問い合わせを優先的に対応しております
+                  LINEでのお問い合わせも引き続き受け付けております
                 </p>
               </div>
             </div>
