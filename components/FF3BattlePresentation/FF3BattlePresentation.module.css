@@ -227,7 +227,7 @@
   padding: 8px;
   box-shadow: 0 0 10px rgba(100, 150, 255, 0.5);
   animation: window-shine 3s infinite;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 /* ウィンドウタイトル */
@@ -699,6 +699,7 @@
     min-height: 200px;
     margin-bottom: 5px;
     overflow-x: hidden;
+    overflow-y: hidden;
     padding: 10px;
     border-width: 2px;
   }
@@ -821,6 +822,7 @@
     max-height: 220px;
     min-height: 180px;
     padding: 8px;
+    overflow-y: hidden;
   }
   
   /* ステータスリストの最適化 */
@@ -1039,6 +1041,11 @@
   
   .infoWindow {
     margin-left: 0;
+  }
+  
+  /* スクロールを無効化 */
+  .statusWindow {
+    overflow-y: hidden;
   }
 }
 

@@ -36,7 +36,7 @@ export default function ServicesGrid() {
       category: "マーケティング",
       title: "広告運用サービス",
       description: "Google・Meta・X・TikTokなど各種広告プラットフォームの運用代行。ROIを最大化する広告戦略を提案します。",
-      href: "/ad-service",
+      href: "https://www.stellarium.jp/services/ads-service",
     },
     {
       icon: <Twitter className="w-4 h-4" />,
