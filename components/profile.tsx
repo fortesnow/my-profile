@@ -1,7 +1,6 @@
 import * as React from "react"
 import Image from "next/image"
 import { ProfileData } from './types'
-import { Users, Code, Layout, Palette, Trophy, LineChartIcon } from "lucide-react"
 import { motion } from "framer-motion"
 import ServicesGrid from "./ServicesGrid"
 
@@ -19,26 +18,7 @@ const defaultWebsites: Website[] = [
   { icon: "/icons/threads-pic.svg", name: "Threads", url: "https://www.threads.net/@stellariumix" },
 ]
 
-// スキルのアイコンマッピング
-const skillIcons = {
-  "WEBサイト制作＆LP制作": <Layout className="w-5 h-5" />,
-  "SNS & 広告運用": <Users className="w-5 h-5" />,
-  "Webデザイン": <Palette className="w-5 h-5" />,
-  "プログラミング": <Code className="w-5 h-5" />,
-  "SEO & コンテンツ": <LineChartIcon className="w-5 h-5" />,
-  "前を向く誇り": <Trophy className="w-5 h-5" />,
-}
-
 export default function Profile({ data }: { data: ProfileData }) {
-  const skills = [
-    { name: "WEBサイト制作＆LP制作", level: 90 },
-    { name: "SNS & 広告運用", level: 90 },
-    { name: "Webデザイン", level: 85 },
-    { name: "プログラミング", level: 90 },
-    { name: "SEO & コンテンツ", level: 95 },
-    { name: "前を向く誇り", level: 100 },
-  ]
-
   // アニメーション用のバリアント
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -189,54 +169,10 @@ export default function Profile({ data }: { data: ProfileData }) {
               </div>
             )}
 
-            {/* Skills Section - 改善版 */}
-            <motion.div 
-              className="mt-8"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={containerVariants}
-            >
-              <motion.h2 
-                className="text-2xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400
-                  [text-shadow:2px_2px_0_theme(colors.cyan.900)]"
-                variants={itemVariants}
-              >
-                Skills
-              </motion.h2>
-              <motion.div className="space-y-4" variants={containerVariants}>
-                {skills.map((skill, index) => (
-                  <motion.div 
-                    key={index} 
-                    className="bg-gray-900/50 backdrop-blur-md p-4 
-                      border-2 border-cyan-200 [box-shadow:4px_4px_0_theme(colors.cyan.900)]
-                      hover:bg-gray-800/50 hover:border-cyan-300 transition-all duration-300
-                      hover:translate-y-[-2px] hover:shadow-cyan-900/30"
-                    variants={itemVariants}
-                    whileHover={{ scale: 1.02 }}
-                  >
-                    <div className="flex justify-between items-center mb-2">
-                      <div className="flex items-center gap-2">
-                        <div className="bg-gradient-to-r from-cyan-500 to-purple-500 p-1.5 rounded-full">
-                          {skillIcons[skill.name as keyof typeof skillIcons]}
-                        </div>
-                        <span className="text-gray-300">{skill.name}</span>
-                      </div>
-                      <span className="text-cyan-400 font-semibold">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-gray-700 rounded-full h-2.5 overflow-hidden">
-                      <motion.div
-                        className="bg-gradient-to-r from-cyan-500 to-purple-500 h-2.5"
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        transition={{ duration: 1, ease: "easeOut" }}
-                        viewport={{ once: true }}
-                      />
-                    </div>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </motion.div>
+            {/* サービス一覧セクション */}
+            <section className="mt-8">
+              <ServicesGrid />
+            </section>
 
             {/* わたしの強みセクション - 漫画風デザイン */}
             <motion.section 
@@ -359,11 +295,6 @@ export default function Profile({ data }: { data: ProfileData }) {
                 </div>
               </motion.div>
             </motion.section>
-
-            {/* サービス一覧セクション */}
-            <section className="mt-16">
-              <ServicesGrid />
-            </section>
 
             {/* その他のプロフィールコンテンツがあればここに追加 */}
           </div>
