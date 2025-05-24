@@ -1,8 +1,8 @@
 import * as React from "react"
 import Image from "next/image"
 import { ProfileData } from './types'
-import { motion } from "framer-motion"
 import ServicesGrid from "./ServicesGrid"
+import { AnimatedTestimonials } from "./ui/animated-testimonials"
 
 interface Website {
   icon: string
@@ -19,28 +19,27 @@ const defaultWebsites: Website[] = [
 ]
 
 export default function Profile({ data }: { data: ProfileData }) {
-  // アニメーション用のバリアント
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+  // 強みデータ - Animated Testimonials形式
+  const strengths = [
+    {
+      name: "包括的なマルチスキル",
+      designation: "デジタルマーケティングの総合力",
+      quote: "SNS運用、Webデザイン、プログラミング、SEOなど、デジタルマーケティングに必要な幅広いスキルを保有し複合的な戦略を提起実地します。技術と創造性を融合させた独自のアプローチで、クライアントのビジネス成長を支援します。",
+      src: "/images/manga1.png"
+    },
+    {
+      name: "実践的な経験",
+      designation: "現場で培った実用的知識",
+      quote: "実業での経験を活かした実践的なアプローチが可能！理論だけでなく、実際のビジネスシーンで効果を発揮する施策を提案！経営視点からの戦略的思考と、現場での実行力を兼ね備えています。",
+      src: "/images/manga2.png"
+    },
+    {
+      name: "迅速な対応力",
+      designation: "柔軟性と課題解決能力",
+      quote: "経験を活かして、潜在的な需要からニーズを深堀り。目的に応じて逆算した筋道を柔軟に整地します。変化の激しいデジタル市場において、スピーディーかつ的確な判断で最適解を導き出します。",
+      src: "/images/manga3.png"
     }
-  }
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { 
-      y: 0, 
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100
-      }
-    }
-  }
+  ]
 
   return (
     <div className="w-full min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white font-sans">
@@ -174,127 +173,19 @@ export default function Profile({ data }: { data: ProfileData }) {
               <ServicesGrid />
             </section>
 
-            {/* わたしの強みセクション - 漫画風デザイン */}
-            <motion.section 
-              id="my-strengths-manga"
-              className="mt-16 p-8 rounded-xl"
-              style={{
-                background: "linear-gradient(135deg,#fff 0%,#fdf6ff 100%)"
-              }}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={containerVariants}
-            >
-              <motion.h2 
-                className="text-3xl font-bold mb-8 text-center text-gray-800"
-                style={{ fontFamily: "'Bangers','Anime Ace',sans-serif" }}
-                variants={itemVariants}
-              >
-                わたしの強み
-              </motion.h2>
-              
-              <motion.div 
-                className="flex flex-col md:flex-row gap-4 relative"
-                variants={containerVariants}
-              >
-                {/* 漫画パネル1: 包括的なマルチスキル */}
-                <motion.div 
-                  className="flex-1 bg-white p-0 rounded-lg overflow-hidden relative border-[3px] border-black transform"
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                >
-                  <div className="relative aspect-square">
-                    <Image
-                      src="/images/manga1.png"
-                      alt="ノートPCを掲げ、幅広いスキルを示すマーケターのイラスト"
-                      width={500}
-                      height={500}
-                      className="w-full h-full object-cover"
-                      priority
-                    />
-                  </div>
-                  <div className="p-4 bg-white">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">
-                      包括的なマルチスキル
-                    </h3>
-                    <p className="text-gray-700 text-sm text-center">
-                      SNS運用、Webデザイン、プログラミング、SEOなど、デジタルマーケティングに必要な幅広いスキルを保有し複合的な戦略を提起実地します
-                    </p>
-                  </div>
-                </motion.div>
-                
-                {/* 漫画パネル2: 実践的な経験 */}
-                <motion.div 
-                  className="flex-1 bg-white p-0 rounded-lg overflow-hidden relative border-[3px] border-black transform"
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                >
-                  <div className="relative aspect-square">
-                    <Image
-                      src="/images/manga2.png"
-                      alt="ダッシュボードを指差し、実践的な分析を行うマーケターのイラスト"
-                      width={500}
-                      height={500}
-                      className="w-full h-full object-cover"
-                      priority
-                    />
-                  </div>
-                  <div className="p-4 bg-white">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">
-                      実践的な経験
-                    </h3>
-                    <p className="text-gray-700 text-sm text-center">
-                      実業での経験を活かした実践的なアプローチが可能！理論だけでなく、実際のビジネスシーンで効果を発揮する施策を提案！
-                    </p>
-                  </div>
-                </motion.div>
-                
-                {/* 漫画パネル3: 迅速な対応力 */}
-                <motion.div 
-                  className="flex-1 bg-white p-0 rounded-lg overflow-hidden relative border-[3px] border-black transform"
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                >
-                  <div className="relative aspect-square">
-                    <Image
-                      src="/images/manga3.png"
-                      alt="クライアントとハイタッチし、迅速な成果を祝うイラスト"
-                      width={500}
-                      height={500}
-                      className="w-full h-full object-cover"
-                      priority
-                    />
-                  </div>
-                  <div className="p-4 bg-white">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">
-                      迅速な対応力
-                    </h3>
-                    <p className="text-gray-700 text-sm text-center">
-                      経験を活かして、潜在的な需要からニーズを深堀り。目的に応じて逆算した筋道を柔軟に整地します
-                    </p>
-                  </div>
-                </motion.div>
-
-                {/* マンガ風装飾 - スピードライン */}
-                <div className="absolute -top-4 -right-4 w-24 h-24 pointer-events-none opacity-30">
-                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="10" y1="10" x2="90" y2="90" stroke="black" strokeWidth="2" />
-                    <line x1="20" y1="10" x2="90" y2="80" stroke="black" strokeWidth="2" />
-                    <line x1="30" y1="10" x2="90" y2="70" stroke="black" strokeWidth="2" />
-                    <line x1="40" y1="10" x2="90" y2="60" stroke="black" strokeWidth="2" />
-                  </svg>
-                </div>
-                <div className="absolute -bottom-4 -left-4 w-24 h-24 pointer-events-none opacity-30 transform rotate-180">
-                  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="10" y1="10" x2="90" y2="90" stroke="black" strokeWidth="2" />
-                    <line x1="20" y1="10" x2="90" y2="80" stroke="black" strokeWidth="2" />
-                    <line x1="30" y1="10" x2="90" y2="70" stroke="black" strokeWidth="2" />
-                    <line x1="40" y1="10" x2="90" y2="60" stroke="black" strokeWidth="2" />
-                  </svg>
-                </div>
-              </motion.div>
-            </motion.section>
+            {/* わたしの強みセクション - Animated Testimonials */}
+            <section className="mt-16">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                  わたしの強み
+                </h2>
+              </div>
+              <AnimatedTestimonials 
+                testimonials={strengths} 
+                autoplay={true}
+                className="py-8"
+              />
+            </section>
 
             {/* その他のプロフィールコンテンツがあればここに追加 */}
           </div>
