@@ -3,6 +3,7 @@ import Image from "next/image"
 import { ProfileData } from './types'
 import ServicesGrid from "./ServicesGrid"
 import { AnimatedTestimonials } from "./ui/animated-testimonials"
+import { Hero } from "./ui/animated-hero"
 
 interface Website {
   icon: string
@@ -45,6 +46,9 @@ export default function Profile({ data }: { data: ProfileData }) {
     <div className="w-full min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white font-sans">
       <main>
         <article>
+          {/* Hero Section */}
+          <Hero />
+
           {/* Header */}
           <div
             className="relative h-72 bg-cover bg-center overflow-hidden"
