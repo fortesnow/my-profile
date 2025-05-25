@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { MoveRight, PhoneCall } from "lucide-react";
+import { Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 function Hero() {
@@ -66,17 +66,7 @@ function Hero() {
               asChild
             >
               <a href="https://lin.ee/ATZ4bog" target="_blank" rel="noopener noreferrer">
-                無料相談を予約 <PhoneCall className="w-4 h-4" />
-              </a>
-            </Button>
-            <Button 
-              size="lg" 
-              className="gap-4 bg-white/10 hover:bg-white/20 text-white border-white/20 hover:border-white/30"
-              variant="outline"
-              asChild
-            >
-              <a href="https://note.com/hareharesky" target="_blank" rel="noopener noreferrer">
-                サービス詳細 <MoveRight className="w-4 h-4" />
+                お問い合わせ <Github className="w-4 h-4" />
               </a>
             </Button>
           </div>
