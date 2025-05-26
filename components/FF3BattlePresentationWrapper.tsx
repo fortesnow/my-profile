@@ -8,6 +8,7 @@ import { ArrowRight } from "lucide-react";
 import ProfileClient from '@/components/profile';
 import { getLatestPosts, BlogPost } from '@/lib/blog-posts';
 import { ProfileData } from '@/components/types';
+import { Logos3 } from '@/components/ui/logos3';
 
 // プレゼンテーションデータの型定義
 interface PresentationData {
@@ -73,6 +74,9 @@ export const FF3BattlePresentationWrapper: React.FC<FF3BattlePresentationWrapper
 
       {/* プロフィールセクション */}
       {profileData && <ProfileClient data={profileData} />}
+
+      {/* ロゴセクション */}
+      <Logos3 />
 
       {/* ブログセクション */}
       <section className="py-20 px-6 bg-gradient-to-b from-[#0d1631] to-[#0f172a]">

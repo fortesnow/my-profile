@@ -181,9 +181,9 @@ export default function Profile({ data }: { data: ProfileData }) {
             <section className="mt-16">
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  わたしの強み
+                わたしの強み
                 </h2>
-              </div>
+                  </div>
               <AnimatedTestimonials 
                 testimonials={strengths} 
                 autoplay={true}

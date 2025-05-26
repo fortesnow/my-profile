@@ -10,10 +10,11 @@ import {
   // Users,  // 未使用のためコメントアウトまたは削除
   // Zap,    // 未使用のためコメントアウトまたは削除
   CheckCircle,
-  ArrowRight,
+  // ArrowRight, // 未使用のためコメントアウト
   // Gift,   // 未使用のためコメントアウトまたは削除
   // Star    // 未使用のためコメントアウトまたは削除
 } from "lucide-react"
+import { Pricing } from "@/components/ui/pricing"
 
 export const metadata: Metadata = {
   title: 'LP制作サービス | Stellarium マーケティング',
@@ -78,6 +79,61 @@ function generateStructuredData() {
 
 export default function LPServicePage() {
   const structuredData = generateStructuredData()
+  
+  // 料金プランデータ
+  const pricingPlans = [
+    {
+      name: "スタンダードプラン",
+      price: "150000",
+      yearlyPrice: "120000",
+      period: "per project",
+      features: [
+        "1ページのLP制作",
+        "レスポンシブ対応",
+        "SEO基本対策",
+        "お問い合わせフォーム",
+        "基本的なアニメーション",
+        "2回までの修正対応"
+      ],
+      description: "シンプルなLP制作に最適なプランです",
+      buttonText: "詳細を見る",
+      href: "https://lin.ee/ATZ4bog",
+      isPopular: false,
+    },
+    {
+      name: "プレミアムプラン",
+      price: "250000",
+      yearlyPrice: "200000",
+      period: "per project",
+      features: [
+        "スタンダードプランの全機能",
+        "ユーザー心理分析",
+        "アクセス解析設定",
+        "コンバージョン最適化",
+        "無制限修正対応"
+      ],
+      description: "成果にこだわるLP制作におすすめです",
+      buttonText: "詳細を見る",
+      href: "https://lin.ee/ATZ4bog",
+      isPopular: true,
+    },
+    {
+      name: "エンタープライズプラン",
+      price: "400000",
+      yearlyPrice: "320000",
+      period: "per project",
+      features: [
+        "プレミアムプランの全機能",
+        "広告アカウント連携",
+        "運用サポート",
+        "月次レポート提出"
+      ],
+      description: "法人向け包括的なLPO支援プランです",
+      buttonText: "詳細を見る",
+      href: "https://lin.ee/ATZ4bog",
+      isPopular: false,
+    },
+  ]
   const features = [
     {
       title: "戦略的デザイン",
@@ -377,143 +433,11 @@ export default function LPServicePage() {
       </div>
       
       {/* 料金プラン */}
-      <div className="container mx-auto px-6 mb-20">
-        <h2 className="text-3xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-          料金プラン
-        </h2>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* スタンダードプラン */}
-          <div className="bg-gray-900/50 backdrop-blur-md rounded-lg border border-cyan-500/20 overflow-hidden">
-            <div className="bg-gradient-to-r from-blue-900 to-indigo-900 p-6">
-              <h3 className="text-xl font-semibold mb-2 text-white">スタンダードプラン</h3>
-              <p className="text-gray-300 text-sm mb-4">シンプルなLP制作に最適</p>
-              <div className="text-3xl font-bold text-cyan-400">
-                ¥150,000〜
-              </div>
-            </div>
-            <div className="p-6">
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-2 text-sm text-gray-300">
-                  <ArrowRight className="w-4 h-4 text-cyan-400" />
-                  <span>1ページのLP制作</span>
-                </li>
-                <li className="flex items-center gap-2 text-sm text-gray-300">
-                  <ArrowRight className="w-4 h-4 text-cyan-400" />
-                  <span>レスポンシブ対応</span>
-                </li>
-                <li className="flex items-center gap-2 text-sm text-gray-300">
-                  <ArrowRight className="w-4 h-4 text-cyan-400" />
-                  <span>SEO基本対策</span>
-                </li>
-                <li className="flex items-center gap-2 text-sm text-gray-300">
-                  <ArrowRight className="w-4 h-4 text-cyan-400" />
-                  <span>お問い合わせフォーム</span>
-                </li>
-              </ul>
-              <a
-                href="https://lin.ee/ATZ4bog"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-center py-3 px-6 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors"
-              >
-                詳細を見る
-              </a>
-            </div>
-          </div>
-          
-          {/* プレミアムプラン */}
-          <div className="bg-gray-900/50 backdrop-blur-md rounded-lg border-2 border-cyan-500/40 overflow-hidden transform scale-105 shadow-lg shadow-cyan-500/20 relative z-10">
-            <div className="absolute top-0 right-0">
-              <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-4 py-1 rounded-bl-lg">
-                おすすめ
-              </div>
-            </div>
-            <div className="bg-gradient-to-r from-cyan-700 to-purple-700 p-6">
-              <h3 className="text-xl font-semibold mb-2 text-white">プレミアムプラン</h3>
-              <p className="text-gray-200 text-sm mb-4">成果にこだわるLP制作に</p>
-              <div className="text-3xl font-bold text-white">
-                ¥250,000〜
-              </div>
-            </div>
-            <div className="p-6">
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-2 text-sm text-gray-300">
-                  <ArrowRight className="w-4 h-4 text-cyan-400" />
-                  <span>スタンダードプランの全機能</span>
-                </li>
-                <li className="flex items-center gap-2 text-sm text-gray-300">
-                  <ArrowRight className="w-4 h-4 text-cyan-400" />
-                  <span>ユーザー心理分析</span>
-                </li>
-                <li className="flex items-center gap-2 text-sm text-gray-300">
-                  <ArrowRight className="w-4 h-4 text-cyan-400" />
-                  <span>アクセス解析</span>
-                </li>
-                <li className="flex items-center gap-2 text-sm text-gray-300">
-                  <ArrowRight className="w-4 h-4 text-cyan-400" />
-                  <span>A/Bテスト実施</span>
-                </li>
-                <li className="flex items-center gap-2 text-sm text-gray-300">
-                  <ArrowRight className="w-4 h-4 text-cyan-400" />
-                  <span>3ヶ月間の改善サポート</span>
-                </li>
-              </ul>
-              <a
-                href="https://lin.ee/ATZ4bog"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-center py-3 px-6 bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white rounded-lg transition-colors"
-              >
-                詳細を見る
-              </a>
-            </div>
-          </div>
-          
-          {/* エンタープライズプラン */}
-          <div className="bg-gray-900/50 backdrop-blur-md rounded-lg border border-cyan-500/20 overflow-hidden">
-            <div className="bg-gradient-to-r from-blue-900 to-indigo-900 p-6">
-              <h3 className="text-xl font-semibold mb-2 text-white">エンタープライズプラン</h3>
-              <p className="text-gray-300 text-sm mb-4">法人向け包括的なLPO支援</p>
-              <div className="text-3xl font-bold text-cyan-400">
-                ¥400,000〜
-              </div>
-            </div>
-            <div className="p-6">
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-2 text-sm text-gray-300">
-                  <ArrowRight className="w-4 h-4 text-cyan-400" />
-                  <span>プレミアムプランの全機能</span>
-                </li>
-                <li className="flex items-center gap-2 text-sm text-gray-300">
-                  <ArrowRight className="w-4 h-4 text-cyan-400" />
-                  <span>複数LP制作（最大3ページ）</span>
-                </li>
-                <li className="flex items-center gap-2 text-sm text-gray-300">
-                  <ArrowRight className="w-4 h-4 text-cyan-400" />
-                  <span>広告アカウント連携</span>
-                </li>
-                <li className="flex items-center gap-2 text-sm text-gray-300">
-                  <ArrowRight className="w-4 h-4 text-cyan-400" />
-                  <span>6ヶ月間の運用サポート</span>
-                </li>
-                <li className="flex items-center gap-2 text-sm text-gray-300">
-                  <ArrowRight className="w-4 h-4 text-cyan-400" />
-                  <span>月次レポート提出</span>
-                </li>
-              </ul>
-              <a
-                href="https://lin.ee/ATZ4bog"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-center py-3 px-6 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors"
-              >
-                詳細を見る
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Pricing 
+        plans={pricingPlans}
+        title="料金プラン"
+        description="お客様のニーズに合わせた最適なプランをご用意しています。全てのプランで高品質なLP制作と継続的なサポートを提供します。"
+      />
       
       {/* FAQ */}
       <div className="container mx-auto px-6 mb-20">
