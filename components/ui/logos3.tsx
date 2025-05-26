@@ -22,7 +22,7 @@ interface Logos3Props {
 }
 
 const Logos3 = ({
-  heading = "Trusted by these companies",
+  heading = "Trusted by these technology",
   logos = [
     {
       id: "logo-1",
