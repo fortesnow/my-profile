@@ -29,7 +29,7 @@ export default function ServicesGrid() {
       category: "開発",
       title: "爆速コーディングサービス",
       description: "最短当日対応可能。高品質なコードと迅速な納品で、あなたのビジネスを加速させます。",
-      href: "/coding-service",
+      href: "/services/coding-service",
     },
     {
       icon: <BarChart2 className="w-4 h-4" />,
@@ -43,28 +43,28 @@ export default function ServicesGrid() {
       category: "マーケティング",
       title: "SNS運用サービス",
       description: "X(旧Twitter)・Instagram・TikTokなどのSNS運用代行。ブランディングと集客に効果的なコンテンツ戦略を提供します。",
-      href: "/sns-service",
+      href: "/services/sns-service",
     },
     {
       icon: <LineChart className="w-4 h-4" />,
       category: "マーケティング",
       title: "SEO対策サービス",
       description: "検索エンジンからの自然流入を増やし、持続的な集客を実現。コンテンツ戦略からテクニカルSEOまで総合的に対応します。",
-      href: "/seo-service",
+      href: "/services/seo-service",
     },
     {
       icon: <Code className="w-4 h-4" />,
       category: "開発",
       title: "受託開発サービス",
       description: "Webアプリ、業務システム、ECサイトなど、お客様のニーズに合わせたシステム開発を提供します。",
-      href: "/development-service",
+      href: "/services/development-service",
     },
     {
       icon: <MessageSquare className="w-4 h-4" />,
       category: "コンテンツ",
       title: "セールスライティングサービス",
       description: "購買意欲を高めるコピーライティングで、コンバージョン率を向上。お客様の商品・サービスの魅力を最大限に伝えます。",
-      href: "/copywriting-service",
+      href: "/services/writing-service",
     },
   ];
 
