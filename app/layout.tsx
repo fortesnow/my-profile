@@ -42,7 +42,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" className="overflow-x-hidden">
-      <body className="font-sans">
+      <body className="font-sans overflow-x-hidden">
         <GoogleTagManager />
         <Navigation />
         {children}

@@ -13,6 +13,7 @@
 html {
   background: #111827; /* または現在使用している濃い青系の背景色 */
   overscroll-behavior: none;
+  overflow-x: hidden; /* 横スクロールを防止 */
 }
 
 body {
@@ -20,11 +21,19 @@ body {
   min-height: 100dvh; /* dynamic viewport heightを使用 */
   background: linear-gradient(to bottom right, #111827, #1e3a8a, #1e40af);
   font-family: 'Shinonome', monospace;
+  overflow-x: hidden; /* 横スクロールを防止 */
+  max-width: 100vw; /* 画面幅を超えないように制限 */
 }
 
 * {
   font-family: 'Shinonome', monospace;
   border-color: var(--border);
+}
+
+/* 全ての要素が画面幅を超えないように制限 */
+*, *::before, *::after {
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 @layer base {

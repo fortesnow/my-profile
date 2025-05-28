@@ -75,14 +75,14 @@ const Logos3 = ({
   ],
 }: Logos3Props) => {
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
+    <section className="py-16 bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 overflow-x-hidden">
       <div className="container flex flex-col items-center text-center">
         <h2 className="my-6 text-pretty text-2xl font-bold lg:text-4xl text-white">
           {heading}
         </h2>
       </div>
       <div className="pt-10 md:pt-16 lg:pt-20">
-        <div className="relative mx-auto flex items-center justify-center lg:max-w-5xl">
+        <div className="relative mx-auto flex items-center justify-center lg:max-w-5xl overflow-x-hidden">
           <Carousel
             opts={{ loop: true }}
             plugins={[AutoScroll({ playOnInit: true })]}
@@ -93,7 +93,7 @@ const Logos3 = ({
                   key={logo.id}
                   className="flex basis-1/3 justify-center pl-0 sm:basis-1/4 md:basis-1/5 lg:basis-1/6"
                 >
-                  <div className="mx-10 flex shrink-0 items-center justify-center">
+                  <div className="mx-4 sm:mx-6 md:mx-8 lg:mx-10 flex shrink-0 items-center justify-center">
                     <div>
                       <img
                         src={logo.image}
