@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Star, Users, TrendingUp, CheckCircle, ArrowRight, Phone, Mail } from 'lucide-react';
+import { MapPin, Star, Users, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, Target, BarChart, Shield, Zap } from 'lucide-react';
 import Link from 'next/link';
 
 export default function MEOServicePage() {
@@ -26,18 +26,30 @@ export default function MEOServicePage() {
     }
   ];
 
-  const plans = [
+  const advantages = [
     {
-      name: "ベーシックプラン",
-      price: "¥30,000",
-      period: "/月",
-      features: [
-        "Googleビジネスプロフィール最適化",
-        "基本的な投稿作成（週2回）",
-        "口コミ返信代行",
-        "月次レポート"
-      ]
+      icon: <Target className="w-8 h-8 text-cyan-400" />,
+      title: "競合が弱い今がチャンス",
+      description: "多くの店舗がMEOの重要性に気づいていない、または中途半端な対策しかしていないため、専門的な取り組みで地域で頭一つ抜け出せます。"
     },
+    {
+      icon: <BarChart className="w-8 h-8 text-green-400" />,
+      title: "資産性の高い施策",
+      description: "広告が「消費」であるのに対し、MEOは積み上げるほど価値が増す「資産」。一度構築すれば継続的な集客効果を生み出します。"
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-purple-400" />,
+      title: "包括的なMEO戦略",
+      description: "ビジネスプロフィールだけでなく、サイテーション、SEO、SNS戦略を組み合わせた包括的なアプローチで確実な結果を実現。"
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      title: "広告費ゼロで継続集客",
+      description: "広告のように「止めると効果ゼロ」ではなく、適切な運用で広告費をかけずとも継続的な集客効果が期待できます。"
+    }
+  ];
+
+  const plans = [
     {
       name: "スタンダードプラン",
       price: "¥50,000",
@@ -62,7 +74,10 @@ export default function MEOServicePage() {
         "イベント・キャンペーン企画",
         "複数店舗対応",
         "専任担当者",
-        "電話サポート"
+        "電話サポート",
+        "サイテーション最適化",
+        "SEO連携戦略",
+        "SNS統合戦略"
       ]
     }
   ];
@@ -76,10 +91,11 @@ export default function MEOServicePage() {
             <MapPin className="w-16 h-16 text-blue-400" />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            MEO対策サービス
+            ダサいことする前に結果の出るMEO対策で差別化しましょう。
           </h1>
-          <p className="text-xl text-blue-200 max-w-3xl mx-auto mb-8">
-            Googleマップで上位表示を実現し、地域のお客様に確実に見つけてもらえる店舗づくりをサポートします
+          <p className="text-xl text-blue-200 max-w-4xl mx-auto mb-8">
+            実店舗の集客において、今すぐ何よりも優先して取り組むべきなのがMEO対策です。<br />
+            競合が手薄な今だからこそ、専門的なMEO戦略で地域で頭一つ抜け出せる大きなチャンスがあります。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -95,6 +111,85 @@ export default function MEOServicePage() {
             >
               料金プランを見る
             </Link>
+          </div>
+        </div>
+
+        {/* なぜ広告よりMEOが先なのか */}
+        <div className="mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <h2 className="text-3xl font-bold text-white mb-6">なぜ広告よりMEOが先なのか？</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-semibold text-cyan-300 mb-4">広告の限界</h3>
+                <p className="text-blue-200 mb-4">
+                  広告運用はランニングコストとしてお金を払い続けないと効果が止まってしまいます。止めた途端にパタッと反応がなくなる自転車操業のようなもので、精神的にもコスト的にもしんどいものです。
+                </p>
+                <p className="text-blue-200 mb-4">
+                  特に小規模事業者や個人経営の店舗では、広告運用に対するリテラシーがないため丁半博打になりがちです。
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-cyan-300 mb-4">MEOの可能性</h3>
+                <p className="text-blue-200 mb-4">
+                  MEOの最大の魅力は、一度適切に設定・運用すれば、広告費をかけずとも継続的な集客効果が期待できる点です。
+                </p>
+                <p className="text-blue-200 mb-4">
+                  「近くのカフェ」「〇〇駅 ラーメン」こんな風に、今まさに「行きたい！」と思っている人が検索した時に、あなたのお店がGoogleマップの上位に表示されることの価値は計り知れません。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* MEOの優位性 */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-white mb-12">
+            MEOが絶好のチャンスである4つの理由
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {advantages.map((advantage, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <div className="flex items-center mb-4">
+                  {advantage.icon}
+                  <h3 className="text-xl font-semibold text-white ml-3">
+                    {advantage.title}
+                  </h3>
+                </div>
+                <p className="text-blue-200">
+                  {advantage.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 包括的なMEO戦略 */}
+        <div className="mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <h2 className="text-3xl font-bold text-white mb-6">真のMEO対策は包括的なアプローチが必要</h2>
+            <p className="text-blue-200 mb-6">
+              MEO対策というとGoogleビジネスプロフィールの管理ばかりに目が行きがちですが、本当に効果を出すためには以下の要素を組み合わせた戦略が必要です：
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-white/5 rounded-lg p-4">
+                <h4 className="text-lg font-semibold text-white mb-2">サイテーション最適化</h4>
+                <p className="text-sm text-blue-200">
+                  外部サイトでのNAP情報（店名・住所・電話番号）の統一と、自然な言及を増やす戦略的アプローチ
+                </p>
+              </div>
+              <div className="bg-white/5 rounded-lg p-4">
+                <h4 className="text-lg font-semibold text-white mb-2">SEO連携戦略</h4>
+                <p className="text-sm text-blue-200">
+                  ウェブサイトのSEO対策とMEOを連動させることで、検索エンジン全体での露出を最大化
+                </p>
+              </div>
+              <div className="bg-white/5 rounded-lg p-4">
+                <h4 className="text-lg font-semibold text-white mb-2">SNS統合戦略</h4>
+                <p className="text-sm text-blue-200">
+                  InstagramやTikTokでの戦略的情報発信で、ユーザーからの自然な言及とエンゲージメントを促進
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -167,7 +262,7 @@ export default function MEOServicePage() {
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             料金プラン
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {plans.map((plan, index) => (
               <div
                 key={index}
@@ -215,6 +310,19 @@ export default function MEOServicePage() {
                 </Link>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* 資産性の強調セクション */}
+        <div className="mb-16">
+          <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/30">
+            <h2 className="text-3xl font-bold text-white mb-6 text-center">MEOは「資産性の高い財産」</h2>
+            <p className="text-blue-200 mb-6 text-center max-w-4xl mx-auto">
+              広告が「消費」であるのに対し、MEOは積み上げれば積み上げるほど価値が増す「資産」のようなもの。一度しっかり構築すれば、少ない労力で安定した集客効果を生み出し続けてくれる可能性を秘めています。
+            </p>
+            <p className="text-cyan-300 text-center font-semibold">
+              競合が弱い、薄い、甘いのトリプルパンチの状態で、まだ本気を出していない今だからこそ少しの努力で大きなアドバンテージを得られます。
+            </p>
           </div>
         </div>
 
