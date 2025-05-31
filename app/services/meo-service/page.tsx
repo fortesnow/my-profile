@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Star, Users, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, Target, BarChart, Shield, Zap } from 'lucide-react';
+import { MapPin, Star, Users, TrendingUp, CheckCircle, ArrowRight, Target, BarChart, Shield, Zap } from 'lucide-react';
 import Link from 'next/link';
 
 export default function MEOServicePage() {
@@ -98,13 +98,15 @@ export default function MEOServicePage() {
             競合が手薄な今だからこそ、専門的なMEO戦略で地域で頭一つ抜け出せる大きなチャンスがあります。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="#contact"
+            <a
+              href="https://lin.ee/ATZ4bog"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center gap-2"
             >
               無料相談を申し込む
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </a>
             <Link
               href="#plans"
               className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
@@ -298,8 +300,10 @@ export default function MEOServicePage() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href="#contact"
+                <a
+                  href="https://lin.ee/ATZ4bog"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`w-full py-3 rounded-lg font-semibold transition-colors text-center block ${
                     plan.popular
                       ? 'bg-blue-600 hover:bg-blue-700 text-white'
@@ -307,7 +311,7 @@ export default function MEOServicePage() {
                   }`}
                 >
                   このプランを選ぶ
-                </Link>
+                </a>
               </div>
             ))}
           </div>
@@ -327,71 +331,29 @@ export default function MEOServicePage() {
         </div>
 
         {/* お問い合わせセクション */}
-        <div id="contact" className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-          <h2 className="text-3xl font-bold text-center text-white mb-8">
-            無料相談・お問い合わせ
-          </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold text-white mb-4">
-                まずは無料相談から
-              </h3>
-              <p className="text-blue-200 mb-6">
-                現在の店舗の状況をお聞かせください。MEO対策の効果や具体的な施策について、無料でご相談いただけます。
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-blue-400" />
-                  <span className="text-white">03-1234-5678</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-blue-400" />
-                  <span className="text-white">info@example.com</span>
-                </div>
-              </div>
-            </div>
-            <div>
-              <form className="space-y-4">
-                <div>
-                  <label className="block text-white mb-2">お名前</label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60"
-                    placeholder="山田太郎"
-                  />
-                </div>
-                <div>
-                  <label className="block text-white mb-2">メールアドレス</label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60"
-                    placeholder="example@email.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-white mb-2">店舗名・会社名</label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60"
-                    placeholder="株式会社サンプル"
-                  />
-                </div>
-                <div>
-                  <label className="block text-white mb-2">お問い合わせ内容</label>
-                  <textarea
-                    rows={4}
-                    className="w-full px-4 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60"
-                    placeholder="MEO対策についてご相談したいことをお書きください"
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors"
-                >
-                  無料相談を申し込む
-                </button>
-              </form>
-            </div>
+        <div className="container mx-auto px-6 pb-20">
+          <div className="bg-gradient-to-br from-gray-900/80 to-blue-900/80 backdrop-blur-md rounded-lg p-12 max-w-4xl mx-auto text-center border border-cyan-500/20">
+            <h2 className="text-3xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+              競合が弱い今こそ、<br className="md:hidden" />MEO対策で差別化しませんか？
+            </h2>
+            <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+              私たちのMEO対策サービスは、ただのビジネスプロフィール管理ではなく、<br className="hidden md:block" />
+              資産性の高い包括的なマーケティング戦略です。
+            </p>
+            <a
+              href="https://lin.ee/ATZ4bog"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-10 py-5 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-lg font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
+            >
+              <span>無料相談を予約する</span>
+              <svg className="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+            <p className="mt-6 text-gray-400 text-sm">
+              LINEでお気軽にご相談ください。通常24時間以内に返信いたします。
+            </p>
           </div>
         </div>
       </div>
