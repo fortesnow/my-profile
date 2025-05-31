@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Code, Layout, BarChart2, LineChart, MessageSquare, ArrowRight, Twitter } from "lucide-react";
+import { Code, Layout, BarChart2, LineChart, MessageSquare, ArrowRight, Twitter, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
@@ -51,6 +51,13 @@ export default function ServicesGrid() {
       title: "SEO対策サービス",
       description: "検索エンジンからの自然流入を増やし、持続的な集客を実現。コンテンツ戦略からテクニカルSEOまで総合的に対応します。",
       href: "/services/seo-service",
+    },
+    {
+      icon: <MapPin className="w-4 h-4" />,
+      category: "マーケティング",
+      title: "MEO対策サービス",
+      description: "Googleマップでの上位表示を実現し、地域密着型ビジネスの集客を強化。店舗への来店数増加をサポートします。",
+      href: "/services/meo-service",
     },
     {
       icon: <Code className="w-4 h-4" />,
