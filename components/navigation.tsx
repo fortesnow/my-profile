@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null)
+
   const [scrolled, setScrolled] = useState(false)
 
   // スクロール検知の最適化（useCallbackで関数をメモ化）
@@ -35,21 +35,8 @@ export default function Navigation() {
 
   const navItems = [
     { label: "Home", href: "/" },
-    { 
-      label: "サービス", 
-      href: "/services",
-      items: [
-        { name: "受託開発", href: "/services/development-service" },
-        { name: "LP制作", href: "/services/lp-service" },
-        { name: "コーディング", href: "/services/coding-service" },
-        { name: "広告運用", href: "/services/ads-service" },
-        { name: "SEO対策", href: "/services/seo-service" },
-        { name: "SNS運用", href: "/services/sns-service" },
-        { name: "Webサイト制作", href: "/services/website-service" },
-        { name: "セールスライティング", href: "/services/writing-service" },
-        { name: "AI開発", href: "/services/ai-service" },
-      ]
-    },
+    { label: "サービス", href: "/services" },
+    { label: "実績", href: "/achievements" },
     { label: "ブログ", href: "/blog" },
     { label: "お問い合わせ", href: "/contact" },
   ]
@@ -81,52 +68,13 @@ export default function Navigation() {
             {/* PCメニュー */}
             <nav className="hidden md:flex items-center space-x-8">
               {navItems.map((item) => (
-                <div
-                  key={item.label}
-                  className="relative"
-                  onMouseEnter={() => setHoveredItem(item.label)}
-                  onMouseLeave={() => setHoveredItem(null)}
-                >
-                  {item.items ? (
-                    <>
-                      <Link 
-                        href={item.href || "#"} 
-                        className="text-gray-300 hover:text-cyan-400 transition-colors py-2"
-                        aria-expanded={hoveredItem === item.label}
-                        aria-haspopup="true"
-                      >
-                        {item.label}
-                      </Link>
-                      <AnimatePresence>
-                        {hoveredItem === item.label && (
-                          <motion.div
-                            initial={{ opacity: 0, y: 5 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 5 }}
-                            transition={{ duration: 0.2 }}
-                            className="absolute top-full left-0 w-64 bg-gray-900/95 backdrop-blur-md py-4 rounded-lg shadow-xl"
-                          >
-                            {item.items.map((subItem) => (
-                              <Link
-                                key={subItem.name}
-                                href={subItem.href}
-                                className="block px-6 py-2 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors"
-                              >
-                                {subItem.name}
-                              </Link>
-                            ))}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      className="text-gray-300 hover:text-cyan-400 transition-colors py-2"
-                    >
-                      {item.label}
-                    </Link>
-                  )}
+                <div key={item.label}>
+                  <Link
+                    href={item.href}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors py-2"
+                  >
+                    {item.label}
+                  </Link>
                 </div>
               ))}
             </nav>
@@ -178,51 +126,19 @@ export default function Navigation() {
                   <div className="space-y-6">
                     {navItems.map((item, index) => (
                       <div key={index} className="border-b border-cyan-500/20 pb-4">
-                        {item.items ? (
-                          <>
-                            <h2 className="text-xl font-bold text-cyan-400 mb-2">
-                              <Link 
-                                href={item.href || "#"} 
-                                onClick={closeMenu}
-                                className="block py-3 px-2 rounded-lg touch-manipulation hover:bg-gray-800/50"
-                              >
-                                {item.label}
-                              </Link>
-                            </h2>
-                            <ul className="pl-2 space-y-1">
-                              {item.items.map((subItem, subIndex) => (
-                                <motion.li
-                                  key={subIndex}
-                                  initial={{ x: -10, opacity: 0 }}
-                                  animate={{ x: 0, opacity: 1 }}
-                                  transition={{ delay: 0.05 * subIndex, duration: 0.2 }}
-                                >
-                                  <Link
-                                    href={subItem.href}
-                                    className="text-gray-300 hover:text-cyan-400 transition-colors block py-3 px-3 rounded-lg touch-manipulation hover:bg-gray-800/50"
-                                    onClick={closeMenu}
-                                  >
-                                    {subItem.name}
-                                  </Link>
-                                </motion.li>
-                              ))}
-                            </ul>
-                          </>
-                        ) : (
-                          <motion.div
-                            initial={{ x: -10, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            transition={{ delay: 0.05 * index, duration: 0.2 }}
+                        <motion.div
+                          initial={{ x: -10, opacity: 0 }}
+                          animate={{ x: 0, opacity: 1 }}
+                          transition={{ delay: 0.05 * index, duration: 0.2 }}
+                        >
+                          <Link
+                            href={item.href}
+                            className="text-xl font-bold text-cyan-400 hover:text-cyan-300 transition-colors block py-3 px-2 rounded-lg touch-manipulation hover:bg-gray-800/50"
+                            onClick={closeMenu}
                           >
-                            <Link
-                              href={item.href}
-                              className="text-xl font-bold text-cyan-400 hover:text-cyan-300 transition-colors block py-3 px-2 rounded-lg touch-manipulation hover:bg-gray-800/50"
-                              onClick={closeMenu}
-                            >
-                              {item.label}
-                            </Link>
-                          </motion.div>
-                        )}
+                            {item.label}
+                          </Link>
+                        </motion.div>
                       </div>
                     ))}
                   </div>

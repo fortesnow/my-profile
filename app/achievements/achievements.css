@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Orbitron:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* アニメーションのみCSS、他はTailwindで対応 */
+@keyframes twinkle {
+  from { background-position: 0 0, 40px 60px, 130px 270px; }
+  to { background-position: -400px 400px, -360px 460px, -270px 670px; }
+}
+
+/* メインページスタイル */
+.achievements-page {
+  min-height: 100vh;
+  position: relative;
+  background-color: #0c142c;
+  color: #e0e0e0;
+  font-family: 'Noto Sans JP', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 星空背景 */
+.star-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(white, rgba(255,255,255,0) 0.5px),
+    radial-gradient(white, rgba(255,255,255,0) 0.5px),
+    radial-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0) 1px);
+  background-repeat: repeat;
+  background-size: 400px 400px, 200px 200px, 100px 100px;
+  background-position: 0 0, 40px 60px, 130px 270px;
+  animation: twinkle 15s linear infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes twinkle {
+  from { background-position: 0 0, 40px 60px, 130px 270px; }
+  to { background-position: -400px 400px, -360px 460px, -270px 670px; }
+}
+
+/* タイトル */
+.achievements-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .achievements-title {
+    font-size: 3.75rem;
+  }
+}
+
+/* 実績カード */
+.achievement-card {
+  background: rgba(12, 20, 44, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement-card:hover {
+  transform: scale(1.05);
+}
+
+/* ミッションタグ */
+.mission-tag {
+  background: #d4af37;
+  color: #0c142c;
+  font-weight: 700;
+  padding: 0.25rem 1rem 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  display: inline-block;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+/* カードタイトル */
+.achievement-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-top: 0.5rem;
+}
+
+/* メトリクス値 */
+.metric-value {
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  font-size: 1.125rem;
+}
+
+/* 結果バー */
+.result-bar {
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  height: 0.5rem;
+}
+
+.result-bar-inner {
+  background: linear-gradient(90deg, #d4af37, #f0e68c);
+  height: 100%;
+  transition: width 1s ease-out;
+}
+
+/* CTAタイトル */
+.cta-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 0 8px #fff;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .cta-title {
+    font-size: 2.25rem;
+  }
+}
+
+/* CTAボタン */
+.cta-button {
+  margin-top: 2rem;
+  display: inline-block;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  padding: 0.75rem 2.5rem;
+  border-radius: 0.375rem;
+  font-size: 1.125rem;
+  transition: all 0.3s ease;
+  background: linear-gradient(145deg, #1a2b58, #101a35);
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  text-shadow: 0 0 5px #d4af37;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5), inset 0 0 5px rgba(212, 175, 55, 0.3);
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background: #d4af37;
+  color: #0c142c;
+  text-shadow: none;
+  box-shadow: 0 0 20px #d4af37;
+} 
