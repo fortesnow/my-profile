@@ -4,6 +4,8 @@ import { ProfileData } from './types'
 import ServicesGrid from "./ServicesGrid"
 import { AnimatedTestimonials } from "./ui/animated-testimonials"
 import { Hero } from "./ui/animated-hero"
+import { ProblemSection } from "./ProblemSection"
+import { StellariumServiceSection } from "./StellariumServiceSection"
 
 interface Website {
   icon: string
@@ -171,6 +173,12 @@ export default function Profile({ data }: { data: ProfileData }) {
                 <div className="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tl from-cyan-500/20 to-purple-500/20 transform rotate-45 translate-x-8 translate-y-8" />
               </div>
             )}
+
+            {/* お悩み・共感セクション */}
+            <ProblemSection />
+
+            {/* Stellarium具体的サービスセクション */}
+            <StellariumServiceSection />
 
             {/* サービス一覧セクション */}
             <section className="mt-8">
