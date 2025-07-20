@@ -4,7 +4,7 @@ import { ProfileData } from './types'
 import ServicesGrid from "./ServicesGrid"
 import { AnimatedTestimonials } from "./ui/animated-testimonials"
 import { Hero } from "./ui/animated-hero"
-import { ProblemSection } from "./ProblemSection"
+
 import { StellariumServiceSection } from "./StellariumServiceSection"
 
 interface Website {
@@ -174,8 +174,7 @@ export default function Profile({ data }: { data: ProfileData }) {
               </div>
             )}
 
-            {/* お悩み・共感セクション */}
-            <ProblemSection />
+
 
             {/* Stellarium具体的サービスセクション */}
             <StellariumServiceSection />

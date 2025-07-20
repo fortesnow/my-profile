@@ -43,7 +43,7 @@ export const StellariumServiceSection: React.FC = () => {
                   "競合アカウント調査", 
                   "具体的な改善アクションプラン",
                   "3ヶ月後の目標達成ロードマップ",
-                  "30分間のオンライン解説コンサルティング付き"
+                  "1時間のオンライン解説コンサルティング付き"
                 ].map((item, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-yellow-400 flex-shrink-0" />
