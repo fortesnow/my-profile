@@ -211,9 +211,7 @@ export default function DevelopmentServicePage() {
               お客様のニーズに合わせた最適な開発プランをご提案いたします
             </p>
             <a
-              href="https://lin.ee/ATZ4bog"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/contact"
               className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-lg"
             >
               <span>お問い合わせ</span>
