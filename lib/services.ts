@@ -22,7 +22,7 @@ export const services: Service[] = [
     title: "受託開発",
     description: "お客様のビジネス要件に合わせたカスタムWebアプリケーションを開発します。企画から設計、開発、運用までワンストップで対応可能です。",
     shortDescription: "ビジネスに最適化されたWebアプリケーション開発",
-    thumbnail: "/services/development.jpg",
+    thumbnail: "/images/zunda-pic.png",
     icon: "code",
     features: [
       "要件定義・技術設計",
@@ -39,7 +39,7 @@ export const services: Service[] = [
     title: "LP制作",
     description: "コンバージョン率を最大化するランディングページを制作します。マーケティング戦略に基づいたデザインと、説得力のあるコピーライティングで成果を上げます。",
     shortDescription: "高CVRを実現するLPデザイン＆コピーライティング",
-    thumbnail: "/services/lp.jpg",
+    thumbnail: "/images/zunda-pic.png",
     icon: "layout",
     features: [
       "ターゲット分析",
@@ -55,7 +55,7 @@ export const services: Service[] = [
         {
           title: "美容クリニックのLP制作",
           result: "問い合わせ数が前月比180%増加",
-          image: "/services/case-beauty.jpg"
+          image: "/images/zunda-pic.png"
         },
         // 他の事例...
       ],
@@ -73,7 +73,7 @@ export const services: Service[] = [
     title: "コーディング",
     description: "デザインデータをHTML/CSS/JavaScriptを使って忠実に再現します。レスポンシブ対応、クロスブラウザ対応、アクセシビリティにも配慮したコーディングを提供します。",
     shortDescription: "高品質・高速表示のフロントエンド実装",
-    thumbnail: "/services/coding.jpg",
+    thumbnail: "/images/zunda-pic.png",
     icon: "code-2",
     features: [
       "レスポンシブデザイン",
@@ -90,7 +90,7 @@ export const services: Service[] = [
     title: "広告運用",
     description: "Google広告やMeta広告を活用した効果的な広告運用で、集客とコンバージョンを最大化します。データ分析に基づいた広告戦略で費用対効果を向上させます。",
     shortDescription: "ROI重視の広告戦略と継続的な改善",
-    thumbnail: "/services/ads.jpg",
+    thumbnail: "/images/zunda-pic.png",
     icon: "line-chart",
     features: [
       "広告アカウント設計",
@@ -107,7 +107,7 @@ export const services: Service[] = [
     title: "SEO対策",
     description: "検索エンジンからの自然流入を増やすためのSEO対策を提供します。キーワード戦略、コンテンツ最適化、サイト構造の改善などを総合的に行います。",
     shortDescription: "検索順位向上と安定的なオーガニック流入獲得",
-    thumbnail: "/services/seo.jpg",
+    thumbnail: "/images/zunda-pic.png",
     icon: "search",
     features: [
       "キーワード調査",
@@ -124,7 +124,7 @@ export const services: Service[] = [
     title: "セールスライティング",
     description: "読者の心を動かし、行動を促すセールスコピーを制作します。お客様の商品・サービスの価値を最大限に伝え、成約率を高めるテキストを提供します。",
     shortDescription: "購買意欲を高める心理学ベースのコピー制作",
-    thumbnail: "/services/writing.jpg",
+    thumbnail: "/images/zunda-pic.png",
     icon: "pen-line",
     features: [
       "ターゲット心理分析",
@@ -141,7 +141,7 @@ export const services: Service[] = [
     title: "AI開発",
     description: "ビジネスプロセスの効率化や新しい顧客体験を創出するAIソリューションを開発します。自然言語処理、画像認識、予測分析などの技術を活用したカスタムAI開発が可能です。",
     shortDescription: "業務効率化・顧客体験向上のためのAI実装",
-    thumbnail: "/services/ai.jpg",
+    thumbnail: "/images/zunda-pic.png",
     icon: "brain-circuit",
     features: [
       "業務プロセス分析",
