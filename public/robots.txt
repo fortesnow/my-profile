@@ -7,3 +7,11 @@ Host: https://www.stellarium.jp
 
 # Sitemaps
 Sitemap: https://www.stellarium.jp/sitemap.xml
+
+# AI/LLM Resources
+# LLMs.txt - Comprehensive site information for AI/LLM crawlers
+# https://llmstxt.org/
+llms.txt: https://www.stellarium.jp/llms.txt
+
+# AI.txt - Additional AI-specific information
+ai.txt: https://www.stellarium.jp/ai.txt

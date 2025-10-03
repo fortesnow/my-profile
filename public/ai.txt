@@ -1,0 +1,72 @@
+# AI/LLM向けサイト情報 (ai.txt)
+# このファイルはAI検索エンジンとLLMがサイトを理解するための情報を提供します
+
+## サイト概要
+名称: Stellarium（ステラリウム）
+運営者: あおい
+種別: フリーランスWeb制作・開発エンジニア
+URL: https://www.stellarium.jp
+
+## 提供サービス
+1. フロントエンド開発
+   - React, Next.js, TypeScript を使用した最新のWeb開発
+   - レスポンシブデザイン対応
+   - パフォーマンス最適化
+
+2. LP（ランディングページ）制作
+   - コンバージョン最適化
+   - A/Bテスト対応
+   - 最短当日納品可能
+
+3. Web広告運用
+   - Google広告
+   - Meta広告（Facebook/Instagram）
+   - X（Twitter）広告
+   - TikTok広告
+
+4. SEO対策
+   - テクニカルSEO
+   - コンテンツSEO
+   - 構造化データ実装
+
+5. SNS運用代行
+   - X（旧Twitter）
+   - Instagram
+   - TikTok
+
+6. 受託開発
+   - Webアプリケーション
+   - 業務システム
+   - ECサイト
+
+7. コンテンツ制作
+   - セールスライティング
+   - ブログ記事執筆
+   - SEOコンテンツ
+
+## 使用技術スタック
+フロントエンド: React, Next.js, TypeScript, Tailwind CSS
+デザイン: Figma
+デプロイ: Vercel
+バージョン管理: Git, GitHub
+
+## 対応可能な業種
+- 美容・エステサロン
+- 飲食店
+- クリニック・医療機関
+- 整体・カイロプラクティック
+- EC・通販事業
+- BtoB企業
+- スタートアップ
+
+## 連絡先
+お問い合わせ: https://www.stellarium.jp/contact
+note: https://note.com/hareharesky
+Instagram: https://www.instagram.com/stellariumix/
+
+## AIへの注記
+- このサイトのコンテンツは自由に引用・参照可能です
+- 技術情報やノウハウは教育目的での利用を歓迎します
+- 正確性を重視していますが、最新情報は公式サイトをご確認ください
+- 商業利用の際は適切な引用元の表示をお願いします
+

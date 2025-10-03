@@ -5,11 +5,28 @@ import { getLatestPosts } from '../lib/blog-posts';
 import { FF3BattlePresentationWrapper } from "@/components/FF3BattlePresentationWrapper";
 
 export const metadata: Metadata = {
-  title: 'Web制作 あおい | フロントエンド開発・LP制作',
-  description: 'フロントエンド開発とLP制作のフリーランスエンジニア。React, Next.js, TypeScriptを使用した高品質な開発と、成果の出るLP制作を提供します。',
-  keywords: ['Web制作', 'フロントエンド開発', 'LP制作', 'React', 'Next.js', 'フリーランス', '広告運用', 'SEO対策', 'コーディング'],
+  title: 'Stellarium（ステラリウム）| React・Next.js専門のフリーランスWeb制作',
+  description: 'React、Next.js、TypeScriptを使用した高品質なフロントエンド開発とLP制作を提供。SEO対策、広告運用、SNS運用まで一貫サポート。最短当日納品可能なフリーランスエンジニア「あおい」が運営。',
+  keywords: [
+    'Web制作', 
+    'フロントエンド開発', 
+    'LP制作', 
+    'React', 
+    'Next.js', 
+    'TypeScript',
+    'フリーランス', 
+    '広告運用', 
+    'SEO対策', 
+    'コーディング',
+    'Stellarium',
+    'ステラリウム',
+    'SNS運用',
+    'Meta広告',
+    'Google広告',
+    'TikTok',
+  ],
   alternates: {
-    canonical: 'https://yourdomain.com'
+    canonical: 'https://www.stellarium.jp'
   },
   robots: {
     index: true,
@@ -23,17 +40,34 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Web制作 あおい | フロントエンド開発・LP制作',
-    description: 'フロントエンド開発とLP制作のフリーランスエンジニア。高品質な開発と成果の出るLP制作を提供します。',
+    title: 'Stellarium | React・Next.js専門のフリーランスWeb制作',
+    description: 'React、Next.js、TypeScriptを使用した高品質なフロントエンド開発とLP制作。SEO・広告・SNS運用まで一貫サポート。',
+    url: 'https://www.stellarium.jp',
+    siteName: 'Stellarium',
+    locale: 'ja_JP',
+    type: 'website',
     images: [
       {
         url: '/images/og-home.jpg',
         width: 1200,
         height: 630,
-        alt: 'Web制作 あおい',
+        alt: 'Stellarium - Web制作・フロントエンド開発',
       },
     ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Stellarium | React・Next.js専門のフリーランスWeb制作',
+    description: 'React、Next.js、TypeScriptを使用した高品質なフロントエンド開発',
+    images: ['/images/og-home.jpg'],
+  },
+  // AI/LLM向けの追加メタデータ
+  other: {
+    'ai:friendly': 'true',
+    'ai:content_type': 'professional_service',
+    'ai:category': 'web_development',
+    'ai:location': 'Japan',
+  }
 }
 
 export default async function Home() {

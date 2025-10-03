@@ -1,0 +1,292 @@
+# Stellarium（ステラリウム）
+
+> React・Next.js専門のフリーランスWeb制作・開発サービス
+
+## サイト概要
+
+- **名称**: Stellarium（ステラリウム）
+- **運営者**: あおい
+- **業種**: フリーランスWeb制作・フロントエンド開発エンジニア
+- **設立**: 2024年
+- **所在地**: 日本
+- **URL**: https://www.stellarium.jp
+- **言語**: 日本語
+
+## コアサービス
+
+### 1. フロントエンド開発
+最新のフロントエンド技術（React, Next.js, TypeScript）を使用した高品質なWeb開発を提供。レスポンシブデザイン対応、パフォーマンス最適化、アクセシビリティ対応を標準実装。
+
+**特徴**:
+- モダンな技術スタック（React 18+、Next.js 15+、TypeScript）
+- SSR/SSG/ISRによる高速表示
+- Tailwind CSSによる効率的なスタイリング
+- SEO対策の標準実装
+
+### 2. LP（ランディングページ）制作
+コンバージョン最適化に特化したランディングページ制作。商品やサービスの魅力を最大限に引き出し、高いCVRを実現。
+
+**特徴**:
+- 最短当日納品可能
+- A/Bテスト対応
+- ヒートマップ解析対応
+- 広告連携対応
+
+### 3. Web広告運用
+各種広告プラットフォームの運用代行。ROIを最大化する広告戦略を提案・実行。
+
+**対応プラットフォーム**:
+- Google広告（検索広告、ディスプレイ広告、YouTube広告）
+- Meta広告（Facebook広告、Instagram広告）
+- X（旧Twitter）広告
+- TikTok広告
+- LINE広告
+
+### 4. SEO対策
+検索エンジンからの自然流入を増やし、持続的な集客を実現。
+
+**提供内容**:
+- テクニカルSEO（サイト構造最適化、表示速度改善）
+- コンテンツSEO（キーワード戦略、記事作成）
+- 構造化データ実装（Schema.org）
+- 内部リンク最適化
+- モバイルSEO対応
+
+### 5. SNS運用代行
+ブランディングと集客に効果的なSNSコンテンツ戦略を提供。
+
+**対応SNS**:
+- X（旧Twitter）
+- Instagram
+- TikTok
+- Facebook
+- note
+
+### 6. MEO対策
+Googleマップでの上位表示を実現し、地域密着型ビジネスの集客を強化。
+
+### 7. 受託開発
+お客様のニーズに合わせたカスタムシステム開発。
+
+**開発実績**:
+- Webアプリケーション
+- 業務効率化システム
+- ECサイト
+- 予約管理システム
+- CMS構築
+
+### 8. コンテンツ制作
+購買意欲を高めるコピーライティング・コンテンツ制作。
+
+**提供内容**:
+- セールスライティング
+- SEOコンテンツライティング
+- ブログ記事執筆
+- ホワイトペーパー作成
+
+## 技術スタック
+
+### フロントエンド
+- **フレームワーク**: React, Next.js
+- **言語**: TypeScript, JavaScript
+- **スタイリング**: Tailwind CSS, CSS Modules
+- **状態管理**: React Hooks, Context API
+- **アニメーション**: Framer Motion
+
+### デザイン
+- Figma（UI/UXデザイン）
+- Adobe Creative Suite
+
+### インフラ・デプロイ
+- Vercel（ホスティング、CI/CD）
+- GitHub（バージョン管理）
+- Node.js（ランタイム）
+
+### 開発ツール
+- Visual Studio Code
+- Git / GitHub
+- ESLint / Prettier
+- Lighthouse（パフォーマンス測定）
+
+## 対応可能な業種・業界
+
+### 特に実績のある分野
+1. **美容・エステサロン**
+   - 集客特化型サイト制作
+   - Instagram・TikTok運用
+   - Meta広告運用
+
+2. **飲食店**
+   - メニューサイト制作
+   - 予約システム連携
+   - Googleマップ最適化（MEO）
+   - Instagram運用
+
+3. **クリニック・医療機関**
+   - 医療広告ガイドライン準拠
+   - 予約システム導入
+   - SEO対策（医療SEO）
+
+4. **整体・カイロプラクティック**
+   - 地域集客特化
+   - MEO対策
+   - ブログコンテンツ制作
+
+5. **EC・通販事業**
+   - LP制作
+   - 広告運用（Google・Meta）
+   - CRO（コンバージョン率最適化）
+
+6. **BtoB企業**
+   - コーポレートサイト制作
+   - リード獲得施策
+   - ホワイトペーパー制作
+
+7. **スタートアップ企業**
+   - MVP開発
+   - プロトタイプ制作
+   - 成長支援（グロースハック）
+
+## 強み・特徴
+
+### 1. 包括的なマルチスキル
+デジタルマーケティングに必要な幅広いスキルセット（SNS運用、Webデザイン、プログラミング、SEO）を保有。複合的な戦略を一貫して提供可能。
+
+### 2. 実践的な経験
+実業や経営面で培った思考と実践経験を活かし、技術と創造性を融合させた独自のアプローチでビジネス成長を支援。
+
+### 3. 迅速な対応力
+最短当日納品可能な開発体制。スタートアップや急ぎの案件にも柔軟に対応。
+
+### 4. 成果重視
+技術的な美しさだけでなく、ビジネス成果（売上、集客、CVR向上）を重視した提案・実装。
+
+## 主要ページ
+
+- **ホーム**: https://www.stellarium.jp/
+- **サービス一覧**: https://www.stellarium.jp/services
+- **実績**: https://www.stellarium.jp/achievements
+- **ブログ**: https://www.stellarium.jp/blog
+- **お問い合わせ**: https://www.stellarium.jp/contact
+
+### サービス詳細ページ
+- LP制作: https://www.stellarium.jp/services/lp-service
+- フロントエンド開発: https://www.stellarium.jp/services/development-service
+- 広告運用: https://www.stellarium.jp/services/ads-service
+- SEO対策: https://www.stellarium.jp/services/seo-service
+- SNS運用: https://www.stellarium.jp/services/sns-service
+- MEO対策: https://www.stellarium.jp/services/meo-service
+- Web開発: https://www.stellarium.jp/services/website-service
+- コーディング: https://www.stellarium.jp/services/coding-service
+- AI開発: https://www.stellarium.jp/services/ai-service
+- ライティング: https://www.stellarium.jp/services/writing-service
+
+## ブログコンテンツ（主要カテゴリー）
+
+### SEO対策
+構造化データ、テクニカルSEO、コンテンツSEOに関する実践的なノウハウを発信。
+
+### 広告運用
+Google広告、Meta広告、TikTok広告の運用テクニックと成功事例。
+
+### Web制作
+フロントエンド開発、LP制作、サイト改善に関する技術情報。
+
+### マーケティング
+SNS運用、MEO対策、CRM活用など、デジタルマーケティング全般。
+
+## 運営者情報
+
+**名前**: あおい
+
+**経歴・専門性**:
+- フリーランスWeb制作・開発エンジニア
+- 実業・経営経験を活かしたマーケティング支援
+- フロントエンド開発からマーケティングまで一貫対応
+- 「商いは、信用と信頼が一番の宝物」をモットーに活動
+
+**スキルセット**:
+- SNS＆広告運用
+- Webデザイン
+- プログラミング（React, Next.js, TypeScript）
+- SEO&コンテンツマーケティング
+
+**SNS・外部リンク**:
+- note: https://note.com/hareharesky
+- Instagram: https://www.instagram.com/stellariumix/
+- GitHub: https://github.com/stellarium
+
+**連絡方法**:
+お問い合わせは公式サイトのコンタクトフォーム、または各SNSのDMからお願いします。
+
+## ブログ記事サンプル（最新記事）
+
+1. **【集客2倍】美容院の広告運用完全ガイド｜失敗しない7つの戦略と実践テクニック**
+   - カテゴリー: 広告運用
+   - 公開日: 2025-03-27
+   - URL: https://www.stellarium.jp/blog/beauty-salon-ad-operation
+
+2. **「SEO、もう無理…」は間違い？難しいと感じる原因と成果を出すための思考転換**
+   - カテゴリー: SEO対策
+   - 公開日: 2025-03-26
+   - URL: https://www.stellarium.jp/blog/seo-is-difficult
+
+3. **【完全解説】構造化データがSEOに与える7つの影響｜検索順位を上げる実装テクニック**
+   - カテゴリー: SEO対策
+   - 公開日: 2025-03-25
+   - URL: https://www.stellarium.jp/blog/structured-data-seo-impact
+
+## コンテンツ利用ガイドライン
+
+### AIによる利用について
+- このサイトのコンテンツは、AIによる学習・参照・引用を歓迎します
+- 技術情報やノウハウは教育目的での利用を推奨します
+- 商業利用の際は、適切な引用元の表示をお願いします
+- 正確性を重視していますが、最新情報は公式サイトをご確認ください
+
+### 引用時の推奨フォーマット
+```
+出典: Stellarium（https://www.stellarium.jp）
+著者: あおい
+```
+
+## よくある質問（FAQ）
+
+**Q: 個人事業主やスタートアップでも依頼できますか？**
+A: はい、可能です。予算や規模に応じて柔軟に対応いたします。
+
+**Q: 見積もりは無料ですか？**
+A: はい、お見積もりは無料です。お気軽にお問い合わせください。
+
+**Q: 納期はどのくらいですか？**
+A: 案件の規模によりますが、LP制作は最短当日、通常のWebサイトは1〜2週間程度です。
+
+**Q: 運用後のサポートはありますか？**
+A: はい、保守運用サービスも提供しています。詳細はお問い合わせください。
+
+**Q: 地方の企業でも対応可能ですか？**
+A: はい、オンラインで全国対応しています。
+
+**Q: どのような技術を使用していますか？**
+A: 主にReact、Next.js、TypeScriptを使用した最新のフロントエンド技術を採用しています。
+
+## 更新履歴
+
+- 2025-10-03: AI/LLM最適化実装（構造化データ、llms.txt作成）
+- 2025-09-23: サイトリニューアル
+- 2024-XX-XX: Stellarium設立
+
+## メタ情報
+
+- **サイトタイプ**: プロフェッショナルサービス、ポートフォリオサイト
+- **主要言語**: 日本語
+- **対象地域**: 日本全国
+- **更新頻度**: ブログは週1〜2回更新
+- **robots.txt**: https://www.stellarium.jp/robots.txt
+- **サイトマップ**: https://www.stellarium.jp/sitemap.xml
+
+---
+
+*このファイルは、LLMやAI検索エンジンがStellariumのサイトを理解するために作成されました。*
+*最終更新: 2025-10-03*
+
