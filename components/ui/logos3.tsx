@@ -27,13 +27,13 @@ const Logos3 = ({
     {
       id: "logo-1",
       description: "Next.js",
-      image: "https://shadcnblocks.com/images/block/logos/nextjs.svg",
+      image: "/icons/nextjs-new.svg",
       className: "h-7 w-auto",
     },
     {
       id: "logo-2",
       description: "React",
-      image: "https://shadcnblocks.com/images/block/logos/react.png",
+      image: "/icons/react.svg",
       className: "h-7 w-auto",
     },
     {
@@ -51,7 +51,7 @@ const Logos3 = ({
     {
       id: "logo-5",
       description: "Vercel",
-      image: "https://shadcnblocks.com/images/block/logos/vercel.svg",
+      image: "/icons/vercel.svg",
       className: "h-7 w-auto",
     },
     {
