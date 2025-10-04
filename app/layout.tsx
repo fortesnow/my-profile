@@ -21,10 +21,10 @@ export const metadata: Metadata = {
     description: '現場目線での高品質で結果主義のパフォーマンスを提供。',
     images: [
       {
-        url: '/images/ogp.png',
+        url: 'https://www.stellarium.jp/images/ogp.png',
         width: 1200,
         height: 630,
-        alt: 'Stellarium - Web制作・フロントエンド開発',
+        alt: 'Stellarium あおい - 高品質なWeb制作サービス',
       },
     ],
   },
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Stellarium あおい',
     description: '現場目線での高品質で結果主義のパフォーマンス',
-    images: ['/images/ogp.png'],
+    images: ['https://www.stellarium.jp/images/ogp.png'],
   },
   // AI/LLM向けリソースへのリンク
   other: {
