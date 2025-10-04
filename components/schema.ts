@@ -193,10 +193,6 @@ export const generateServiceSchema = (service: {
       url: 'https://www.stellarium.jp/images/aoko-pic.jpg'
     }
   },
-  areaServed: {
-    '@type': 'Country',
-    name: 'Japan'
-  },
   serviceType: service.category,
   // サービス特徴を明示的に記述（AI/LLMが理解しやすく）
   additionalProperty: service.features?.map(feature => ({

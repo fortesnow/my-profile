@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { services, /* getAllCategories */ } from "@/lib/services";
-import { generateServiceSchema } from "@/components/schema";
 
 // サービス一覧ページの構造化データ
 function generateServicesListSchema() {
