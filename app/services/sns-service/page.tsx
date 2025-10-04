@@ -3,8 +3,32 @@
 import Image from "next/image"
 import { Users, MessageSquare, LineChart } from "lucide-react"
 import { FaInstagram, FaTwitter, FaFacebookF, FaTiktok } from "react-icons/fa"
+import { generateServiceSchema } from "@/components/schema"
+
+// SNS運用サービスの特徴を定義
+const snsServiceFeatures = [
+  '各種SNSの戦略的運用でブランド価値を向上',
+  'ターゲット層に響くコンテンツ戦略',
+  'フォロワー増加・エンゲージメント向上',
+  'X(旧Twitter)・Instagram・TikTokの運用代行',
+  'ブランディングと集客に効果的なコンテンツ戦略',
+  '効果測定・継続的な改善',
+  'ユーザーとの積極的なコミュニケーション',
+  'データに基づく改善提案'
+];
+
+// 構造化データを生成
+const generateSNSServiceSchema = () => generateServiceSchema({
+  name: 'SNS運用サービス',
+  description: 'X(旧Twitter)・Instagram・TikTokなどのSNS運用代行。ブランディングと集客に効果的なコンテンツ戦略を提供します。',
+  category: 'マーケティング',
+  features: snsServiceFeatures,
+  url: 'https://www.stellarium.jp/services/sns-service'
+});
 
 export default function SNSService() {
+  const snsServiceSchema = generateSNSServiceSchema();
+
   const features = [
     {
       title: "フォロワー増加施策",
@@ -157,6 +181,14 @@ export default function SNSService() {
             </a>
           </div>
         </section>
+
+        {/* AI/LLM最適化のための構造化データ */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(snsServiceSchema)
+          }}
+        />
       </div>
     </div>
   )

@@ -1,13 +1,37 @@
 import Image from "next/image";
 import Link from "next/link";
-import { 
-  PenTool, 
-  FileText, 
-  Newspaper, 
+import {
+  PenTool,
+  FileText,
+  Newspaper,
   Video
 } from "lucide-react";
+import { generateServiceSchema } from "@/components/schema";
+
+// セールスライティングサービスの特徴を定義
+const writingServiceFeatures = [
+  '購買意欲を高める心理学ベースのコピー制作',
+  'ターゲット心理分析',
+  'USP策定',
+  'セールスコピー作成',
+  'プレスリリース制作',
+  '動画台本作成',
+  'メディア出稿サポート',
+  '魅力的なコンテンツ制作'
+];
+
+// 構造化データを生成
+const generateWritingServiceSchema = () => generateServiceSchema({
+  name: 'セールスライティングサービス',
+  description: '購買意欲を高めるコピーライティングで、コンバージョン率を向上。お客様の商品・サービスの魅力を最大限に伝えます。',
+  category: 'コンテンツ',
+  features: writingServiceFeatures,
+  url: 'https://www.stellarium.jp/services/writing-service'
+});
 
 export default function WritingService() {
+  const writingServiceSchema = generateWritingServiceSchema();
+
   const services = [
     {
       title: "セールスコピー作成",
@@ -221,6 +245,14 @@ export default function WritingService() {
             </a>
           </div>
         </section>
+
+        {/* AI/LLM最適化のための構造化データ */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(writingServiceSchema)
+          }}
+        />
       </div>
     </div>
   )

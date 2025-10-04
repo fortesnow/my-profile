@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 import Image from "next/image"
-import { 
+import {
   TrendingUp,
   Settings,
   Users,
@@ -9,6 +9,7 @@ import {
 import { FaFacebook } from "react-icons/fa"
 import { FcGoogle } from "react-icons/fc"
 import { SiLine, SiTiktok } from "react-icons/si"
+import { generateServiceSchema } from "@/components/schema"
 
 export const metadata: Metadata = {
   title: '広告運用サービス | Stellarium マーケティング',
@@ -39,25 +40,29 @@ export const metadata: Metadata = {
   }
 }
 
+// 広告運用の特徴を定義
+const adsServiceFeatures = [
+  'データドリブンな広告運用',
+  'ROI重視の広告戦略',
+  'Google広告・Meta広告・LINE広告・TikTok広告対応',
+  '広告アカウント設計',
+  'ターゲティング最適化',
+  '継続的な改善・レポート',
+  'LPとの連携サポート'
+];
+
+// 構造化データを生成（統一された関数を使用）
+const generateAdsServiceSchema = () => generateServiceSchema({
+  name: '広告運用サービス',
+  description: 'データドリブンな広告運用で成果を最大化。Google広告、Meta広告、LINE広告など、各種広告媒体の運用代行サービスを提供します。',
+  category: 'マーケティング',
+  features: adsServiceFeatures,
+  url: 'https://www.stellarium.jp/services/ads-service',
+  image: 'https://www.stellarium.jp/images/og-ads-service.jpg'
+});
+
 function generateStructuredData() {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: '広告運用サービス',
-    description: '効率的な広告運用でROASを最大化。Google/Meta広告の運用代行から、LPとの連携まで一貫してサポートします。',
-    provider: {
-      '@type': 'Organization',
-      name: 'Stellarium',
-      url: 'https://yourdomain.com'
-    },
-    areaServed: 'JP',
-    serviceType: 'Digital Advertising',
-    offers: {
-      '@type': 'Offer',
-      availability: 'https://schema.org/InStock',
-      areaServed: 'JP'
-    }
-  }
+  return generateAdsServiceSchema();
 }
 
 export default function AdsServicePage() {

@@ -2,6 +2,28 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
+import { generateServiceSchema } from "@/components/schema"
+
+// SEO対策サービスの特徴を定義
+const seoServiceFeatures = [
+  'テクニカルSEO（サイト構造最適化、表示速度改善）',
+  'コンテンツSEO（キーワード戦略、記事作成）',
+  'ローカルSEO（Googleビジネスプロフィール最適化）',
+  '検索順位向上と安定的なオーガニック流入獲得',
+  'キーワード調査・分析',
+  'サイト内SEO最適化',
+  'コンテンツ戦略立案・実行',
+  '検索エンジンからの自然流入増加'
+];
+
+// 構造化データを生成
+const generateSEOServiceSchema = () => generateServiceSchema({
+  name: 'SEO対策サービス',
+  description: '検索エンジンからの自然流入を増やし、持続的な集客を実現。コンテンツ戦略からテクニカルSEOまで総合的に対応します。',
+  category: 'マーケティング',
+  features: seoServiceFeatures,
+  url: 'https://www.stellarium.jp/services/seo-service'
+});
 
 // 画像拡大モーダルコンポーネント
 function ImageModal({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
@@ -36,6 +58,7 @@ function ImageModal({ src, alt, onClose }: { src: string; alt: string; onClose: 
 }
 
 export default function SEOService() {
+  const seoServiceSchema = generateSEOServiceSchema();
   const [showModal, setShowModal] = useState(false)
   
   // ESCキーでモーダルを閉じる
@@ -808,6 +831,14 @@ export default function SEOService() {
               </a>
             </div>
           </section>
+
+          {/* AI/LLM最適化のための構造化データ */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(seoServiceSchema)
+            }}
+          />
     </div>
   )
 } 

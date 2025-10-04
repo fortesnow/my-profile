@@ -169,6 +169,52 @@ export const generateFAQSchema = (faqs: Array<{ question: string; answer: string
   }))
 })
 
+// サービスページ用の構造化データ（AI/LLM最適化）
+export const generateServiceSchema = (service: {
+  name: string;
+  description: string;
+  category: string;
+  features?: string[];
+  url?: string;
+  image?: string;
+}) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: service.name,
+  description: service.description,
+  url: service.url || 'https://www.stellarium.jp',
+  image: service.image || 'https://www.stellarium.jp/images/og-image.jpg',
+  provider: {
+    '@type': 'Organization',
+    name: 'Stellarium',
+    url: 'https://www.stellarium.jp',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.stellarium.jp/images/aoko-pic.jpg'
+    }
+  },
+  areaServed: {
+    '@type': 'Country',
+    name: 'Japan'
+  },
+  serviceType: service.category,
+  // サービス特徴を明示的に記述（AI/LLMが理解しやすく）
+  additionalProperty: service.features?.map(feature => ({
+    '@type': 'PropertyValue',
+    name: '特徴',
+    value: feature
+  })) || [],
+  // サービス提供地域を明示
+  areaServed: '日本全国',
+  // サービス価格情報（オプション）
+  offers: {
+    '@type': 'Offer',
+    availability: 'https://schema.org/InStock',
+    priceCurrency: 'JPY',
+    description: 'お見積もりベースでお客様のニーズに合わせて調整'
+  }
+})
+
 // WebSite構造化データ（サイト内検索を有効化）
 export const generateWebsiteSchema = () => ({
   '@context': 'https://schema.org',

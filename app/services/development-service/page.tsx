@@ -5,8 +5,32 @@ import Image from "next/image"
 // import '@hackernoon/pixel-icon-library/fonts/iconfont.css';
 // Lucide Reactのアイコンは不要になるので削除
 // import { Code, Server, Database, Layout } from "lucide-react"
+import { generateServiceSchema } from "@/components/schema"
+
+// 受託開発サービスの特徴を定義
+const developmentServiceFeatures = [
+  'フルスタック開発（フロントエンドからバックエンドまで）',
+  'サーバー構築・運用（AWS・GCP対応）',
+  '要件定義・技術設計',
+  'フロントエンド/バックエンド開発',
+  'データベース設計・実装',
+  'レスポンシブデザイン対応',
+  'セキュリティ対策実装',
+  'パフォーマンス最適化'
+];
+
+// 構造化データを生成
+const generateDevelopmentServiceSchema = () => generateServiceSchema({
+  name: '受託開発サービス',
+  description: 'ビジネスに最適化されたWebアプリケーション開発。要件定義・技術設計から、フロントエンド/バックエンド開発まで一貫して対応します。',
+  category: '開発',
+  features: developmentServiceFeatures,
+  url: 'https://www.stellarium.jp/services/development-service'
+});
 
 export default function DevelopmentServicePage() {
+  const developmentServiceSchema = generateDevelopmentServiceSchema();
+
   const services = [
     {
       title: "フルスタック開発",
@@ -220,6 +244,14 @@ export default function DevelopmentServicePage() {
           </div>
         </section>
       </div>
+
+      {/* AI/LLM最適化のための構造化データ */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(developmentServiceSchema)
+        }}
+      />
     </div>
   )
 } 

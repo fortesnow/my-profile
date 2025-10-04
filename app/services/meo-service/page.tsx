@@ -1,8 +1,32 @@
 import React from 'react';
 import { MapPin, Star, Users, TrendingUp, CheckCircle, ArrowRight, Target, BarChart, Shield, Zap } from 'lucide-react';
 import Link from 'next/link';
+import { generateServiceSchema } from "@/components/schema";
+
+// MEO対策サービスの特徴を定義
+const meoServiceFeatures = [
+  'Googleマップでの上位表示を実現',
+  '地域密着型ビジネスの集客を強化',
+  '店舗への来店数増加をサポート',
+  'Googleビジネスプロフィール最適化',
+  '口コミ管理・レビュー獲得戦略',
+  '来店促進のための投稿戦略',
+  '効果測定・継続的な改善',
+  'ローカル検索での視認性向上'
+];
+
+// 構造化データを生成
+const generateMEOServiceSchema = () => generateServiceSchema({
+  name: 'MEO対策サービス',
+  description: 'Googleマップでの上位表示を実現し、地域密着型ビジネスの集客を強化。店舗への来店数増加をサポートします。',
+  category: 'マーケティング',
+  features: meoServiceFeatures,
+  url: 'https://www.stellarium.jp/services/meo-service'
+});
 
 export default function MEOServicePage() {
+  const meoServiceSchema = generateMEOServiceSchema();
+
   const features = [
     {
       icon: <MapPin className="w-6 h-6 text-blue-400" />,
@@ -356,6 +380,14 @@ export default function MEOServicePage() {
             </p>
           </div>
         </div>
+
+        {/* AI/LLM最適化のための構造化データ */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(meoServiceSchema)
+          }}
+        />
       </div>
     </div>
   );

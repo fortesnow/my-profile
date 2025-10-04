@@ -1,14 +1,15 @@
 import { Metadata } from "next"
 import Image from "next/image"
-import { 
-  Zap, 
-  Code2, 
+import {
+  Zap,
+  Code2,
   LineChart,
   MessageSquare,
   Calculator,
   Rocket,
   CheckCircle2,
 } from "lucide-react"
+import { generateServiceSchema } from "@/components/schema"
 
 export const metadata: Metadata = {
   title: '爆速コーディングサービス | Stellarium マーケティング',
@@ -28,30 +29,33 @@ export const metadata: Metadata = {
   },
 }
 
-// 構造化データの生成を関数化
-function generateJsonLd() {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: '爆速コーディングサービス',
-    description: '最短当日対応可能な高品質コーディングサービス。',
-    provider: {
-      '@type': 'Organization',
-      name: 'Stellarium',
-      url: 'https://yourdomain.com'
-    },
-    areaServed: 'JP',
-    serviceType: 'Web Development',
-  }
-}
+// コーディングサービスの特徴を定義
+const codingServiceFeatures = [
+  '最短当日対応可能',
+  '高品質なコードと迅速な納品',
+  'HTML/CSS, React, Next.js, TypeScript対応',
+  'レスポンシブデザイン実装',
+  'SEO最適化対応',
+  'Web制作会社様の開発効率化'
+];
+
+// 構造化データを生成（統一された関数を使用）
+const generateCodingServiceSchema = () => generateServiceSchema({
+  name: '爆速コーディングサービス',
+  description: '最短当日対応可能な高品質コーディングサービス。HTML/CSS, React, Next.js, TypeScriptなど、モダンな技術スタックに対応。Web制作会社様の開発効率化をサポートします。',
+  category: '開発',
+  features: codingServiceFeatures,
+  url: 'https://www.stellarium.jp/services/coding-service',
+  image: 'https://www.stellarium.jp/images/og-coding-service.jpg'
+});
 
 export default function CodingServicePage() {
-  const jsonLd = generateJsonLd()
+  const codingServiceSchema = generateCodingServiceSchema();
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(codingServiceSchema) }}
       />
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
         {/* ヒーローセクション */}

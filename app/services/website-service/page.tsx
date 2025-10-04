@@ -1,13 +1,35 @@
 import type { Metadata } from "next";
 import Image from "next/image"
-import { 
-  Trophy, 
-  BarChart2, 
-  Smartphone, 
+import {
+  Trophy,
+  BarChart2,
+  Smartphone,
   Search,
   CheckCircle,
   ArrowRight
 } from "lucide-react"
+import { generateServiceSchema } from "@/components/schema"
+
+// Webサイト制作サービスの特徴を定義
+const websiteServiceFeatures = [
+  'ビジネス成果を出すための戦略的Webサイト制作',
+  '成果にコミットする設計',
+  'データドリブンな改善',
+  '顧客分析からUI/UXデザインまで一貫したアプローチ',
+  '勝つための結果を出すWebサイト制作',
+  'コンバージョン率最適化',
+  'レスポンシブデザイン対応',
+  'SEO対策実装'
+];
+
+// 構造化データを生成（統一された関数を使用）
+const generateWebsiteServiceSchema = () => generateServiceSchema({
+  name: 'Webサイト制作サービス',
+  description: '勝つための結果を出すWebサイト制作。ただきれいなだけではなく、ビジネス成果につながるWebサイトを戦略的に設計・構築します。',
+  category: 'デザイン',
+  features: websiteServiceFeatures,
+  url: 'https://www.stellarium.jp/services/website-service'
+});
 
 export const metadata: Metadata = {
   title: 'Webサイト制作サービス | Stellarium マーケティング',
@@ -48,26 +70,9 @@ export const metadata: Metadata = {
   }
 }
 
-// 構造化データの生成
+// 構造化データを生成（統一された関数を使用）
 function generateStructuredData() {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: 'Webサイト制作サービス',
-    description: '勝つための結果を出すWebサイト制作。ただきれいなだけではなく、ビジネス成果につながるWebサイトを戦略的に設計・構築します。',
-    provider: {
-      '@type': 'Organization',
-      name: 'Stellarium',
-      url: 'https://www.stellarium.jp'
-    },
-    areaServed: 'JP',
-    serviceType: 'Web Development',
-    offers: {
-      '@type': 'Offer',
-      availability: 'https://schema.org/InStock',
-      areaServed: 'JP'
-    }
-  }
+  return generateWebsiteServiceSchema();
 }
 
 export default function WebsiteServicePage() {

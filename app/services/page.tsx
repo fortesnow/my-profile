@@ -2,6 +2,34 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { services, /* getAllCategories */ } from "@/lib/services";
+import { generateServiceSchema } from "@/components/schema";
+
+// サービス一覧ページの構造化データ
+function generateServicesListSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Stellariumサービス一覧',
+    description: 'Web制作、マーケティング、コンテンツ制作など、ビジネス成長に必要なサービスをワンストップで提供します。',
+    url: 'https://www.stellarium.jp/services',
+    numberOfItems: services.length,
+    itemListElement: services.map((service, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Service',
+        name: service.title,
+        description: service.shortDescription,
+        url: `https://www.stellarium.jp/services/${service.slug}`,
+        provider: {
+          '@type': 'Organization',
+          name: 'Stellarium'
+        },
+        serviceType: service.category
+      }
+    }))
+  };
+}
 
 export const metadata: Metadata = {
   title: "サービス一覧 | Stellarium マーケティング",
@@ -12,7 +40,9 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   // カテゴリーを特定の順序で取得
   const categories = ["マーケティング", "デザイン", "開発", "コンテンツ"];
-  
+
+  const servicesListSchema = generateServicesListSchema();
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-900 to-blue-900 text-gray-100">
       <div className="max-w-7xl mx-auto px-6 py-24">
@@ -121,6 +151,14 @@ export default function ServicesPage() {
           </Link>
         </div>
       </div>
+
+      {/* AI/LLM最適化のための構造化データ */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(servicesListSchema)
+        }}
+      />
     </main>
   );
 } 
