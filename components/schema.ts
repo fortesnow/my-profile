@@ -4,7 +4,7 @@ export const generateOrganizationSchema = () => ({
   '@type': ['Organization', 'ProfessionalService'],
   name: 'Stellarium（ステラリウム）',
   alternateName: 'Web制作 あおい',
-  description: 'フロントエンド開発、LP制作、Web開発、SEO対策、広告運用を提供するフリーランスエンジニア。React、Next.js、TypeScriptを使用した高品質な開発サービス。',
+  description: '現場目線での高品質で結果主義のパフォーマンスを提供するフリーランスエンジニア。実業や経営面で培った思考を活かし、Web制作からマーケティングまで幅広く対応。',
   url: 'https://www.stellarium.jp',
   logo: 'https://www.stellarium.jp/images/aoko-pic.jpg',
   image: 'https://www.stellarium.jp/images/ogp.png',

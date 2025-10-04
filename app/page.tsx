@@ -5,8 +5,8 @@ import { getLatestPosts } from '../lib/blog-posts';
 import { FF3BattlePresentationWrapper } from "@/components/FF3BattlePresentationWrapper";
 
 export const metadata: Metadata = {
-  title: 'Stellarium（ステラリウム）| React・Next.js専門のフリーランスWeb制作',
-  description: 'React、Next.js、TypeScriptを使用した高品質なフロントエンド開発とLP制作を提供。SEO対策、広告運用、SNS運用まで一貫サポート。最短当日納品可能なフリーランスエンジニア「あおい」が運営。',
+  title: 'Stellarium あおい',
+  description: '現場目線での高品質で結果主義のパフォーマンスを提供。最短当日納品可能なフリーランスエンジニア「あおい」が運営。',
   keywords: [
     'Web制作', 
     'フロントエンド開発', 
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Stellarium | React・Next.js専門のフリーランスWeb制作',
-    description: 'React、Next.js、TypeScriptを使用した高品質なフロントエンド開発とLP制作。SEO・広告・SNS運用まで一貫サポート。',
+    title: 'Stellarium あおい',
+    description: '現場目線での高品質で結果主義のパフォーマンスを提供。',
     url: 'https://www.stellarium.jp',
     siteName: 'Stellarium',
     locale: 'ja_JP',
@@ -57,8 +57,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Stellarium | React・Next.js専門のフリーランスWeb制作',
-    description: 'React、Next.js、TypeScriptを使用した高品質なフロントエンド開発',
+    title: 'Stellarium あおい',
+    description: '現場目線での高品質で結果主義のパフォーマンス',
     images: ['/images/ogp.png'],
   },
   // AI/LLM向けの追加メタデータ
