@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/og-home.jpg',
+        url: '/images/ogp.png',
         width: 1200,
         height: 630,
         alt: 'Stellarium - Web制作・フロントエンド開発',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Stellarium | React・Next.js専門のフリーランスWeb制作',
     description: 'React、Next.js、TypeScriptを使用した高品質なフロントエンド開発',
-    images: ['/images/og-home.jpg'],
+    images: ['/images/ogp.png'],
   },
   // AI/LLM向けの追加メタデータ
   other: {

@@ -7,7 +7,7 @@ export const generateOrganizationSchema = () => ({
   description: 'フロントエンド開発、LP制作、Web開発、SEO対策、広告運用を提供するフリーランスエンジニア。React、Next.js、TypeScriptを使用した高品質な開発サービス。',
   url: 'https://www.stellarium.jp',
   logo: 'https://www.stellarium.jp/images/aoko-pic.jpg',
-  image: 'https://www.stellarium.jp/images/og-image.jpg',
+  image: 'https://www.stellarium.jp/images/ogp.png',
   foundingDate: '2024',
   founder: {
     '@type': 'Person',
@@ -128,7 +128,7 @@ export const generateArticleSchema = (article: {
       url: 'https://www.stellarium.jp/images/aoko-pic.jpg'
     }
   },
-  image: article.image || 'https://www.stellarium.jp/images/og-image.jpg',
+  image: article.image || 'https://www.stellarium.jp/images/ogp.png',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': article.url
@@ -183,7 +183,7 @@ export const generateServiceSchema = (service: {
   name: service.name,
   description: service.description,
   url: service.url || 'https://www.stellarium.jp',
-  image: service.image || 'https://www.stellarium.jp/images/og-image.jpg',
+  image: service.image || 'https://www.stellarium.jp/images/ogp.png',
   provider: {
     '@type': 'Organization',
     name: 'Stellarium',

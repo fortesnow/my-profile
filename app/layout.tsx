@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: 'React、Next.js、TypeScriptを使用した高品質なWeb制作。SEO・広告・SNS運用まで一貫サポート。',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: '/images/ogp.png',
         width: 1200,
         height: 630,
         alt: 'Stellarium - Web制作・フロントエンド開発',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Stellarium | Web制作・フロントエンド開発',
     description: 'React、Next.js、TypeScriptを使用した高品質なWeb制作',
-    images: ['/images/og-image.jpg'],
+    images: ['/images/ogp.png'],
   },
   // AI/LLM向けリソースへのリンク
   other: {
