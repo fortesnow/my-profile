@@ -9,6 +9,7 @@ import ProfileClient from '@/components/profile';
 import { getLatestPosts, BlogPost } from '@/lib/blog-posts';
 import { ProfileData } from '@/components/types';
 import { Logos3 } from '@/components/ui/logos3';
+import { Banner } from '@/components/ui/banner';
 
 // プレゼンテーションデータの型定義
 interface PresentationData {
@@ -62,15 +63,49 @@ export const FF3BattlePresentationWrapper: React.FC<FF3BattlePresentationWrapper
   return (
     <div className="ff3-battle-content">
       {/* FF3バトルプレゼンテーション */}
-      <div 
-        className="ff3-presentation-wrapper" 
-        style={{ 
+      <div
+        className="ff3-presentation-wrapper"
+        style={{
           marginTop: isMobile ? '80px' : '100px', // PCの場合は100pxに変更（元は60px）
           overflowX: 'hidden' // 横スクロールを防止
         }}
       >
         <FF3BattlePresentation presentationData={presentationData} />
       </div>
+
+      {/* 新デザインのバナーセクション */}
+      <section className="relative py-20 px-6 bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900">
+        <div className="max-w-4xl mx-auto text-center">
+          <Banner
+            show={true}
+            variant="gradient"
+            size="lg"
+            title="実際のこのサイトページをベンチマークとして FigmaでLPOの工程を公開中！"
+            showShade={true}
+            closable={false}
+            action={
+              <Link
+                href="https://www.figma.com/design/BAWB2oFJTl49jzpbVWXovH/Stellarium%E5%85%AC%E5%BC%8F%E3%82%B5%E3%82%A4%E3%83%88%E6%94%B9%E5%96%84?node-id=0-1&t=1sk6lHbif0FFNQGJ-1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                <div className="flex items-center mr-2">
+                  <Image
+                    src="/figma-logo.png"
+                    alt="Figma"
+                    width={20}
+                    height={20}
+                    className="mr-1"
+                  />
+                  <span>Check!</span>
+                </div>
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            }
+          />
+        </div>
+      </section>
 
       {/* プロフィールセクション */}
       {profileData && <ProfileClient data={profileData} />}
