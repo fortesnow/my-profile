@@ -98,9 +98,9 @@ export function Banner({
 
 					<div className="min-w-0 flex-1">
 						<div className="flex flex-wrap items-center">
-							<p className="truncate font-semibold">{title}</p>
+							<p className="break-words font-semibold leading-tight hyphens-auto">{title}</p>
 						</div>
-						{description && <p className="text-xs opacity-80">{description}</p>}
+						{description && <p className="text-xs opacity-80 break-words">{description}</p>}
 					</div>
 				</div>
 
