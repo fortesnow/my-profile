@@ -9,7 +9,6 @@ import ProfileClient from '@/components/profile';
 import { getLatestPosts, BlogPost } from '@/lib/blog-posts';
 import { ProfileData } from '@/components/types';
 import { Logos3 } from '@/components/ui/logos3';
-import { Banner } from '@/components/ui/banner';
 
 // プレゼンテーションデータの型定義
 interface PresentationData {
@@ -145,46 +144,6 @@ export const FF3BattlePresentationWrapper: React.FC<FF3BattlePresentationWrapper
       {/* ロゴセクション */}
       <Logos3 />
 
-      {/* ブログセクション */}
-      <section className="py-20 px-6 bg-gradient-to-b from-[#0d1631] to-[#0f172a]">
-        <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-400 mb-16 text-center">
-            ブログ
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {latestPosts.map((post: BlogPost) => (
-              <article key={post.id} className="bg-[#0d1631]/70 rounded-xl overflow-hidden border border-gray-800 shadow-lg hover:shadow-cyan-900/20 transition-all group">
-                <Link href={`/blog/${post.slug}`} className="block">
-                  <div className="relative h-48 overflow-hidden">
-                    <Image 
-                      src={post.thumbnail}
-                      alt={post.title}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
-                    <div className="absolute bottom-0 left-0 p-4 z-10">
-                      <span className="bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded text-xs">{post.category}</span>
-                    </div>
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-cyan-400 transition-colors">
-                      {post.title}
-                    </h3>
-                    <time className="text-gray-500 text-sm">{post.date}</time>
-                  </div>
-                </Link>
-              </article>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <Link href="/blog" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-600 to-teal-600 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-teal-500 transition-all">
-              ブログ一覧を見る
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }; 

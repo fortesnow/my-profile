@@ -99,11 +99,14 @@ export function TextGlitch({ text, hoverText, href, className = "", delay = 0 }:
 
   useEffect(() => {
     return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current)
+      const interval = intervalRef.current
+      const hoverInterval = hoverIntervalRef.current
+
+      if (interval) {
+        clearInterval(interval)
       }
-      if (hoverIntervalRef.current) {
-        clearInterval(hoverIntervalRef.current)
+      if (hoverInterval) {
+        clearInterval(hoverInterval)
       }
     }
   }, [])
