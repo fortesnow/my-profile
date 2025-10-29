@@ -6,7 +6,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from "lucide-react";
 import ProfileClient from '@/components/profile';
-import { getLatestPosts, BlogPost } from '@/lib/blog-posts';
 import { ProfileData } from '@/components/types';
 import { Logos3 } from '@/components/ui/logos3';
 
@@ -34,12 +33,10 @@ interface FF3BattlePresentationWrapperProps {
   profileData?: ProfileData; // プロフィールデータ用のプロップ
 }
 
-export const FF3BattlePresentationWrapper: React.FC<FF3BattlePresentationWrapperProps> = ({ 
+export const FF3BattlePresentationWrapper: React.FC<FF3BattlePresentationWrapperProps> = ({
   presentationData,
-  profileData 
+  profileData
 }) => {
-  // 最新の投稿を取得
-  const latestPosts = getLatestPosts(3);
   // レスポンシブ対応のための状態管理
   const [isMobile, setIsMobile] = useState(false);
 
