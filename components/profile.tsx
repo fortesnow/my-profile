@@ -5,8 +5,6 @@ import ServicesGrid from "./ServicesGrid"
 import { AnimatedTestimonials } from "./ui/animated-testimonials"
 import { Hero } from "./ui/animated-hero"
 
-import { StellariumServiceSection } from "./StellariumServiceSection"
-
 interface Website {
   icon: string
   name: string
@@ -175,9 +173,6 @@ export default function Profile({ data }: { data: ProfileData }) {
             )}
 
 
-
-            {/* Stellarium具体的サービスセクション */}
-            <StellariumServiceSection />
 
             {/* サービス一覧セクション */}
             <section className="mt-8">
