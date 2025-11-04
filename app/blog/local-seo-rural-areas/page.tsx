@@ -589,7 +589,7 @@ export default function BlogLocalSEORuralAreas() {
                 
                 <div className="flex flex-col sm:flex-row gap-4 mt-8">
                   <Link
-                    href="/services/seo-service"
+                    href="/contact"
                     className="px-6 py-3 bg-gradient-to-r from-emerald-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-emerald-500 hover:to-cyan-500 transition-all shadow-lg flex items-center justify-center"
                   >
                     地域特化型SEOサービスを見る

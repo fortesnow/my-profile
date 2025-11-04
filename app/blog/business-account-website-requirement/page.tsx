@@ -518,7 +518,7 @@ export default function BusinessAccountWebsiteRequirement() {
                  </p>
                  <div className="flex flex-col sm:flex-row gap-4">
                    <Link 
-                     href="/services/website-service" 
+                     href="/contact" 
                      className="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition-colors text-center"
                    >
                      ホームページ制作サービスを見る

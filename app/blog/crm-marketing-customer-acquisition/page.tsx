@@ -734,7 +734,7 @@ export default function CrmMarketingCustomerAcquisition() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link 
-                    href="/services/marketing-service" 
+                    href="/contact" 
                     className="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition-colors text-center text-sm md:text-base"
                   >
                     マーケティングサービスを見る

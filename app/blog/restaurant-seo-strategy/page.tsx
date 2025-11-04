@@ -700,7 +700,7 @@ export default function BlogPost() {
               Stellariumでは、飲食店に特化したSEO対策サービスを提供しています。<br />
               専門知識と実績を持つコンサルタントが、あなたの店舗に最適な戦略をご提案します。
             </p>
-            <Link href="/services/seo" className="inline-block bg-white text-blue-800 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition duration-300">
+            <Link href="/contact" className="inline-block bg-white text-blue-800 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition duration-300">
               SEO対策サービスの詳細を見る
             </Link>
           </div>

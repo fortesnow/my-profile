@@ -611,7 +611,7 @@ export default function BlogMetaAdsBeginners() {
                 
                 <div className="flex flex-col sm:flex-row gap-4 mt-8">
                   <Link
-                    href="/services/ads-service"
+                    href="/contact"
                     className="px-6 py-3 bg-gradient-to-r from-cyan-600 to-indigo-600 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-indigo-500 transition-all shadow-lg flex items-center justify-center"
                   >
                     広告運用サービスを見る

@@ -25,18 +25,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: 'https://www.stellarium.jp/ads-service',
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.9,
-    },
-    {
-      url: 'https://www.stellarium.jp/services',
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.9,
-    },
-    {
       url: 'https://www.stellarium.jp/about',
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,

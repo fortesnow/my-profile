@@ -677,7 +677,7 @@ export default function BlogPost() {
               Stellariumでは、農業や地域産業に特化したデジタルマーケティングをサポートしています。<br />
               SNS運用のコツや具体的な集客方法について、無料相談を実施中です。
             </p>
-            <Link href="/services/sns" className="inline-block bg-white text-blue-800 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition duration-300">
+            <Link href="/contact" className="inline-block bg-white text-blue-800 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition duration-300">
               SNS運用サポートの詳細を見る
             </Link>
           </div>

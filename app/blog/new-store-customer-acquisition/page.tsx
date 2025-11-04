@@ -1098,7 +1098,7 @@ export default function NewStoreCustomerAcquisition() {
                   無料相談を予約する
                 </Link>
                 
-                <Link href="/services/marketing-service" className="bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-center flex items-center justify-center">
+                <Link href="/contact" className="bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-center flex items-center justify-center">
                   <i className="hn hn-arrow-right text-white text-xl mr-2"></i>
                   集客支援サービスを見る
                 </Link>

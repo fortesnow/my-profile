@@ -827,7 +827,7 @@ export default function BlogClinicSEOStrategy() {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link 
-                  href="/services/medical-seo" 
+                  href="/contact" 
                   className="inline-flex justify-center items-center px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg transition-colors"
                 >
                   医療機関SEOサービスの詳細を見る

@@ -863,7 +863,7 @@ export default function BlogPost() {
               Stellariumでは、TikTokを含むSNSマーケティングの戦略立案から運用代行まで、<br />
               あなたのビジネスに最適なソリューションを提供しています。
             </p>
-            <Link href="/services/social-media" className="inline-block bg-white text-blue-800 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition duration-300">
+            <Link href="/contact" className="inline-block bg-white text-blue-800 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition duration-300">
               SNSマーケティングサービスの詳細を見る
             </Link>
           </div>

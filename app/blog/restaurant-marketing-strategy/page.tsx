@@ -692,7 +692,7 @@ export default function BlogRestaurantMarketingStrategy() {
                 Stellariumでは、飲食店に特化したマーケティングコンサルティングを提供しています。50店舗以上の成功実績をもとに、あなたの店舗に最適な戦略をご提案します。
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Link href="/services/restaurant-marketing" className="block text-center bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg">
+                <Link href="/contact" className="block text-center bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg">
                   飲食店マーケティングサービスを見る
                 </Link>
                 <Link href="/contact" className="block text-center bg-white hover:bg-gray-100 text-indigo-800 font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg">

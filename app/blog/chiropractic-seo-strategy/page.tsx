@@ -704,7 +704,7 @@ export default function BlogChiropracticSEOStrategy() {
               
               <div className="flex flex-col md:flex-row gap-4">
                 <Link 
-                  href="/services/seo-service" 
+                  href="/contact" 
                   className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white py-3 px-6 rounded-lg text-center font-medium transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

@@ -448,7 +448,7 @@ export default function BlogPost() {
               </div>
               
               <Link
-                href="/services/sns-service"
+                href="/contact"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 transition-all duration-300"
               >
                 <span>無料相談のお申し込み</span>

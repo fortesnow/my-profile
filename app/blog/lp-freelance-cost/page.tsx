@@ -454,13 +454,13 @@ export default function BlogPost() {
             
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link 
-                href="/services/lp-production" 
+                href="/contact" 
                 className="w-full sm:w-auto inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-4 px-10 rounded-lg shadow-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-center transform hover:scale-105"
               >
                 LP制作サービスを詳しく見る
               </Link>
               <Link 
-                href="/services/lp-production#contact" 
+                href="/contact" 
                 className="w-full sm:w-auto inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-4 px-10 rounded-lg shadow-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 text-center transform hover:scale-105"
               >
                 無料相談・お見積り依頼

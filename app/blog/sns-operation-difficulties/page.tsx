@@ -563,7 +563,7 @@ export default function BlogPost() {
             </p>
             <div className="text-center">
               <Link 
-                href="/services/sns-service" 
+                href="/contact" 
                 className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium hover:scale-105 transition-transform duration-300 shadow-md"
               >
                 <span>SNS運用サービスを詳しく見る</span>
