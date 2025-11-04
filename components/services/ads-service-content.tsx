@@ -11,7 +11,7 @@ type Props = {
 export function InteractiveFeature() {
   // インタラクティブな要素
   return (
-    <button onClick={() => console.log('Clicked')}>
+    <button onClick={() => alert('詳細ページは準備中です')}>
       詳細を見る
     </button>
   );

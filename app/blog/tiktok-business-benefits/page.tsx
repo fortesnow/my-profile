@@ -8,9 +8,6 @@ import { metadata } from "./metadata";
 export { metadata };
 
 export default function BlogPost() {
-  // デバッグ用のコンソールログ
-  console.log("TikTok記事ページがロードされました");
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-blue-900 text-gray-100 pb-20">
       <div className="max-w-4xl mx-auto px-6 pt-32">

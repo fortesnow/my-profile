@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { ProfileServer } from '@/components/profile-server'
 import '@/app/globals.css';
-import { getLatestPosts } from '../lib/blog-posts';
 import { FF3BattlePresentationWrapper } from "@/components/FF3BattlePresentationWrapper";
 
 export const metadata: Metadata = {
@@ -71,16 +70,7 @@ export const metadata: Metadata = {
 }
 
 export default async function Home() {
-  const startTime = process.hrtime();
   const data = await ProfileServer();
-  const endTime = process.hrtime(startTime);
-  
-  console.log(`Server-side rendering took ${endTime[0]}s ${endTime[1] / 1000000}ms`);
-  
-  // 確実に最新データを取得するため、明示的に関数を呼び出す
-  const latestPosts = getLatestPosts(3);
-  
-  console.log("Latest posts:", latestPosts); // デバッグ用
   
   // FF3プレゼンテーション用のデータ
   const presentationData = {
