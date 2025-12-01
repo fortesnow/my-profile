@@ -174,15 +174,20 @@ export const FF3BattlePresentation: React.FC<FF3BattlePresentationProps> = ({ pr
   const Monster = () => {
     const monsterRef = useRef<HTMLDivElement>(null);
     const [damage, setDamage] = useState<number | null>(null);
+    const animationRef = useRef<Animation | null>(null);
     
     useEffect(() => {
       if (monsterEffect === 'damage' && monsterRef.current) {
         // ダメージエフェクト
         setDamage(Math.floor(Math.random() * 9999) + 1);
-        setTimeout(() => setDamage(null), 1500);
+        const damageTimer = setTimeout(() => setDamage(null), 1500);
         
         // 被ダメージアニメーション
-        monsterRef.current.animate([
+        if (animationRef.current) {
+          animationRef.current.cancel();
+        }
+        
+        animationRef.current = monsterRef.current.animate([
           { filter: 'brightness(1)', transform: 'translateX(0)' },
           { filter: 'brightness(2)', transform: 'translateX(-10px)' },
           { filter: 'brightness(2)', transform: 'translateX(10px)' },
@@ -191,8 +196,15 @@ export const FF3BattlePresentation: React.FC<FF3BattlePresentationProps> = ({ pr
           duration: 300,
           iterations: 1
         });
+        
+        return () => {
+          clearTimeout(damageTimer);
+          if (animationRef.current) {
+            animationRef.current.cancel();
+          }
+        };
       }
-    }, []);
+    }, [monsterEffect]);
 
     return (
       <>

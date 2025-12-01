@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './BattleEffects.module.css';
 
 export type EffectType = 'fire' | 'ice' | 'thunder' | 'heal' | 'defend' | 'attack' | 'victory';
@@ -18,6 +18,7 @@ export const BattleEffects: React.FC<BattleEffectsProps> = ({
   isActive,
   onComplete
 }) => {
+  const onCompleteRef = useRef(onComplete);
   const [particles, setParticles] = useState<Array<{
     id: number;
     x: number;
@@ -28,6 +29,11 @@ export const BattleEffects: React.FC<BattleEffectsProps> = ({
     color: string;
     opacity: number;
   }>>([]);
+
+  // onCompleteの参照を更新
+  useEffect(() => {
+    onCompleteRef.current = onComplete;
+  }, [onComplete]);
 
   // エフェクト発動時にパーティクルを生成
   useEffect(() => {
@@ -149,21 +155,31 @@ export const BattleEffects: React.FC<BattleEffectsProps> = ({
     // エフェクト完了のタイマーを設定
     const timer = setTimeout(() => {
       setParticles([]);
-      if (onComplete) {
-        onComplete();
+      if (onCompleteRef.current) {
+        onCompleteRef.current();
       }
     }, 1500);
 
     return () => clearTimeout(timer);
-  }, [isActive, targetPosition, type, onComplete]);
+  }, [isActive, targetPosition, type]);
 
   // パーティクルの更新ロジック
   useEffect(() => {
     if (particles.length === 0) return;
 
+    let animationId: number | null = null;
+    let isRunning = true;
+
     const updateParticles = () => {
-      setParticles(currentParticles => 
-        currentParticles.map(particle => {
+      if (!isRunning) return;
+      
+      setParticles(currentParticles => {
+        if (currentParticles.length === 0) {
+          isRunning = false;
+          return currentParticles;
+        }
+        
+        const updated = currentParticles.map(particle => {
           const radians = particle.angle * (Math.PI / 180);
           return {
             ...particle,
@@ -171,13 +187,27 @@ export const BattleEffects: React.FC<BattleEffectsProps> = ({
             y: particle.y + Math.sin(radians) * particle.speed,
             opacity: particle.opacity - 0.01
           };
-        }).filter(particle => particle.opacity > 0)
-      );
+        }).filter(particle => particle.opacity > 0);
+        
+        if (updated.length > 0 && isRunning) {
+          animationId = requestAnimationFrame(updateParticles);
+        } else {
+          isRunning = false;
+        }
+        
+        return updated;
+      });
     };
 
-    const animationId = requestAnimationFrame(updateParticles);
-    return () => cancelAnimationFrame(animationId);
-  }, [particles]);
+    animationId = requestAnimationFrame(updateParticles);
+    
+    return () => {
+      isRunning = false;
+      if (animationId !== null) {
+        cancelAnimationFrame(animationId);
+      }
+    };
+  }, [particles.length]);
 
   // 特殊なエフェクト：雷のジグザグ効果
   const renderThunderEffect = () => {

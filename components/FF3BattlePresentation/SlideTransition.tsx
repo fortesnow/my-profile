@@ -31,34 +31,38 @@ export const SlideTransition: React.FC<SlideTransitionProps> = ({
       return;
     }
 
+    let timer: NodeJS.Timeout | null = null;
+
     if (isActive) {
       // トランジションイン
       setIsTransitioning(true);
       setShowContent(true);
       setTransitionClass(`${styles[`${type}-in`]} ${styles.transitioning}`);
       
-      const timer = setTimeout(() => {
+      timer = setTimeout(() => {
         setIsTransitioning(false);
         setTransitionClass('');
         if (onComplete) onComplete();
       }, duration);
-      
-      return () => clearTimeout(timer);
     } else {
       // トランジションアウト
       setIsTransitioning(true);
       setTransitionClass(`${styles[`${type}-out`]} ${styles.transitioning}`);
       
-      const timer = setTimeout(() => {
+      timer = setTimeout(() => {
         setShowContent(false);
         setIsTransitioning(false);
         setTransitionClass('');
         if (onComplete) onComplete();
       }, duration);
-      
-      return () => clearTimeout(timer);
     }
-  }, [isActive, type, duration, onComplete]);
+    
+    return () => {
+      if (timer) {
+        clearTimeout(timer);
+      }
+    };
+  }, [isActive, type, duration]);
 
   // バトルトランジション用のフラッシュエフェクト
   const renderBattleFlash = () => {
