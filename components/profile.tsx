@@ -174,6 +174,22 @@ export default function Profile({ data }: { data: ProfileData }) {
 
 
 
+            {/* FRONT-END画像セクション */}
+            <section className="mt-8 mb-8">
+              <div className="w-full flex justify-center">
+                <div className="relative w-full max-w-6xl mx-auto">
+                  <Image
+                    src="/images/front-end.png"
+                    alt="FRONT-END - Next.jsによる高速開発"
+                    width={1200}
+                    height={800}
+                    className="w-full h-auto rounded-lg shadow-2xl"
+                    priority={false}
+                  />
+                </div>
+              </div>
+            </section>
+
             {/* サービス一覧セクション */}
             <section className="mt-8">
               <ServicesGrid />
