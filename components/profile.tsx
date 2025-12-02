@@ -174,22 +174,32 @@ export default function Profile({ data }: { data: ProfileData }) {
 
 
 
-            {/* FRONT-END画像セクション */}
-            <section className="mt-8 mb-8">
-              <div className="w-full flex justify-center">
-                <div className="relative w-full max-w-6xl mx-auto">
-                  <Image
-                    src="/images/front-end.png"
-                    alt="FRONT-END - Next.jsによる高速開発"
-                    width={1200}
-                    height={800}
-                    className="w-full h-auto rounded-lg shadow-2xl"
-                    priority={false}
-                  />
-                </div>
-              </div>
-            </section>
+          </div>
 
+          {/* FRONT-END画像セクション - 全幅表示 */}
+          <section 
+            className="w-full overflow-hidden"
+            style={{ 
+              marginLeft: 'calc(-50vw + 50%)', 
+              marginRight: 'calc(-50vw + 50%)', 
+              width: '100vw',
+              maxWidth: '100vw'
+            }}
+          >
+            <img
+              src="/images/front-end.png"
+              alt="FRONT-END - Next.jsによる高速開発"
+              className="block"
+              style={{ 
+                width: '100vw',
+                maxWidth: '100vw',
+                height: 'auto'
+              }}
+            />
+          </section>
+
+          {/* Profile Content続き */}
+          <div className="relative px-6 pb-8">
             {/* サービス一覧セクション */}
             <section className="mt-8">
               <ServicesGrid />
