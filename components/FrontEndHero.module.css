@@ -1,0 +1,83 @@
+/* FrontEndHero コンポーネント用のCSSモジュール */
+/* Figmaデザインの比率（1980x1024）を維持しつつ、レスポンシブ対応 */
+
+.frontendSection {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: #78878e;
+  aspect-ratio: 1980 / 1024;
+  min-height: 400px;
+}
+
+/* スマホでの表示調整 - 要素が重ならないように位置とサイズを調整 */
+@media (max-width: 768px) {
+  .frontendSection {
+    /* スマホでは最小高さを確保して要素が重ならないように */
+    min-height: 500px;
+    aspect-ratio: auto;
+  }
+  
+  /* タイトルの位置調整 */
+  .titleContainer {
+    top: 8% !important;
+    left: 5% !important;
+  }
+  
+  /* 説明テキストの位置調整 */
+  .descriptionContainer {
+    top: 20% !important;
+    left: 5% !important;
+    right: 5% !important;
+  }
+  
+  /* ミニカードの位置調整 */
+  .miniCardsContainer {
+    top: 45% !important;
+    left: 5% !important;
+    flex-wrap: wrap;
+    gap: 8px !important;
+  }
+  
+  /* アンダーラインバーの位置調整 */
+  .underlineBar {
+    top: 65% !important;
+    left: 5% !important;
+  }
+  
+  /* マウスホールドの位置調整 */
+  .mausholdMain {
+    top: 50% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 80% !important;
+    right: auto !important;
+  }
+  
+  /* Next.jsカードを非表示（スマホでは重なるため） */
+  .nextjsCard {
+    display: none !important;
+  }
+  
+  /* 装飾要素を非表示 */
+  .decorationEllipse {
+    display: none !important;
+  }
+  
+  .mausholdBg {
+    display: none !important;
+  }
+}
+
+/* タブレットでの表示調整 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .frontendSection {
+    min-height: 450px;
+  }
+  
+  /* Next.jsカードを少し小さく */
+  .nextjsCard {
+    width: 25% !important;
+  }
+}
