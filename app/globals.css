@@ -175,6 +175,9 @@ body {
 /* 404ページ用の追加CSS */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
+/* Front-endセクション用のフォント */
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=DotGothic16&display=swap');
+
 @keyframes bounce-x {
     0%, 100% {
         transform: translateX(-4px);

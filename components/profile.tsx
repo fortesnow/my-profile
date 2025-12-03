@@ -4,6 +4,7 @@ import { ProfileData } from './types'
 import ServicesGrid from "./ServicesGrid"
 import { AnimatedTestimonials } from "./ui/animated-testimonials"
 import { Hero } from "./ui/animated-hero"
+import FrontEndHero from "./FrontEndHero"
 
 interface Website {
   icon: string
@@ -176,7 +177,7 @@ export default function Profile({ data }: { data: ProfileData }) {
 
           </div>
 
-          {/* FRONT-END画像セクション - 全幅表示 */}
+          {/* FRONT-END セクション - Figmaデザイン再現 */}
           <section 
             className="w-full overflow-hidden"
             style={{ 
@@ -186,16 +187,7 @@ export default function Profile({ data }: { data: ProfileData }) {
               maxWidth: '100vw'
             }}
           >
-            <img
-              src="/images/front-end.png"
-              alt="FRONT-END - Next.jsによる高速開発"
-              className="block"
-              style={{ 
-                width: '100vw',
-                maxWidth: '100vw',
-                height: 'auto'
-              }}
-            />
+            <FrontEndHero />
           </section>
 
           {/* Profile Content続き */}
