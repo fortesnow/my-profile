@@ -9,16 +9,14 @@ import Image from 'next/image';
 export default function FrontEndHero() {
   return (
     <section 
-      className="frontend-section relative w-full overflow-hidden"
+      className="frontend-section relative w-full overflow-hidden min-h-[400px] md:aspect-[1980/1024]"
       style={{ 
         backgroundColor: '#78878e',
-        aspectRatio: '1980 / 1024',
-        minHeight: '400px',
       }}
     >
-      {/* 背景ベクター素材（Figmaからエクスポート） */}
+      {/* 背景ベクター素材（Figmaからエクスポート） - PCのみ */}
       <div 
-        className="absolute pointer-events-none"
+        className="absolute pointer-events-none hidden md:block"
         style={{
           left: '-1%',
           top: '-1%',
@@ -26,7 +24,6 @@ export default function FrontEndHero() {
           height: '102%',
         }}
       >
-        {/* インラインSVGで背景波形を描画 */}
         <svg 
           viewBox="0 0 1185 1012" 
           fill="none" 
@@ -41,9 +38,17 @@ export default function FrontEndHero() {
         </svg>
       </div>
 
-      {/* 右側の装飾的な楕円（Figmaからエクスポート） */}
+      {/* スマホ用の背景グラデーション */}
       <div 
-        className="absolute pointer-events-none"
+        className="absolute inset-0 pointer-events-none md:hidden"
+        style={{
+          background: 'linear-gradient(135deg, #4F6C6E 0%, #78878e 50%, #8a9a9e 100%)',
+        }}
+      />
+
+      {/* 右側の装飾的な楕円（Figmaからエクスポート） - PCのみ */}
+      <div 
+        className="absolute pointer-events-none hidden md:block"
         style={{
           right: '-10%',
           top: '40%',
@@ -71,9 +76,9 @@ export default function FrontEndHero() {
         </svg>
       </div>
 
-      {/* マウスホールド（透明背景、左上） */}
+      {/* マウスホールド（透明背景、左上） - PCのみ */}
       <div 
-        className="absolute pointer-events-none"
+        className="absolute pointer-events-none hidden md:block"
         style={{
           left: '24%',
           top: '6.6%',
@@ -87,24 +92,24 @@ export default function FrontEndHero() {
           alt=""
           fill
           className="object-cover"
-          sizes="(max-width: 768px) 50vw, 25vw"
+          sizes="25vw"
         />
       </div>
 
       {/* タイトル: Front-end */}
       <div 
-        className="absolute flex items-center justify-center z-10"
+        className="absolute z-10 px-4 md:px-0 text-center md:text-left md:left-[5%] md:right-auto md:top-[23%]"
         style={{
-          left: '5%',
-          top: '23%',
-          padding: '10px',
+          left: '0',
+          top: '8%',
+          right: '0',
         }}
       >
         <h2 
           className="text-white font-bold leading-normal"
           style={{
             fontFamily: "'Bungee', sans-serif",
-            fontSize: 'clamp(32px, 5vw, 96px)',
+            fontSize: 'clamp(28px, 8vw, 96px)',
             textShadow: '0px 4px 8px rgba(63, 64, 68, 0.5)',
           }}
         >
@@ -114,18 +119,18 @@ export default function FrontEndHero() {
 
       {/* 説明テキスト */}
       <div 
-        className="absolute flex items-center justify-center z-10"
+        className="absolute z-10 px-4 md:px-0 text-center md:text-left md:left-[5.3%] md:right-auto md:top-[35%]"
         style={{
-          left: '5.3%',
-          top: '35%',
-          padding: '10px',
+          left: '0',
+          top: '20%',
+          right: '0',
         }}
       >
         <p 
           className="text-white leading-relaxed"
           style={{
             fontFamily: "'DotGothic16', sans-serif",
-            fontSize: 'clamp(12px, 1.6vw, 32px)',
+            fontSize: 'clamp(14px, 4vw, 32px)',
           }}
         >
           設計単位で適切なパフォーマンス構築。<br />
@@ -134,12 +139,13 @@ export default function FrontEndHero() {
         </p>
       </div>
 
-      {/* ミニカード4枚（左下） */}
+      {/* ミニカード4枚 - スマホでは中央配置 */}
       <div 
-        className="absolute flex gap-[1%] z-10"
+        className="absolute z-10 flex gap-2 md:gap-[1%] justify-center md:justify-start md:left-[5.3%] md:top-[55%] md:transform-none"
         style={{
-          left: '5.3%',
-          top: '55%',
+          left: '50%',
+          top: '45%',
+          transform: 'translateX(-50%)',
         }}
       >
         {[1, 2, 3, 4].map((index) => (
@@ -147,7 +153,7 @@ export default function FrontEndHero() {
             key={index}
             className="relative cursor-pointer transition-transform hover:scale-105"
             style={{
-              width: 'clamp(40px, 5.5vw, 106px)',
+              width: 'clamp(50px, 12vw, 106px)',
               aspectRatio: '106 / 148',
               boxShadow: '0px 26px 4px 0px rgba(0, 0, 0, 0.25)',
             }}
@@ -157,15 +163,15 @@ export default function FrontEndHero() {
               alt={`Mini card ${index}`}
               fill
               className="object-cover rounded-sm"
-              sizes="(max-width: 768px) 15vw, 106px"
+              sizes="(max-width: 768px) 20vw, 106px"
             />
           </div>
         ))}
       </div>
 
-      {/* アンダーラインバー */}
+      {/* アンダーラインバー - PCのみ */}
       <div 
-        className="absolute z-10"
+        className="absolute z-10 hidden md:block"
         style={{
           left: '5.6%',
           top: '71%',
@@ -176,13 +182,15 @@ export default function FrontEndHero() {
         }}
       />
 
-      {/* マウスホールド（メイン、中央下） - 透過画像で自然に */}
+      {/* マウスホールド（メイン） - スマホでは中央配置 */}
       <div 
-        className="absolute z-10"
+        className="absolute z-10 px-4 md:px-0 md:left-[32.7%] md:top-[56.3%] md:w-[37.8%] md:max-w-none md:transform-none"
         style={{
-          left: '32.7%',
-          top: '56.3%',
-          width: '37.8%',
+          left: '50%',
+          top: '65%',
+          width: '90%',
+          maxWidth: '400px',
+          transform: 'translateX(-50%)',
         }}
       >
         <div 
@@ -196,14 +204,14 @@ export default function FrontEndHero() {
             alt="Maushold illustration"
             fill
             className="object-contain"
-            sizes="(max-width: 768px) 80vw, 40vw"
+            sizes="(max-width: 768px) 90vw, 40vw"
           />
         </div>
       </div>
 
-      {/* Next.jsカード（右上、回転） */}
+      {/* Next.jsカード（右上、回転） - PCのみ */}
       <div 
-        className="absolute flex items-center justify-center z-10"
+        className="absolute hidden md:flex items-center justify-center z-10"
         style={{
           right: '5%',
           top: '12%',
@@ -225,7 +233,7 @@ export default function FrontEndHero() {
             alt="Next.js Pokemon Card"
             fill
             className="object-cover rounded-lg"
-            sizes="(max-width: 768px) 50vw, 25vw"
+            sizes="25vw"
             priority
           />
         </div>
