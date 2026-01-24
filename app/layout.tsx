@@ -3,6 +3,7 @@ import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 import Navigation from '@/components/navigation'
 import { GoogleTagManager } from '@/components/google-tag-manager'
+import { CurtainAnimation } from '@/components/CurtainAnimation'
 import { generateOrganizationSchema, generateWebsiteSchema } from '@/components/schema'
 
 export const metadata: Metadata = {
@@ -71,6 +72,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans overflow-x-hidden">
+        <CurtainAnimation />
         <GoogleTagManager />
         <Navigation />
         {children}
