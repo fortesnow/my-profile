@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Navigation() {
@@ -35,6 +36,7 @@ export default function Navigation() {
 
   const navItems = [
     { label: "Home", href: "/" },
+    { label: "サービス", href: "/services" },
     { label: "実績", href: "/achievements" },
     { label: "ブログ", href: "/blog" },
     { label: "お問い合わせ", href: "/contact" },
@@ -48,7 +50,7 @@ export default function Navigation() {
       {/* 固定ヘッダー - スクロール状態によってサイズ変更 */}
       <header 
         className={`fixed top-0 left-0 w-full z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800/50 transition-all duration-300 ${
-          scrolled ? 'h-14 md:h-16' : 'h-16 md:h-20'
+          scrolled ? 'h-20 md:h-24' : 'h-24 md:h-32'
         }`}
       >
         <div className="container mx-auto px-4 h-full">
@@ -56,12 +58,21 @@ export default function Navigation() {
             {/* ロゴ - スクロール時にサイズ変更 */}
             <Link 
               href="/" 
-              className={`font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300 touch-area ${
-                scrolled ? 'text-lg md:text-xl' : 'text-xl md:text-2xl'
+              className={`transition-all duration-300 touch-area flex items-center ${
+                scrolled ? 'h-20 md:h-24' : 'h-24 md:h-32'
               }`}
               aria-label="ホームページへ戻る"
             >
-              Stellarium
+              <Image
+                src="/images/site-logo.png"
+                alt="Stellarium"
+                width={400}
+                height={128}
+                className={`object-contain transition-all duration-300 ${
+                  scrolled ? 'h-20 md:h-24 w-auto' : 'h-24 md:h-32 w-auto'
+                }`}
+                priority
+              />
             </Link>
 
             {/* PCメニュー */}
