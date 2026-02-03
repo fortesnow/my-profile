@@ -7,6 +7,7 @@ import { motion, useReducedMotion } from 'framer-motion'
  * カーテンアニメーションコンポーネント
  * ページ読み込み時に縦線が上から下に出現し、その後カーテンが中央から左右へ開くエフェクト
  * yui540.comのようなカーテンアニメーションを実装
+ * 広告ブロック対策: タイムアウト処理を追加し、一定時間後に強制的に非表示
  */
 export function CurtainAnimation() {
   const [isVisible, setIsVisible] = useState(true)
@@ -23,9 +24,16 @@ export function CurtainAnimation() {
       setIsVisible(false)
     }, 1400) // 全てのアニメーション完了後
 
+    // 広告ブロック対策: 最大3秒後に強制的に非表示（framer-motionが読み込まれない場合のフォールバック）
+    const forceHideTimer = setTimeout(() => {
+      setIsVisible(false)
+      setLinePhase('hidden')
+    }, 3000)
+
     return () => {
       clearTimeout(lineDisappearTimer)
       clearTimeout(hideTimer)
+      clearTimeout(forceHideTimer)
     }
   }, [])
 
