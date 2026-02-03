@@ -19,7 +19,7 @@ export function GoogleTagManager() {
       <Script
         id="gtm-script"
         strategy="afterInteractive"
-        onError={(e) => {
+        onError={() => {
           // エラーを無視してサイトの動作を継続
           console.warn('Google Tag Managerの読み込みに失敗しました（広告ブロックの可能性があります）')
         }}
