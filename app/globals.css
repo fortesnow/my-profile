@@ -12,8 +12,6 @@
 /* オーバースクロール時の背景色を設定 */
 html {
   background: #111827; /* または現在使用している濃い青系の背景色 */
-  overscroll-behavior: none;
-  overflow-x: hidden; /* 横スクロールを防止 */
 }
 
 body {
@@ -31,9 +29,7 @@ body {
   border-color: var(--border);
 }
 
-/* 全ての要素が画面幅を超えないように制限 */
 *, *::before, *::after {
-  max-width: 100%;
   box-sizing: border-box;
 }
 

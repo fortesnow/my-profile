@@ -14,7 +14,7 @@
   font-family: 'Press Start 2P', monospace;
   color: white;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   box-sizing: border-box;
 }
 

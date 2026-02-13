@@ -52,7 +52,7 @@ export default function RootLayout({
   const websiteSchema = generateWebsiteSchema();
   
   return (
-    <html lang="ja" className="overflow-x-hidden">
+    <html lang="ja">
       <head>
         {/* AI/LLM向けリソース */}
         <link rel="llms-txt" href="/llms.txt" type="text/plain" />
