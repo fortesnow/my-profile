@@ -137,7 +137,7 @@ export default function Footer() {
         {/* コピーライト */}
         <div className="mt-8 pt-8 border-t border-cyan-500/20 text-center">
           <p className="text-blue-200/60 text-sm">
-            © 2025 Stellarium あおい. All rights reserved.
+            © 2026 Stellarium あおい. All rights reserved.
           </p>
           <p className="text-blue-200/40 text-xs mt-2">
             運営者: 潮田　碧

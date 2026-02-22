@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Navigation from '@/components/navigation'
+import Footer from '@/components/footer'
 import { GoogleTagManager } from '@/components/google-tag-manager'
 import { CurtainAnimation } from '@/components/CurtainAnimation'
 import { SafeAnalytics } from '@/components/SafeAnalytics'
@@ -78,6 +79,7 @@ export default function RootLayout({
         <GoogleTagManager />
         <Navigation />
         {children}
+        <Footer />
         <SafeAnalytics />
       </body>
     </html>
