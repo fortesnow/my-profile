@@ -3,6 +3,7 @@ export const generateOrganizationSchema = () => ({
   '@context': 'https://schema.org',
   '@type': ['Organization', 'ProfessionalService'],
   name: 'Stellarium（ステラリウム）',
+  legalName: '潮田　碧',
   alternateName: 'Web制作 あおい',
   description: '現場目線での高品質で結果主義のパフォーマンスを提供するフリーランスエンジニア。実業や経営面で培った思考を活かし、Web制作からマーケティングまで幅広く対応。',
   url: 'https://www.stellarium.jp',
@@ -11,7 +12,8 @@ export const generateOrganizationSchema = () => ({
   foundingDate: '2024',
   founder: {
     '@type': 'Person',
-    name: 'あおい',
+    name: '潮田　碧',
+    alternateName: 'あおい',
     jobTitle: 'フリーランスエンジニア',
     description: '実業や経営面で培った思考を活かし、Web制作からマーケティングまで幅広く対応',
   },

@@ -139,6 +139,9 @@ export default function Footer() {
           <p className="text-blue-200/60 text-sm">
             © 2025 Stellarium あおい. All rights reserved.
           </p>
+          <p className="text-blue-200/40 text-xs mt-2">
+            運営者: 潮田　碧
+          </p>
         </div>
       </div>
     </footer>
