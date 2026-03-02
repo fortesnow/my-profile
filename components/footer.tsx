@@ -102,6 +102,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/tools" className="text-blue-200/80 hover:text-cyan-400 transition-colors text-sm">
+                  ツール販売
+                </Link>
+              </li>
+              <li>
                 <Link href="/achievements" className="text-blue-200/80 hover:text-cyan-400 transition-colors text-sm">
                   実績
                 </Link>

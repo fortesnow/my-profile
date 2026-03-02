@@ -37,6 +37,7 @@ export default function Navigation() {
   const navItems = [
     { label: "Home", href: "/" },
     { label: "サービス", href: "/services" },
+    { label: "ツール", href: "/tools" },
     { label: "実績", href: "/achievements" },
     { label: "ブログ", href: "/blog" },
     { label: "お問い合わせ", href: "/contact" },
