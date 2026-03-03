@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git config:*)",
+      "Bash(git push:*)",
+      "WebFetch(domain:localhost)",
+      "WebFetch(domain:www.stellarium.jp)",
+      "Bash(npm install:*)",
+      "Bash(npx next:*)",
+      "mcp__stripe__get_stripe_account_info",
+      "mcp__stripe__create_product",
+      "mcp__stripe__create_price",
+      "Bash(claude mcp:*)",
+      "mcp__claude_ai_Notion__notion-create-pages",
+      "Bash(curl:*)"
+    ]
+  }
+}
