@@ -453,421 +453,389 @@
   .battleContainer {
     height: auto;
     min-height: 100vh;
-    padding-bottom: 10px;
+    padding: 0;
   }
-  
-  /* バトルフィールドの高さを調整 */
+
   .battleField {
-    flex: 0 0 40%;
-    height: 40%;
-    min-height: 250px;
+    flex: 0 0 38%;
+    height: 38%;
+    min-height: 220px;
   }
-  
-  /* コマンドエリアのレイアウト変更 */
+
   .commandArea {
     flex-direction: column;
     flex: 0 0 auto;
     height: auto;
     padding: 2px;
-    gap: 2px;
+    gap: 1px;
   }
-  
-  /* 各ウィンドウの幅調整 */
+
+  /* ウィンドウ共通：余白を詰める */
   .commandWindow, .infoWindow, .statusWindow {
     flex: 0 0 auto;
     width: 100%;
-    margin-bottom: 5px;
-    padding: 5px;
+    padding: 6px 8px;
+    margin: 0 0 1px 0;
     border-width: 2px;
   }
 
-  /* コマンドウィンドウとインフォウィンドウを1行に並べる */
-  .commandWindow, .infoWindow {
-    width: 100%;
-    display: block;
-    vertical-align: top;
-    padding: 10px;
-    margin: 0 0 4px 0;
-  }
-  
-  .commandWindow {
-    margin-right: 0;
-  }
-  
-  .infoWindow {
-    margin-left: 0;
-  }
-  
-  /* ステータスウィンドウを100%に */
   .statusWindow {
-    width: 100%;
-    max-height: 180px;
+    max-height: 160px;
+    overflow-y: hidden;
   }
-  
-  /* ダイアログウィンドウの調整 */
+
   .dialogWindow {
     flex: 0 0 auto;
     height: auto;
-    min-height: 60px;
-    padding: 5px;
-    margin: 2px 2px 8px 2px;
+    min-height: 50px;
+    padding: 5px 8px;
+    margin: 1px 2px 4px 2px;
     border-width: 2px;
   }
-  
-  /* キャラクターとモンスターの位置調整 */
+
+  /* FF3風に左右対向を維持 */
   .characterContainer {
-    right: 2%;
+    right: 5%;
     bottom: 3%;
-    transform: scale(0.8);
-    /* モバイル向けに並び方を変更 */
-    flex-direction: row;
-    gap: 5px;
+    transform: scale(0.7);
+    flex-direction: column;
+    gap: 4px;
   }
-  
+
   .monsterContainer {
-    left: 50%;
-    bottom: 25%;
-    width: 200px;
-    height: 150px;
-    transform: translate(-50%, 0) scale(1);
+    left: 5%;
+    bottom: 15%;
+    width: 160px;
+    height: 120px;
+    transform: scale(0.9);
   }
-  
-  /* スライド情報を上部に */
+
   .slideInfo {
-    width: 95%;
-    max-width: 95%;
+    width: 96%;
+    max-width: 96%;
     padding: 8px;
     top: 1%;
     z-index: 25;
-    max-height: 70%;
+    max-height: 75%;
     overflow-y: auto;
-    font-size: clamp(0.45rem, 2.2vw, 0.6rem);
     -webkit-overflow-scrolling: touch;
   }
-  
-  /* スライドの内容をモバイル向けに最適化 */
+
   .slideInfo .slideTitle {
-    font-size: clamp(0.75rem, 3.8vw, 1.1rem);
+    font-size: clamp(0.7rem, 3.5vw, 1rem);
+    margin-bottom: 3px;
+  }
+
+  .slideInfo .slideSubtitle {
+    font-size: clamp(0.5rem, 2.5vw, 0.8rem);
     margin-bottom: 4px;
   }
-  
-  .slideInfo .slideSubtitle {
-    font-size: clamp(0.55rem, 2.8vw, 0.85rem);
-    margin-bottom: 6px;
-  }
-  
+
   .slideInfo .slideContent {
-    font-size: clamp(0.44rem, 2.1vw, 0.58rem);
-    line-height: 1.3;
+    font-size: clamp(0.42rem, 2vw, 0.55rem);
+    line-height: 1.25;
     max-height: 25vh;
     overflow-y: auto;
-    padding-right: 5px;
     text-align: left;
   }
-  
+
   .windowTitle {
-    font-size: clamp(0.5rem, 3vw, 0.7rem);
+    font-size: clamp(0.5rem, 2.5vw, 0.65rem);
+    margin-bottom: 4px;
   }
-  
+
   .commandItem {
-    font-size: clamp(0.5rem, 3vw, 0.6rem);
-    padding: 3px 0 3px 10px;
+    font-size: clamp(0.5rem, 2.5vw, 0.6rem);
+    padding: 3px 0 3px 12px;
   }
-  
-  /* ステータスアイテムのレイアウト調整 */
+
+  .statusList {
+    gap: 4px;
+  }
+
   .statusItem {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    gap: 4px;
   }
-  
-  .charInfo {
-    flex-grow: 1;
+
+  .charName {
+    font-size: clamp(0.45rem, 2.5vw, 0.55rem);
+    margin-bottom: 2px;
   }
-  
-  /* ナビゲーションボタンの調整 */
+
+  .hpContainer, .mpContainer {
+    font-size: clamp(0.4rem, 2vw, 0.5rem);
+    gap: 3px;
+  }
+
+  .statValue {
+    width: 55px;
+  }
+
   .navigation {
-    bottom: 5px;
-    right: 10px;
-    display: flex;
-    gap: 5px;
+    bottom: 4px;
+    right: 8px;
+    gap: 4px;
     z-index: 100;
   }
-  
+
   .navButton {
-    padding: 4px 8px;
-    font-size: 0.6rem;
-    /* タッチしやすいサイズに */
-    min-width: 60px;
-    min-height: 36px;
+    padding: 3px 6px;
+    font-size: 0.55rem;
+    min-width: 56px;
+    min-height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  
-  /* 設定ボタンの位置調整 */
+
   .settingsButton {
-    bottom: 5px;
-    left: 10px;
-    width: 36px;
-    height: 36px;
+    bottom: 4px;
+    left: 8px;
+    width: 32px;
+    height: 32px;
     z-index: 100;
   }
-  
-  /* ダメージ表示の調整 */
+
   .damageNumber {
     font-size: 20px;
   }
-  
-  /* モンスターとキャラクターの透明度を下げてスライド内容を見やすく */
+
   .monsterContainer, .characterContainer {
     opacity: 0.8;
   }
-  
+
   .monsterContainer:hover, .characterContainer:hover,
   .character.selected {
     opacity: 1;
   }
 }
 
-/* 超小型スマホ向けの調整 */
-@media (max-width: 375px) {
+/* スマートフォン向け（480px以下） */
+@media (max-width: 480px) {
   .battleContainer {
-    min-height: 90vh;
+    min-height: 100vh;
+    padding: 0;
   }
-  
-  /* バトルフィールドの高さをさらに調整 */
+
   .battleField {
-    min-height: 190px;
-    flex: 0 0 35%;
-    height: 35%;
+    min-height: 200px;
+    flex: 0 0 36%;
+    height: 36%;
   }
-  
-  /* スライド情報をさらに最適化 - この部分だけ残す */
+
   .slideInfo {
-    top: 0.2%;
-    width: 98%;
-    max-width: 98%;
-    padding: 10px;
-    z-index: 25;
-    max-height: 95%;
-    font-size: clamp(0.38rem, 1.9vw, 0.52rem);
-    border-width: 5px;
-    box-shadow: 0 0 22px rgba(100, 150, 255, 0.8);
-    /* 枠のグラデーションを強調 */
+    width: 97%;
+    max-width: 97%;
+    padding: 6px;
+    top: 0.5%;
+    max-height: 92%;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.65);
+    border-width: 3px;
+    box-shadow: 0 0 18px rgba(100, 150, 255, 0.8);
     border-image: linear-gradient(to bottom right, #FFFFFF, #A0A0FF, #4040FF, #0000FF) 1;
   }
-  
-  /* 以下の元々のスタイル設定を復元 */
+
   .slideInfo .slideTitle {
     font-size: clamp(0.65rem, 3.2vw, 0.9rem);
-    margin-bottom: 1px;
-  }
-  
-  .slideInfo .slideSubtitle {
-    font-size: clamp(0.48rem, 2.4vw, 0.7rem);
     margin-bottom: 2px;
   }
-  
-  .slideInfo .slideContent {
-    font-size: clamp(0.38rem, 1.9vw, 0.52rem);
-    line-height: 1.1;
-    max-height: none;
-    padding: 0 1px;
+
+  .slideInfo .slideSubtitle {
+    font-size: clamp(0.48rem, 2.3vw, 0.7rem);
+    margin-bottom: 2px;
   }
-  
-  /* キャラクターとモンスターをさらに小さく調整 - FF3風の左右対向を維持 */
+
+  .slideInfo .slideContent {
+    font-size: clamp(0.4rem, 1.9vw, 0.5rem);
+    line-height: 1.15;
+    max-height: none;
+    padding: 0 2px;
+  }
+
   .characterContainer {
     right: 8%;
-    bottom: 1%;
-    transform: scale(0.5);
+    bottom: 2%;
+    transform: scale(0.55);
     flex-direction: column;
-    gap: 6px;
+    gap: 3px;
+    opacity: 1;
   }
-  
+
   .monsterContainer {
-    width: 140px;
-    height: 110px;
-    left: 3%;
-    bottom: 7%;
+    left: 5%;
+    bottom: 8%;
+    width: 150px;
+    height: 120px;
     transform: scale(0.85);
+    opacity: 1;
   }
-  
-  /* ステータスウィンドウの高さを調整 */
-  .statusWindow {
-    max-height: 240px;
-    min-height: 200px;
-    margin-bottom: 5px;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    padding: 10px;
-    border-width: 2px;
-  }
-  
-  /* ステータスリストのさらなる最適化 */
-  .statusList {
-    gap: 12px;
-    padding-bottom: 8px;
-  }
-  
-  /* ステータスアイテムの高さ調整 */
-  .statusItem {
-    min-height: 48px;
-    padding: 5px 3px;
-    border-bottom: 1px solid rgba(100, 150, 255, 0.2);
-  }
-  
-  /* HP/MPコンテナの小型画面での調整 */
-  .hpContainer, .mpContainer {
-    gap: 5px;
-    font-size: clamp(0.45rem, 3vw, 0.6rem);
-    margin-bottom: 4px;
-  }
-  
-  /* HP・MPバーの幅調整 */
-  .hpBarBg, .mpBarBg {
-    height: 8px;
-    margin: 0 2px;
-  }
-  
-  /* キャラクター名の調整 */
-  .charName {
-    font-size: clamp(0.55rem, 3.2vw, 0.7rem);
-    margin-bottom: 6px;
-  }
-  
-  /* ステータス値とラベルの小型画面での調整 */
-  .statValue {
-    width: 60px;
-    font-size: clamp(0.45rem, 3vw, 0.6rem);
-  }
-  
-  .statLabel {
-    width: 28px;
-    font-size: clamp(0.45rem, 3vw, 0.6rem);
-  }
-  
-  /* コマンドウィンドウとインフォウィンドウの調整 */
+
   .commandWindow, .infoWindow {
-    width: 100%;
-    margin-bottom: 3px;
-    padding: 8px;
-    margin-left: 0;
-    margin-right: 0;
+    padding: 5px 7px;
+    margin: 0 0 1px 0;
+  }
+
+  .statusWindow {
+    max-height: 140px;
+    overflow-y: hidden;
+  }
+
+  .statusList {
+    gap: 3px;
+  }
+
+  .statusItem {
+    gap: 3px;
+  }
+
+  .charName {
+    font-size: clamp(0.42rem, 2.3vw, 0.52rem);
+    margin-bottom: 1px;
+  }
+
+  .hpContainer, .mpContainer {
+    gap: 2px;
+    font-size: clamp(0.38rem, 1.8vw, 0.48rem);
+    margin-bottom: 1px;
+  }
+
+  .hpBarBg, .mpBarBg {
+    height: 5px;
+  }
+
+  .statValue {
+    width: 50px;
+  }
+
+  .statLabel {
+    width: 22px;
   }
 }
 
-/* 極小スマホ向けの調整（iPhone SE等） */
-@media (max-width: 320px) {
-  /* モンスターとキャラクターの位置をさらに調整 */
-  .monsterContainer {
-    width: 120px;
-    height: 90px;
-    left: 2%;
-    bottom: 6%;
-    transform: scale(0.8);
-  }
-  
-  .characterContainer {
-    right: 5%;
-    bottom: 0.5%;
-    transform: scale(0.42);
-    gap: 4px;
-  }
-  
-  /* バトルフィールドの高さをさらに調整 */
+/* 小型スマホ向け（375px以下） */
+@media (max-width: 375px) {
   .battleField {
-    min-height: 170px;
-    flex: 0 0 33%;
-    height: 33%;
+    min-height: 180px;
+    flex: 0 0 34%;
+    height: 34%;
   }
-  
-  /* スライド情報をさらに小さく - この部分だけ残す */
+
   .slideInfo {
-    top: 0.1%;
-    width: 99%;
-    max-width: 99%;
-    padding: 8px;
-    z-index: 25;
-    max-height: 97%;
-    font-size: clamp(0.36rem, 1.8vw, 0.48rem);
-    border-width: 6px;
-    box-shadow: 0 0 25px rgba(100, 150, 255, 0.9);
-    /* 枠のグラデーションを強調 */
-    border-image: linear-gradient(to bottom right, #FFFFFF, #A0A0FF, #4040FF, #0000FF) 1;
-    /* 背景色を少し薄くして文字を見やすく */
-    background: rgba(0, 0, 0, 0.6);
+    top: 0.3%;
+    width: 98%;
+    max-width: 98%;
+    padding: 6px;
+    max-height: 92%;
+    border-width: 3px;
+    box-shadow: 0 0 18px rgba(100, 150, 255, 0.8);
   }
-  
-  /* 以下の元々のスタイル設定を復元 */
+
   .slideInfo .slideTitle {
     font-size: clamp(0.6rem, 3vw, 0.85rem);
     margin-bottom: 1px;
   }
-  
+
   .slideInfo .slideSubtitle {
-    font-size: clamp(0.42rem, 2.2vw, 0.65rem);
+    font-size: clamp(0.44rem, 2.2vw, 0.65rem);
     margin-bottom: 2px;
   }
-  
+
   .slideInfo .slideContent {
-    font-size: clamp(0.36rem, 1.8vw, 0.48rem);
-    line-height: 1.05;
-    max-height: none;
-    padding: 0;
+    font-size: clamp(0.38rem, 1.8vw, 0.48rem);
+    line-height: 1.1;
   }
-  
-  /* ステータスウィンドウの調整 */
+
+  .characterContainer {
+    right: 6%;
+    bottom: 1%;
+    transform: scale(0.48);
+    gap: 3px;
+  }
+
+  .monsterContainer {
+    width: 130px;
+    height: 100px;
+    left: 3%;
+    bottom: 6%;
+    transform: scale(0.8);
+  }
+
   .statusWindow {
-    max-height: 220px;
-    min-height: 180px;
-    padding: 8px;
-    overflow-y: hidden;
+    max-height: 130px;
+    padding: 5px;
   }
-  
-  /* ステータスリストの最適化 */
+
   .statusList {
-    gap: 10px;
-    padding-bottom: 6px;
+    gap: 2px;
   }
-  
-  /* ステータスアイテムの調整 */
+
   .statusItem {
-    min-height: 45px;
-    padding: 4px 2px;
+    min-height: auto;
+    padding: 2px;
+    border-bottom: 1px solid rgba(100, 150, 255, 0.15);
   }
-  
-  /* キャラクター名とステータスの調整 */
-  .charName {
-    font-size: clamp(0.5rem, 3vw, 0.65rem);
-    margin-bottom: 5px;
-  }
-  
-  /* HP/MPコンテナの極小画面での調整 */
-  .hpContainer, .mpContainer {
-    gap: 4px;
-    font-size: clamp(0.42rem, 2.8vw, 0.55rem);
-    margin-bottom: 3px;
-  }
-  
-  /* ステータス値とラベルの極小画面での調整 */
-  .statValue {
-    width: 56px;
-    font-size: clamp(0.42rem, 2.8vw, 0.55rem);
-  }
-  
-  .statLabel {
-    width: 25px;
-    font-size: clamp(0.42rem, 2.8vw, 0.55rem);
-  }
-  
-  /* コマンドウィンドウとインフォウィンドウの調整 */
+
   .commandWindow, .infoWindow {
-    width: 100%;
-    margin-bottom: 2px;
-    padding: 7px;
-    margin-left: 0;
-    margin-right: 0;
+    padding: 5px 6px;
+    margin: 0 0 1px 0;
+  }
+}
+
+/* 極小スマホ向け（iPhone SE等 320px以下） */
+@media (max-width: 320px) {
+  .battleField {
+    min-height: 160px;
+    flex: 0 0 32%;
+    height: 32%;
+  }
+
+  .monsterContainer {
+    width: 110px;
+    height: 85px;
+    left: 2%;
+    bottom: 5%;
+    transform: scale(0.75);
+  }
+
+  .characterContainer {
+    right: 4%;
+    bottom: 0.5%;
+    transform: scale(0.4);
+    gap: 2px;
+  }
+
+  .slideInfo {
+    top: 0.1%;
+    width: 99%;
+    max-width: 99%;
+    padding: 5px;
+    max-height: 95%;
+    background: rgba(0, 0, 0, 0.6);
+    border-width: 3px;
+    box-shadow: 0 0 20px rgba(100, 150, 255, 0.9);
+  }
+
+  .slideInfo .slideTitle {
+    font-size: clamp(0.55rem, 2.8vw, 0.8rem);
+  }
+
+  .slideInfo .slideSubtitle {
+    font-size: clamp(0.4rem, 2vw, 0.6rem);
+  }
+
+  .slideInfo .slideContent {
+    font-size: clamp(0.35rem, 1.7vw, 0.45rem);
+    line-height: 1.05;
+  }
+
+  .statusWindow {
+    max-height: 120px;
+    padding: 4px;
+  }
+
+  .commandWindow, .infoWindow {
+    padding: 4px 5px;
   }
 }
 
@@ -952,102 +920,7 @@
   color: #3d5afe;
 }
 
-/* スマートフォン向けの調整（さらに小さい画面） */
-@media (max-width: 480px) {
-  /* スライド情報を上部に - この部分だけ修正部分を残す */
-  .slideInfo {
-    width: 97%;
-    max-width: 97%;
-    padding: 12px;
-    top: 0.2%;
-    z-index: 25;
-    max-height: 93%;
-    overflow-y: auto;
-    font-size: clamp(0.42rem, 2vw, 0.55rem);
-    border-width: 5px;
-    box-shadow: 0 0 20px rgba(100, 150, 255, 0.8);
-    /* 枠のグラデーションを強調 */
-    border-image: linear-gradient(to bottom right, #FFFFFF, #A0A0FF, #4040FF, #0000FF) 1;
-    background: rgba(0, 0, 0, 0.65);
-  }
-  
-  /* 追加：480pxメディアクエリの他の設定を復元 */
-  .battleContainer {
-    min-height: 100vh;
-    /* モバイルでのセーフエリア対応（ノッチや画面上部UI考慮） */
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-  
-  .battleField {
-    min-height: 220px;
-    flex: 0 0 40%;
-    height: 40%;
-  }
-  
-  /* キャラクターの配置を改善 - FF3風に右側に配置 PC表示に近づける */
-  .characterContainer {
-    right: 10%;
-    left: auto;
-    bottom: 1.5%;
-    width: auto;
-    transform: scale(0.6);
-    justify-content: flex-end;
-    flex-direction: column;
-    gap: 8px;
-    opacity: 1;
-  }
-  
-  /* モンスターの位置調整 - FF3風に左側に配置 PC表示に近づける */
-  .monsterContainer {
-    left: 5%;
-    right: auto;
-    bottom: 8%;
-    width: 180px;
-    height: 140px;
-    transform: scale(0.9);
-    opacity: 1;
-  }
-  
-  .slideInfo .slideTitle {
-    font-size: clamp(0.7rem, 3.5vw, 1rem);
-    margin-bottom: 2px;
-  }
-  
-  .slideInfo .slideSubtitle {
-    font-size: clamp(0.5rem, 2.5vw, 0.75rem);
-    margin-bottom: 3px;
-  }
-  
-  .slideInfo .slideContent {
-    font-size: clamp(0.42rem, 2vw, 0.55rem);
-    line-height: 1.15;
-    max-height: none;
-    padding: 0 2px;
-  }
-  
-  /* コマンドウィンドウとインフォウィンドウの調整 */
-  .commandWindow, .infoWindow {
-    width: 100%;
-    margin-bottom: 4px;
-    padding: 9px;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  
-  .commandWindow {
-    margin-right: 0;
-  }
-  
-  .infoWindow {
-    margin-left: 0;
-  }
-  
-  /* スクロールを無効化 */
-  .statusWindow {
-    overflow-y: hidden;
-  }
-}
+/* 重複480pxメディアクエリ削除済み — 614行目に統合 */
 
 /* 設定ボタン */
 .settingsButton {
