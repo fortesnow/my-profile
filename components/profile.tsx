@@ -5,7 +5,7 @@ import ServicesGrid from "./ServicesGrid"
 import { AnimatedTestimonials } from "./ui/animated-testimonials"
 import { Hero } from "./ui/animated-hero"
 import FrontEndHero from "./FrontEndHero"
-import PokemonCardHoloSection from "./PokemonCardHoloSection"
+// import PokemonCardHoloSection from "./PokemonCardHoloSection"
 
 interface Website {
   icon: string
@@ -212,10 +212,10 @@ export default function Profile({ data }: { data: ProfileData }) {
               />
             </section>
 
-            {/* ポケモンカードホロ効果セクション */}
-            <section className="mt-16">
+            {/* ポケモンカードホロ効果セクション - 一時非表示 */}
+            {/* <section className="mt-16">
               <PokemonCardHoloSection />
-            </section>
+            </section> */}
 
             {/* その他のプロフィールコンテンツがあればここに追加 */}
           </div>
