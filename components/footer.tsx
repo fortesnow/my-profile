@@ -147,6 +147,11 @@ export default function Footer() {
           <p className="text-blue-200/40 text-xs mt-2">
             運営者: 潮田　碧
           </p>
+          <p className="mt-2">
+            <Link href="/legal/tokushoho" className="text-blue-200/40 hover:text-cyan-400 transition-colors text-xs">
+              特定商取引法に基づく表記
+            </Link>
+          </p>
         </div>
       </div>
     </footer>
